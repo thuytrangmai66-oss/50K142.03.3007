@@ -12,7 +12,9 @@ it('isolates CoCoDB and preserves records across concurrent startup and reopen',
   try {
     await Promise.all([initializeDatabase(), initializeDatabase()]);
     expect(db.name).toBe(COCO_DATABASE_NAME);
-    expect(db.tables.map(table => table.name)).toEqual(['appMetadata']);
+    expect(db.tables.map(table => table.name)).toContain('appMetadata');
+    expect(await db.taiKhoan.count()).toBe(0);
+    expect(await db.khachHang.count()).toBe(0);
     await db.appMetadata.add({ key: 'sentinel', value: 'keep' });
     db.close();
     await initializeDatabase();
