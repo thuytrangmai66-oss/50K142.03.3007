@@ -128,7 +128,7 @@ it('commits only once for simultaneous identical operation ids across tabs and s
   const other = new CoCoDatabase(database.name);
   const command: Command = { id: 'retry-same-command', changes: [{ table: 'khachHang', kind: 'create', value: customer() }] };
   try {
-    const results = await Promise.all([repository.commit(command), new CoCoRepository(other).commit(command)]);
+    const results = await Promise.all([repository.commit(command), new CoCoRepository(other, () => instant).commit(command)]);
     expect(results.map(result => result.duplicate).sort()).toEqual([false, true]);
   } finally { other.close(); }
   database.close();
@@ -206,7 +206,7 @@ it('stores explicit per-product costs for two different prices in the same invoi
     { table: 'productCosts', kind: 'create', value: { MaSP: 'SP01', MaHDTM: 'TM01', MaKhungGia: 'KG01', unitCost: 80_000, recordedAt: instant } },
     { table: 'productCosts', kind: 'create', value: { MaSP: 'SP02', MaHDTM: 'TM01', MaKhungGia: 'KG01', unitCost: 120_000, recordedAt: instant } },
   ] });
-  expect((await repository.list('productCosts')).map(row => row.record.unitCost).sort()).toEqual([120_000, 80_000]);
+  expect((await repository.list('productCosts')).map(row => row.record.unitCost).sort((a, b) => a - b)).toEqual([80_000, 120_000]);
   await expect(repository.commit({ id: 'cost-rewrite', changes: [{ table: 'productCosts', kind: 'update', expectedVersion: 1,
     value: { MaSP: 'SP01', MaHDTM: 'TM01', MaKhungGia: 'KG01', unitCost: 100_000, recordedAt: instant },
   }] })).rejects.toMatchObject({ code: 'IMMUTABLE' });
