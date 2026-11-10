@@ -1,0 +1,36 @@
+# Vấn đề và quyết định cần chốt
+
+Cập nhật 10/11/2026: người dùng đã phê chuẩn toàn bộ phương án kỹ thuật đề xuất trong tài liệu này và nghiệm thu Giai đoạn 0 ĐẠT điều kiện chuyển tiếp. Các bảng dưới giữ bằng chứng và công việc chi tiết còn phải thực hiện; thiếu thông số chưa từng được đề xuất không được coi là đã có giá trị cụ thể.
+
+| ID | Trạng thái | Bằng chứng và kết luận hiện tại | Quyết định hoặc bước xử lý còn cần | Phạm vi bị ảnh hưởng |
+|---|---|---|---|---|
+| Q01 | APPROVED_USER | Người dùng chọn GitHub Pages + IndexedDB, không dịch vụ ngoài | Giữ giới hạn demo trong nghiệm thu, không hỏi lại kiến trúc | Toàn hệ thống |
+| Q02 | APPROVED_USER | Figma 170:4139 và Design image78 hiển thị 00:00; người dùng chấp nhận giờ Việt Nam và xử lý bù khi mở lại | Mô tả thuật toán bù thực thi, chống lặp và ghi đúng thời điểm thật khi implement | UC_2.3 |
+| Q03 | APPROVED_USER | SHB/0947800469/MAI THUY TRANG; Figma 284:3619 và 1027:4283 có nút Đã nhận | Kiểm tra chuẩn QR và mã SHB khi triển khai; không cần hỏi lại cách xác nhận | UC_3.1 |
+| Q04 | APPROVED_USER | SRC-01/P0872 ghi Tạo thông tin khách hàng nhưng P0878 ghi Xem; Design bảng 23 và sơ đồ SRS image17 ghi Tạo | Giữ ID UC_4.4; mapping chức năng tạo có đủ bằng chứng. Không sửa tên gốc trong bản trích; chưa cần chặn logic tạo chỉ vì lỗi tên | Traceability UC_4.4 |
+| Q05 | APPROVED_USER | SRC-02/P0402 và sơ đồ lớp image1 không có role; MatKhau CHAR(16) ở P0441. SRS có hai role | Đề xuất metadata kỹ thuật riêng cho role + hash/salt, tái sử dụng crypto hiện có; không giới hạn hash bằng CHAR(16), không lưu mật khẩu rõ. Cần chốt mapping lưu trữ và cách tạo chủ đầu tiên | Schema/auth |
+| Q06 | APPROVED_USER | ChiTietHoaDonBH logic ở SRC-02/P0411 và sơ đồ lớp có ThanhTien; bảng vật lý lặp khóa hóa đơn ở dòng cuối | Đề xuất dùng đúng 5 thuộc tính logic MaHDBH, MaSP, DonGia, SoLuong, ThanhTien; khóa kép MaHDBH+MaSP. Xác nhận trước khóa schema; giữ nguyên tài liệu nguồn | Schema bán hàng |
+| Q07 | APPROVED_USER | SRS BR-UC3-06 yêu cầu khách đã đăng ký thành viên; KhachHang chỉ có mã/tên/điện thoại/điểm tại SRC-02/P0404 | Chốt sự kiện đăng ký thành viên và cách lưu trạng thái; không suy ra cứ có hồ sơ là thành viên nếu chưa được phép | Khách hàng/bán hàng |
+| Q08 | APPROVED_USER | SRS P0556/P0580 yêu cầu mốc đã áp dụng và nhật ký; Design 10 thực thể chưa có cấu trúc lưu lịch, thông báo, version | Đề xuất các store metadata kỹ thuật tách biệt cho lịch/mốc, nhật ký, thông báo và version; không thêm màn hình nghiệp vụ. Chốt cấu trúc trước giai đoạn 2 | Schema/scheduler/phê duyệt |
+| Q09 | APPROVED_USER | SRS BR-UC7-11 yêu cầu giá vốn từng món; SanPham không có cột giá vốn; khóa chi tiết thu mua là MaHDTM+MaKhungGia | Chốt cách xác định giá vốn nếu cùng hóa đơn và khung giá có hai giá thu mua; đề xuất ghi liên kết/snapshot giá vốn từng món với sự cho phép rõ | Thu mua/lợi nhuận |
+| Q10 | APPROVED_USER | SRS BR-UC2-09 chỉ nêu chủ sửa giá thì reset, UC_2.2 cho nhân viên sửa giá | Chốt nhân viên đổi giá có reset chu kỳ không. Tuổi tồn thật vẫn theo ngày nhập, không đổi | Hàng hóa/giảm giá |
+| Q11 | APPROVED_USER | Danh sách hiện tại không có tên chuẩn trùng trong 291 match. Staff home 865:6434 chỉ có menu nhân viên; staff QR 1027:4283 lại có menu quản trị | Giữ quyền theo SRS; cần chốt hiển thị menu staff ở các node còn menu cũ. Không cấp thêm quyền dựa trên ảnh. 285 cặp màn hình chưa kiểm tra chi tiết | UI và quyền |
+| Q12 | APPROVED_USER | SRS BR-UC3-07 nêu 1 điểm/10.000đ, chưa nói phần lẻ; MONEY/DATE chưa có quy tắc làm tròn và biên kỳ | Đề xuất điểm nguyên lấy phần nguyên tiền thực trả/10.000; tiền VND nguyên đồng; ngày báo cáo theo giờ Việt Nam, bao gồm cả ngày cuối. Chốt cách làm tròn khoản giảm | Tiền/điểm/báo cáo |
+| Q13 | APPROVED_USER | SRS UC_7.2 luồng rỗng hiển thị thông báo, BR-UC7-09 có phép chia không nêu mẫu số 0 | Đề xuất trạng thái rỗng đúng nguồn, giá trị tính nội bộ trung bình = 0 khi không có giao dịch; không NaN/Infinity | Báo cáo chi phí |
+| Q14 | APPROVED_USER | 7 NFR được tách theo nhóm; SRS dùng ID đăng nhập 0, Design matrix dùng UC_0; sơ đồ nhóm nhân viên image35 ghi Xem là 8.3 thay vì bảng UC_8.4 | Alias 0 ↔ UC_0 chỉ phục vụ mapping; giữ nguyên ID/mục nguồn, không sửa bản gốc. Các số bước quay lại sai và câu lỗi khác nhau vẫn cần đối chiếu UI | Mã yêu cầu và nội dung |
+| Q15 | APPROVED_USER | Đã xem tổng quan hình nhúng; link Drive tại SRS P0178 không đọc được; Interaction description của Design là mẫu trống | Dùng sơ đồ nhúng để tiếp tục phần đã rõ; cần bản Drive có thể đọc nếu chứa chi tiết khác. Chưa tự tạo sequence diagram giả làm nguồn | Nguồn workflow |
+| Q16 | APPROVED_USER | Người dùng chọn SRS+Design gốc ổ D+Figma; 15 Word bổ sung chỉ tham khảo | Đã ghi SOURCE_REGISTER.csv; không hỏi lại thứ tự nguồn | Quản lý phiên bản |
+| Q17 | APPROVED_USER | Người dùng chọn bản CoCo riêng trong workspace, chưa gắn GitHub | Đã tạo CoCo, nhánh coco, chưa commit/remote; repo gốc không đổi | Môi trường dự án |
+| Q18 | APPROVED_USER | Design DS-229/P7464 có 1 dòng kết quả GD0001; Figma 1027:1287 nhập GD0001 nhưng vẫn hiển thị nhiều dòng | SRS UC_3.2 yêu cầu kết quả phù hợp điều kiện; dùng dữ liệu động đúng bộ lọc, không hard-code dữ liệu mẫu. Hình thức theo Figma, ghi rõ khác biệt dữ liệu mẫu | UI tìm kiếm bán hàng |
+| Q19 | APPROVED_USER | Nhãn sidebar/nút/tiêu đề có cách viết khác; ví dụ SRC-02 mô tả chào mừng COCO nhưng Figma 1:2 hiển thị CoCo; DS-151 tên số 3 tương ứng node số 4 | Giữ bảng alias màn hình; nội dung UI lấy Figma theo phân chia nguồn trong plan, không tự đổi nhãn. Nếu văn bản ảnh và mô tả làm thay đổi hành vi thì yêu cầu chốt riêng | Nhãn UI |
+| Q20 | APPROVED_USER | SRS BR-UC1-07 yêu cầu tiêu chí chất lượng; có trường độ mới nhưng chưa có bộ tiêu chí định lượng từ nguồn chuẩn | Cần tiêu chí/giá trị hợp lệ; không tự thêm thuật toán thẩm định hay AI/OCR | Thu mua |
+| Q21 | APPROVED_USER | NFR Peformance/NFR-01 yêu cầu phím tắt và lựa chọn giá nhanh, chưa chỉ rõ tổ hợp/giá trị | Chốt danh sách phím tắt/mức giá; không tự định nghĩa như yêu cầu nguồn. Đo hiệu năng không tự đặt SLA | NFR thao tác |
+| Q22 | APPROVED_USER | Design bảng 24–27 có hàng UC_2.3 nhưng không đánh dấu ô UI; catalog U15 mô tả chỉ xem lịch/nhật ký, không chạy tay | Traceability ghi U15 là quan hệ giám sát suy ra, không tự thêm dấu tick vào matrix nguồn. Tác vụ vẫn chạy tự động theo AD08, không thêm nút Chạy ngay | Mapping UC_2.3 |
+
+Các quyết định về cấu trúc lưu kỹ thuật có thể được duyệt theo một bảng mapping cụ thể thay vì hỏi lại từng trường. Không thay đổi layout, chính sách giá, vai trò hoặc scope để né những vấn đề này.
+
+## Phê chuẩn và chuyển tiếp ngày 10/11/2026
+
+Chỉ đạo người dùng: “Phê chuẩn toàn bộ các phương án đề xuất kỹ thuật trong planning/phase0/OPEN_ISSUES.md. Coi như Giai đoạn 0 đã nghiệm thu đạt điều kiện chuyển tiếp.”
+
+Q01–Q22: APPROVED_USER cho phương án và hướng xử lý đã nêu. Không yêu cầu phê chuẩn lại. Q05/Q07/Q08/Q09 còn bảng mapping cần cụ thể hóa trong Giai đoạn 2; Q10, cách làm tròn khoản giảm ở Q12, Q20 và Q21 chưa có giá trị/thuật toán cụ thể trong đề xuất gốc, được theo dõi khi triển khai module tương ứng. Việc duyệt không tạo ra dữ liệu nguồn hay bằng chứng đối chiếu 285 màn hình chưa xem. Các chi tiết này không chặn Giai đoạn 1.

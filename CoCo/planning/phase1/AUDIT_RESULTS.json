@@ -1,0 +1,30 @@
+{
+  "scope": "Static Phase 1 checks; browser tests recorded separately",
+  "results": [
+    {
+      "id": "P1-01",
+      "pass": true,
+      "detail": "No legacy domain or external integrations in source, dependencies, config or workflow"
+    },
+    {
+      "id": "P1-02",
+      "pass": true,
+      "detail": "No legacy seed, repository, adapter or engine"
+    },
+    {
+      "id": "P1-03",
+      "pass": true,
+      "detail": "Removed cloud SQL and old service worker"
+    },
+    {
+      "id": "P1-04",
+      "pass": true,
+      "detail": "Dedicated CoCoDB, no inherited local/session storage"
+    },
+    {
+      "id": "P1-05",
+      "pass": true,
+      "detail": "No external HTTP endpoint in application source"
+    }
+  ]
+}

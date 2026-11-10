@@ -1,0 +1,44 @@
+﻿name: CoCo checks and Pages
+on:
+  push:
+    branches: [coco, main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy to GitHub Pages
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy
+    needs: checks
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v4
+      - uses: actions/deploy-pages@v4
+        id: deployment

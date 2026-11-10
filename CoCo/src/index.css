@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'Be Vietnam Pro', sans-serif; color: #171717; background: #f5f0e8; font-synthesis: none; --surface: #fff; --border: #ece6d8; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 720px; }
+a { color: inherit; }
+button { font: inherit; cursor: pointer; padding: 12px 20px; background: #171717; color: white; border-radius: 10px; }
+:focus-visible { outline: 3px solid #806440; outline-offset: 4px; }
+.app-shell { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+.sidebar { background: var(--surface); padding: 42px 28px; border-right: 1px solid var(--border); }
+.brand { font-size: 42px; font-weight: 600; text-decoration: none; letter-spacing: -3px; }
+.brand-caption { margin: 8px 0 48px; font-size: 13px; color: #686057; }
+nav a { display: block; padding: 16px 20px; border-radius: 10px; text-decoration: none; }
+nav a.active { color: white; background: #171717; }
+.page-header { display: flex; justify-content: space-between; padding: 28px 40px; background: var(--surface); border-bottom: 1px solid var(--border); font-size: 14px; }
+#main-content { padding: 48px 40px; }
+.eyebrow { font-size: 12px; color: #686057; letter-spacing: 2px; }
+h1 { font-size: 30px; margin: 12px 0 30px; font-weight: 600; }
+h2 { font-size: 20px; font-weight: 600; margin-top: 0; }
+p { line-height: 1.8; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
+.startup { max-width: 640px; margin: 15vh auto; padding: 32px; }
+.skip-link { position: absolute; top: -100px; left: 20px; background: white; padding: 12px; z-index: 1; }
+.skip-link:focus { top: 12px; }

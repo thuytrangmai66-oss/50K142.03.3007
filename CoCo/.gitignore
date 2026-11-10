@@ -1,0 +1,52 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+dist-ssr/
+
+# Environment variables and private credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Test output and downloaded browsers
+coverage/
+playwright-report/
+test-results/
+.playwright-browsers/
+blob-report/
+
+# Logs, caches and temporary files
+*.log
+.cache/
+.vite/
+*.tsbuildinfo
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~$*
+
+# Machine-specific editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local agent workspace and backups
+.agent/
+.codex-backups/
+.codex-upstream/
+
+# Local database files and reference documents
+*.db
+*.sqlite
+*.sqlite3
+*.docx
