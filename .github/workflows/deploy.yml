@@ -1,37 +1,50 @@
-﻿name: CoCo checks and Pages
+name: CoCo checks and Pages
+
 on:
   push:
-    branches: [coco, main]
+    branches: [main]
   pull_request:
+    branches: [main]
   workflow_dispatch:
-    inputs:
-      deploy:
-        description: Deploy to GitHub Pages
-        type: boolean
-        default: false
+
 permissions:
   contents: read
+
 jobs:
   checks:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: CoCo
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: CoCo/package-lock.json
       - run: npm ci
-      - run: npm run typecheck
       - run: npm run lint
+      - run: npm run typecheck
       - run: npm test
+      - run: node scripts/audit-phase1.mjs
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
       - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
-          path: dist
+          path: CoCo/dist
+
   deploy:
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: checks
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
     permissions:
       pages: write
       id-token: write

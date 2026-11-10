@@ -6,7 +6,7 @@ test('shell, fallback route, persisted metadata and local requests', async ({ pa
     const url = new URL(request.url());
     if (['http:', 'https:'].includes(url.protocol) && url.hostname !== '127.0.0.1') external.push(url.href);
   });
-  await page.goto('/');
+  await page.goto('./');
   await expect(page.getByRole('heading', { name: 'Trang chủ', exact: true })).toBeVisible();
   await page.evaluate(() => new Promise<void>((resolve, reject) => {
     const connection = indexedDB.open('CoCoDB');
@@ -32,7 +32,7 @@ test('shell, fallback route, persisted metadata and local requests', async ({ pa
     };
   }));
   expect(application).toBe('keep');
-  await page.goto('/#/unknown');
+  await page.goto('./#/unknown');
   await expect(page.getByRole('heading', { name: 'Không tìm thấy trang' })).toBeVisible();
   await page.getByRole('link', { name: 'Về trang chủ' }).click();
   await expect(page.getByRole('heading', { name: 'Trang chủ', exact: true })).toBeVisible();
@@ -44,7 +44,7 @@ test('unavailable IndexedDB displays a recoverable startup error', async ({ page
   await page.addInitScript(() => {
     indexedDB.open = () => { throw new DOMException('Storage denied', 'SecurityError'); };
   });
-  await page.goto('/');
+  await page.goto('./');
   await expect(page.getByRole('alert')).toContainText('Không thể mở dữ liệu CoCo');
   await expect(page.getByRole('button', { name: 'Thử lại' })).toBeVisible();
 });

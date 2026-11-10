@@ -7,7 +7,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const walk = directory => fs.readdirSync(path.join(root, directory), { withFileTypes: true })
   .flatMap(entry => entry.isDirectory() ? walk(`${directory}/${entry.name}`) : [`${directory}/${entry.name}`]);
 const legacy = /supabase|motocare|moto-care|rental_requests|vehicles|gemini|emailjs|vietqr\.io|tesseract/i;
-const runtime = [...walk('src'), ...walk('.github'), 'package.json', 'package-lock.json', 'vite.config.ts', 'index.html'];
+const runtime = [...walk('src'), '../.github/workflows/deploy.yml', 'package.json', 'package-lock.json', 'vite.config.ts', 'index.html'];
 const results = [
   { id: 'P1-01', pass: runtime.every(file => !legacy.test(read(file))), detail: 'No legacy domain or external integrations in source, dependencies, config or workflow' },
   { id: 'P1-02', pass: !walk('src').some(file => /seed|adapter|repo\/|engine\//i.test(file)), detail: 'No legacy seed, repository, adapter or engine' },

@@ -4,6 +4,8 @@
 
 Ngày báo cáo: 10/11/2026, giờ Việt Nam. **Giai đoạn 1: ĐẠT điều kiện chuyển tiếp.** Đã hoàn tất việc loại bỏ nghiệp vụ thuê xe, ngắt Supabase và dựng khung CoCo chạy được typecheck/build.
 
+> Bổ sung CI/CD theo chỉ đạo tiếp theo ngày 10/11/2026: xem [CI_CD.md](CI_CD.md). Workflow hiện đặt ở root repository và tự kiểm tra/deploy khi push `main`. Các thông tin nhánh `coco`, chưa có remote, base tương đối, deploy thủ công và deploy ngoài phạm vi ở phần báo cáo gốc dưới đây là lịch sử trước bổ sung này. Roadmap và bước nghiệp vụ tiếp theo không thay đổi.
+
 ## Phê chuẩn và phạm vi
 
 Đã ghi nhận chỉ đạo phê chuẩn toàn bộ phương án kỹ thuật tại `planning/phase0/OPEN_ISSUES.md`, cập nhật trạng thái Q01–Q22 và kết luận nghiệm thu Giai đoạn 0 ĐẠT. Các dữ kiện nguồn và hạng mục đối chiếu còn lại được giữ dấu vết; việc phê chuẩn không biến chúng thành bằng chứng đã kiểm thử.
