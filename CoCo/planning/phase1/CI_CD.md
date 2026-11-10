@@ -20,9 +20,10 @@ Sau mỗi push `main`, workflow tự kiểm tra và cập nhật website nếu t
 
 - Local: `npm ci`, lint, typecheck, 1 unit test, 5 kiểm tra audit và build đều PASS. HTML build tham chiếu JS/CSS dưới `/50K142.03.3007/assets/`.
 - Smoke test bản build: 2/2 PASS trên Chromium với đường dẫn Pages. Lượt đầu trong sandbox không kết thúc sau khi tạo ảnh; đã dừng và chạy lại ngoài sandbox với `CI=true`, 1 worker và global timeout 90 giây, hoàn tất trong 2,9 giây.
-- Kết quả workflow/URL thực được ghi bổ sung sau khi hoàn tất; chưa dùng cấu hình workflow làm bằng chứng deploy thành công.
+- Workflow đầu tiên tự kích hoạt bằng push commit `2f6b8271e73e5cda1c13e7ba60eb12defd50fbd1` lên `main`: [run 42851055574](https://github.com/thuytrangmai66-oss/50K142.03.3007/actions/runs/42851055574) **SUCCESS**, cả `checks` và `deploy` thành công. Tất cả các bước install/lint/typecheck/unit/audit/build/Chromium smoke/artifact/Pages đều success.
+- URL Pages thực trả HTTP 200. Chromium profile kiểm thử riêng xác minh Trang chủ, reload, route không tồn tại và link quay lại Trang chủ đều PASS; không có page error hoặc response HTTP lỗi khi kiểm tra. Ảnh kiểm tra: `test-results/coco-pages-live.png` (artifact local, không commit). Lượt xác minh live đầu tiên bị lỗi chuỗi tiếng Việt khi PowerShell truyền script qua stdin; đã chạy lại bằng Unicode escape và đạt.
 - URL Pages đã được GitHub cấp: https://thuytrangmai66-oss.github.io/50K142.03.3007/.
-- Không thay đổi visibility, branch protection, quyền review PR, policy Actions hoặc các thiết lập repository khác.
+- Không thay đổi visibility, branch protection, quyền review PR, policy Actions hoặc các thiết lập repository khác. Chỉ bật Pages nguồn workflow; quyền deploy khai báo riêng trong workflow.
 
 Nguồn kỹ thuật: [Vite — GitHub Pages](https://vite.dev/guide/static-deploy.html#github-pages), [GitHub — workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax), [GitHub — Pages API](https://docs.github.com/en/rest/pages/pages).
 
