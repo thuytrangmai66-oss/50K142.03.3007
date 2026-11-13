@@ -1,5 +1,11 @@
 # Master plan phát triển CoCo
 
+> G9-D01/D02 đã được người dùng chốt ngày 13/11/2026: không đoán thanh toán/ngày lịch sử; loại UNVERIFIED và bản ghi thiếu thời gian tin cậy khỏi chỉ tiêu theo kỳ, bảo toàn gốc. Data layer đã triển khai, 410/410 unit/integration và 35/35 Chromium regression PASS; lint/typecheck/build PASS. G9-M01/U01 về nguồn ngày tạo và UI KPI cần review riêng, chưa ghi metadata hoặc thêm UI. Báo cáo tiền có thể tiếp tục theo Figma; không hỏi lại R01/R02, không tự DONE/commit/push/deploy. [Tiến độ G9](phase9/REPORT_PHASE_9.md) · [Decision Log](phase9/DECISION_LOG.md) · [Review](phase9/IMPLEMENTATION_REVIEW.md).
+
+> Chốt kiểm chứng G8-T06 ngày 13/11/2026: thêm 3 E2E về lỗi thanh toán/reload/retry hai vai trò và tranh chấp cùng sản phẩm. **Full Chromium 131/131 PASS**, 0 FAIL/SKIP; lint lượt T06 PASS. Runtime/build/lockfile không đổi, tái sử dụng baseline 345/345 unit/integration, typecheck/build PASS từ T05 (không chạy lại các lệnh này trong T06). T06 IMPLEMENTED / PENDING REVIEW; chưa nghiệm thu G8, chưa chuyển G9. [Execution](phase8/T06_EXECUTION.md) · [Gói review và ngoại lệ](phase8/G8_REVIEW_GATE.md). Không commit/push/deploy lượt này; các mốc dưới giữ làm lịch sử.
+
+> Tiếp tục G8-T05 ngày 13/11/2026 trên nền commit `7338294`: đã sửa popup lỗi lịch sử/chi tiết theo Figma, nền bảng lịch sử và vị trí mở danh sách; bổ sung 2 bài lỗi hai vai trò. **345/345 unit/integration, 128/128 full Chromium, lint/typecheck/build PASS**, 0 SKIP. T05 IMPLEMENTED / PENDING REVIEW; ô trạng thái trên chi tiết lịch sử mua vẫn OPEN/BLOCKED do SRS khác UI09. Không nghiệm thu G8, không chuyển G9, không commit/push/deploy lượt này. [Execution, file, mapping và ảnh](phase8/T05_EXECUTION.md). Các mốc bên dưới giữ làm lịch sử.
+
 > Cập nhật T05–T06 ngày 13/11/2026: đã nối lịch sử mua của khách với snapshot hóa đơn bán, tái sử dụng UI09 và chế độ in Ctrl+P; bổ sung kiểm thử điểm nhiều tab, scheduler/QR, rollback và reload. 345/345 unit/integration, lint/typecheck/build PASS; full Chromium cuối 125 PASS / 1 FAIL (phục hồi lịch sử thu mua). Đã dừng trước staging/commit/push theo chỉ đạo mới. T06 còn lỗi kiểm chứng; xem [báo cáo T06](phase8/T06_EXECUTION.md); chưa nghiệm thu G8. Các mốc phía dưới giữ làm lịch sử.
 
 > Sửa Bán hàng theo yêu cầu mới ngày 13/11/2026: D05 tự động ưu đãi thay checkbox; danh sách/chi tiết, tìm kết hợp và thanh nhập/quét mã UI10 đã có. P05/schema/mapping không đổi. Kiểm chứng 339 unit/integration, 123 full Chromium; sau chỉnh màu/spacing cuối, 19 Chromium liên quan, lint/typecheck/build PASS. [Báo cáo sửa module](phase8/SALES_FIGMA_SRS_FIX.md). Không đổi roadmap hoặc tự DONE G8; phần T05 còn lại/T06 vẫn theo plan.
@@ -79,7 +85,7 @@ Trạng thái sau coding G3 khác baseline trên: nhánh local `coco/phase-3-aut
 | G6 | Thu mua + phê duyệt liên kết | G4/G5, P03/P04/Q20 | 3 UC, draft/decision/finalize atomic/races/history | IN PROGRESS — PENDING REVIEW; audit và UI gate còn mở |
 | G7 | Hàng hóa + scheduler tồn lâu | G6, Q10/Q12/P10 | 3 UC, 29/30/44/45, catch-up, midnight, nhiều tab | IN PROGRESS — T01 PARTIAL; T02–T06 implemented, automated checks PASS, all PENDING REVIEW; barcode BLOCKED |
 | G8 | Bán hàng + membership + QR cục bộ | G4/G6/G7, P05/P06/Q12 | 2 UC, tiền mặt/QR, points/stock atomic/races | IN PROGRESS — T01 PENDING REVIEW; P05/P06/P07 gates open; G8 not accepted |
-| G9 | 5 báo cáo + dashboard hai vai trò | G6/G8 snapshots, G7 | 5 UC, VN period/zero/reconciliation/owner-only | NOT STARTED |
+| G9 | 5 báo cáo + dashboard hai vai trò | G6/G8 snapshots, G7 | 5 UC, VN period/zero/reconciliation/owner-only | IN PROGRESS / PARTIAL — data eligibility; M01/U01 review |
 | G10 | Tích hợp, visual, security, NFR và hồi quy | G3–G9, P11/Q21 | Mọi required UC/BR/SC/NFR và cross-flow | NOT STARTED |
 | G11 | Release Pages/rollback compatible/bàn giao | G10 và cho phép release | CI đúng SHA, production smoke, rollback dry run | NOT STARTED |
 

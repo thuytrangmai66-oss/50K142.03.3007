@@ -1,5 +1,31 @@
 # G8-T01 acceptance checklist
 
+## G8-T06 — kiểm chứng cuối 13/11/2026
+
+- [x] Rà soát coverage trước khi bổ sung, không viết lại T01–T05 hoặc đổi source runtime.
+- [x] Hai vai trò: lỗi native khi thanh toán → rollback toàn bộ store → reload giữ giỏ/điểm → quote mới → chỉ một hóa đơn/receipt/snapshot/audit và một lần cập nhật điểm.
+- [x] Owner/Staff đồng thời xác nhận cùng món: đúng một bên thành công, bên còn lại bị chặn, hóa đơn ghi đúng người thắng; đóng popup/reload không xử lý lại hoặc đổi vai trò.
+- [x] 3/3 bài mới PASS; full Chromium cuối **131/131 PASS, 0 FAIL, 0 SKIP**, exit 0. CSV ghi đủ 131 case; ảnh hai vai trò và tranh chấp lưu cùng execution.
+- [x] Lint T06 PASS. Baseline T05 345/345 unit/integration, typecheck/build PASS được tái sử dụng trên runtime/build/lockfile đã kiểm hash không đổi; không báo các lệnh đó đã chạy lại trong T06.
+- [x] G2–G7 và các bài G8 trước được giữ trong full Chromium; bài lỗi lịch sử thu mua cũ không tái hiện ở lượt cuối, chưa nhận đã xác minh nguyên nhân.
+- [ ] UI trạng thái chi tiết UC_4.5 vẫn OPEN/BLOCKED; không tự thêm trường ngoài Figma hoặc miễn trừ SRS.
+- [ ] Máy in/native print dialog, app ngân hàng và scanner vật lý: NOT RUN.
+- [ ] Chủ dự án review/nghiệm thu T05/T06/G8 và xử lý ngoại lệ trước G9; không tự DONE hoặc chuyển phase.
+
+[Execution T06](T06_EXECUTION.md) · [G8 review gate](G8_REVIEW_GATE.md). Các checklist bên dưới là lịch sử.
+
+## Tiếp tục G8-T05 — kết quả mới nhất 13/11/2026
+
+- [x] Popup lỗi lịch sử mua theo SC089, dùng component chung; nền giữ hồ sơ thật, không báo rỗng giả khi lỗi đọc.
+- [x] Nền bảng trắng theo vùng nội dung bằng Flexbox/min-height; không tự cuộn danh sách như trang chi tiết hoặc lặp tiêu đề ngoài breadcrumb.
+- [x] Hai bài mới Chủ/Nhân viên: lỗi invoice/list-history/history-invoice, đóng popup đúng route, phục hồi không F5, không thay store và không console error.
+- [x] Full unit/integration 345/345, full Chromium 128/128, lint/typecheck/build PASS trên bản sửa cuối; 0 SKIP. Lỗi lịch sử cũ không tái hiện trong 3 lượt riêng và full suite cuối; chưa kết luận nguyên nhân.
+- [ ] UC_4.5 MAIN: ô trạng thái trong chi tiết không có trên UI09 — BLOCKED/OPEN đối chiếu SRS–Figma, giữ thiết kế, chưa miễn trừ yêu cầu.
+- [ ] Máy in/native print dialog, app ngân hàng và scanner vật lý: NOT RUN.
+- [ ] Chủ dự án nghiệm thu T05/T06/G8; không tự DONE hoặc chuyển G9.
+
+[Báo cáo, file, mapping UC/BR và ảnh](T05_EXECUTION.md). Các checklist bên dưới giữ làm lịch sử các lượt trước.
+
 ## T05–T06, 13/11/2026 — kiểm chứng hiện tại
 
 Các mục bên dưới thay thế trạng thái còn thiếu lịch sử/in ở ghi chú cũ; các con số kiểm thử trước đó giữ làm lịch sử. Chưa nghiệm thu G8.
