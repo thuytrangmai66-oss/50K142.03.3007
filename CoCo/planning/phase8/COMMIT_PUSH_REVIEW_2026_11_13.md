@@ -1,5 +1,7 @@
 # Kiểm tra phạm vi commit CoCo — 13/11/2026
 
+> Báo cáo này lưu lượt kiểm tra đã dừng trước commit/push vì test FAIL. Khi nhận chỉ đạo tiếp tục T05 sau đó, repository đã có commit `7338294` cùng upstream. Lượt T05 mới không commit/push; kiểm chứng hiện tại 345/345 unit/integration và 128/128 Chromium PASS, xem [T05_EXECUTION.md](T05_EXECUTION.md). Không dùng kết quả push hay test lịch sử dưới đây làm trạng thái hiện tại.
+
 Nguồn ủy quyền: người dùng yêu cầu trực tiếp commit và push phiên bản hiện tại, giữ branch, không merge main, không force/reset/rebase và không tự deploy. Chỉ đạo này thay thế giới hạn không commit/push ở các execution lịch sử; không thay đổi trạng thái nghiệm thu.
 
 ## Git và phạm vi

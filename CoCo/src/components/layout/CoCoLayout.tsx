@@ -14,7 +14,8 @@ export function CoCoLayout() {
   const salesDetail = location.pathname.startsWith('/sales/transactions/');
   const salesEditor = location.pathname.startsWith('/sales/') && !salesDetail;
   const heading = /^\/customers\/[^/]+\/purchases/.test(location.pathname) ? <>Khách hàng<span className="purchase-breadcrumb"> / Lịch sử mua</span></> : location.pathname === '/sales' || salesDetail ? 'Bán hàng' : location.pathname === '/inventory/discounts' ? <>Hàng hóa<span className="purchase-breadcrumb"> / Xử lý hàng tồn lâu</span></> : location.pathname.startsWith('/inventory') ? 'Hàng hóa' : location.pathname.startsWith('/approvals') ? 'Phê duyệt' : location.pathname === '/purchases' || purchaseDetail ? 'Thu mua' : purchaseEditor ? 'Thu mua / Tạo giao dịch' : salesEditor ? 'Bán hàng / Tạo giao dịch' : /^\/customers\/[^/]+\/sales/.test(location.pathname) ? <>Khách hàng<span className="purchase-breadcrumb"> / Lịch sử bán</span></> : location.pathname.startsWith('/customers') ? 'Khách hàng' : location.pathname.startsWith('/price-brackets') ? 'Khung giá thu mua' : location.pathname.startsWith('/staff') ? 'Nhân viên' : 'Trang Chủ';
-  const isDetail = location.pathname !== '/inventory/discounts' && (purchaseDetail || salesDetail || /^\/(inventory|customers|price-brackets|staff)\/[^/]+/.test(location.pathname));
+  const customerPurchaseHistory = /^\/customers\/[^/]+\/purchases$/.test(location.pathname);
+  const isDetail = !customerPurchaseHistory && location.pathname !== '/inventory/discounts' && (purchaseDetail || salesDetail || /^\/(inventory|customers|price-brackets|staff)\/[^/]+/.test(location.pathname));
   useEffect(() => {
     if (!window.matchMedia('(min-width: 761px)').matches) return;
     const main = document.getElementById('main-content');

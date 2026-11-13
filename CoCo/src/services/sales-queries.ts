@@ -1,6 +1,6 @@
 import type { CoCoDatabase } from '../db/schema';
 import { calendarDate, entitySchemas, identifier } from '../domain/records';
-import { paidSaleSchema } from '../domain/sale-payment';
+import { paidSaleSchema, type SaleSnapshot } from '../domain/sale-payment';
 import { paginate } from '../domain/pagination';
 import { RepositoryError } from '../repositories/constraints';
 import { AuthService } from './auth/service';
@@ -11,29 +11,40 @@ export interface SalesFilters { id: string; name: string; phone: string; date: s
 const dayVN = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Ho_Chi_Minh' });
 const invalid = () => new RepositoryError('REFERENCE', 'Dữ liệu hóa đơn bán hàng không nhất quán');
 
-/** Read only: snapshots are checked against the persisted graph, never repaired. */
-export async function readSaleInvoice(db: CoCoDatabase, raw: unknown) {
+/** Shared graph reader: deliberately independent from any payment timestamp. */
+export async function readSaleInvoiceGraph(db: CoCoDatabase, raw: unknown) {
   const invoice = entitySchemas.hoaDonBanHang.parse(raw);
   const currentCustomer = entitySchemas.khachHang.parse(await db.khachHang.get(invoice.MaKH));
   const employee = entitySchemas.nhanVien.parse(await db.nhanVien.get(invoice.MaNV));
   const storedLines = (await db.chiTietHoaDonBH.where('MaHDBH').equals(invoice.MaHDBH).toArray()).map(line => entitySchemas.chiTietHoaDonBH.parse(line));
   if (!storedLines.length) throw invalid();
   const products = await Promise.all(storedLines.map(async line => entitySchemas.sanPham.parse(await db.sanPham.get(line.MaSP))));
+  return { invoice, currentCustomer, employee, storedLines, products };
+}
+export async function assertSaleSnapshotGraph(db: CoCoDatabase, graph: Awaited<ReturnType<typeof readSaleInvoiceGraph>>, snapshot: SaleSnapshot) {
+  const { invoice, storedLines, products } = graph;
+  if (snapshot.invoiceId !== invoice.MaHDBH || snapshot.customer.id !== invoice.MaKH || snapshot.employee.id !== invoice.MaNV
+    || snapshot.total !== invoice.TongTien || snapshot.discount !== invoice.TienKhuyenMai || snapshot.customer.pointsEarned !== invoice.TichDiem
+    || snapshot.mapping.completed !== invoice.TrangThai || snapshot.mapping[snapshot.method] !== invoice.PTTT
+    || snapshot.lines.length !== storedLines.length) throw invalid();
+  for (const line of snapshot.lines) {
+    const stored = storedLines.find(row => row.MaSP === line.productId), product = products.find(row => row.MaSP === line.productId);
+    if (!stored || !product || product.MaHDTM !== line.sourcePurchaseId || stored.DonGia !== line.unitPrice
+      || stored.SoLuong !== line.quantity || stored.ThanhTien !== line.lineTotal) throw invalid();
+    const mapping = await db.appMetadata.get(`purchase-status-mapping:${product.MaHDTM}`);
+    if (!mapping || product.TrangThai !== statusMappingSchema.parse(JSON.parse(mapping.value)).productSold) throw invalid();
+  }
+}
+
+/** Read only: snapshots are checked against the persisted graph, never repaired. */
+export async function readSaleInvoice(db: CoCoDatabase, raw: unknown) {
+  const graph = await readSaleInvoiceGraph(db, raw);
+  const { invoice, currentCustomer, employee, storedLines, products } = graph;
   const metadata = await db.appMetadata.get(saleInvoiceKey(invoice.MaHDBH));
   const paid = metadata ? paidSaleSchema.parse(JSON.parse(metadata.value)) : undefined;
   if (paid) {
-    const snapshot = paid.snapshot;
-    if (snapshot.invoiceId !== invoice.MaHDBH || snapshot.customer.id !== invoice.MaKH || snapshot.employee.id !== invoice.MaNV
-      || snapshot.total !== invoice.TongTien || snapshot.discount !== invoice.TienKhuyenMai || snapshot.customer.pointsEarned !== invoice.TichDiem
-      || snapshot.mapping.completed !== invoice.TrangThai || snapshot.mapping[snapshot.method] !== invoice.PTTT
-      || Date.parse(paid.paidAt) !== Date.parse(invoice.NgayBan) || snapshot.lines.length !== storedLines.length) throw invalid();
-    for (const line of snapshot.lines) {
-      const stored = storedLines.find(row => row.MaSP === line.productId), product = products.find(row => row.MaSP === line.productId);
-      if (!stored || !product || product.MaHDTM !== line.sourcePurchaseId || stored.DonGia !== line.unitPrice
-        || stored.SoLuong !== line.quantity || stored.ThanhTien !== line.lineTotal) throw invalid();
-      const mapping = await db.appMetadata.get(`purchase-status-mapping:${product.MaHDTM}`);
-      if (!mapping || product.TrangThai !== statusMappingSchema.parse(JSON.parse(mapping.value)).productSold) throw invalid();
-    }
+    await assertSaleSnapshotGraph(db, graph, paid.snapshot);
+    if (Date.parse(paid.paidAt) !== Date.parse(invoice.NgayBan)) throw invalid();
   }
   const subtotalBig = storedLines.reduce((sum, line) => sum + BigInt(line.ThanhTien), 0n);
   if (subtotalBig > BigInt(Number.MAX_SAFE_INTEGER)) throw invalid();

@@ -436,6 +436,32 @@ p { line-height: 1.8; }
 .history-links svg { width: 36px; height: 36px; }
 .customer-summary { padding: 24px 28px; }
 .customer-summary p { margin: 0 0 8px; }
+.customer-purchase-history { display: flex; flex-direction: column; min-block-size: 100%; }
+.customer-purchase-history > .reference-toolbar { flex-shrink: 0; }
+.customer-purchase-history > .back-link { align-self: flex-start; }
+.customer-purchase-history > .history-card { display: flex; flex-direction: column; flex: 1 0 auto; }
+.customer-purchase-history .data-table-scroll { flex: 1 0 auto; overflow: visible; }
+.report-picker { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-block-start: clamp(2rem, 8svh, 6rem); }
+.report-choice { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; min-block-size: clamp(10rem, 21svh, 13.5rem); padding: 1.25rem; border: 0; background: #fff; color: #000; cursor: pointer; font: inherit; }
+.report-choice svg { width: 2.75rem; height: 2.75rem; }
+.report-choice strong { max-inline-size: 15rem; font-size: 1.125rem; line-height: 1.4; }
+.report-period-form { background: #fff; padding: 1.5rem; border-radius: .75rem; }
+.report-period-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(8rem, 12rem); align-items: end; gap: .75rem; }
+.report-period-fields:has(label:nth-of-type(2)) { grid-template-columns: minmax(0, 1fr) repeat(2, minmax(7rem, 9rem)); }
+.report-period-fields fieldset { min-inline-size: 0; border: 0; padding: 0; margin: 0; }
+.report-period-fields legend, .report-period-fields label { font-weight: 600; }
+.report-period-fields legend { margin-block-end: .5rem; }
+.report-period-fields label { display: flex; flex-direction: column; gap: .5rem; font-size: .875rem; }
+.report-period-fields input { width: 100%; min-width: 0; border: 1px solid #aeb0b4; border-radius: .5rem; padding: .65rem; font: inherit; }
+.report-period-fields input[aria-invalid="true"] { border-color: #ff383c; color: #ff383c; }
+.report-period-kinds { display: flex; border-radius: .5rem; background: var(--accent); }
+.report-period-kinds button { flex: 1; border: 0; padding: .65rem .5rem; background: transparent; border-radius: .5rem; font: inherit; white-space: nowrap; cursor: pointer; }
+.report-period-kinds button[aria-pressed="true"] { background: #000; color: #fff; font-weight: 700; }
+.report-period-actions { display: flex; align-items: center; gap: 1.5rem; margin-block-start: 1.25rem; }
+.report-period-actions .coco-button { min-inline-size: 10rem; border-radius: 1.25rem; }
+.report-period-actions .field-error { display: flex; align-items: center; gap: .5rem; margin: 0; }
+@media (max-width: 1100px) { .report-period-fields, .report-period-fields:has(label:nth-of-type(2)) { grid-template-columns: repeat(2, minmax(0, 1fr)); } .report-period-fields fieldset { grid-column: 1 / -1; } .report-period-kinds { flex-wrap: wrap; } }
+@media (max-width: 760px) { .report-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); } .report-period-actions { flex-wrap: wrap; } }
 .invoice-total { text-align: right; font-size: 22px; font-weight: 700; }
 .form-dialog { width: 920px; max-width: calc(100vw - 32px); max-height: calc(100svh - 32px); border: 0; padding: 0; background: #f5f0e8; overflow: auto; }
 .form-dialog::backdrop { background: rgb(0 0 0 / 36%); }
