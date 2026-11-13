@@ -1,0 +1,800 @@
+{
+  "capturedAtUTC": "2026-11-11T09:33:08.247Z",
+  "branch": "coco/phase-5-staff",
+  "baseCommit": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "status": "uncommitted; no stage/push/merge/deploy",
+  "scope": "shared table layout and pagination only; no schema/data/authorization/business-rule changes",
+  "defaultPageSize": 9,
+  "perModule": {
+    "customers": 9,
+    "staff": 9,
+    "priceBrackets": 9
+  },
+  "before": {
+    "capturedAtUTC": "2026-11-11T09:20:34.368Z",
+    "measurements": [
+      {
+        "route": "customers",
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/customers-1366x768.png",
+        "renderedRows": 10,
+        "tableHeight": 430,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 684
+      },
+      {
+        "route": "customers",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/customers-1440x900.png",
+        "renderedRows": 10,
+        "tableHeight": 528,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 816
+      },
+      {
+        "route": "customers",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/customers-1920x1080.png",
+        "renderedRows": 10,
+        "tableHeight": 708,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 996
+      },
+      {
+        "route": "staff",
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/staff-1366x768.png",
+        "renderedRows": 10,
+        "tableHeight": 452,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 684
+      },
+      {
+        "route": "staff",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/staff-1440x900.png",
+        "renderedRows": 10,
+        "tableHeight": 550,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 816
+      },
+      {
+        "route": "staff",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/staff-1920x1080.png",
+        "renderedRows": 10,
+        "tableHeight": 730,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 996
+      },
+      {
+        "route": "price-brackets",
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/price-brackets-1366x768.png",
+        "renderedRows": 10,
+        "tableHeight": 452,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 684
+      },
+      {
+        "route": "price-brackets",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/price-brackets-1440x900.png",
+        "renderedRows": 10,
+        "tableHeight": 550,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 816
+      },
+      {
+        "route": "price-brackets",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "screenshot": "planning/phase5/evidence/pagination9/before/price-brackets-1920x1080.png",
+        "renderedRows": 10,
+        "tableHeight": 730,
+        "tableScrollHeight": 758,
+        "internalVerticalScroll": true,
+        "paginationTop": 996
+      }
+    ],
+    "codeFiles": [
+      {
+        "path": "src/app/providers.tsx",
+        "sha256": "9bce9ddadd55ecb45e3496aeb9c9091b25dcd2619f23ba9810ad6ae3b2ee3713"
+      },
+      {
+        "path": "src/app/router.tsx",
+        "sha256": "c522cb52e6eab40e0a1b888377e0b488d32e7048d3afe7abc3158a5befd5b399"
+      },
+      {
+        "path": "src/App.tsx",
+        "sha256": "c1c76bdc6ec4d63959c02a7e785f01e1e9bc0f89fd9b85d784aef8e66e05a4fd"
+      },
+      {
+        "path": "src/assets/coco-mark.png",
+        "sha256": "69d06b27c6906dc97d08fe096e72bcd60cb11bf65cc6f0d99c3f08de94599410"
+      },
+      {
+        "path": "src/components/layout/CoCoLayout.tsx",
+        "sha256": "497172b6fa7376de7d84e79194638ecfe0f6263c317bed863dd1576c29f9fc7c"
+      },
+      {
+        "path": "src/components/ui/Button.tsx",
+        "sha256": "34e361feb632d50b5940b98820376d6dc1e46fbfcbbefcf4b9f43bbcc456e5ea"
+      },
+      {
+        "path": "src/components/ui/DataTable.tsx",
+        "sha256": "065ecede909d37d6a66939ba36a7edbbb78ae6e9dfb352aa8d845105229b650b"
+      },
+      {
+        "path": "src/components/ui/Field.tsx",
+        "sha256": "f677fc85af83989620e3b1440cbe7607a12d83c4b0b3ca283053622d685a942a"
+      },
+      {
+        "path": "src/components/ui/FormDialog.tsx",
+        "sha256": "33880d4941f5846e1e3b92d137109ce85e34832929e0f90d285862cc9fc06d39"
+      },
+      {
+        "path": "src/components/ui/Notice.tsx",
+        "sha256": "21e2397295df0da12d953edab8b16845a9916e3e0ba258c4b5314f25c900f254"
+      },
+      {
+        "path": "src/components/ui/ResultDialog.tsx",
+        "sha256": "12e1d8dd83cba63e57ac8336a4dd0ce0cddb2fa8d3fae822986233350cbd0345"
+      },
+      {
+        "path": "src/db/index.ts",
+        "sha256": "04cb0756d8523de1335c39c868366690239b9a80ee81020a5a4041368e33ca0b"
+      },
+      {
+        "path": "src/db/schema.ts",
+        "sha256": "e6b19b9245052467dfb6da35dbf34ab68e34cc6956d1a29a55f4c7bd9ec3ccd2"
+      },
+      {
+        "path": "src/domain/auth.ts",
+        "sha256": "493dbec501f150afb57eebe72e752816a04cbb956c99348278c461a985d863c6"
+      },
+      {
+        "path": "src/domain/conditions.ts",
+        "sha256": "587ab9534080cec3e9750999cfadbb770f4606f446ccd8b16d1f4e6fd290c0fa"
+      },
+      {
+        "path": "src/domain/formatters.ts",
+        "sha256": "2377bcc1cd0594197145c9be5e016801cfa23774f5801a018f5f4c1e11e0b701"
+      },
+      {
+        "path": "src/domain/records.ts",
+        "sha256": "5e16f7be2aad01ee0f61775b3158498f50421375e125b9d3a7b3a26da1302036"
+      },
+      {
+        "path": "src/features/auth/AuthPage.tsx",
+        "sha256": "7383bbe261b869e91565d378295d670be2f8eeb4f4db464483a8e469b3f68db7"
+      },
+      {
+        "path": "src/features/auth/AuthProvider.tsx",
+        "sha256": "64de99727f21431738f95bac98252d35967ec89bd954f6bd745cb02d1c689dc4"
+      },
+      {
+        "path": "src/features/auth/context.ts",
+        "sha256": "e76d53abf289270ce20bd95a4b4952ada079716b5e09ebcea8cf0311498963d4"
+      },
+      {
+        "path": "src/features/auth/use-auth.ts",
+        "sha256": "c59f283b45d19f77a77b99f6d1e901ac4d95c723cadb6be426a8e1cc0e2fb5fe"
+      },
+      {
+        "path": "src/features/customers/CustomerDetailPage.tsx",
+        "sha256": "e3cfb5d916a10c8c6bdc33a1f598aa9ab50ff6211a6567d876378a8b78d929e7"
+      },
+      {
+        "path": "src/features/customers/CustomerForm.tsx",
+        "sha256": "3a5e91023e10367c7fe2f9ebd1414f25bb3874fa44b22085a0a40b39a0781d33"
+      },
+      {
+        "path": "src/features/customers/CustomerHistoryPage.tsx",
+        "sha256": "96f835b718e71b5fb3aa3de3c38184558dfe9671395cbe4b24b30379ddcdb2d6"
+      },
+      {
+        "path": "src/features/customers/CustomersPage.tsx",
+        "sha256": "89bfaf388b6d0347ca8184e6b4f26bb9d4abc2c7e19bffd1fd1ea25e544426b8"
+      },
+      {
+        "path": "src/features/customers/CustomerToolbar.tsx",
+        "sha256": "c08a40549de92f8998e42bf3e2db6c0dc3a3574259065f7c51b65fa7606eeafc"
+      },
+      {
+        "path": "src/features/home/HomePage.tsx",
+        "sha256": "a4963a548fe5e1da85d49652404e1cd31a5f4056516d360906ea530d1d588af9"
+      },
+      {
+        "path": "src/features/price-brackets/BracketForm.tsx",
+        "sha256": "56b88e31386c63d0de09f238d682db747d66189e4732994541dbf28f74a6a90a"
+      },
+      {
+        "path": "src/features/price-brackets/PriceBracketsPage.tsx",
+        "sha256": "f5cf185c569ffaf6c15fa894a0e466a07ed703fec11f9db377fbde419f004521"
+      },
+      {
+        "path": "src/features/reference-data/use-resource.ts",
+        "sha256": "bee8bbefc6485db021e4b12b9da812fe540cd3990694d6344d07f58fd81b8597"
+      },
+      {
+        "path": "src/features/staff/StaffForm.tsx",
+        "sha256": "f246f017b046904ab81baa0c1ecdbb920f78cc0f674c8d7c9348c8f992316347"
+      },
+      {
+        "path": "src/features/staff/StaffPages.tsx",
+        "sha256": "13e0c4e4889e23e261d96303d3918ae231195aad2898727df779269c9a46bdcf"
+      },
+      {
+        "path": "src/index.css",
+        "sha256": "fa72363cb6e007451f004e4543264ef4aa1db02ba976f4d60370aaa9ab6f5908"
+      },
+      {
+        "path": "src/main.tsx",
+        "sha256": "e11d62b317fddd796a860b83ab04f8f947f8cbaed9c1a1083a02e2058e9fd9da"
+      },
+      {
+        "path": "src/repositories/constraints.ts",
+        "sha256": "b99494a1f3ebfdcf207fc6048d17cb0d0964f4ce42489b895a489b4ee1f71446"
+      },
+      {
+        "path": "src/repositories/index.ts",
+        "sha256": "b2507c3a82a26d59b53e3b4ff4187dcab37c8656dda0730e72b22015fbd793ed"
+      },
+      {
+        "path": "src/services/auth/crypto.ts",
+        "sha256": "8b95459cd3f14d3a32ef43d68ae2b7de335a602b663d7b9644e44d47ea1a16cc"
+      },
+      {
+        "path": "src/services/auth/errors.ts",
+        "sha256": "f74ba7708d684b6d6bf5fce85a4ce756193c148433a5ee73e42e9dbd397c5a1a"
+      },
+      {
+        "path": "src/services/auth/service.ts",
+        "sha256": "b571fe113ef0900dae5010422b9506189fc251ed3c4015249ef62268570e6c64"
+      },
+      {
+        "path": "src/services/auth/storage.ts",
+        "sha256": "deb6cb43d596562060ced5633ee2f2d52e69ada76818b639985b41ddfe15a233"
+      },
+      {
+        "path": "src/services/permissions.ts",
+        "sha256": "7d001389660657d119664bebfc47306429dfd48d67dd5328a5d14f5d3da4174b"
+      },
+      {
+        "path": "src/services/reference-data/contracts.ts",
+        "sha256": "4283bf869ac7f1851aff7f0ffff52e7e48d1609a0740264c7c8c33f89fa354d4"
+      },
+      {
+        "path": "src/services/reference-data/local.ts",
+        "sha256": "064a2f5537ebe26f96bb4fe947ddbf1a5658447e15d659fe7ebfadefbc0c71dc"
+      },
+      {
+        "path": "src/services/staff-accounts.ts",
+        "sha256": "edc4825883ee89ab2c9933ed0bdc7bde9997d3809545d91462207cda18e0d29d"
+      },
+      {
+        "path": "src/vite-env.d.ts",
+        "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+      }
+    ]
+  },
+  "modifiedSourceFiles": [
+    "src/components/ui/DataTable.tsx",
+    "src/features/price-brackets/PriceBracketsPage.tsx",
+    "src/features/staff/StaffPages.tsx",
+    "src/index.css",
+    "src/services/reference-data/contracts.ts",
+    "src/services/reference-data/local.ts"
+  ],
+  "addedSourceFiles": [
+    "src/domain/pagination.ts"
+  ],
+  "testResults": {
+    "vitest": {
+      "passed": 101,
+      "failed": 0,
+      "skipped": 0,
+      "files": 6
+    },
+    "chromium": {
+      "passed": 39,
+      "failed": 0,
+      "skipped": 0,
+      "retries": 0
+    },
+    "lint": "PASS",
+    "typecheckViaBuild": "PASS",
+    "build": "PASS",
+    "pixelBaseline": "NOT RUN",
+    "unimplementedG6G9Modules": "NOT RUN",
+    "ciPagesForWorkingTree": "NOT RUN"
+  },
+  "layout": {
+    "states": 120,
+    "targetStates": 72,
+    "shortWindowStates": 48,
+    "maxCrossScreenDelta": 0,
+    "screens": [
+      {
+        "screen": "owner-customers",
+        "states": 30,
+        "targetStates": 18,
+        "maxYDelta": 0,
+        "maxCenterError": 0,
+        "internalVerticalScrollStates": 0
+      },
+      {
+        "screen": "staff-customers",
+        "states": 30,
+        "targetStates": 18,
+        "maxYDelta": 0,
+        "maxCenterError": 0,
+        "internalVerticalScrollStates": 0
+      },
+      {
+        "screen": "owner-staff",
+        "states": 30,
+        "targetStates": 18,
+        "maxYDelta": 0,
+        "maxCenterError": 0,
+        "internalVerticalScrollStates": 0
+      },
+      {
+        "screen": "owner-price-brackets",
+        "states": 30,
+        "targetStates": 18,
+        "maxYDelta": 0,
+        "maxCenterError": 0,
+        "internalVerticalScrollStates": 0
+      }
+    ]
+  },
+  "codeFiles": [
+    {
+      "pathFromApp": "src/App.tsx",
+      "sha256": "c1c76bdc6ec4d63959c02a7e785f01e1e9bc0f89fd9b85d784aef8e66e05a4fd"
+    },
+    {
+      "pathFromApp": "src/app/providers.tsx",
+      "sha256": "9bce9ddadd55ecb45e3496aeb9c9091b25dcd2619f23ba9810ad6ae3b2ee3713"
+    },
+    {
+      "pathFromApp": "src/app/router.tsx",
+      "sha256": "c522cb52e6eab40e0a1b888377e0b488d32e7048d3afe7abc3158a5befd5b399"
+    },
+    {
+      "pathFromApp": "src/assets/coco-mark.png",
+      "sha256": "69d06b27c6906dc97d08fe096e72bcd60cb11bf65cc6f0d99c3f08de94599410"
+    },
+    {
+      "pathFromApp": "src/components/layout/CoCoLayout.tsx",
+      "sha256": "497172b6fa7376de7d84e79194638ecfe0f6263c317bed863dd1576c29f9fc7c"
+    },
+    {
+      "pathFromApp": "src/components/ui/Button.tsx",
+      "sha256": "34e361feb632d50b5940b98820376d6dc1e46fbfcbbefcf4b9f43bbcc456e5ea"
+    },
+    {
+      "pathFromApp": "src/components/ui/DataTable.tsx",
+      "sha256": "8a75933a114634b040835cd8756c8fbfe385744fdb0be4f6e42895b233d4b392"
+    },
+    {
+      "pathFromApp": "src/components/ui/Field.tsx",
+      "sha256": "f677fc85af83989620e3b1440cbe7607a12d83c4b0b3ca283053622d685a942a"
+    },
+    {
+      "pathFromApp": "src/components/ui/FormDialog.tsx",
+      "sha256": "33880d4941f5846e1e3b92d137109ce85e34832929e0f90d285862cc9fc06d39"
+    },
+    {
+      "pathFromApp": "src/components/ui/Notice.tsx",
+      "sha256": "21e2397295df0da12d953edab8b16845a9916e3e0ba258c4b5314f25c900f254"
+    },
+    {
+      "pathFromApp": "src/components/ui/ResultDialog.tsx",
+      "sha256": "12e1d8dd83cba63e57ac8336a4dd0ce0cddb2fa8d3fae822986233350cbd0345"
+    },
+    {
+      "pathFromApp": "src/db/index.ts",
+      "sha256": "04cb0756d8523de1335c39c868366690239b9a80ee81020a5a4041368e33ca0b"
+    },
+    {
+      "pathFromApp": "src/db/schema.ts",
+      "sha256": "e6b19b9245052467dfb6da35dbf34ab68e34cc6956d1a29a55f4c7bd9ec3ccd2"
+    },
+    {
+      "pathFromApp": "src/domain/auth.ts",
+      "sha256": "493dbec501f150afb57eebe72e752816a04cbb956c99348278c461a985d863c6"
+    },
+    {
+      "pathFromApp": "src/domain/conditions.ts",
+      "sha256": "587ab9534080cec3e9750999cfadbb770f4606f446ccd8b16d1f4e6fd290c0fa"
+    },
+    {
+      "pathFromApp": "src/domain/formatters.ts",
+      "sha256": "2377bcc1cd0594197145c9be5e016801cfa23774f5801a018f5f4c1e11e0b701"
+    },
+    {
+      "pathFromApp": "src/domain/pagination.ts",
+      "sha256": "3e68194ac877b3b4eea9973c3168f5b02ae7daa110d1ac0cea9c0913a3b4664e"
+    },
+    {
+      "pathFromApp": "src/domain/records.ts",
+      "sha256": "5e16f7be2aad01ee0f61775b3158498f50421375e125b9d3a7b3a26da1302036"
+    },
+    {
+      "pathFromApp": "src/features/auth/AuthPage.tsx",
+      "sha256": "7383bbe261b869e91565d378295d670be2f8eeb4f4db464483a8e469b3f68db7"
+    },
+    {
+      "pathFromApp": "src/features/auth/AuthProvider.tsx",
+      "sha256": "64de99727f21431738f95bac98252d35967ec89bd954f6bd745cb02d1c689dc4"
+    },
+    {
+      "pathFromApp": "src/features/auth/context.ts",
+      "sha256": "e76d53abf289270ce20bd95a4b4952ada079716b5e09ebcea8cf0311498963d4"
+    },
+    {
+      "pathFromApp": "src/features/auth/use-auth.ts",
+      "sha256": "c59f283b45d19f77a77b99f6d1e901ac4d95c723cadb6be426a8e1cc0e2fb5fe"
+    },
+    {
+      "pathFromApp": "src/features/customers/CustomerDetailPage.tsx",
+      "sha256": "e3cfb5d916a10c8c6bdc33a1f598aa9ab50ff6211a6567d876378a8b78d929e7"
+    },
+    {
+      "pathFromApp": "src/features/customers/CustomerForm.tsx",
+      "sha256": "3a5e91023e10367c7fe2f9ebd1414f25bb3874fa44b22085a0a40b39a0781d33"
+    },
+    {
+      "pathFromApp": "src/features/customers/CustomerHistoryPage.tsx",
+      "sha256": "96f835b718e71b5fb3aa3de3c38184558dfe9671395cbe4b24b30379ddcdb2d6"
+    },
+    {
+      "pathFromApp": "src/features/customers/CustomerToolbar.tsx",
+      "sha256": "c08a40549de92f8998e42bf3e2db6c0dc3a3574259065f7c51b65fa7606eeafc"
+    },
+    {
+      "pathFromApp": "src/features/customers/CustomersPage.tsx",
+      "sha256": "89bfaf388b6d0347ca8184e6b4f26bb9d4abc2c7e19bffd1fd1ea25e544426b8"
+    },
+    {
+      "pathFromApp": "src/features/home/HomePage.tsx",
+      "sha256": "a4963a548fe5e1da85d49652404e1cd31a5f4056516d360906ea530d1d588af9"
+    },
+    {
+      "pathFromApp": "src/features/price-brackets/BracketForm.tsx",
+      "sha256": "56b88e31386c63d0de09f238d682db747d66189e4732994541dbf28f74a6a90a"
+    },
+    {
+      "pathFromApp": "src/features/price-brackets/PriceBracketsPage.tsx",
+      "sha256": "2bcb235ee8ec08e4d6fd3ef7c70268e02de43ff01796ce5e6025334cb04ca721"
+    },
+    {
+      "pathFromApp": "src/features/reference-data/use-resource.ts",
+      "sha256": "bee8bbefc6485db021e4b12b9da812fe540cd3990694d6344d07f58fd81b8597"
+    },
+    {
+      "pathFromApp": "src/features/staff/StaffForm.tsx",
+      "sha256": "f246f017b046904ab81baa0c1ecdbb920f78cc0f674c8d7c9348c8f992316347"
+    },
+    {
+      "pathFromApp": "src/features/staff/StaffPages.tsx",
+      "sha256": "486887bd6b0484ef830c0ddf2aab8872b4db0e7156247d394879d0407beca2e6"
+    },
+    {
+      "pathFromApp": "src/index.css",
+      "sha256": "c79d473c3b0c2ce1f6ed7d9a97fcc9e4fa3aaa7d0be7a616fb2269cfba5a737e"
+    },
+    {
+      "pathFromApp": "src/main.tsx",
+      "sha256": "e11d62b317fddd796a860b83ab04f8f947f8cbaed9c1a1083a02e2058e9fd9da"
+    },
+    {
+      "pathFromApp": "src/repositories/constraints.ts",
+      "sha256": "b99494a1f3ebfdcf207fc6048d17cb0d0964f4ce42489b895a489b4ee1f71446"
+    },
+    {
+      "pathFromApp": "src/repositories/index.ts",
+      "sha256": "b2507c3a82a26d59b53e3b4ff4187dcab37c8656dda0730e72b22015fbd793ed"
+    },
+    {
+      "pathFromApp": "src/services/auth/crypto.ts",
+      "sha256": "8b95459cd3f14d3a32ef43d68ae2b7de335a602b663d7b9644e44d47ea1a16cc"
+    },
+    {
+      "pathFromApp": "src/services/auth/errors.ts",
+      "sha256": "f74ba7708d684b6d6bf5fce85a4ce756193c148433a5ee73e42e9dbd397c5a1a"
+    },
+    {
+      "pathFromApp": "src/services/auth/service.ts",
+      "sha256": "b571fe113ef0900dae5010422b9506189fc251ed3c4015249ef62268570e6c64"
+    },
+    {
+      "pathFromApp": "src/services/auth/storage.ts",
+      "sha256": "deb6cb43d596562060ced5633ee2f2d52e69ada76818b639985b41ddfe15a233"
+    },
+    {
+      "pathFromApp": "src/services/permissions.ts",
+      "sha256": "7d001389660657d119664bebfc47306429dfd48d67dd5328a5d14f5d3da4174b"
+    },
+    {
+      "pathFromApp": "src/services/reference-data/contracts.ts",
+      "sha256": "a9a5c639cd5d52f96a3789339ea63ef6c0b3df9452b0866c96e490ed4130b20b"
+    },
+    {
+      "pathFromApp": "src/services/reference-data/local.ts",
+      "sha256": "645998cc286db4326e97ed351a597b94e3a6e64efe40876bd9930ca7894cf3b4"
+    },
+    {
+      "pathFromApp": "src/services/staff-accounts.ts",
+      "sha256": "edc4825883ee89ab2c9933ed0bdc7bde9997d3809545d91462207cda18e0d29d"
+    },
+    {
+      "pathFromApp": "src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    }
+  ],
+  "testFiles": [
+    {
+      "pathFromApp": "tests/e2e/pagination.spec.ts",
+      "sha256": "ef016d15d6b5dcbbcf6f6c505d68393bd7dab61945d4b210faf319cdb80208c4"
+    },
+    {
+      "pathFromApp": "tests/e2e/pagination-helpers.ts",
+      "sha256": "479baf1ca68dceac917d4323a304ef1880b25eb6bfcef0c33f44deae35e38779"
+    },
+    {
+      "pathFromApp": "tests/e2e/reference-data.spec.ts",
+      "sha256": "02fb1cee037534958b704b057939e6c75955e42d966a93f9f597a6f384834b34"
+    },
+    {
+      "pathFromApp": "tests/unit/pagination.test.ts",
+      "sha256": "6d35c76e4ad2a85450f4d37afe4ea1787ea92f08642aa63d9a1e8e0f8793e5a2"
+    },
+    {
+      "pathFromApp": "tests/unit/reference-data.test.ts",
+      "sha256": "c6434bb4e2f4f79bf58eff81b7273e3c8f88db9f079d5ad4fd12cae37e55b9d6"
+    }
+  ],
+  "sourceFrames": [
+    {
+      "screen": "SC75",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-75.png",
+      "sha256": "2a1a7727df509ca7d2caddeecfd50f0cda1fe35c010e7d4587eee895b01a927d"
+    },
+    {
+      "screen": "SC267",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-267.png",
+      "sha256": "18189b40c857fbf0102a0764cf4c3d496bd81a5f047b23e0635a46d8158d19bc"
+    },
+    {
+      "screen": "SC145",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-145.png",
+      "sha256": "bc15e4b143571fc161a3754e449ee80c04518ce37bd57f6f71668cd8884aeb5a"
+    },
+    {
+      "screen": "SC163",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-163.png",
+      "sha256": "97c355b9dc2d1dbe707c88031b3dcdbdf2cf15576140b5954e38b871c8524f7a"
+    },
+    {
+      "screen": "SC87",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-87.png",
+      "sha256": "3165ac87c5d55cc7122ee5efae45cc5b64115dadbede8d7b6148d15a69f4e503"
+    },
+    {
+      "screen": "SC91",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-91.png",
+      "sha256": "3836d2f62198e0810ce22cbaf512b4041bc9b8c29b867b12c97458713125fe7c"
+    }
+  ],
+  "artifacts": [
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/owner-customers-metrics.json",
+      "sha256": "66d7e63ae95c2ed669517a389b747f2b1881717dbb2fa48abbad36e3a6abfc2c"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-customers-0-1366x768.png",
+      "sha256": "8f38430d32e715c7e8822d4980c0bd7c96740b3da27406199bc4090d0eb2ccec"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-customers-1-1366x768.png",
+      "sha256": "4f8770a02f34cfd7f7fcf1e12a87c9e17883f64ea9f25dcc6e5bbffacb88d06c"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-customers-10-1366x768.png",
+      "sha256": "b0616696fd12c54cafd77e64f3539c837a46f81f20229df67eba20f6b43eb113"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-customers-25-1366x768.png",
+      "sha256": "b46b81a0a1b651dd79c245714440af5d0f46bfd8261f2696f0f45b3030db9978"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-customers-25-1440x900.png",
+      "sha256": "aeeedd876f90a5e28ff4b07103c9c6e9da0ec0a0bbdb9e5cacd90a71b0785e9e"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-customers-25-1920x1080.png",
+      "sha256": "4604814c3c7313a966608d55731ae5d61877198ccfe1d766f3b51936e602ea63"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-customers-9-1366x768.png",
+      "sha256": "5f7d44aca893fc2beb0b91a2e3fd691ec3d37e4ad54bbfa58e8cc6ff6ff7b6d1"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/staff-customers-metrics.json",
+      "sha256": "66d7e63ae95c2ed669517a389b747f2b1881717dbb2fa48abbad36e3a6abfc2c"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/staff-customers-0-1366x768.png",
+      "sha256": "6e48aeb223e68047652139cb990e81fe7ecd6fb80f646648a4e1accb24c2311a"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/staff-customers-1-1366x768.png",
+      "sha256": "82e7c34415f1534ade9ab991a48995067eaceda8510ff873ec11cda23353e44d"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/staff-customers-10-1366x768.png",
+      "sha256": "29d2ebebf529083f0a5ca260599bcd67b5db70323473879b132ea66cc49ce8b8"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/staff-customers-25-1366x768.png",
+      "sha256": "8bebd5e76fb4e45be4d5a9a6871f6dc00e9a5db9b7996f894ff82da3cfa6c31c"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/staff-customers-25-1440x900.png",
+      "sha256": "ac07e0c7089f6d4d26dfe401f482393e0c3f3df79bd91906c33429acbfb438ac"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/staff-customers-25-1920x1080.png",
+      "sha256": "7b912d46e8c09dc6bfc43a58f267ee29e0554632ff3d05feb76bbf77d778959b"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/staff-customers-9-1366x768.png",
+      "sha256": "cb361537f54cf43b01a9544d61dce5bdb6da30d1d55960c9e53da96248ca8ea7"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/owner-staff-metrics.json",
+      "sha256": "53e2aba2800ed873b11cb11800843bf69e4d2d97ecc75204ed119826ad4b0df1"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-staff-0-1366x768.png",
+      "sha256": "f9080ae1e37312c134453f258ff13e7b8df909d9e678c0a8d86622cd87cf9d51"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-staff-1-1366x768.png",
+      "sha256": "13896ad03200d403a369239bc1d3ad9b64f207329a921e0d43146cc9b76cb792"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-staff-10-1366x768.png",
+      "sha256": "fe376c8be5e9f24916b072b1d4921843c33b0925a92ae5eae27341a42fe7160c"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-staff-25-1366x768.png",
+      "sha256": "a41bee8f7d0d58232ca805e6034e8937f01509ec5bdd4234d5ac8873e2224540"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-staff-25-1440x900.png",
+      "sha256": "ec2e4bb2e38907ea668c9825b40384cd11e3794f31f9745bfe0ec6c7c5c4d141"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-staff-25-1920x1080.png",
+      "sha256": "3635b79be29e22a35b59ef09574cc796b4da8bb259148e6e0fd235eadf50f189"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-staff-9-1366x768.png",
+      "sha256": "2ab0c31664d48860db587dfe38c42033956b134cc5c1c17bb0a45e52db8c5797"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/owner-price-brackets-metrics.json",
+      "sha256": "334673ab9ae826bcd76afa0320da7f653853c3494e85b1b878228e4a716feb54"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-price-brackets-0-1366x768.png",
+      "sha256": "8b3fe9d5e13bdd9738861c172f19cacb06a07666ee4c45f1321f4ec3ac816abd"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-price-brackets-1-1366x768.png",
+      "sha256": "cec2aa34ed2a20569f128962b461a0f13547643d446133ea93f358961b4fab76"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-price-brackets-10-1366x768.png",
+      "sha256": "9e3b14a312cb1c401b749b303422d587488c433d77e6c87bc39009dbcd4d661f"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-price-brackets-25-1366x768.png",
+      "sha256": "55f61f2b1f0ee517e180ae36c7b2894243b42e0d600fdb5c97e06387bc4f3565"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-price-brackets-25-1440x900.png",
+      "sha256": "ba9bb4251a5540ccaaeb446dfac8645e5001fc74c57e6224a2ee8ade6c82278d"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-price-brackets-25-1920x1080.png",
+      "sha256": "5908b3e432c740a4e5856e5b13eea404ee3e1ca7d1f94946a2fabdccdc446372"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/after/owner-price-brackets-9-1366x768.png",
+      "sha256": "6b339f3384b7152a2e5f4c6cfe7a8792cd093fb8b5db943cf3b8aae40577c909"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/customers-1366x768.png",
+      "sha256": "46597e2308ef825c687b25f1b527fd34914af9c12d663b91ad8c8aeab52cd372"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/customers-1440x900.png",
+      "sha256": "310a6077da20508d5f6cb5823a8ff0907d3f5a4a076e354c45edbeefd66181be"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/customers-1920x1080.png",
+      "sha256": "57e89d6e73e1791e7a63762497fac54cc60e2240948f43d1297c9273b7ece1ab"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/staff-1366x768.png",
+      "sha256": "cc009f41e57a6c3a905cec2acaf853e837a36d7f7df8b6571cb8470836d82e75"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/staff-1440x900.png",
+      "sha256": "43b3df8e303421fcb79a40db6d710e64489ba816f7c6f4e792749066bbefb7fb"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/staff-1920x1080.png",
+      "sha256": "826a5bcab6292b5b00c8303ed40b92e08f25e0c2f0784b427d78bc338d315a97"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/price-brackets-1366x768.png",
+      "sha256": "7493989d98455897537042a91d7a5e6814bc55af3f7bb01757bc3a74335dbe94"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/price-brackets-1440x900.png",
+      "sha256": "2905301cbf6e63fdef04c22d807dc0aa63f50085216320a2e1ae7feccea69412"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination9/before/price-brackets-1920x1080.png",
+      "sha256": "503ed18bc1cc67134b8b259bacbec911bba0650278c9732223230a93017010e6"
+    }
+  ],
+  "checks": {
+    "unrelatedSourceUnchanged": true,
+    "schemaDependenciesViteConfigUnchanged": true,
+    "gitDiffCheck": "PASS",
+    "stagedFiles": 0
+  }
+}

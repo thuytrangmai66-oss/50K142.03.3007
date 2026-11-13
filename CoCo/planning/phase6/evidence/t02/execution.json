@@ -1,0 +1,90 @@
+{
+  "capturedAt": "2026-11-11T15:51:40.903Z",
+  "branch": "coco/phase-5-staff",
+  "baseHead": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "approval": "User: Nghiệm thu T01, cho phép kích hoạt P03/P04 và làm T02",
+  "runtime": {
+    "dexieVersion": 4,
+    "nativeVersion": 40,
+    "stores": 27,
+    "legacyRewritten": false
+  },
+  "checks": [
+    {
+      "command": "npm.cmd run lint",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm.cmd run typecheck",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm.cmd test",
+      "status": "PASS",
+      "passed": 171,
+      "failed": 0,
+      "files": 9,
+      "exitCode": 0
+    },
+    {
+      "command": "npm.cmd run build",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/audit-phase1.mjs --phase=6",
+      "status": "PASS",
+      "passed": 5,
+      "exitCode": 0
+    },
+    {
+      "command": "CI=1 npm.cmd run test:e2e -- --retries=0 --reporter=line",
+      "status": "PASS",
+      "passed": 59,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 0,
+      "retries": 0,
+      "exitCode": 0
+    }
+  ],
+  "t02Chromium": {
+    "passed": 5,
+    "roles": [
+      "owner",
+      "staff"
+    ],
+    "viewports": [
+      "1366x768",
+      "1440x900",
+      "1920x1080"
+    ],
+    "realUi": true
+  },
+  "notRun": [
+    "T03/T04 owner decision and delivery demo A-E",
+    "T05 invoice/stock finalization UI",
+    "T06 invoice search",
+    "user/manual/pixel acceptance",
+    "CI/Pages deployment"
+  ],
+  "acceptance": {
+    "T01": "ACCEPTED_USER",
+    "T02": "READY_FOR_REVIEW",
+    "G5": "NOT_CHANGED",
+    "G6": "IN_PROGRESS"
+  },
+  "earlierRun": {
+    "passedFirstTry": 56,
+    "flakyAfterRetry": 2,
+    "total": 58,
+    "note": "Not clean evidence; final sequential build then zero-retry run above supersedes it."
+  },
+  "notes": [
+    "No commit/push/deploy. User browser storage not reset.",
+    "Tests use isolated databases/browser contexts.",
+    "Counts transcribed from actual completed tool runs; screenshots and native logs copied from final run."
+  ]
+}

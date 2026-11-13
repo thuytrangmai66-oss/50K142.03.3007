@@ -1,0 +1,74 @@
+{
+  ".sidebar": {
+    "x": 26,
+    "y": 16,
+    "width": 397,
+    "height": 868
+  },
+  ".page-header": {
+    "x": 461,
+    "y": 31,
+    "width": 943,
+    "height": 75
+  },
+  ".purchase-heading > button": {
+    "x": 461,
+    "y": 153,
+    "width": 108,
+    "height": 49
+  },
+  ".purchase-title-card": {
+    "x": 579,
+    "y": 138,
+    "width": 825,
+    "height": 73
+  },
+  ".purchase-title-card > strong": {
+    "x": 905.4375,
+    "y": 155,
+    "width": 145,
+    "height": 39
+  },
+  ".purchase-lines .data-table-scroll": {
+    "x": 461,
+    "y": 227,
+    "width": 619,
+    "height": 657
+  },
+  ".purchase-customer": {
+    "x": 1093,
+    "y": 227,
+    "width": 311,
+    "height": 255
+  },
+  ".purchase-payment": {
+    "x": 1093,
+    "y": 497,
+    "width": 311,
+    "height": 387
+  },
+  ".customer-phone-lookup .field-input": {
+    "x": 1114,
+    "y": 299,
+    "width": 278,
+    "height": 43
+  },
+  ".purchase-customer > .coco-field .field-input": {
+    "x": 1114,
+    "y": 397,
+    "width": 278,
+    "height": 43
+  },
+  ".purchase-payment .button-beige": {
+    "x": 1126,
+    "y": 823,
+    "width": 108,
+    "height": 49
+  },
+  ".purchase-payment .button-secondary": {
+    "x": 1267,
+    "y": 823,
+    "width": 108,
+    "height": 49
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "file": "owner-inventory-1366.png",
+    "sha256": "62024dae72445126df9531c62325e5998abb3244b0d24044c7406cddf6cf7603"
+  },
+  {
+    "file": "owner-inventory-1440.png",
+    "sha256": "bff2d74b6b8307a95d16245be21a2818b35760a91cdd8c3692925eb92c94a93c"
+  },
+  {
+    "file": "owner-inventory-1920.png",
+    "sha256": "b8a6f2c20bdd8b0a8265b2f4921caf311cc3273f4dbe8e12f2373021ecc45948"
+  },
+  {
+    "file": "owner-inventory-detail.png",
+    "sha256": "63f90fdee782012ab45f6dfcad0c5bf1e59b3e49de526c8c04992c07d07d23de"
+  },
+  {
+    "file": "staff-inventory-1366.png",
+    "sha256": "e3dcb444e748ee162cc63efc2962a1ac4f25ad1fcb1bb0d7e237be199a9b6954"
+  },
+  {
+    "file": "staff-inventory-1440.png",
+    "sha256": "263db52b0990e4f3e03c13bb9c645f3175a3bbc1f6890cdb10699dd56e518a48"
+  },
+  {
+    "file": "staff-inventory-1920.png",
+    "sha256": "7edd2fb18e454cbb66becac71f636daaf15b716db2b7e3a366fa1e1eabd35b34"
+  },
+  {
+    "file": "staff-inventory-detail.png",
+    "sha256": "0caffcb61df2388879a74de993b87a4cfb468b5431553c212d2d911d73a7d814"
+  }
+]

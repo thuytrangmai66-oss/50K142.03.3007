@@ -1,6 +1,7 @@
 import { useEffect, useState, type PropsWithChildren } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { initializeDatabase } from '../db';
+import { AuthProvider } from '../features/auth/AuthProvider';
 
 export function AppProviders({ children }: PropsWithChildren) {
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
@@ -18,5 +19,5 @@ export function AppProviders({ children }: PropsWithChildren) {
     <p>Vui lòng cho phép lưu dữ liệu trên trình duyệt rồi thử lại.</p>
     <button onClick={() => window.location.reload()}>Thử lại</button>
   </main>;
-  return <HashRouter>{children}</HashRouter>;
+  return <HashRouter><AuthProvider>{children}</AuthProvider></HashRouter>;
 }

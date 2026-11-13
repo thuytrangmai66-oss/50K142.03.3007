@@ -1,0 +1,43 @@
+﻿{
+    "executedAt":  "2026-11-12T20:14:04.6773755+07:00",
+    "branch":  "coco/phase-5-staff",
+    "head":  "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+    "workingTree":  "pre-existing dirty tree preserved; T06 changes uncommitted",
+    "checks":  {
+                   "lint":  0,
+                   "typecheck":  0,
+                   "test":  0,
+                   "build":  0
+               },
+    "unit":  {
+                 "suites":  20,
+                 "notRun":  0,
+                 "failed":  0,
+                 "passed":  249
+             },
+    "chromium":  {
+                     "startTime":  "2026-11-12T13:10:16.264Z",
+                     "duration":  197684.21399999998,
+                     "expected":  93,
+                     "skipped":  0,
+                     "unexpected":  0,
+                     "flaky":  0
+                 },
+    "e2eExit":  {
+                    "chromium":  0
+                },
+    "status":  {
+                   "G6":  "IN PROGRESS",
+                   "T05":  "PENDING REVIEW",
+                   "T06":  "PENDING REVIEW"
+               },
+    "blocked":  [
+                    "BR-UC1-16 employee field in detail UI: user chose to preserve Figma",
+                    "BR-UC1-16 status field in detail UI: user chose to preserve Figma"
+                ],
+    "acceptance":  "NOT RUN: final user acceptance and pixel review",
+    "sourceManifest":  "source-manifest.json",
+    "localhost":  "http://127.0.0.1:5173/50K142.03.3007/",
+    "localhostStatus":  200,
+    "production":  "No commit, push or deploy"
+}

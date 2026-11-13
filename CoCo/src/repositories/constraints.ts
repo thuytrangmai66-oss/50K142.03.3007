@@ -1,16 +1,17 @@
 import type { CoCoDatabase } from '../db/schema';
 import type { RecordKey, RecordMap, RecordName } from '../domain/records';
 
-export class RepositoryError extends Error {
-  constructor(public readonly code: 'VALIDATION' | 'DUPLICATE' | 'NOT_FOUND' | 'CONFLICT' | 'REFERENCE' | 'IMMUTABLE' | 'OPERATION_REUSED', message: string) {
-    super(message);
-    this.name = 'RepositoryError';
-  }
-}
+import { RepositoryError } from './errors';
+export { RepositoryError } from './errors';
+import { validateCandidatePurchaseReferences, resolveCandidatePurchaseDetail } from './purchase-links';
+import { inventoryAttributesKey, inventoryAttributesSchema, cycleKey, cycleSchema } from '../domain/inventory';
 
 // Called inside the same read/write transaction as every mutation. IndexedDB
 // does not provide foreign keys; check the final state, including reverse links.
 export async function validateReferences(db: CoCoDatabase): Promise<void> {
+  // Runtime v3 has no candidate metadata: every legacy FK follows the same path.
+  const candidate = db.verno === 4 && db.tables.some(table => table.name === 'purchaseProvenance');
+  if (candidate) await validateCandidatePurchaseReferences(db);
   async function requireRecord<N extends RecordName>(table: N, key: RecordKey<N>): Promise<RecordMap[N]> {
     const record = await db.table<RecordMap[N], RecordKey<N>>(table).get(key);
     if (!record) throw new RepositoryError('REFERENCE', `Missing reference in ${table}`);
@@ -33,6 +34,7 @@ export async function validateReferences(db: CoCoDatabase): Promise<void> {
     await requireRecord('khungGiaThuMua', record.MaKhungGia);
   }
   for (const record of await db.sanPham.toArray()) {
+    if (candidate && await resolveCandidatePurchaseDetail(db, record)) continue;
     await requireRecord('chiTietHoaDonTM', [record.MaHDTM, record.MaKhungGia]);
   }
   for (const record of await db.hoaDonBanHang.toArray()) {
@@ -55,6 +57,13 @@ export async function validateReferences(db: CoCoDatabase): Promise<void> {
     }
   }
   for (const record of await db.discountApplications.toArray()) await requireRecord('sanPham', record.MaSP);
+  for (const record of await db.appMetadata.filter(row => row.key.startsWith('inventory-attributes:') || row.key.startsWith('inventory-cycle:')).toArray()) {
+    const attributes = record.key.startsWith('inventory-attributes:');
+    const value = attributes ? inventoryAttributesSchema.parse(JSON.parse(record.value)) : cycleSchema.parse(JSON.parse(record.value));
+    if (record.key !== (attributes ? inventoryAttributesKey(value.productId) : cycleKey(value.productId))) throw new RepositoryError('REFERENCE', 'Invalid inventory metadata key');
+    const product = await requireRecord('sanPham', value.productId);
+    if ('startedOn' in value && value.startedOn !== product.NgayBatDauChuKyGiam) throw new RepositoryError('REFERENCE', 'Invalid inventory cycle');
+  }
   for (const record of await db.notifications.toArray()) {
     await requireRecord('taiKhoan', record.recipient);
     await requireRecord('yeuCauPheDuyetGia', record.MaYC);

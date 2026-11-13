@@ -1,5 +1,7 @@
 # Báo cáo Giai đoạn 2 nền dữ liệu CoCo
 
+> Bổ sung sau coding G3 ngày 11/11/2026: nội dung v2/27 test bên dưới là mốc lịch sử G2. G3 giữ nền này, thêm authSessions qua migration v3 và auth/guard/UI; 49 Vitest + 10 Chromium PASS. Xem [REPORT_PHASE_3.md](../phase3/REPORT_PHASE_3.md). G3 chưa commit/push/deploy.
+
 Ngày 10/11/2026. Đã hiện thực phạm vi nền dữ liệu được nêu trong bước tiếp theo của Giai đoạn 1. Kết quả kỹ thuật local đạt; chưa ghi nhận người dùng nghiệm thu thay cho chỉ đạo trực tiếp. Không thay đổi roadmap, thứ tự phase hoặc AD01–AD08.
 
 ## Kết quả
@@ -30,3 +32,5 @@ CI/CD trên `main` tiếp tục dùng workflow đã thiết lập. Bảng trên 
 Lớp repository chưa được nối với màn hình ghi dữ liệu; đây chưa phải nghiệm thu 27 UC hoặc xác thực/phân quyền. Các service sau phải kiểm tra quyền và các quy tắc nghiệp vụ trước khi gọi repository. Đã có cấu trúc hash/salt/role nhưng chưa có login hay chủ đầu tiên; cấu trúc membership, snapshot giá vốn, lịch giảm và thông báo chưa đồng nghĩa đã triển khai các luồng đó.
 
 Không tự quyết định Q10, làm tròn khoản giảm Q12, Q20 hoặc Q21. `MASTER_PLAN_COCO.md` chưa có trong checkout, nên báo cáo này chỉ xác nhận phạm vi Giai đoạn 2 đã được ghi ở báo cáo trước, không đặt lại tên hoặc thứ tự phase tiếp theo.
+
+> Cập nhật ngày 11/11/2026: câu về thiếu master ở trên là trạng thái lúc lập báo cáo. Nay có [master plan đề xuất](../MASTER_PLAN_COCO.md) theo prompt mới và [baseline chạy lại](../BASELINE_AUDIT.md); vẫn chờ người dùng duyệt thứ tự/scope trước khi code tiếp. Không đổi kết luận hoặc mở rộng phạm vi nghiệm thu Giai đoạn 2 bằng kế hoạch chưa triển khai.

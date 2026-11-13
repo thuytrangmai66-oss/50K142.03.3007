@@ -1,6 +1,6 @@
 import Dexie from 'dexie';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { CoCoDatabase } from '../../src/db/schema';
+import { COCO_SCHEMA_VERSION, CoCoDatabase } from '../../src/db/schema';
 import { calendarDate, entitySchemas, recordSchemas, type RecordMap } from '../../src/domain/records';
 import { CoCoRepository, type Change, type Command } from '../../src/repositories';
 
@@ -45,9 +45,9 @@ it('migrates a real v1 schema without resetting metadata or seeding business rec
   await v1.table('appMetadata').add({ key: 'preserve', value: 'from-phase-1' });
   v1.close();
   await database.open();
-  expect(database.verno).toBe(2);
+  expect(database.verno).toBe(COCO_SCHEMA_VERSION);
   expect(await database.appMetadata.get('preserve')).toEqual({ key: 'preserve', value: 'from-phase-1' });
-  expect(database.tables).toHaveLength(20);
+  expect(database.tables).toHaveLength(27);
   for (const table of database.tables.filter(table => table.name !== 'appMetadata')) expect(await table.count()).toBe(0);
 });
 

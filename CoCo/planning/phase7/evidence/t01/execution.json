@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-11-12T14:21:06.005Z",
+  "branch": "coco/phase-7",
+  "head": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "checks": {
+    "lint": 0,
+    "typecheck": 0,
+    "test": 0,
+    "build": 0
+  },
+  "finalCodeChecks": {
+    "lint": 0,
+    "typecheck": 0
+  },
+  "build": {
+    "build": 0
+  },
+  "chromiumExit": {
+    "chromium": 0
+  },
+  "unit": {
+    "pass": 265,
+    "fail": 0,
+    "skip": 0,
+    "files": 13
+  },
+  "chromium": {
+    "startTime": "2026-11-12T14:13:49.971Z",
+    "duration": 384756.563,
+    "expected": 98,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "dependenciesUnchangedAgainstHead": true,
+  "audit": {
+    "rerun": false,
+    "knownStatus": "FAIL from G6-T07; 13 package findings",
+    "evidence": "../../../phase6/evidence/t07/npm-audit.json"
+  },
+  "status": {
+    "G6": "PENDING REVIEW",
+    "G7": "IN PROGRESS",
+    "T01": "PARTIAL/PENDING REVIEW"
+  },
+  "blocked": [
+    "barcode payload mapping",
+    "Q10 staff price cycle reset",
+    "Q12 discount rounding",
+    "P10 below-20000 policy"
+  ],
+  "notImplemented": [
+    "T02 edit producer",
+    "T03 cycle updates",
+    "T04 scheduler",
+    "T05 run locking/logs",
+    "T06 monitor"
+  ],
+  "constraints": "No schema migration, dependency change, commit, push, deploy, seed or user-data reset"
+}

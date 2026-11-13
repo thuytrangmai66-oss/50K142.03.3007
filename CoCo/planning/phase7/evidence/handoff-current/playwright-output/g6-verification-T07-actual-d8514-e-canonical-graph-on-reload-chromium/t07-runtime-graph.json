@@ -1,0 +1,39 @@
+{
+  "nativeVersion": 40,
+  "storeCount": 27,
+  "legacyKeys": [
+    "MaHDTM",
+    "MaKhungGia"
+  ],
+  "draftId": "D90a33706",
+  "invoiceId": "TMec29bc4c",
+  "customerId": "KH522c6393",
+  "requestId": "Yd39489ef",
+  "statusMapping": {
+    "invoiceCompleted": 1,
+    "productAvailable": 1,
+    "productSold": 2
+  },
+  "pendingNoFabrication": true,
+  "lineBinding": true,
+  "sharedInvoiceWithoutReload": true,
+  "lines": [
+    {
+      "id": "a873284c-0301-48c3-94d2-c7a0134048ca",
+      "quantity": 1,
+      "unitCost": 120000
+    },
+    {
+      "id": "f2d96deb-1828-43f4-bf79-c3426248ec6c",
+      "quantity": 2,
+      "unitCost": 80005
+    }
+  ],
+  "invoiceCount": 1,
+  "productCount": 3,
+  "provenanceCount": 3,
+  "costsCount": 3,
+  "reloadPreservedAllStores": true,
+  "independentSessions": true,
+  "consoleErrors": []
+}

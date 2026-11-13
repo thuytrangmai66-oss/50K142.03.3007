@@ -1,0 +1,63 @@
+﻿{
+    "recordedAt":  "2026-11-12T10:19:52.0325015+07:00",
+    "branch":  "coco/phase-5-staff",
+    "baseHead":  "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+    "status":  "IN PROGRESS / PARTIAL / AWAITING STATUS MAPPING",
+    "runtimeActivated":  false,
+    "lint":  "PASS",
+    "typecheck":  "PASS",
+    "build":  "PASS",
+    "unit":  {
+                 "success":  true,
+                 "failed":  0,
+                 "passed":  232
+             },
+    "chromiumRegression":  {
+                               "startTime":  "2026-11-12T03:13:39.461Z",
+                               "duration":  138184.13499999998,
+                               "expected":  81,
+                               "skipped":  0,
+                               "unexpected":  0,
+                               "flaky":  0
+                           },
+    "nativeAfterMappingMarker":  {
+                                     "startTime":  "2026-11-12T03:17:29.579Z",
+                                     "duration":  4785.005999999999,
+                                     "expected":  1,
+                                     "skipped":  0,
+                                     "unexpected":  0,
+                                     "flaky":  0
+                                 },
+    "uiFinalizeE2E":  "NOT RUN",
+    "pending":  [
+                    "User confirmation of numeric status mapping",
+                    "Runtime finalizer binding and UI E2E",
+                    "T05 acceptance"
+                ],
+    "files":  [
+                  {
+                      "path":  "src/services/purchase-finalization.ts",
+                      "sha256":  "4594f0e613ac082dc05df1d2ccad6240bc137f4c4070c53455939024d454dabc"
+                  },
+                  {
+                      "path":  "src/features/auth/context.ts",
+                      "sha256":  "bff78a1706d98822c5b97cf33fc41da69a1d7a14109c92c7f3f8296f0004175b"
+                  },
+                  {
+                      "path":  "src/features/purchases/PurchaseEditor.tsx",
+                      "sha256":  "1d57344d9bace61dc97063eaaa7005588133ccbfedc52e3714be4448d7ad90c5"
+                  },
+                  {
+                      "path":  "tests/unit/purchase-finalization.test.ts",
+                      "sha256":  "4d81423c320fc5872c16127f603e360b0d19e259ef12a9a79b7b9c7e93a3ee14"
+                  },
+                  {
+                      "path":  "tests/fixtures/purchase-finalization-browser.ts",
+                      "sha256":  "d28fbdbb3df49ad841aef627c2357884e7eeb08da8b511511dccce7e8c866f31"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-finalization-storage.spec.ts",
+                      "sha256":  "9a763a2bddc03c7a25072262a7d22d6182ec6e0da9c738ad187b6f3784760419"
+                  }
+              ]
+}

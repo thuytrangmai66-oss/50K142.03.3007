@@ -1,0 +1,103 @@
+﻿{
+    "recordedAt":  "2026-11-12T13:25:45.1718464+07:00",
+    "branch":  "coco/phase-5-staff",
+    "baseHead":  "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+    "status":  "IMPLEMENTATION COMPLETE / READY FOR REVIEW",
+    "runtimeActivated":  true,
+    "mapping":  {
+                    "productAvailable":  1,
+                    "productSold":  2,
+                    "invoiceCompleted":  1
+                },
+    "mappingAuthorization":  "Applied the proposed mapping as part of the instruction to finish all remaining T05 work, stated to the user before activation",
+    "lint":  "PASS",
+    "typecheck":  "PASS",
+    "build":  "PASS",
+    "unit":  {
+                 "success":  true,
+                 "failed":  0,
+                 "passed":  233
+             },
+    "chromium":  {
+                     "startTime":  "2026-11-12T06:20:13.564Z",
+                     "duration":  128409.50499999999,
+                     "expected":  88,
+                     "skipped":  0,
+                     "unexpected":  0,
+                     "flaky":  0
+                 },
+    "t05UiTests":  7,
+    "nativeT05Tests":  1,
+    "consoleErrorsT05":  0,
+    "pending":  [
+                    "User review/acceptance of T05",
+                    "T06 full search/details/history status presentation",
+                    "T07 overall G6 acceptance"
+                ],
+    "files":  [
+                  {
+                      "path":  "src/domain/purchase-status.ts",
+                      "sha256":  "c6665dc14fed5f945481e04f12986ca2ed9b693785144a5029e943b7a93f18e1"
+                  },
+                  {
+                      "path":  "src/features/auth/AuthProvider.tsx",
+                      "sha256":  "2bcbe25d2e73ffdf6f1abec38da9570b6d50fb587a2ee50695a5513ca4f58c79"
+                  },
+                  {
+                      "path":  "src/features/auth/context.ts",
+                      "sha256":  "3a237eb88b90a0a7608aa33cb5d6572c9240f7e0d4a469cdd9667ee0a3a01a6a"
+                  },
+                  {
+                      "path":  "src/features/purchases/PurchaseEditor.tsx",
+                      "sha256":  "6caad46e75b924157195d72b81c4ca3bb5609f3fad2c192e84bf7010acc14e24"
+                  },
+                  {
+                      "path":  "src/services/purchase-finalization.ts",
+                      "sha256":  "2845790e3c7d62dc2f403df50f27818ae6d6478b8b6ed31c07562dc5bccd750f"
+                  },
+                  {
+                      "path":  "src/services/purchase-candidate.ts",
+                      "sha256":  "80124d4734cc5e834a0e6bf27fbede9665e0290d664ce175a8abdd79c1ed2c2a"
+                  },
+                  {
+                      "path":  "src/services/reference-data/local.ts",
+                      "sha256":  "13a81a5b6570c1f4e565674a9d6e9b5111a068c076a77ca5e86e0ac03c2cb6f1"
+                  },
+                  {
+                      "path":  "src/index.css",
+                      "sha256":  "2e828e338e4468e0bd1e8c8a53d4066bb35f1b9faffbc0ab1ac31fc96c9d1b74"
+                  },
+                  {
+                      "path":  "tests/unit/purchase-finalization.test.ts",
+                      "sha256":  "add1a50f36aa0a514c3677c6531c60f15ce7d2e2b5c29ef3074f0188443cadf6"
+                  },
+                  {
+                      "path":  "tests/unit/purchase-approvals.test.ts",
+                      "sha256":  "af4b0ce78428e98dd0a9f1bffeda42f87edfbddf27fe3a65dccc1ffcc7db4e14"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-finalization.spec.ts",
+                      "sha256":  "2c0230f8ed0fdf82eee543d0039552d1340fc55bb65f419830c271838ceb8e70"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-finalization-storage.spec.ts",
+                      "sha256":  "c4de5ecff81242241df8fdb3822687966bea3c3574cf4a50140a29d5912796c2"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-helpers.ts",
+                      "sha256":  "25538bdb5835e1ca390b2145672821f98bc136da8e856215df980341dd7ca302"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-drafts.spec.ts",
+                      "sha256":  "f58a6ffe13899ce04ca63bfd9da7e45108bc78d93b3d484f438a6e9317bdd2dc"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-results.spec.ts",
+                      "sha256":  "a047d7f73a7ec61ba4eaf616b0645ab5b1a1a92bf949720a9794ca55ba15a044"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-editor-figma.spec.ts",
+                      "sha256":  "ecdb7512ac53183985526030073ed6124bac80c895980bf179935d74517d6f75"
+                  }
+              ]
+}

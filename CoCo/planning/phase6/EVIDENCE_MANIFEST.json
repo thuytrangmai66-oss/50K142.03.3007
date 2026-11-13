@@ -1,0 +1,45 @@
+{
+    "capturedAt":  "2026-11-11T14:09:19.3422104Z",
+    "branch":  "coco/phase-5-staff",
+    "baseHead":  "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+    "scope":  "G6 T01 partial: contract + unactivated migration candidate; 19 new tests, 120 full unit/integration; 52 runtime baseline regression E2E. No UI G6/demo A-F.",
+    "runtimeSchemaVersion":  3,
+    "candidateSchemaVersion":  4,
+    "tests":  {
+                  "chromiumBaselinePass":  52,
+                  "staticAuditPass":  5,
+                  "unitIntegrationPass":  120,
+                  "g6Workflow":  "NOT RUN",
+                  "contractPass":  19
+              },
+    "files":  [
+                  {
+                      "path":  "src/domain/purchases.ts",
+                      "sha256":  "35a9635dde2655a422ce3cd8c1e65d5938d735671edc900a279eaa4986e622f0"
+                  },
+                  {
+                      "path":  "src/db/purchase-metadata.ts",
+                      "sha256":  "8ad9df110a28a879d2fb1f0ccb1d947e61ffa0f7e6d36deba3784a17194f4e53"
+                  },
+                  {
+                      "path":  "tests/unit/purchase-contract.test.ts",
+                      "sha256":  "a21a8523c646745f12048e268dd30c1ddbe7f42f7441ddcbf98863c72d1cffe7"
+                  },
+                  {
+                      "path":  "scripts/audit-phase1.mjs",
+                      "sha256":  "cc3a3b0af892f08d571fb290229fb44db2e455fbe7fa8f2fc5a5ef16de5f000f"
+                  },
+                  {
+                      "path":  "planning/phase6/AUDIT_RESULTS.json",
+                      "sha256":  "2c0e6778e9a3fa56381be6be2458a6130342bb1d9bd0620a3524e2339b6f4642"
+                  },
+                  {
+                      "path":  "planning/phase6/evidence/regression/owner-staff-list.png",
+                      "sha256":  "1fcfc9cc4fd531d2ae8c199270ded5bfc8cb698527c26eb646762b54277b427a"
+                  },
+                  {
+                      "path":  "planning/phase6/evidence/regression/staff-created-ui-session.png",
+                      "sha256":  "dd72d30402c604c12d52aed2c4741167af4b84cff62f3456a253bfd89a7b4357"
+                  }
+              ]
+}

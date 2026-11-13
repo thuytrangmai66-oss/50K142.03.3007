@@ -1,0 +1,120 @@
+{
+  "capturedAt": "2026-11-12T01:08:34.321Z",
+  "verifiedDateVN": "2026-11-12",
+  "branch": "coco/phase-5-staff",
+  "baseHead": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "files": [
+    {
+      "path": "src/components/layout/CoCoLayout.tsx",
+      "sha256": "555acf31085c594266f868073c99e6145ee34fb6378eee1efee4167b3626e5af"
+    },
+    {
+      "path": "src/features/purchases/PurchaseEditor.tsx",
+      "sha256": "affede2ef166da999addd9d2194d8920f068215c8df83b2a772fb6159139e366"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "986609bd302c9c0b5d61e7d7574b6aa44ca421f2e275c30dc362258b46d8643e"
+    },
+    {
+      "path": "src/services/purchase-approvals.ts",
+      "sha256": "e5ffc449fe4baffe72fb5b36a856b1fdf7460dbd10985a72ea5eb4ef840c6106"
+    },
+    {
+      "path": "src/features/approvals/ApprovalsPage.tsx",
+      "sha256": "22398d69a87ce5df44803075ae3eae3d6b7e02db08e29e0894366ad26e995e13"
+    },
+    {
+      "path": "tests/e2e/purchase-editor-figma.spec.ts",
+      "sha256": "bb99174e753632f20036b6e3b23a128760e3bc38d09f28a5f5628c20b12f20ba"
+    },
+    {
+      "path": "tests/e2e/purchase-drafts.spec.ts",
+      "sha256": "c058e9aa041421845a67ca0c44fdad72b6b6b50a9838f553cdab103d5fe066a9"
+    },
+    {
+      "path": "tests/e2e/purchase-customer-layout.spec.ts",
+      "sha256": "51d288f6df8bb6033de48c88ecc7d8310932ebfe480c7ef22654eb2a75e61848"
+    },
+    {
+      "path": "planning/phase6/PURCHASE_EDITOR_LAYOUT_REVIEW.md",
+      "sha256": "94d4e62162f6945e033691e5049477b68471519e18b21ddccc7fa2e328631f34"
+    },
+    {
+      "path": "planning/phase6/REPORT_PHASE_6.md",
+      "sha256": "043c1baac6776aded3adf6bccda8d6060c082d89bb7b327878faf1eb74fa6507"
+    },
+    {
+      "path": "planning/phase6/ACCEPTANCE_CHECKLIST.md",
+      "sha256": "64be7b9224c6b086b02eaddc863758cdbf373e000388a4694e25ebddb3b488f2"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/audit-results.json",
+      "sha256": "2c0e6778e9a3fa56381be6be2458a6130342bb1d9bd0620a3524e2339b6f4642"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/execution.json",
+      "sha256": "1b6ebbe91093b349e600ea6ce2a5a25d065a033143cfb7e0231d573660676e8e"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/owner-empty-1366x768.png",
+      "sha256": "908ad47d314eaad39850ffbc8ce99f9f43d73b698c645a8d364846f9311e091c"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/owner-empty-1440x900.png",
+      "sha256": "e13d07a7ba10c4390921dc67983ff2d279292cc251470f756fdbdfeda86bbea9"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/owner-empty-1920x1080.png",
+      "sha256": "b6ff507835d7f1cfa84ce206a6e22f722685b0c51deb3057e06b2b98c1cc3458"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/owner-existing-suggestion.png",
+      "sha256": "b9a2da0e23f215ce0ce81347486593d3770d54cc160decbfa88ea0c86719facb"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/owner-figma-geometry.json",
+      "sha256": "8731ee627a744e5f194fc486c4e8d18e626e018bdb4d2ebcc0703f35655e3635"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/owner-selected-1366x768.png",
+      "sha256": "165b3868938706fa367d10c773a9924a465b8297505634697bc5599e5148c005"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/playwright-current.json",
+      "sha256": "060c3922e0f7fa55d3b00f398cfa40c0c90865814fd0c43f8bb5ccc357da1c47"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/playwright-last-run.json",
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/staff-empty-1366x768.png",
+      "sha256": "77a1e08e0236a01a22aed770480f071351820817ade70ad8fcbaad18bda076c4"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/staff-empty-1440x900.png",
+      "sha256": "e4058c33325217e8fce550e204fd0b26db91821338aa3eb62d048725cb9e7f91"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/staff-empty-1920x1080.png",
+      "sha256": "bd278887240fad8ad97a4974efe3c308c84f17718458c6ac3f32369aa88e1207"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/staff-existing-suggestion.png",
+      "sha256": "f39b711b8f9f6072c65e6e5ef4f3dc0f86548698c7b0e14c5855585c3ea11d77"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/staff-figma-geometry.json",
+      "sha256": "8731ee627a744e5f194fc486c4e8d18e626e018bdb4d2ebcc0703f35655e3635"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/staff-selected-1366x768.png",
+      "sha256": "a5b5e87e9973b41eb777f82f250d7ac9550683169ccc45abedbde8f6d7ad8e1a"
+    },
+    {
+      "path": "planning/phase6/evidence/editor-layout/vitest-current.json",
+      "sha256": "7636fa31f2b40babee0b41cc3a72d9c8dc30ca57b41f482f961db933ade97b80"
+    }
+  ]
+}

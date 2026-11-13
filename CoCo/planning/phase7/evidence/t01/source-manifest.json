@@ -1,0 +1,42 @@
+[
+  {
+    "path": "src/services/inventory.ts",
+    "sha256": "117439b5d7022aa28a0c359a2796b00bd5c9cac1a137989f7f2a1d0bb9ea634d"
+  },
+  {
+    "path": "src/features/inventory/InventoryPages.tsx",
+    "sha256": "da66843cf5e4b3a47da7abe2be1f0a17b4260193a12c15d9da4d2599b9baa020"
+  },
+  {
+    "path": "src/features/auth/context.ts",
+    "sha256": "935370775b20ea1c9926b1a8db5baddba59d9e2e3cf622c7846df1f0876a34f4"
+  },
+  {
+    "path": "src/features/auth/AuthProvider.tsx",
+    "sha256": "17f84100d2eb54fbbf01011115e556c53a55507e79c53acaf501f94ff97be662"
+  },
+  {
+    "path": "src/services/reference-data/local.ts",
+    "sha256": "26d0c706fe838ceecb68e0be25cbad15176a07bc5738bb5bfbb83f2061c31c8b"
+  },
+  {
+    "path": "src/app/router.tsx",
+    "sha256": "1e586f2dd1d9be05e4bb4eae36204595fd29d1ee47bf01f96d7fac6c3f487a65"
+  },
+  {
+    "path": "src/components/layout/CoCoLayout.tsx",
+    "sha256": "9b7b2aec7fffda00eeed339fd58434f1176fb87d32aa03eaf2ac7f9809c9dfbc"
+  },
+  {
+    "path": "src/index.css",
+    "sha256": "2f9a9f8d34aaa3625c4abc8eabe5ba59e9d8e52ab7f6dd446d8e4a9d1436db88"
+  },
+  {
+    "path": "tests/unit/inventory.test.ts",
+    "sha256": "4c35e1f5cfd6dfba2285926afba9c5d0471d38000ee61938558728c93a11feac"
+  },
+  {
+    "path": "tests/e2e/inventory.spec.ts",
+    "sha256": "4305f5adf835b209856ca7578b9211fbf12676f56605f5fbc67d6de29d9ed2aa"
+  }
+]
