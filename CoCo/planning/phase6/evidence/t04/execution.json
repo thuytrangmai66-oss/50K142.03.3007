@@ -1,0 +1,65 @@
+﻿{
+    "recordedAt":  "2026-11-12T09:54:02.9970412+07:00",
+    "branch":  "coco/phase-5-staff",
+    "baseHead":  "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+    "status":  "IMPLEMENTED / READY FOR REVIEW",
+    "lint":  "PASS",
+    "typecheck":  "PASS",
+    "build":  "PASS",
+    "unit":  {
+                 "success":  true,
+                 "failed":  0,
+                 "passed":  211
+             },
+    "chromium":  {
+                     "startTime":  "2026-11-12T02:49:54.370Z",
+                     "duration":  101095.812,
+                     "expected":  80,
+                     "skipped":  0,
+                     "unexpected":  0,
+                     "flaky":  0
+                 },
+    "pending":  [
+                    "User acceptance and pixel review of modal background stacking",
+                    "T05 finalized transaction and numeric status mapping",
+                    "T06/T07"
+                ],
+    "files":  [
+                  {
+                      "path":  "src/services/purchase-drafts.ts",
+                      "sha256":  "0a979a2fb0d8806de2e3a109097c6aebbd092e87160b215f594e5b5efcb64e2a"
+                  },
+                  {
+                      "path":  "src/features/purchases/PurchaseResults.tsx",
+                      "sha256":  "be5722b1b57eb159713edde1bf5aaf9d299795de82efacb260ea4edc3daadfcb"
+                  },
+                  {
+                      "path":  "src/features/purchases/PurchaseEditor.tsx",
+                      "sha256":  "9907f4aad72af3e515877b84854b8df4ad4a7d9a9c6e5b8cca494b17f47da022"
+                  },
+                  {
+                      "path":  "src/components/ui/ResultDialog.tsx",
+                      "sha256":  "164de937d15627ccd639942e49da192b42fe805870af14834b66c5156ebd8f5a"
+                  },
+                  {
+                      "path":  "src/index.css",
+                      "sha256":  "a4a374e884590ce70ad5fd92558b09c38f64e564a0106b0544b9fff098724821"
+                  },
+                  {
+                      "path":  "tests/unit/purchase-approvals.test.ts",
+                      "sha256":  "cab96c2ee7a84eca9261fd6e2b738fb0d67b3d84e605afd1cfa1ebd155ca7caf"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-results.spec.ts",
+                      "sha256":  "2ab3802dbdb5e1ad30b44e346f534249f01df51fe795616e423aaaae71697a76"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-helpers.ts",
+                      "sha256":  "73a8a821119d3ed675a4618faf656bb8d683e74073452f78ff91591b8d6b0aa6"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-approvals.spec.ts",
+                      "sha256":  "d3a43fd790763afb8964e65048df55b738bb04d2f365d9cd1c9fa3f479373b3e"
+                  }
+              ]
+}

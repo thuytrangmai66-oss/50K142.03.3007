@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { bootstrapOwner, login } from './auth-helpers';
 
 test('shell, fallback route, persisted metadata and local requests', async ({ page }) => {
   const external: string[] = [];
@@ -6,7 +7,8 @@ test('shell, fallback route, persisted metadata and local requests', async ({ pa
     const url = new URL(request.url());
     if (['http:', 'https:'].includes(url.protocol) && url.hostname !== '127.0.0.1') external.push(url.href);
   });
-  await page.goto('./');
+  await bootstrapOwner(page);
+  await login(page);
   await expect(page.getByRole('heading', { name: 'Trang chủ', exact: true })).toBeVisible();
   await page.evaluate(() => new Promise<void>((resolve, reject) => {
     const connection = indexedDB.open('CoCoDB');
@@ -69,7 +71,7 @@ test('upgrades phase 1 browser data without deleting existing metadata or seedin
   }));
   await page.unroute('**/assets/*.js');
   await page.reload();
-  await expect(page.getByRole('heading', { name: 'Trang chủ', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Thiết lập chủ cửa hàng', exact: true })).toBeVisible();
   const preserved = await page.evaluate(() => new Promise<{ value: string; nativeVersion: number; accounts: number }>((resolve, reject) => {
     const request = indexedDB.open('CoCoDB');
     request.onerror = () => reject(request.error);
@@ -85,5 +87,5 @@ test('upgrades phase 1 browser data without deleting existing metadata or seedin
       tx.onerror = () => { connection.close(); reject(tx.error); };
     };
   }));
-  expect(preserved).toEqual({ value: 'preserve', nativeVersion: 20, accounts: 0 });
+  expect(preserved).toEqual({ value: 'preserve', nativeVersion: 40, accounts: 0 });
 });

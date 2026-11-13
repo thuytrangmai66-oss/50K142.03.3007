@@ -1,0 +1,253 @@
+{
+  "capturedAt": "2026-11-11T13:45:28.765Z",
+  "branch": "coco/phase-5-staff",
+  "baseHead": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "browserVersion": "156.0.8078.4",
+  "note": "Source is uncommitted. Screenshot contact sheets support manual review; they are not automated pixel comparisons or user acceptance. Test results recorded in REVIEW_COMPLETION.md from executed commands.",
+  "files": [
+    {
+      "path": "src/components/ui/Field.tsx",
+      "sha256": "8562951e23bf42bd65e2580facd9fab16dc9dfc948fd17f77f52f1d8bbe87f4c"
+    },
+    {
+      "path": "src/features/staff/StaffForm.tsx",
+      "sha256": "980759b5503a36813a3d5212a80fbebfec3ddcf4ec2d1e2ec94f6f984e638e53"
+    },
+    {
+      "path": "src/features/staff/StaffPages.tsx",
+      "sha256": "e90a439959ea2d8800954a17175821732492a62b201cee83a9d194056186b40e"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "9967a121101ceafe51b1ad87b933e104a6ed859c4706c83120c252fc6b7139e1"
+    },
+    {
+      "path": "tests/e2e/staff-review.spec.ts",
+      "sha256": "c980acf515794a3085ec7706f8c2534e6fd55c3945ed7d9a11f7bb3fde503f3f"
+    }
+  ],
+  "references": [
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-145.png",
+      "sha256": "bc15e4b143571fc161a3754e449ee80c04518ce37bd57f6f71668cd8884aeb5a"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-146.png",
+      "sha256": "3323daee8c28d35e5c8e3a12bb8801dcab110fd55226001d5cd13577ae630eae"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-147.png",
+      "sha256": "63e823098b202824d303576150e983776554bb9aa65fecc3d5349fe6991e2c14"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-148.png",
+      "sha256": "2172b66bce68d97cb2dffc644e8600ba20005b2eeb7cc2ac459a6776743654a4"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-149.png",
+      "sha256": "822503e774bdd361ef27d22e300ff368f4afacd12449da4ab6c869262eca9a23"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-150.png",
+      "sha256": "fb731271e18c53446c6c7a23335e1e017b3075189f781c4a0d3cf2c20b1f762c"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-151.png",
+      "sha256": "1b9bc302caffbb2da90e39c7b8902d87559db0ff868cb73ccb7a9ea8837dfa93"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-152.png",
+      "sha256": "10ac6b8379b347f897d270095dd1cb51fbc8bde2d5aada72c1f077447245853f"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-153.png",
+      "sha256": "f115a7a849f7a9bf05a85f3ef5ec238ce3b6b3d53915f995940da50bd92e8a24"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-154.png",
+      "sha256": "9537bc547eb6ee8133722dea491522599ff02e5df56b0d150fb325d590835772"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-155.png",
+      "sha256": "78ce8e679752f5dc0610f5429fa121e3352403b3bf9b56a967573fe5e2b85e65"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-156.png",
+      "sha256": "e658b89cbef039c82d26f25fc4305de93824f9359f0ba9ebff63dff0d696d8e9"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-157.png",
+      "sha256": "69871865a0530f405048f7883470d8ba0adddf8518e8ae49b047933bf46ecb00"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-158.png",
+      "sha256": "9f2068df930f077fdafe277fc1c48d7e609845d9cd4dea2c7a3f52193efdec48"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-159.png",
+      "sha256": "d53e615a9fb90f81a1efeb89947fc3fe681b2529c2edc0db6f1fce3111c85cd3"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-160.png",
+      "sha256": "d3d28a05bf654ac7570c0f7f91d269c412546fa7bc5fdf1fc430b6b8ab76df65"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-161.png",
+      "sha256": "bd11dc4eed717969324e7eedb6c2a7195abe1ef19090bf93eba97a3aeb9d07ba"
+    },
+    {
+      "path": "../CODEX/.uc-ui-matrix-qa/frame-162.png",
+      "sha256": "e9ff03de922c685d64e232cd69858f257a230cde8ff150c30920002edc54a98c"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "planning/phase5/evidence/staff-review/before-success-create.png",
+      "sha256": "5da2a02087e75eac068eef97055d7b6ccec1c4d02661e29fc97e1eb94e02aca8"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/before-success-delete.png",
+      "sha256": "f373f0aa039487be418bcd3ad63dfc15a70af6f0505140796d49b5f4def86282"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/before-success-edit.png",
+      "sha256": "c0ac1606ea6cd23c71820c1f073fa3d77a92c835b7b42f1d12fb1e238bc60f89"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-145-146.png",
+      "sha256": "cf0e2bd1197a7475b77e350969212ade775e6447de05a2b6aa0c812217ae5bcd"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-147-148.png",
+      "sha256": "8334771e3c0806a04880bb7a99aa77efe1d644f4d5d77166aefef90538bec63e"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-149-150.png",
+      "sha256": "154dff078f9db37110cd79af932ebd902a080b8ec61ccaea342d67fbe40e3de0"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-151-152.png",
+      "sha256": "73d2d26682d85c47095186b7372982fb669445cb35fbf0603ff35655ac69706b"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-153-154.png",
+      "sha256": "fecefbf4a0dac874f1d413b0ba9e159eb47a46ee7b5db0247da9fce778c35835"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-155-156.png",
+      "sha256": "364490cc3fc723b6a152315de4a69f8f1f10769dc2f0fe0830fe4cdccec423de"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-157-158.png",
+      "sha256": "3d6b1047ea206d849f62c9369829115fc47da43451f5d441fe0e66b333e1a738"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-159-160.png",
+      "sha256": "f49d2e34553dac03829a79d9810fa1db3f2e3d9586204a50d852cb00d61eb986"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/compare-161-162.png",
+      "sha256": "105ae57fd417d32801fa1d49aafa5cf50f9d6f35a0a1fb78f6accf709323e397"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/create-1366x768.png",
+      "sha256": "89b97c8e5a103f8acdc7a43d7bf5c6a78b8a11ce1b205779e0544ecdee271a25"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/create-1440x900.png",
+      "sha256": "d6190d33f742babdd442334237e30ac600717640a383030bf7060d7f7295d176"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/create-1920x1080.png",
+      "sha256": "665c775c850c991c0fabb33e88cabda6c1b1593dd7fb90a68c3fc752cecdba83"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/create-390x844.png",
+      "sha256": "b25f00bfafcdbc5c232dc1b8d4d6ccafabc9650d168fb191d75f5cf34bd665c9"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/detail-read-error.png",
+      "sha256": "d00705c645caa0f94efc1b3dad354a16ca1def414c5a251799591f21e4f44b01"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC145.png",
+      "sha256": "15dec6ab84b0dd530591d0a40043da3a033801a1c550993144aa877371e493da"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC146.png",
+      "sha256": "be5f8683954cebc84479756f4483bebd4aea9584938650d52d39a78b9b160ed9"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC147.png",
+      "sha256": "650235274d122c6ad3af69952d4d9ff0948bc8a03edc10183099358bb0fe6ac5"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC148.png",
+      "sha256": "94b8aa4573fe5cc1c11bc58ec938957e9e418dafa571f65b981527a381dd664b"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC149.png",
+      "sha256": "6d44931b5f740a2b7ac6c2dc88db4ccfba9ecb275e420ef6e90112fa2ffe37c3"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC150.png",
+      "sha256": "1946afd34d841b4061dbbe6a5416cea4d0f28040dd1e609a53828ad55ad4768d"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC151.png",
+      "sha256": "5ba9ec29afd88abf024a8d061ec7ca0e84bf40b874684b3d11320997bbae7b73"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC152.png",
+      "sha256": "92b6782f4e7cc09b12871f615f4a6b529d67a65324249a478b394bbd01a6b104"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC153.png",
+      "sha256": "b322e7141661caf13bf46ba7d638de29a0503fc74811e23cb4989c0cc3c93afa"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC154.png",
+      "sha256": "e45ba026fc256188bc7ff39e4edc99fc694a726ed4238ef2e28d1c949b0558e2"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC155.png",
+      "sha256": "a69fe7f3fb8635315c50bace4ca5828322a380163237f1a587e631bd55bf9e33"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC156.png",
+      "sha256": "dc7aa4aa2ffac12be3fcd8f73fcf42aa70ecdd78563a71164851994fc1c1f32e"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC157.png",
+      "sha256": "70cd8b125f1d0f048e51965122c903fe2690935d86a249bdcd6536ca891ba933"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC158-empty.png",
+      "sha256": "9bcac5c2297dbf7f4992b9be4d400d6d7e25f8f554580a586d20a357dc2ac2ff"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC158.png",
+      "sha256": "f1871301fbfbe3d432dcc443ed1eba840044bd5c491772268f85220b97d1ff43"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC159.png",
+      "sha256": "e98aceeb9f1f7e3006234d4fdba6f5364b1a1f611561da84f7693371716f6ac5"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC160.png",
+      "sha256": "56275d886556e789afd63aa0dbdc124ea7cf9b08b7146a0c0b5480039bbd175b"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC161.png",
+      "sha256": "fdce427e7a96dbbe3e871cef8080184734c101aa4fe51b1efd96e91fd8091276"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/SC162.png",
+      "sha256": "2a95019ef70bbfe706e280e8feb1f5ea974146f4ccda298247151ab8e3d23e79"
+    },
+    {
+      "path": "planning/phase5/evidence/staff-review/staff-created-ui-session.png",
+      "sha256": "dd72d30402c604c12d52aed2c4741167af4b84cff62f3456a253bfd89a7b4357"
+    }
+  ]
+}

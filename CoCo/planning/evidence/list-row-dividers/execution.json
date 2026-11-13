@@ -1,0 +1,22 @@
+{
+  "capturedAt": "2026-11-12T01:12:44.860Z",
+  "verifiedDateVN": "2026-11-12",
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "build": "PASS",
+  "chromium": {
+    "passed": 18,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "retries": 0
+  },
+  "scope": "Shared list row dividers; editor Figma preserved",
+  "notRun": [
+    "unit/integration in this presentation-only change",
+    "full E2E outside targeted scope",
+    "approval UI not activated"
+  ],
+  "dataChanges": false,
+  "publish": "No commit/push/deploy"
+}

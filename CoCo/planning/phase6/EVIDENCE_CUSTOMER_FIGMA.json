@@ -1,0 +1,125 @@
+{
+  "capturedAt": "2026-11-11T16:22:03.839Z",
+  "files": [
+    {
+      "path": "src/features/purchases/PurchaseEditor.tsx",
+      "sha256": "2ea8a948faaf54285b0e7c01febd5c66b42b73bb4373976fac47d67c8b1f1f64"
+    },
+    {
+      "path": "src/features/purchases/PurchasesPage.tsx",
+      "sha256": "a9b0e8ba881c5c1fb232a250733fb20b50cba471ab9add2ed78fc494d5345cd9"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "f6e0e26c2b1e427dd78d0c5688fb2a1af1d48f97bfd377d5a0bc7edd3aae4ac4"
+    },
+    {
+      "path": "tests/e2e/purchase-customer-layout.spec.ts",
+      "sha256": "0e4cc9f97564e588f322971661c2ef5070d26fb587fc739cd651bca86b9dc60d"
+    },
+    {
+      "path": "tests/e2e/purchase-list.spec.ts",
+      "sha256": "e34d8d7cc4834a71dfc0a6eb699792809c2c154e078de406c17fd70b3d763cb4"
+    },
+    {
+      "path": "tests/e2e/purchase-drafts.spec.ts",
+      "sha256": "c4f1231d1bef624ecc8ea04b8bb5c0e50ab32614a512ba2b201ae8034abc1318"
+    },
+    {
+      "path": "planning/phase6/PURCHASE_CUSTOMER_FIGMA_REVIEW.md",
+      "sha256": "b9aa7f6cd47820bca0b072fd68f22470eeef37d9da32c03b4c8a284f96a9d015"
+    },
+    {
+      "path": "planning/phase6/REPORT_PHASE_6.md",
+      "sha256": "018d3436d37e12ace66d3f78120404aec27f72688bb5611b57214f53db1a3041"
+    },
+    {
+      "path": "planning/phase6/ACCEPTANCE_CHECKLIST.md",
+      "sha256": "578cb40f0b2f4b32559fc41bfb913fa773c48dd0b3a6896f61745942bfaa4230"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/audit-results.json",
+      "sha256": "2c0e6778e9a3fa56381be6be2458a6130342bb1d9bd0620a3524e2339b6f4642"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/execution.json",
+      "sha256": "3c8abc62f0312cd775503d67914e013cd5f28e1c9d51246c0237e261aa02d536"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-1366x768.png",
+      "sha256": "cfa6cb30cd2d2bef3a97e6494f418dd1140f3afcc0a9c4f77facb4f896303739"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-1440x900.png",
+      "sha256": "5d23d993469ec978b25af982930834cff22c44d104301d70b046d5b11b35fee3"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-1920x1080.png",
+      "sha256": "ed4b3bab0a231a57fecca988ec3a9fe525eb4a0924198ceaacc7621982e25aeb"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-empty.png",
+      "sha256": "4e6bb208d2e643d6a4869dd719d92e3b5fa141ac759d04d54f358c585133ed32"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-existing-suggestion.png",
+      "sha256": "f1ae0414b5ba4513bb4dd306fb5b28acbb67bbe740acd64baaf91a1b4177e0b5"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-not-found.png",
+      "sha256": "05d3d92bb1437ec42e92f75d4fad7e9739c717d85fdfb221ef145618e49927bb"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-selected-1366x768.png",
+      "sha256": "c1e1bda3023bd10e3b7243ba991925fffa2674670dbef193e29b77161cc3bd8e"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-selected-1440x900.png",
+      "sha256": "25bc0b5cf2a87d4a042decd418c25527a65c412ca16bce24ef22bb3fd8bf933c"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/owner-selected-1920x1080.png",
+      "sha256": "f22d5163e677752dd89af162c0f14ec3c5618fb0a5bd59598e225117b00732ee"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/playwright-last-run.json",
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-1366x768.png",
+      "sha256": "0a234f9bf1e8336f3aece574f02529dc68827142db5ab167a21c6779a087725d"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-1440x900.png",
+      "sha256": "f014adc759b663d1cbbd02a02a0d92543a7594936b1174b1c52acb3ff2db665a"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-1920x1080.png",
+      "sha256": "c54528ef374a95ada5ee73f8dc4e7592c733222ae64b3fa86b27e526325ee45b"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-empty.png",
+      "sha256": "dba09e419d9efc5614e4bbcd396c4ff66df5deec215ab234cf7937506c5b8cf5"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-existing-suggestion.png",
+      "sha256": "1c86aa90c534f7debd3ea292ef2dd834cd723c173eea7b2b8f180b9e3b2fb5c0"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-not-found.png",
+      "sha256": "99296a9fa45697258952193d58f7805bac1c892aa75ab00424c50e8132052b1f"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-selected-1366x768.png",
+      "sha256": "3c5fb1fc9a5d6deeb63dff22210268661a30755bbfe181d31286545a18ded13a"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-selected-1440x900.png",
+      "sha256": "a1118d7a019b173bc6481c88001471ccae4bcffbb4f296700f6eca76a28920fb"
+    },
+    {
+      "path": "planning/phase6/evidence/customer-figma/staff-selected-1920x1080.png",
+      "sha256": "ece1db05f7214be7a625183586a6873a3e399f61978e33cb9d419a92c62ee2cc"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# Vấn đề cần quyết định cho master plan CoCo
+
+## Cập nhật G6 hiện hành
+
+Ngày 11/11/2026, người dùng xác nhận: **“Nghiệm thu T01, cho phép kích hoạt P03/P04 và làm T02”**. T01 đã được nghiệm thu; P03/P04 runtime APPROVED_USER. Không suy ra nghiệm thu G5 hoặc toàn bộ G6 từ xác nhận này.
+
+Runtime IndexedDB đã nâng additive lên v4/27 store; T02 đã triển khai theo [báo cáo](phase6/T02_EXECUTION.md), chờ nghiệm thu. T03 là task tiếp theo sau T02, không đổi roadmap hoặc tự DONE G5/G6. Demo hai tab duyệt/từ chối A–F vẫn NOT RUN cho đến T03/T04/T07. Các mục P03/P04 “chưa phê duyệt” trong hồ sơ lịch sử dưới đây đã được thay thế; mapping số cho bản ghi mới trước T05 và các quyết định nghiệp vụ khác vẫn OPEN khi chưa chốt.
+
+## Hồ sơ trước xác nhận T01 — lịch sử
+
+Các ghi chú chưa kích hoạt/chưa có UI bên dưới mô tả mốc trước xác nhận, không thay trạng thái hiện tại ở trên.
+
+> Xác nhận mới G6: **Q20/BR-UC1-07 CLOSED về cách xử lý** — nhân viên kiểm tra trực tiếp trước khi nhập, hàng không đạt bị từ chối ngoài app, không thêm checklist/trạng thái/bảng kiểm định. **Giá bán đầu APPROVED_USER** — giá mua thực tế từng món ×1,30, làm tròn gần nhất, 0,5 lên; đã có hàm/test số nguyên. **P03/P04 vẫn OPEN về kích hoạt**: chỉ cho phép hoàn thiện candidate T01; phải đối chiếu/nghiệm thu rõ trước runtime. Checklist QA từng task có tại [ACCEPTANCE_CHECKLIST.md](phase6/ACCEPTANCE_CHECKLIST.md). Các ghi chú cũ về Q20/giá dưới đây là lịch sử, không yêu cầu người dùng trả lời lại.
+
+> Rà soát G6 11/11/2026: [DATA_CONTRACT_REVIEW.md](phase6/DATA_CONTRACT_REVIEW.md) ghi đề xuất cụ thể cho P03/P04 và câu hỏi Q20. Bổ sung bằng chứng P03: draft chưa chọn khách còn vướng FK bắt buộc `hoaDonThuMua.MaKH`, không chỉ FK request → invoice. Đã gửi để quyết định, chưa áp dụng thay đổi schema/validator và chưa tự coi đề xuất được duyệt.
+
+> Bổ sung khi chi tiết hóa kế hoạch G6: trước T05 phải đối chiếu/chốt nguồn khởi tạo `GiaBanHienHanh/GiaGocChuKyGiam/TrangThai/NgayBatDauChuKyGiam` bắt buộc của sản phẩm mới. UC1.1 chưa chỉ rõ giá bán ban đầu; không suy từ giá mua, Max hoặc giá trị 0 mà repository cho phép. Theo dõi trong contract/mapping của T01/T05, không tạo phase/task nghiệp vụ mới, không kéo UI/scheduler G7 lên trước và không đòi duyệt lại phương án metadata chung đã chốt.
+
+> G5 theo chỉ đạo tiếp tục ngày 11/11/2026: đã chọn phương án kỹ thuật P08 **rename và cập nhật liên kết nguyên tử, MaNV ổn định, alias lịch sử trong appMetadata; xóa là inactive + revoke**. Không ghi nhận một câu trả lời phê duyệt riêng P08 từ người dùng; đây là hiện thực kỹ thuật trong scope UC8.2/G5 được yêu cầu. Có test FK/history/race/rollback và [contract](phase5/IDENTITY_CONTRACT.md). Người dùng chốt chỉ tập trung web desktop; P11 không mở rộng thêm mobile, SLA/shortcut/pixel gate vẫn chưa chốt.
+
+> Chốt mới sau khi bắt đầu G4 (11/11/2026): không Supabase, giữ AD02/03; mở rộng responsive theo màn hình người dùng; danh mục độ mới cố định **3=Mới, 2=Tốt, 1=Khá** đã duyệt. P09 được giải quyết phần mã độ mới, chưa tự suy ra tiêu chí nhận hàng/thẩm định G6. P11 được cho phép responsive, phần pixel/SLA/shortcut vẫn mở. Dữ liệu G2 chưa có marker mapping phải được giữ nguyên và đối chiếu trước thay đổi, xem báo cáo G4.
+
+Ngày 13/11/2026. Bảo toàn Q01–Q22 đã duyệt tại [hồ sơ Giai đoạn 0](phase0/OPEN_ISSUES.md). Bảng mới dùng prefix P để không đổi trạng thái hoặc đánh số lại quyết định cũ. **P01/P02 đã được cho phép** qua yêu cầu “tiếp tục” sau bản kế hoạch; đã triển khai G3 và có [báo cáo](phase3/REPORT_PHASE_3.md). P08 đã hiện thực kỹ thuật ở G5; P09 đã chốt mã độ mới ở G4, còn tiêu chí thẩm định; P11 ưu tiên desktop. G8 P05/P06/P07 đã được xác nhận theo [Decision Log G8](phase8/DECISION_LOG.md); UI control đã được duyệt và triển khai, còn physical finalization mapping là review gate, không phải câu hỏi nghiệp vụ còn mở.
+
+## Sổ quyết định — gồm cả mục đã giải quyết
+
+| ID | Vấn đề / bằng chứng | Đề xuất cụ thể để duyệt | Chặn phạm vi nào |
+|---|---|---|---|
+| P01 | SRS UC0 cần account đã lưu; DB hiện không seed; Q05 chưa có cách tạo chủ đầu tiên | Cho phép màn thiết lập kỹ thuật một lần, chỉ khi DB chưa có chủ, nhập tên/phone/login/password thật; transaction chống hai tab và không hardcode. Đây là màn bổ sung kỹ thuật chưa có trong 38 UI. Nếu không duyệt, cần chọn cách provisioning local cụ thể khác | ĐÃ CHO PHÉP 11/11/2026; đã code/test G3, visual còn review |
+| P02 | Không khôi phục được roadmap phase sau G2; master prompt mới yêu cầu đề xuất đầy đủ | Duyệt G3–G11 trong PHASE_ROADMAP như thứ tự đề xuất, giữ phạm vi đã làm G0–G2; không coi đây là roadmap cũ đã được khôi phục | ĐÃ CHO PHÉP 11/11/2026; G3 code, giữ thứ tự G4–G11 |
+| P03 | Request có MaHDTM FK trong schema; UC1.1 chờ duyệt trước khi hoàn tất thu mua | Lưu draft invoice/request và trạng thái kỹ thuật có snapshot rõ; chỉ finalized mới nhập kho/chi phí. Lưu reason/decision actor/time riêng để không mất lý do yêu cầu gốc. Thêm metadata additive qua migration | APPROVED_USER 11/11/2026, đã kích hoạt; không được tạo invoice hoàn tất giả |
+| P04 | ChiTietHoaDonTM khóa MaHDTM+MaKhungGia, một DonGia; productCosts lưu từng món nhưng hai món cùng bracket khác giá không thể luôn gộp thành DonGia nguyên đồng | Duyệt biểu diễn chi tiết từng món/dòng bằng metadata line riêng có ID và cost snapshot, đồng thời xác định nghĩa DonGia/ThanhTien của entity logic gốc; hoặc chỉ rõ chính sách cùng bracket cùng giá. Không tự lấy bình quân hay âm thầm đổi khóa entity Design | APPROVED_USER 11/11/2026, đã kích hoạt metadata; finalize vẫn T05; liên quan Q09 |
+| P05 | Nghĩa legacy `TongTien/TienKhuyenMai/TichDiem` và sale snapshots | **CONFIRMED_USER 13/11/2026:** TongTien=Subtotal−TienKhuyenMai; TienKhuyenMai là mức giảm thực tế; TichDiem là điểm mới từ số tiền sau giảm của thành viên. Snapshot subtotal, điểm dùng/trước/sau, member-at-sale, đơn giá/thành tiền từng dòng. Không backfill legacy; physical metadata/migration phải review trước finalizer | Semantic mapping CLOSED; physical representation/finalizer còn REVIEW GATE |
+| P06 | Q07 duyệt lưu memberships; cần tách trạng thái thành viên khỏi hồ sơ khách và số điểm | **CONFIRMED_USER 13/11/2026:** checkout opt-in rõ ràng; không tự đăng ký khi tạo hồ sơ; non-member vẫn mua nhưng không dùng/tích điểm. Membership ghi ngay sau opt-in kể cả nếu đơn sau hủy/thất bại. `memberships` hiện có `{MaKH, registeredAt, registeredBy}` | Business rule CLOSED; UI10/service opt-in persistence implemented and tested; payment/finalizer integration remains G8-T02 partial, no schema change |
+| P07 | Quy tắc ưu đãi 20% và điểm G8, không suy từ Q12 giảm 30% của G7 | **CONFIRMED_USER 13/11/2026:** đủ 50 điểm và chọn dùng thì giảm roundHalfUp(Subtotal×20%), trừ đúng 50; điểm mới=floor(số tiền sau giảm/10.000); không dùng ưu đãi thì giảm 0 và vẫn tích theo thực trả cho member | Business rule CLOSED; calculator, checkout eligibility, and preview implemented; payment/final point persistence remains |
+| P08 | UC8.2 cho sửa username; username là PK và được metadata tham chiếu | Đã chọn transaction rename/update FK + alias giữ MaNV, không đổi schema; lịch sử audit giữ actor lúc phát sinh. Xóa là inactive + revoke. [Contract G5](phase5/IDENTITY_CONTRACT.md) ghi cách hiện thực và test | G5 code/test đạt; READY FOR REVIEW, không khóa username để né UC |
+| P09 | BR-UC1-07: nhân viên trực tiếp kiểm tra chất lượng thực tế trước khi nhập | CLOSED theo xác nhận mới: hàng không đạt từ chối ngoài hệ thống; không thêm checklist/control/bảng/trạng thái kiểm định hoặc tự loại theo mã 1/2/3. Giữ mapping độ mới G4 | Không còn chặn T02 vì thiếu tiêu chí kiểm định tự động; checklist QA phần mềm theo từng task vẫn bắt buộc |
+| P10 | CONFIRMED_USER12/11/2026: luôn đặt đúng20.000đ từ45 ngày, kể cả tăng từ giá thấp hơn | Không dùng min(); xác nhận riêng đã nhận trước triển khai | [Decision Log G7](phase7/DECISION_LOG.md) |
+| P11 | Q21 chưa có shortcut/mức giá nhanh; NFR tốc độ không có SLA; local export có 1440×900/923/933 và component nhỏ | Ưu tiên web desktop theo chỉ đạo mới; G5 kiểm detail ở 1366×650/1280×720, không phát triển thêm mobile. Bộ phím tắt/giá nhanh, dataset/máy, SLA và pixel gate vẫn chưa chốt; ngưỡng visual đề xuất ở TEST_MASTER_PLAN | Chốt nghiệm thu NFR/visual G10, không chặn mapping có nguồn hiện tại |
+
+P01/P02 đã giải quyết theo chỉ đạo tiếp tục ngày 11/11/2026; P01 code/atomic/race PASS, visual form kỹ thuật còn review; P02 giữ đúng thứ tự roadmap. P08 đã hiện thực theo scope G5 được yêu cầu; phần mã độ mới P09 và ưu tiên desktop P11 đã được cập nhật theo chỉ đạo. Với G8, tách quyết định nghiệp vụ đã chốt khỏi phê duyệt thay đổi UI và review physical storage; không tự làm các thay đổi gated. Các quyết định cũ về local DB/QR/giờ Việt Nam/role không cần phê chuẩn lại.
+
+## Xung đột nguồn và việc kỹ thuật tự xử lý trong scope đã duyệt
+
+| ID | Bằng chứng | Hướng xử lý có căn cứ | Trạng thái |
+|---|---|---|---|
+| C01 | CODEX `.uc-ui-matrix-qa/word-updated.docx` khác hash Design gốc, thêm heading tìm kiếm thu mua 6/7; source Design gốc và Word QA khác giai đoạn | Giữ nguồn gốc riêng, dùng biến thể lỗi theo SRS; nếu hình thức/hành vi thực sự mâu thuẫn thì đưa đúng hai nguồn để quyết định, không đổi baseline âm thầm | Ghi nhận; visual từng màn còn NOT RUN |
+| C02 | Có 146 owner export nằm lồng `Figma.Nhân viên/Figma.Chủ`; staff menu một số ảnh có quyền quản trị (Q11) | Folder lồng là owner alias. Quyền theo SRS; khi triển khai staff dùng shell staff đã có, không cấp quyền theo ảnh lỗi | Không cần hỏi lại quyền; cần review visual menu sửa đúng |
+| C03 | UC_2.3 catalog mapping rỗng, UI15 là giám sát; actor là Hệ thống | Giữ source mapping, ghi INFERRED_MONITORING_Q22, tự chạy theo AD08, không nút Chạy ngay | Đã có phương án Q22 |
+| C04 | UC_4.4 dòng tên ghi Xem, mô tả/Design ghi Tạo; số usecase login 0/UC_0 | Giữ ID và alias, triển khai Tạo theo Q04; không chỉnh nguyên bản nguồn | Đã duyệt Q04/Q14 |
+| C05 | QR nguồn là ảnh mẫu, màu/tên/giá mẫu không phải dữ liệu thật | Sinh payload cục bộ theo AD04/05; dynamic invoice/customer/final amount, test CRC và scan; không gọi online API | Đã duyệt kiến trúc, implementation NOT STARTED |
+| C06 | PDF Type3 glyph cảnh báo và render staff có dòng ghép; frame QA có số/khung đỏ | Dùng local PNG tham chiếu để đối chiếu renderer; loại annotation khỏi UI; asset task xác minh text/font/geometry trước baseline. Không coi PDF text extraction là layout chính xác | Theo dõi asset/visual G3 và từng module |
+| C07 | Raw exports không có toàn bộ node ID/font token manifest | Theo chỉ đạo mới không đọc link Figma; dùng PDF/PNG/đặc tả local, tự lập asset manifest và ghi điều chưa xác minh. Không coi thiếu node online là lý do yêu cầu gửi lại hai bộ thiết kế | Nguồn local đã đủ để lập kế hoạch |
+| C08 | Metadata G2 đã có nhưng chưa có handler auth/scheduler/payment/permission | Giữ G2, bổ sung service và migration cần thiết theo task, không viết lại hoặc gọi partial test là UC hoàn chỉnh | Được phân bổ G3–G9 |
+
+Backup/restore UI, cold-start offline/service worker, sync đa máy và dịch vụ ngoài chưa có căn cứ SRS rõ để đưa vào phạm vi chính thức. Giới hạn dữ liệu local và chiến lược checkpoint phải được hướng dẫn; nếu muốn thêm tính năng backup/offline cần yêu cầu và duyệt scope riêng. Không đổi AD02/AD03.

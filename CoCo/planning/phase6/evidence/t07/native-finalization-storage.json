@@ -1,0 +1,14 @@
+{
+  "nativeVersion": 40,
+  "rolledBack": true,
+  "replay": true,
+  "initialProducts": 2,
+  "initialPrices": [
+    104007,
+    104007
+  ],
+  "raceWinners": 1,
+  "invoices": 2,
+  "products": 3,
+  "issued": 5
+}

@@ -1,0 +1,1237 @@
+[
+  {
+    "file": "auth.spec.ts",
+    "line": 6,
+    "name": "owner: login states, source geometry, real session, logout and Back protection",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2938
+      }
+    ]
+  },
+  {
+    "file": "auth.spec.ts",
+    "line": 6,
+    "name": "staff: login states, source geometry, real session, logout and Back protection",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2892
+      }
+    ]
+  },
+  {
+    "file": "auth.spec.ts",
+    "line": 65,
+    "name": "owner and staff share DB with separate sessions, staff route denied and revoked account loses access",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2221
+      }
+    ]
+  },
+  {
+    "file": "auth.spec.ts",
+    "line": 93,
+    "name": "real browser v2 migration preserves existing owner credentials and customer data",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1037
+      }
+    ]
+  },
+  {
+    "file": "auth.spec.ts",
+    "line": 151,
+    "name": "forged session data cannot select an owner identity",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1408
+      }
+    ]
+  },
+  {
+    "file": "auth.spec.ts",
+    "line": 159,
+    "name": "failed browser session persistence rolls back the new login session and offers recovery",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1193
+      }
+    ]
+  },
+  {
+    "file": "auth.spec.ts",
+    "line": 180,
+    "name": "bootstrap is race-safe across two browser tabs",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1183
+      }
+    ]
+  },
+  {
+    "file": "confirmation.spec.ts",
+    "line": 26,
+    "name": "owner customers: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 8550
+      }
+    ]
+  },
+  {
+    "file": "confirmation.spec.ts",
+    "line": 26,
+    "name": "staff customers: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 8594
+      }
+    ]
+  },
+  {
+    "file": "confirmation.spec.ts",
+    "line": 26,
+    "name": "owner staff: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 7655
+      }
+    ]
+  },
+  {
+    "file": "confirmation.spec.ts",
+    "line": 52,
+    "name": "delete failure rolls back data, shows an error, and allows a real retry",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3541
+      }
+    ]
+  },
+  {
+    "file": "confirmation.spec.ts",
+    "line": 61,
+    "name": "busy confirmation blocks repeat clicks, X, cancel and Escape until one transaction finishes",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2939
+      }
+    ]
+  },
+  {
+    "file": "confirmation.spec.ts",
+    "line": 70,
+    "name": "a changed customer cannot be deleted using an old open confirmation snapshot",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3584
+      }
+    ]
+  },
+  {
+    "file": "g6-verification.spec.ts",
+    "line": 7,
+    "name": "T07 native migration abort restores v3 and successful runtime upgrade preserves all legacy stores and numeric codes",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 607
+      }
+    ]
+  },
+  {
+    "file": "g6-verification.spec.ts",
+    "line": 42,
+    "name": "T07 actual runtime: two UI roles approve, finalize, live-read shared invoice/history and preserve canonical graph on reload",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 11616
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 30,
+    "name": "owner customers: responsive pages, stable footer, no internal scrolling",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 30441
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 30,
+    "name": "staff customers: responsive pages, stable footer, no internal scrolling",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 34185
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 30,
+    "name": "owner staff: responsive pages, stable footer, no internal scrolling",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 28047
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 30,
+    "name": "owner price-brackets: responsive pages, stable footer, no internal scrolling",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 26973
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 94,
+    "name": "customer search paginates the filtered set and preserves the query across pages",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2034
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 106,
+    "name": "bracket condition filter preserves its value while paging and resets a removed page",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2318
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 117,
+    "name": "customers: UI add creates page 2; live delete clamps page 2 and keeps it clamped on later add",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6666
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 117,
+    "name": "staff: UI add creates page 2; live delete clamps page 2 and keeps it clamped on later add",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5339
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 137,
+    "name": "creating a tenth bracket updates the page count using the active filter",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1837
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 148,
+    "name": "many pages use ellipsis and never link to a nonexistent page",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3517
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 159,
+    "name": "owner customers: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5287
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 159,
+    "name": "staff customers: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5540
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 159,
+    "name": "owner staff: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4024
+      }
+    ]
+  },
+  {
+    "file": "pagination.spec.ts",
+    "line": 159,
+    "name": "owner price-brackets: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3543
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 18,
+    "name": "T03 approve through UI, independent sessions, live data, search/date and screenshots",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6140
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 59,
+    "name": "T03 reject requires reason, cancel preserves data and shared decision updates live",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5165
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 101,
+    "name": "T03 approve write failure rolls back, retry commits once and delivery failure preserves the decision",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4686
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 101,
+    "name": "T03 reject write failure rolls back, retry commits once and delivery failure preserves the decision",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4767
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 139,
+    "name": "T03 refuses a request after employee remove",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4815
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 139,
+    "name": "T03 refuses a request after employee cancel",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5027
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 148,
+    "name": "T03 two owner tabs racing preserve a single decision and notice",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4333
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 159,
+    "name": "T03 approve: dismiss success with Escape, preserve filters and open another request without overlay",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4201
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 159,
+    "name": "T03 reject: dismiss success with Escape, preserve filters and open another request without overlay",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5149
+      }
+    ]
+  },
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 197,
+    "name": "T03 real requests paginate and list read error recovers through navigation",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 11118
+      }
+    ]
+  },
+  {
+    "file": "purchase-candidate-storage.spec.ts",
+    "line": 6,
+    "name": "T01 native Chromium storage integration: candidate migration, CAS, replay, audit rollback and revoked session; no G6 UI claim",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1078
+      }
+    ]
+  },
+  {
+    "file": "purchase-candidate-storage.spec.ts",
+    "line": 21,
+    "name": "T01 native FK integration: mixed-price lines, strict provenance and rollback; no finalize UI claim",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 765
+      }
+    ]
+  },
+  {
+    "file": "purchase-customer-layout.spec.ts",
+    "line": 12,
+    "name": "owner: existing purchase customer follows local Figma phone suggestion and selected states",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4776
+      }
+    ]
+  },
+  {
+    "file": "purchase-customer-layout.spec.ts",
+    "line": 12,
+    "name": "staff: existing purchase customer follows local Figma phone suggestion and selected states",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4285
+      }
+    ]
+  },
+  {
+    "file": "purchase-drafts.spec.ts",
+    "line": 16,
+    "name": "T02 owner: real UI input, validation, pending request, reload, remove and cancel",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4600
+      }
+    ]
+  },
+  {
+    "file": "purchase-drafts.spec.ts",
+    "line": 16,
+    "name": "T02 staff: real UI input, validation, pending request, reload, remove and cancel",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5250
+      }
+    ]
+  },
+  {
+    "file": "purchase-drafts.spec.ts",
+    "line": 46,
+    "name": "T02 native IDB failure keeps the price form, rolls back and retries without duplicate request",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2417
+      }
+    ]
+  },
+  {
+    "file": "purchase-drafts.spec.ts",
+    "line": 55,
+    "name": "T02 real customer creation and selection persist without creating an invoice or stock",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2074
+      }
+    ]
+  },
+  {
+    "file": "purchase-drafts.spec.ts",
+    "line": 84,
+    "name": "T02 missing bracket is recoverable and ten real lines paginate without hidden rows",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 9259
+      }
+    ]
+  },
+  {
+    "file": "purchase-editor-figma.spec.ts",
+    "line": 15,
+    "name": "owner: empty purchase editor preserves the local Figma canvas layout",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2330
+      }
+    ]
+  },
+  {
+    "file": "purchase-editor-figma.spec.ts",
+    "line": 15,
+    "name": "staff: empty purchase editor preserves the local Figma canvas layout",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2465
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization-storage.spec.ts",
+    "line": 6,
+    "name": "T05 native storage transaction rolls back, retries, reserves IDs and serializes connections",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1339
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization.spec.ts",
+    "line": 52,
+    "name": "T05 owner validates empty and missing customer, finalizes mixed prices and quantity once, then reloads safely",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 7497
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization.spec.ts",
+    "line": 96,
+    "name": "T05 staff cannot finalize pending/rejected prices, then completes an approved mixed-price purchase",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 9392
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization.spec.ts",
+    "line": 133,
+    "name": "T05 productCosts failure rolls back and keeps the editor for a single successful retry",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3374
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization.spec.ts",
+    "line": 133,
+    "name": "T05 auditEntries failure rolls back and keeps the editor for a single successful retry",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3425
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization.spec.ts",
+    "line": 155,
+    "name": "T05 two owner tabs finalize one draft once and the losing tab recovers to the list",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4060
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization.spec.ts",
+    "line": 171,
+    "name": "T05 reload immediately after native commit restores the completed draft without a second invoice",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4080
+      }
+    ]
+  },
+  {
+    "file": "purchase-finalization.spec.ts",
+    "line": 194,
+    "name": "T05 cancel customer creation leaves no customer and concurrent phone creation stays unique",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4149
+      }
+    ]
+  },
+  {
+    "file": "purchase-list.spec.ts",
+    "line": 4,
+    "name": "owner: Thu mua opens list, filters and pages real legacy data, then explicitly opens creation",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 14936
+      }
+    ]
+  },
+  {
+    "file": "purchase-list.spec.ts",
+    "line": 4,
+    "name": "staff: Thu mua opens list, filters and pages real legacy data, then explicitly opens creation",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 16079
+      }
+    ]
+  },
+  {
+    "file": "purchase-queries.spec.ts",
+    "line": 36,
+    "name": "T06 owner: real mixed-price purchase, combined search, reload, stable customer history and read-only views",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 9213
+      }
+    ]
+  },
+  {
+    "file": "purchase-queries.spec.ts",
+    "line": 36,
+    "name": "T06 staff: real mixed-price purchase, combined search, reload, stable customer history and read-only views",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 12035
+      }
+    ]
+  },
+  {
+    "file": "purchase-queries.spec.ts",
+    "line": 99,
+    "name": "T06 read error list: Figma notice closes without fabricated data or writes",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6551
+      }
+    ]
+  },
+  {
+    "file": "purchase-queries.spec.ts",
+    "line": 99,
+    "name": "T06 read error detail: Figma notice closes without fabricated data or writes",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5241
+      }
+    ]
+  },
+  {
+    "file": "purchase-queries.spec.ts",
+    "line": 99,
+    "name": "T06 read error history: Figma notice closes without fabricated data or writes",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5155
+      }
+    ]
+  },
+  {
+    "file": "purchase-results.spec.ts",
+    "line": 16,
+    "name": "T04 approval reaches the creator live, is acknowledged once and survives replay/reload",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6019
+      }
+    ]
+  },
+  {
+    "file": "purchase-results.spec.ts",
+    "line": 44,
+    "name": "T04 rejection reason and real price revision 80000, immutable history and new snapshot",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6711
+      }
+    ]
+  },
+  {
+    "file": "purchase-results.spec.ts",
+    "line": 44,
+    "name": "T04 rejection reason and real price revision 130000, immutable history and new snapshot",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6603
+      }
+    ]
+  },
+  {
+    "file": "purchase-results.spec.ts",
+    "line": 89,
+    "name": "T04 unread result recovers after signal failure and two creator tabs display it once",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 7081
+      }
+    ]
+  },
+  {
+    "file": "purchase-results.spec.ts",
+    "line": 119,
+    "name": "T04 acknowledgement and price write failures retain the dialog, rollback and retry once",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 7401
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 15,
+    "name": "owner customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4479
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 15,
+    "name": "staff customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4444
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 73,
+    "name": "two tabs keep independent identities, live customer data without F5, and reject stale UI writes",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3740
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 98,
+    "name": "owner bracket UI uses fixed dropdown, validates, cancels, edits and blocks staff route",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3879
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 138,
+    "name": "customer UI reads existing purchase/sale history and snapshots, and refuses linked deletion",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2814
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 172,
+    "name": "customer UI handles a real IDB write failure without partial data and allows retry",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1795
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 194,
+    "name": "customer pagination changes real rows and search reset returns to the first page",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 4870
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 216,
+    "name": "layout fits 1366x650 without browser zoom",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2402
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 216,
+    "name": "layout fits 1280x720 without browser zoom",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2088
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 216,
+    "name": "layout fits 1024x768 without browser zoom",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2109
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 216,
+    "name": "layout fits 768x1024 without browser zoom",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2441
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 216,
+    "name": "layout fits 390x844 without browser zoom",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2366
+      }
+    ]
+  },
+  {
+    "file": "reference-data.spec.ts",
+    "line": 216,
+    "name": "layout fits 320x640 without browser zoom",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1921
+      }
+    ]
+  },
+  {
+    "file": "shell.spec.ts",
+    "line": 4,
+    "name": "shell, fallback route, persisted metadata and local requests",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2531
+      }
+    ]
+  },
+  {
+    "file": "shell.spec.ts",
+    "line": 45,
+    "name": "unavailable IndexedDB displays a recoverable startup error",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 478
+      }
+    ]
+  },
+  {
+    "file": "shell.spec.ts",
+    "line": 54,
+    "name": "upgrades phase 1 browser data without deleting existing metadata or seeding accounts",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 1142
+      }
+    ]
+  },
+  {
+    "file": "staff-review.spec.ts",
+    "line": 76,
+    "name": "G5 source controls and successful states SC145/146/148/149/150/152-155/157-160/162 through real UI",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 11773
+      }
+    ]
+  },
+  {
+    "file": "staff-review.spec.ts",
+    "line": 131,
+    "name": "G5 failures SC147/151/156/161 preserve complete DB and recover through UI retry",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6549
+      }
+    ]
+  },
+  {
+    "file": "staff-review.spec.ts",
+    "line": 157,
+    "name": "G5 create form and password control fit desktop and narrow viewports without console errors",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 6427
+      }
+    ]
+  },
+  {
+    "file": "staff.spec.ts",
+    "line": 16,
+    "name": "staff management UI validates all fields, cancels, creates, reads safe details and checks duplicates",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5563
+      }
+    ]
+  },
+  {
+    "file": "staff.spec.ts",
+    "line": 48,
+    "name": "two real UI-created roles retain independent sessions; rename and delete revoke staff live",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 5421
+      }
+    ]
+  },
+  {
+    "file": "staff.spec.ts",
+    "line": 80,
+    "name": "two owner forms cannot overwrite a staff profile with a stale version",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3008
+      }
+    ]
+  },
+  {
+    "file": "staff.spec.ts",
+    "line": 92,
+    "name": "account create storage failure keeps form, rolls back and allows UI retry",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2043
+      }
+    ]
+  },
+  {
+    "file": "staff.spec.ts",
+    "line": 102,
+    "name": "desktop details land on loaded content at 1366x650",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 2760
+      }
+    ]
+  },
+  {
+    "file": "staff.spec.ts",
+    "line": 102,
+    "name": "desktop details land on loaded content at 1280x720",
+    "outcome": "expected",
+    "attempts": [
+      {
+        "status": "passed",
+        "retry": 0,
+        "durationMs": 3047
+      }
+    ]
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "capturedAt": "2026-11-11T09:06:48.963Z",
+  "baseline": "EVIDENCE_MANIFEST.json (original G5 snapshot, preserved)",
+  "baseCommit": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "branch": "coco/phase-5-staff",
+  "scope": "table/pagination layout only; no service/repository/schema/data/roadmap/dependency changes; no stage/commit/push/deploy",
+  "testResults": {
+    "chromium": {
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0,
+      "retries": 0
+    },
+    "vitest": {
+      "passed": 88,
+      "failed": 0,
+      "skipped": 0
+    },
+    "lint": "PASS",
+    "typecheckViaBuild": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "measurements": {
+    "layoutStates": 126,
+    "crossScreenMaxYDelta": 0,
+    "screens": [
+      {
+        "screen": "customers",
+        "layoutStates": 42,
+        "maxYDelta": 0,
+        "maxCenterError": 0,
+        "minTableFooterGap": 28,
+        "viewports": [
+          "1440x900",
+          "1366x650",
+          "1280x720",
+          "1024x768",
+          "800x500",
+          "600x700",
+          "390x844"
+        ],
+        "recordCounts": [
+          0,
+          1,
+          5,
+          10,
+          11,
+          25
+        ]
+      },
+      {
+        "screen": "price-brackets",
+        "layoutStates": 42,
+        "maxYDelta": 0,
+        "maxCenterError": 0,
+        "minTableFooterGap": 28,
+        "viewports": [
+          "1440x900",
+          "1366x650",
+          "1280x720",
+          "1024x768",
+          "800x500",
+          "600x700",
+          "390x844"
+        ],
+        "recordCounts": [
+          0,
+          1,
+          5,
+          10,
+          11,
+          25
+        ]
+      },
+      {
+        "screen": "staff",
+        "layoutStates": 42,
+        "maxYDelta": 0,
+        "maxCenterError": 0,
+        "minTableFooterGap": 28,
+        "viewports": [
+          "1440x900",
+          "1366x650",
+          "1280x720",
+          "1024x768",
+          "800x500",
+          "600x700",
+          "390x844"
+        ],
+        "recordCounts": [
+          0,
+          1,
+          5,
+          10,
+          11,
+          25
+        ]
+      }
+    ]
+  },
+  "codeFiles": [
+    {
+      "pathFromApp": "src/components/ui/DataTable.tsx",
+      "sha256": "065ecede909d37d6a66939ba36a7edbbb78ae6e9dfb352aa8d845105229b650b"
+    },
+    {
+      "pathFromApp": "src/features/customers/CustomersPage.tsx",
+      "sha256": "89bfaf388b6d0347ca8184e6b4f26bb9d4abc2c7e19bffd1fd1ea25e544426b8"
+    },
+    {
+      "pathFromApp": "src/features/price-brackets/PriceBracketsPage.tsx",
+      "sha256": "f5cf185c569ffaf6c15fa894a0e466a07ed703fec11f9db377fbde419f004521"
+    },
+    {
+      "pathFromApp": "src/features/staff/StaffPages.tsx",
+      "sha256": "13e0c4e4889e23e261d96303d3918ae231195aad2898727df779269c9a46bdcf"
+    },
+    {
+      "pathFromApp": "src/index.css",
+      "sha256": "fa72363cb6e007451f004e4543264ef4aa1db02ba976f4d60370aaa9ab6f5908"
+    },
+    {
+      "pathFromApp": "tests/e2e/pagination.spec.ts",
+      "sha256": "c7a20f4295d371fed28e9db0fdb5933b4201ca6ad18ff4f432fc965bf93ce277"
+    }
+  ],
+  "artifacts": [
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/customers-metrics.json",
+      "sha256": "35f68bda7cae53069bfbae2c6c1e3dc643fa135452d03788c8bba74522821455"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/price-brackets-metrics.json",
+      "sha256": "a0688561d07fa2091716e2205408d375a077fbccdec95ec8c836e799459a174e"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/staff-metrics.json",
+      "sha256": "41a94e97a2bbe8f9009f5f849fe8b7d6ddda1fa39c6cb4e46a615d217f84c086"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/customers-0.png",
+      "sha256": "495cd532de639490aa33aba9065716da8ab4596c4e6dd36f34be200e2b558680"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/customers-1.png",
+      "sha256": "6dfeea44198e9c3cb8028ac7242719f11edf06dede4d74689d8a6a6b1b449584"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/customers-5.png",
+      "sha256": "cd859c55a0b27998adfe671d712fa7d431607040c5906b7ca366653d7c0bed97"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/customers-10.png",
+      "sha256": "cd859c55a0b27998adfe671d712fa7d431607040c5906b7ca366653d7c0bed97"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/customers-25.png",
+      "sha256": "4358de7dbb5a2f18a1cc0139eb3a995a3f695a3fee1c26007155fc5c8eb86592"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/price-brackets-25.png",
+      "sha256": "c6a2bdb747f5edcc31330f3f93976262e14e1513124ab536248a2b43e4927c16"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/narrow-window.png",
+      "sha256": "e959aabb4c7ae0cf82357cce8d7abfc3e921a32090d857a19e9fd7778ad29d19"
+    },
+    {
+      "pathFromApp": "planning/phase5/evidence/pagination/staff-25.png",
+      "sha256": "ee34fc09531298eee402575681bd135d599ca5c6884dfe51ed72e4a2018e9309"
+    }
+  ]
+}

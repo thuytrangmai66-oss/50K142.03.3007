@@ -1,0 +1,1496 @@
+[
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "matches independent native PBKDF2 SHA-256 and uses fresh random salts",
+    "status": "passed",
+    "durationMs": 227.14660000000003
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "migrates the frozen v2 database to v4, preserving business and metadata without accounts or sessions",
+    "status": "passed",
+    "durationMs": 31.612199999999575
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "bootstraps once with caller-entered credentials, hash/salt and atomic evidence",
+    "status": "passed",
+    "durationMs": 309.9463999999998
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "serializes simultaneous bootstrap from two connections into exactly one owner",
+    "status": "passed",
+    "durationMs": 155.29660000000013
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rolls back bootstrap marker and all account rows if audit write fails, then allows retry",
+    "status": "passed",
+    "durationMs": 220.49199999999973
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rejects malformed bootstrap profile without partial data 0",
+    "status": "passed",
+    "durationMs": 3.5109999999999673
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rejects malformed bootstrap profile without partial data 1",
+    "status": "passed",
+    "durationMs": 3.4881000000000313
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rejects malformed bootstrap profile without partial data 2",
+    "status": "passed",
+    "durationMs": 3.348500000000058
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "reports missing login input before writing 0",
+    "status": "passed",
+    "durationMs": 3.6970000000001164
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "reports missing login input before writing 1",
+    "status": "passed",
+    "durationMs": 3.8070000000002437
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "reports missing login input before writing 2",
+    "status": "passed",
+    "durationMs": 3.400800000000345
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "does not distinguish unknown username, wrong password or inactive account and issues no session",
+    "status": "passed",
+    "durationMs": 428.1857
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "logs in with an opaque token, persists only its hash, reloads session and revokes it on logout",
+    "status": "passed",
+    "durationMs": 268.15380000000005
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "checks fresh role/active/version on every service call across connections",
+    "status": "passed",
+    "durationMs": 261.8481999999999
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "revokes role-changed and credential-version-changed sessions",
+    "status": "passed",
+    "durationMs": 351.4895000000006
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "binds write guards to the same transaction, ignores forged actor and rechecks permission on replay",
+    "status": "passed",
+    "durationMs": 224.58870000000024
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rejects staff relabeling account writes as public permission with no partial write",
+    "status": "passed",
+    "durationMs": 261.4402999999993
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "does not allow a read permission to authorize a mutation, even for the owner",
+    "status": "passed",
+    "durationMs": 258.9485000000004
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rolls back a newly issued session if login audit cannot be written",
+    "status": "passed",
+    "durationMs": 317.1241
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "keeps the session if logout audit fails, then revokes it atomically on retry",
+    "status": "passed",
+    "durationMs": 221.78189999999995
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rejects login if account changes while password derivation is in flight",
+    "status": "passed",
+    "durationMs": 208.03430000000026
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "enforces the SRS owner-only permission contract without a system-run permission in UI",
+    "status": "passed",
+    "durationMs": 1.6967999999997119
+  },
+  {
+    "file": "tests/unit/database.test.ts",
+    "name": "isolates CoCoDB and preserves records across concurrent startup and reopen",
+    "status": "passed",
+    "durationMs": 44.762899999999945
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination slices 0 records before rendering",
+    "status": "passed",
+    "durationMs": 2.93119999999999
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination slices 1 records before rendering",
+    "status": "passed",
+    "durationMs": 0.4697000000001026
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination slices 9 records before rendering",
+    "status": "passed",
+    "durationMs": 0.35149999999998727
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination slices 10 records before rendering",
+    "status": "passed",
+    "durationMs": 0.26099999999996726
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination slices 25 records before rendering",
+    "status": "passed",
+    "durationMs": 0.22649999999998727
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination partitions 25 records into exactly 9 + 9 + 7 without gaps or duplicates",
+    "status": "passed",
+    "durationMs": 0.5597999999999956
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination clamps a removed/filtered last page and cannot bounce back after data is added",
+    "status": "passed",
+    "durationMs": 0.21239999999988868
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination normalizes invalid requested page 0",
+    "status": "passed",
+    "durationMs": 0.08809999999994034
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination normalizes invalid requested page -1",
+    "status": "passed",
+    "durationMs": 0.08210000000008222
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination normalizes invalid requested page 1.5",
+    "status": "passed",
+    "durationMs": 0.07930000000010295
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination normalizes invalid requested page NaN",
+    "status": "passed",
+    "durationMs": 0.043600000000196815
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination normalizes invalid requested page Infinity",
+    "status": "passed",
+    "durationMs": 0.03289999999992688
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "name": "shared list pagination supports an explicit module capacity without mutating the data",
+    "status": "passed",
+    "durationMs": 0.4108000000001084
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision continues adding products and selecting a customer after a superseded rejection and second approval",
+    "status": "passed",
+    "durationMs": 2540
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision delivers approve only to its creator and acknowledges once",
+    "status": "passed",
+    "durationMs": 3551.3949000000002
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision delivers reject only to its creator and acknowledges once",
+    "status": "passed",
+    "durationMs": 1681.9105999999992
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision revises rejected price 80000 without changing old history and replays once",
+    "status": "passed",
+    "durationMs": 1003.8756000000012
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision revises rejected price 130000 without changing old history and replays once",
+    "status": "passed",
+    "durationMs": 1105.0522
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision rolls back acknowledgement and price revision after audit failure",
+    "status": "passed",
+    "durationMs": 1031.9681999999993
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision uses the newly displayed bracket revision while preserving the original rejected snapshot",
+    "status": "passed",
+    "durationMs": 1737.2824999999975
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision blocks invalid price, non-rejected lines, foreign sessions and changed brackets",
+    "status": "passed",
+    "durationMs": 1439.7121999999981
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision does not show a stale result after remove",
+    "status": "passed",
+    "durationMs": 1651.1254999999983
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "T04 recipient results and rejected-price revision does not show a stale result after cancel",
+    "status": "passed",
+    "durationMs": 2096.2252999999982
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "rejects a changed price snapshot before deciding and keeps decision/event/audit unchanged",
+    "status": "passed",
+    "durationMs": 1295.9706000000006
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "rejects a changed quantity snapshot before deciding and keeps decision/event/audit unchanged",
+    "status": "passed",
+    "durationMs": 1192.794600000001
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "rejects a changed bracket snapshot before deciding and keeps decision/event/audit unchanged",
+    "status": "passed",
+    "durationMs": 1487.7846000000027
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "rejects malformed decision input {\"action\":\"invalid\"} without writes",
+    "status": "passed",
+    "durationMs": 2917.5106000000014
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "rejects malformed decision input {\"expectedRevision\":0} without writes",
+    "status": "passed",
+    "durationMs": 1144.0035000000025
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "rejects malformed decision input {\"expectedRevision\":1.5} without writes",
+    "status": "passed",
+    "durationMs": 1412.4215000000004
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "rejects malformed decision input {\"operationId\":\"\"} without writes",
+    "status": "passed",
+    "durationMs": 1166.4225000000006
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests filters employee names and Vietnam calendar date",
+    "status": "passed",
+    "durationMs": 1343.507800000003
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests preserves an existing approve decision when adding another product",
+    "status": "passed",
+    "durationMs": 1600.482799999998
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests preserves an existing reject decision when adding another product",
+    "status": "passed",
+    "durationMs": 1679.553700000004
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests returns empty list when no approvals exist",
+    "status": "passed",
+    "durationMs": 1374.3910000000033
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests shows pending request and marks it eligible",
+    "status": "passed",
+    "durationMs": 1397.2311999999947
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests marks request ineligible when line is removed",
+    "status": "passed",
+    "durationMs": 1265.7440999999963
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests filters by status=decided after a decision",
+    "status": "passed",
+    "durationMs": 2473.007599999997
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "listRequests requires approvals.read permission",
+    "status": "passed",
+    "durationMs": 1213.975599999998
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "loadRequest loads approval with draft and line context",
+    "status": "passed",
+    "durationMs": 1344.3585999999996
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "loadRequest throws for unknown approvalId",
+    "status": "passed",
+    "durationMs": 1479.148000000001
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "loadRequest requires approvals.read permission",
+    "status": "passed",
+    "durationMs": 1227.3219000000026
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — approve approves a pending request atomically and writes persistent notice",
+    "status": "passed",
+    "durationMs": 1001.7567999999956
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — approve replays the same operationId without duplicating data",
+    "status": "passed",
+    "durationMs": 1058.5349999999962
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — reject rejects with reason, updates approval and line, writes notice",
+    "status": "passed",
+    "durationMs": 1042.7784000000029
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — reject requires non-empty reason when rejecting",
+    "status": "passed",
+    "durationMs": 1019.0607000000018
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — reject rejects reason longer than 100 characters",
+    "status": "passed",
+    "durationMs": 1094.922599999998
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — permission and CAS guards prevents staff from deciding approvals",
+    "status": "passed",
+    "durationMs": 1091.0260999999955
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — permission and CAS guards rejects stale expectedRevision (CAS)",
+    "status": "passed",
+    "durationMs": 1934.7663999999932
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — permission and CAS guards rejects deciding an already-decided approval",
+    "status": "passed",
+    "durationMs": 1788.3534
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — permission and CAS guards two owners collide: second sees CONFLICT and first decision is preserved",
+    "status": "passed",
+    "durationMs": 1474.4046999999991
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — permission and CAS guards rolls back all writes on audit failure — no partial state",
+    "status": "passed",
+    "durationMs": 2275.3693000000058
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — permission and CAS guards refuses to decide a request where the line has been removed",
+    "status": "passed",
+    "durationMs": 2727.503399999994
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "name": "decide — permission and CAS guards requires auth session for decide",
+    "status": "passed",
+    "durationMs": 1044.1429000000062
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "uses approved integer half-up markup 1 -> 1",
+    "status": "passed",
+    "durationMs": 1275.6965000000005
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "uses approved integer half-up markup 5 -> 7",
+    "status": "passed",
+    "durationMs": 1572.8972000000003
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "uses approved integer half-up markup 15 -> 20",
+    "status": "passed",
+    "durationMs": 2329.2081
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "uses approved integer half-up markup 80001 -> 104001",
+    "status": "passed",
+    "durationMs": 2118.947899999999
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "uses approved integer half-up markup 120000 -> 156000",
+    "status": "passed",
+    "durationMs": 883.0774000000001
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "uses approved integer half-up markup 6928614811339224 -> 9007199254740991",
+    "status": "passed",
+    "durationMs": 673.446899999999
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects fractional/zero/unsafe costs and sale price overflow",
+    "status": "passed",
+    "durationMs": 800.4686999999994
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "atomically saves a real authorized draft, without invoice/customer fabrication; owner=false",
+    "status": "passed",
+    "durationMs": 775.6453999999994
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "atomically saves a real authorized draft, without invoice/customer fabrication; owner=true",
+    "status": "passed",
+    "durationMs": 767.2785000000003
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "replays identical commands once and rejects changed payloads without mutation",
+    "status": "passed",
+    "durationMs": 1288.3041999999987
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "serializes two connections with the same expected revision into a single winner",
+    "status": "passed",
+    "durationMs": 1146.3709999999992
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects forged provenance and revoked sessions, including replay of a committed command",
+    "status": "passed",
+    "durationMs": 1006.7688000000016
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "preserves historical draft actor across real G5 rename, requires new session and records current audit actor",
+    "status": "passed",
+    "durationMs": 1811.641599999999
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects invalid customer link and rolls back all tables",
+    "status": "passed",
+    "durationMs": 1645.3076
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects invalid bracket link and rolls back all tables",
+    "status": "passed",
+    "durationMs": 906.2553000000007
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects invalid request link and rolls back all tables",
+    "status": "passed",
+    "durationMs": 912.9143000000004
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects invalid cross-draft link and rolls back all tables",
+    "status": "passed",
+    "durationMs": 856.607
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "keeps pending price bound to the exact snapshot, cannot inject an approved decision",
+    "status": "passed",
+    "durationMs": 978.1294000000016
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects changed bracket versions and preserves old lines until invalidation is implemented",
+    "status": "passed",
+    "durationMs": 2428.4628999999986
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "does not reinterpret an untagged legacy condition even when its numeric value is 2",
+    "status": "passed",
+    "durationMs": 1389.765000000003
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rolls back draft/lines/receipt when audit fails, then retries exactly once",
+    "status": "passed",
+    "durationMs": 830.6054000000004
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "reads legacy status without interpretation and refuses an incomplete new-format snapshot",
+    "status": "passed",
+    "durationMs": 1069.5040000000008
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "detects orphan notification/provenance and inconsistent finalized snapshot",
+    "status": "passed",
+    "durationMs": 814.1900999999998
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "checks a complete candidate provenance graph, cost binding and exact physical item count",
+    "status": "passed",
+    "durationMs": 1003.7142999999996
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "validates the new-format mixed-price FK without a fabricated legacy aggregate line",
+    "status": "passed",
+    "durationMs": 1072.4772999999986
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects damaged explicit metadata: missing-origin without legacy fallback",
+    "status": "passed",
+    "durationMs": 1183.7853000000032
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects damaged explicit metadata: wrong-line without legacy fallback",
+    "status": "passed",
+    "durationMs": 1232.0313999999998
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects damaged explicit metadata: wrong-invoice without legacy fallback",
+    "status": "passed",
+    "durationMs": 1260.5907999999981
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects damaged explicit metadata: missing-snapshot without legacy fallback",
+    "status": "passed",
+    "durationMs": 930.6739000000016
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects damaged explicit metadata: wrong-cost without legacy fallback",
+    "status": "passed",
+    "durationMs": 1022.9205000000002
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rejects damaged explicit metadata: unmarked-extra-product without legacy fallback",
+    "status": "passed",
+    "durationMs": 916.2356
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "keeps legacy product FK strict in candidate schema when no new-format marker exists",
+    "status": "passed",
+    "durationMs": 1197.5866000000024
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "name": "rolls back a transaction which breaks a new-format reverse FK after earlier writes",
+    "status": "passed",
+    "durationMs": 1961.788499999995
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "stores draft identity without fabricating customer or invoice and validates finalization identity",
+    "status": "passed",
+    "durationMs": 4.197699999999941
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "preserves two same-bracket costs and an odd total without averaging",
+    "status": "passed",
+    "durationMs": 0.8378000000000156
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "does not create a below-Min rule and requires approval strictly above Max",
+    "status": "passed",
+    "durationMs": 0.36550000000011096
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects invalid line input {\"quantity\":0}",
+    "status": "passed",
+    "durationMs": 0.264699999999948
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects invalid line input {\"quantity\":1.5}",
+    "status": "passed",
+    "durationMs": 0.1753000000001066
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects invalid line input {\"unitCost\":0}",
+    "status": "passed",
+    "durationMs": 0.2117000000000644
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects invalid line input {\"unitCost\":-1}",
+    "status": "passed",
+    "durationMs": 0.11740000000008877
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects invalid line input {\"unitCost\":1.5}",
+    "status": "passed",
+    "durationMs": 0.08429999999998472
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects invalid line input {\"bracket\":{\"id\":\"KG1\",\"revision\":1,\"type\":\"Áo\",\"brand\":\"CoCo\",\"condition\":90,\"min\":50000,\"max\":100000}}",
+    "status": "passed",
+    "durationMs": 0.3007999999999811
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects invalid line input {\"bracket\":{\"id\":\"KG1\",\"revision\":1,\"type\":\"Áo\",\"brand\":\"CoCo\",\"condition\":2,\"min\":200000,\"max\":100000}}",
+    "status": "passed",
+    "durationMs": 0.14990000000011605
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects duplicate line identities and arithmetic overflow instead of rounding",
+    "status": "passed",
+    "durationMs": 0.9455000000000382
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "requires a nonblank refusal reason and does not attach decision fields to pending state",
+    "status": "passed",
+    "durationMs": 0.7790999999999713
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rejects staff decisions, stale versions and repeat processing",
+    "status": "passed",
+    "durationMs": 1.091799999999921
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "binds approval to exact line revision, price, quantity and bracket snapshot",
+    "status": "passed",
+    "durationMs": 0.9411000000000058
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "requires customer/items and valid approvals without reusing a decision after an edit",
+    "status": "passed",
+    "durationMs": 1.7227000000000317
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "separates durable notice from delivery and does not claim a delivery without its time",
+    "status": "passed",
+    "durationMs": 0.3431000000000495
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "migrates a real frozen v3 test DB additively and preserves all legacy keys and records",
+    "status": "passed",
+    "durationMs": 33.00879999999984
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "activates the accepted v4 schema with all six additive stores",
+    "status": "passed",
+    "durationMs": 1.9882000000000062
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rolls back a failed schema upgrade itself, retaining native v3 stores and data",
+    "status": "passed",
+    "durationMs": 13.430499999999938
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "name": "rolls back candidate draft and lines on a late transaction failure without touching legacy rows",
+    "status": "passed",
+    "durationMs": 9.318899999999985
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "prepares without writes and finds the exact tagged bracket for a valid quantity",
+    "status": "passed",
+    "durationMs": 358.02970000000005
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid quantity  before writing",
+    "status": "passed",
+    "durationMs": 333.7008999999998
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid quantity 0 before writing",
+    "status": "passed",
+    "durationMs": 335.3272000000002
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid quantity -1 before writing",
+    "status": "passed",
+    "durationMs": 301.9912999999997
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid quantity 1.2 before writing",
+    "status": "passed",
+    "durationMs": 279.5751
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid quantity 2147483648 before writing",
+    "status": "passed",
+    "durationMs": 330.20889999999963
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid quantity abc before writing",
+    "status": "passed",
+    "durationMs": 278.70859999999993
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "returns required field errors and does not match a different condition or missing brand",
+    "status": "passed",
+    "durationMs": 245.5594000000001
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid proposed price 0",
+    "status": "passed",
+    "durationMs": 228.3666000000003
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid proposed price -1",
+    "status": "passed",
+    "durationMs": 232.59999999999945
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid proposed price 1.5",
+    "status": "passed",
+    "durationMs": 274.53610000000026
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid proposed price abc",
+    "status": "passed",
+    "durationMs": 199.6902
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rejects invalid proposed price 9007199254740992",
+    "status": "passed",
+    "durationMs": 222.29780000000028
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "creates a single real pending request only above Max and replays one command without duplicate",
+    "status": "passed",
+    "durationMs": 232.6320999999998
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "accepts Max and positive below-Min prices without inventing extra approval rules",
+    "status": "passed",
+    "durationMs": 236.7498000000005
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "soft-removes a pending line, retains its request snapshot and does not reuse a cancelled draft",
+    "status": "passed",
+    "durationMs": 363.3903
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "rolls back remove/cancel on audit failure and rejects revoked sessions",
+    "status": "passed",
+    "durationMs": 250.6918999999998
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "name": "lists persisted invoices with customer data, combined filters and Vietnam calendar dates; excludes drafts",
+    "status": "passed",
+    "durationMs": 284.84160000000065
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "finalizes real mixed prices without merging cost and preserves legacy data",
+    "status": "passed",
+    "durationMs": 342.12750000000005
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "issues one product per item, rounds initial price half up and uses Vietnam dates",
+    "status": "passed",
+    "durationMs": 264.5464000000002
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "retries a committed operation once and rejects another finalize command or payload",
+    "status": "passed",
+    "durationMs": 238.4734000000003
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "serializes two tabs finalizing the same revision",
+    "status": "passed",
+    "durationMs": 374.2928999999999
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "blocks pending before creating invoice or products",
+    "status": "passed",
+    "durationMs": 968.29
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "blocks rejected before creating invoice or products",
+    "status": "passed",
+    "durationMs": 388.0645000000004
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "blocks missing-customer before creating invoice or products",
+    "status": "passed",
+    "durationMs": 335.0519999999997
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "blocks empty before creating invoice or products",
+    "status": "passed",
+    "durationMs": 348.1884
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "blocks cancelled before creating invoice or products",
+    "status": "passed",
+    "durationMs": 248.71659999999974
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "blocks stale before creating invoice or products",
+    "status": "passed",
+    "durationMs": 272.6873000000005
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when hoaDonThuMua add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 214.6761000000006
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when sanPham add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 296.3692999999994
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when productCosts add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 221.6293999999998
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when purchaseProvenance add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 222.10390000000007
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when purchaseFinalizations add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 221.40980000000036
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when auditEntries add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 220.78960000000006
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when issuedIdentifiers add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 245.22400000000016
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rolls back all stores when recordVersions add fails, then safely retries",
+    "status": "passed",
+    "durationMs": 230.16030000000046
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "rejects a foreign employee and a revoked session even on receipt replay",
+    "status": "passed",
+    "durationMs": 442.22559999999976
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "requires an explicit valid state mapping and valid command",
+    "status": "passed",
+    "durationMs": 302.8270999999995
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "name": "never reuses a reserved product ID and rolls back invoice allocation when random IDs keep colliding",
+    "status": "passed",
+    "durationMs": 297.95840000000135
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "reads canonical mixed prices, actor and status without writes or current bracket repricing",
+    "status": "passed",
+    "durationMs": 581.5493000000001
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "combines trimmed case-insensitive ID/name, phone and Vietnam calendar date with real pagination",
+    "status": "passed",
+    "durationMs": 755.5535999999997
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "keeps history by customer ID after name/phone change and rejects another customer detail route",
+    "status": "passed",
+    "durationMs": 363.3756999999996
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "retains legacy codes and unit prices without inferring their meaning or changing stored rows",
+    "status": "passed",
+    "durationMs": 310.91330000000016
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects corrupt finalized customer without legacy fallback or repairs",
+    "status": "passed",
+    "durationMs": 344.2108999999991
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects corrupt finalized employee without legacy fallback or repairs",
+    "status": "passed",
+    "durationMs": 381.77800000000025
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects corrupt finalized snapshot without legacy fallback or repairs",
+    "status": "passed",
+    "durationMs": 433.58749999999964
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects corrupt finalized cost without legacy fallback or repairs",
+    "status": "passed",
+    "durationMs": 306.0663000000004
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects corrupt finalized product without legacy fallback or repairs",
+    "status": "passed",
+    "durationMs": 392.3692000000001
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects corrupt finalized mapping without legacy fallback or repairs",
+    "status": "passed",
+    "durationMs": 382.3815999999997
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects corrupt finalized total without legacy fallback or repairs",
+    "status": "passed",
+    "durationMs": 340.9308000000001
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects legacy missing-lines without inventing history",
+    "status": "passed",
+    "durationMs": 358.2374
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects legacy wrong-total without inventing history",
+    "status": "passed",
+    "durationMs": 365.91699999999946
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "rejects legacy missing-bracket without inventing history",
+    "status": "passed",
+    "durationMs": 321.47299999999996
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "requires a valid session for all read entry points",
+    "status": "passed",
+    "durationMs": 276.53529999999955
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "name": "allows staff to read an owner transaction while keeping role/session and every store unchanged",
+    "status": "passed",
+    "durationMs": 521.6653000000006
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "creates, searches, renames and deletes a customer, preserving leading zero and points",
+    "status": "passed",
+    "durationMs": 247.1296000000002
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "validates customer fields in service before persistence 0",
+    "status": "passed",
+    "durationMs": 209.3706000000002
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "validates customer fields in service before persistence 1",
+    "status": "passed",
+    "durationMs": 206.4408000000003
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "validates customer fields in service before persistence 2",
+    "status": "passed",
+    "durationMs": 197.6648
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "serializes duplicate phone races across connections and rejects stale edits without overwriting",
+    "status": "passed",
+    "durationMs": 233.0347999999999
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "keeps history under a changed phone, joins invoice snapshots and prevents linked deletion",
+    "status": "passed",
+    "durationMs": 249.44790000000012
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "uses only the approved numeric condition codes for new brackets, including create/edit/unique",
+    "status": "passed",
+    "durationMs": 223.85080000000016
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "rejects unapproved condition input 0 without storing it",
+    "status": "passed",
+    "durationMs": 258.8616000000002
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "rejects unapproved condition input 4 without storing it",
+    "status": "passed",
+    "durationMs": 282.8567000000003
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "rejects unapproved condition input 90 without storing it",
+    "status": "passed",
+    "durationMs": 244.91539999999986
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "rejects unapproved condition input Tốt without storing it",
+    "status": "passed",
+    "durationMs": 240.3762000000006
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "rejects unapproved condition input 2.5 without storing it",
+    "status": "passed",
+    "durationMs": 257.8702000000003
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "checks every required bracket field and integer Min/Max boundaries",
+    "status": "passed",
+    "durationMs": 434.9870000000001
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "preserves untagged G2 condition 90 and requires review before any reinterpretation",
+    "status": "passed",
+    "durationMs": 300.3068999999996
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "preserves untagged G2 condition 2 and requires review before any reinterpretation",
+    "status": "passed",
+    "durationMs": 391.22910000000047
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "rolls back the condition adoption marker and business row when audit fails",
+    "status": "passed",
+    "durationMs": 305.58650000000034
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "removes registration metadata atomically only when the customer has no invoices",
+    "status": "passed",
+    "durationMs": 355.8211000000001
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "supports staff customers but denies all bracket entry points and revoked sessions",
+    "status": "passed",
+    "durationMs": 582.4569999999994
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "name": "paginates deterministically and clamps a deleted last page",
+    "status": "passed",
+    "durationMs": 396.0551999999998
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "migrates a real v1 schema without resetting metadata or seeding business records",
+    "status": "passed",
+    "durationMs": 22.298999999999978
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "writes a complete related batch atomically, including both compound-key details",
+    "status": "passed",
+    "durationMs": 23.424299999999903
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "rolls back earlier writes, versions, id reservations, audit and receipt on a missing foreign key",
+    "status": "passed",
+    "durationMs": 10.681100000000015
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "enforces unique customer phones across competing connections and rolls back the losing command",
+    "status": "passed",
+    "durationMs": 12.376099999999951
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "preserves phone leading zero and rejects duplicate employee phone and login",
+    "status": "passed",
+    "durationMs": 9.816699999999855
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "enforces unique price-bracket combination and preserves per-item cost after bracket price edits",
+    "status": "passed",
+    "durationMs": 13.22829999999999
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "commits only once for simultaneous identical operation ids across tabs and survives reopen",
+    "status": "passed",
+    "durationMs": 10.39910000000009
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "rejects stale writes across tabs without overwriting the winner",
+    "status": "passed",
+    "durationMs": 10.107999999999947
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "retains customer history while changing a phone and prevents deleting linked customers",
+    "status": "passed",
+    "durationMs": 14.370300000000043
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "keeps tombstone versions to reject a stale edit after delete/recreate",
+    "status": "passed",
+    "durationMs": 8.834899999999834
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "never reuses an issued product id even after deletion",
+    "status": "passed",
+    "durationMs": 13.060799999999745
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "keeps product import date and provenance immutable and prevents deleting invoices",
+    "status": "passed",
+    "durationMs": 6.732500000000073
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "stores explicit per-product costs for two different prices in the same invoice/bracket without inference",
+    "status": "passed",
+    "durationMs": 10.353300000000218
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "rejects wrong cost provenance and mismatched compound purchase links",
+    "status": "passed",
+    "durationMs": 16.366300000000138
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "makes a discount milestone unique per product/cycle across connections and records actual execution time",
+    "status": "passed",
+    "durationMs": 13.064000000000306
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "requires explicit membership registration and stores only hash/salt security metadata",
+    "status": "passed",
+    "durationMs": 8.946100000000115
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "rolls back all writes if persisting audit evidence fails, then permits retry",
+    "status": "passed",
+    "durationMs": 11.170799999999872
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "rejects duplicate batch targets, missing versions and malformed compound keys",
+    "status": "passed",
+    "durationMs": 3.131999999999607
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects invalid customer data before persistence 0",
+    "status": "passed",
+    "durationMs": 4.83389999999963
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects invalid customer data before persistence 1",
+    "status": "passed",
+    "durationMs": 6.519999999999982
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects invalid customer data before persistence 2",
+    "status": "passed",
+    "durationMs": 6.027000000000044
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects invalid customer data before persistence 3",
+    "status": "passed",
+    "durationMs": 15.123399999999947
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects invalid customer data before persistence 4",
+    "status": "passed",
+    "durationMs": 11.264300000000276
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects invalid customer data before persistence 5",
+    "status": "passed",
+    "durationMs": 4.667400000000271
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects unsafe, fractional, negative and inconsistent amounts without rounding",
+    "status": "passed",
+    "durationMs": 3.000800000000254
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "name": "runtime validation rejects nonexistent dates and plaintext password fields",
+    "status": "passed",
+    "durationMs": 2.3987999999999374
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "creates real staff credentials atomically, forces staff role and exposes a safe readonly DTO",
+    "status": "passed",
+    "durationMs": 1360.3575
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 0",
+    "status": "passed",
+    "durationMs": 665.9847000000004
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 1",
+    "status": "passed",
+    "durationMs": 531.7787000000008
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 2",
+    "status": "passed",
+    "durationMs": 496.16439999999966
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 3",
+    "status": "passed",
+    "durationMs": 509.7497999999996
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 4",
+    "status": "passed",
+    "durationMs": 509.21589999999924
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 5",
+    "status": "passed",
+    "durationMs": 522.0191000000004
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 6",
+    "status": "passed",
+    "durationMs": 478.20799999999963
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 7",
+    "status": "passed",
+    "durationMs": 495.6366999999991
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "validates required/profile input at the service boundary 8",
+    "status": "passed",
+    "durationMs": 498.3683999999994
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "reports both duplicate phone and username, including owner data, without partial records",
+    "status": "passed",
+    "durationMs": 802.0698999999986
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "serializes two create races and preserves the winning account",
+    "status": "passed",
+    "durationMs": 1002.5374000000011
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "keeps credentials and session when editing only profile, and rejects a stale owner form",
+    "status": "passed",
+    "durationMs": 894.735200000001
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "renames atomically with stable employee, FK links, historical actor and session revocation",
+    "status": "passed",
+    "durationMs": 3916.7065999999995
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "does not rename into another existing username or erase either identity",
+    "status": "passed",
+    "durationMs": 1441.5056000000004
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "confirmation cancellation keeps account and sessions; deletion disables account while retaining history identity",
+    "status": "passed",
+    "durationMs": 3494.6201
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "rejects all staff CRUD and owner-account mutation without touching data",
+    "status": "passed",
+    "durationMs": 1659.6700999999994
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "rolls back every row, aliases and session revocation on create audit failure",
+    "status": "passed",
+    "durationMs": 1466.8127999999997
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "rolls back every row, aliases and session revocation on rename audit failure",
+    "status": "passed",
+    "durationMs": 1578.6473000000005
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "name": "rolls back every row, aliases and session revocation on remove audit failure",
+    "status": "passed",
+    "durationMs": 1525.8505000000005
+  }
+]

@@ -1,0 +1,85 @@
+﻿{
+    "recordedAt":  "2026-11-12T08:49:51.6053949+07:00",
+    "branch":  "coco/phase-5-staff",
+    "baseHead":  "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+    "status":  "READY FOR REVIEW",
+    "lint":  "PASS",
+    "typecheck":  "PASS",
+    "build":  "PASS",
+    "unit":  {
+                 "passed":  202,
+                 "failed":  0
+             },
+    "chromiumRegression":  {
+                               "startTime":  "2026-11-12T01:45:58.191Z",
+                               "duration":  121523.43,
+                               "expected":  73,
+                               "skipped":  0,
+                               "unexpected":  0,
+                               "flaky":  0
+                           },
+    "chromiumT03ScreenshotRerun":  {
+                                       "startTime":  "2026-11-12T01:48:25.101Z",
+                                       "duration":  20687.919,
+                                       "expected":  8,
+                                       "skipped":  0,
+                                       "unexpected":  0,
+                                       "flaky":  0
+                                   },
+    "screenshotRerunChange":  "Blur active form inputs before screenshots only",
+    "pending":  [
+                    "User acceptance of T03 and pixel review",
+                    "T04 recipient notification UI and rejected-price editing",
+                    "T05 finalization and remaining G6 tasks"
+                ],
+    "files":  [
+                  {
+                      "path":  "src/app/router.tsx",
+                      "sha256":  "1cb543647a0f697ecfe99fac9f59f32b51a39f65cc4795cbc26549e4a57de963"
+                  },
+                  {
+                      "path":  "src/components/layout/CoCoLayout.tsx",
+                      "sha256":  "1be5fb2bffa6a476c1c5624b872caaa31236946dd96010f0f6a1f01f6a1ea763"
+                  },
+                  {
+                      "path":  "src/components/ui/FormDialog.tsx",
+                      "sha256":  "6705fd73f1c96d36da9acaab6961033a6c2fe5c7c73a1bd7173347e95cb9b7f9"
+                  },
+                  {
+                      "path":  "src/components/ui/ResultDialog.tsx",
+                      "sha256":  "dc3167f61c9cf206032137ec9c36ce999d3a7ef6e52e5071a0fe85b344de2123"
+                  },
+                  {
+                      "path":  "src/features/auth/AuthProvider.tsx",
+                      "sha256":  "9f0c205ca81f53ca9c4cfd18a6f675be6659101c8777a971d4196caa6c366c1c"
+                  },
+                  {
+                      "path":  "src/features/auth/context.ts",
+                      "sha256":  "c55808b43b49a93d1aad645a36b602ea54f1006f385d1dc0dda27ff23a33e147"
+                  },
+                  {
+                      "path":  "src/features/approvals/ApprovalsPage.tsx",
+                      "sha256":  "ae03d3e2f158ee19888d6c98cbbd049c595d774cca7dc383e0175acad9b88565"
+                  },
+                  {
+                      "path":  "src/services/purchase-approvals.ts",
+                      "sha256":  "95d7cb5dc597cdf4f3d931760511bbd76fc5e769a9c7605e9828a51d2166a0a8"
+                  },
+                  {
+                      "path":  "src/services/purchase-candidate.ts",
+                      "sha256":  "f26909779e6ea33aa40d9a23e31153176427a75ef73278884bc7d1736845a3c3"
+                  },
+                  {
+                      "path":  "src/index.css",
+                      "sha256":  "88bcf700178b868980044a89b2ab6656f1f508758d0ce4fb172892b98f5a8144"
+                  },
+                  {
+                      "path":  "tests/unit/purchase-approvals.test.ts",
+                      "sha256":  "eb206cbc71274d39f955463eb9584d093b4186e31f9fa9270fce233edead7993"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-approvals.spec.ts",
+                      "sha256":  "656163d8a8ba43f9ed2c2812c2dc165a7ec06c8cc9d1d55b93a9e594f4fa4e3d"
+                  }
+              ]
+}

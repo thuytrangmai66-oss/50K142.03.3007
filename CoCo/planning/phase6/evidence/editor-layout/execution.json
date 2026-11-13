@@ -1,0 +1,66 @@
+{
+  "capturedAt": "2026-11-12T01:08:34.321Z",
+  "verifiedDateVN": "2026-11-12",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "branch": "coco/phase-5-staff",
+  "baseHead": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "source": {
+    "path": "../CODEX/Figma.Nhân viên/Tạo giao dịch thu mua 1.pdf",
+    "sha256": "d35e4d36d2aac8c2684be62006c159db12ef649d3ce1172649e64105aab84aed",
+    "canvas": [
+      1440,
+      900
+    ]
+  },
+  "geometry": {
+    "cases": 2,
+    "blocksEach": 12,
+    "tolerancePx": 1,
+    "status": "PASS"
+  },
+  "unitIntegration": {
+    "passed": 192,
+    "failed": 0,
+    "status": "PASS",
+    "report": "vitest-current.json"
+  },
+  "chromium": {
+    "passed": 65,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "retries": 0,
+    "status": "PASS",
+    "report": "playwright-current.json"
+  },
+  "commands": [
+    "npm.cmd run lint",
+    "npm.cmd run typecheck",
+    "npm.cmd test -- --reporter=json --outputFile=planning/phase6/evidence/editor-layout/vitest-current.json",
+    "npm.cmd run build",
+    "node scripts/audit-phase1.mjs --phase=6",
+    "CI=1 npm.cmd run test:e2e -- --retries=0 --reporter=line,json"
+  ],
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "build": "PASS",
+  "audit": "5/5 PASS",
+  "viewports": [
+    "1366x768",
+    "1440x900",
+    "1920x1080"
+  ],
+  "compilerRepairs": [
+    "Removed two unused imports in existing purchase-approvals service",
+    "Returned approvalRevision required by existing view-model interface",
+    "Unwired approval pages receive an explicit typed service prop instead of a missing AuthContext field; no route/provider activation"
+  ],
+  "constraints": [
+    "No schema or business-rule changes",
+    "Existing application data preserved",
+    "No commit/push/deploy",
+    "No approval route activated",
+    "No G6 acceptance inferred from passing tests"
+  ],
+  "visualAcceptance": "12 layout blocks verified, not a claim of pixel-identical icons or all G6 states"
+}

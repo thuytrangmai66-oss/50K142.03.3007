@@ -1,0 +1,18 @@
+[
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "logs in with an opaque token, persists only its hash, reloads session and revokes it on logout",
+    "durationMs": 5285.698400000001,
+    "failures": [
+      "Error: STACK_TRACE_ERROR\n    at task (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:638:27)\n    at Object.<anonymous> (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:662:16)\n    at Object.<anonymous> (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:458:28)\n    at chain (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:369:14)\n    at D:\\50K142-NEW\\CoCo\\tests\\unit\\auth.test.ts:115:1\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at VitestExecutor.runModule (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:397:4)\n    at VitestExecutor.directRequest (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:375:3)\n    at VitestExecutor.cachedRequest (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:189:11)\n    at VitestExecutor.executeId (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:166:10)\n    at collectTests (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:1174:4)\n    at startTests (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:1817:17)\n    at file:///D:/50K142-NEW/CoCo/node_modules/vitest/dist/chunks/runBaseTests.9Ij9_de-.js:117:26\n    at withEnv (file:///D:/50K142-NEW/CoCo/node_modules/vitest/dist/chunks/runBaseTests.9Ij9_de-.js:84:3)\n    at run (file:///D:/50K142-NEW/CoCo/node_modules/vitest/dist/chunks/runBaseTests.9Ij9_de-.js:109:2)"
+    ]
+  },
+  {
+    "file": "tests/unit/auth.test.ts",
+    "name": "rolls back a newly issued session if login audit cannot be written",
+    "durationMs": 5034.957300000002,
+    "failures": [
+      "Error: STACK_TRACE_ERROR\n    at task (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:638:27)\n    at Object.<anonymous> (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:662:16)\n    at Object.<anonymous> (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:458:28)\n    at chain (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:369:14)\n    at D:\\50K142-NEW\\CoCo\\tests\\unit\\auth.test.ts:185:1\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at VitestExecutor.runModule (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:397:4)\n    at VitestExecutor.directRequest (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:375:3)\n    at VitestExecutor.cachedRequest (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:189:11)\n    at VitestExecutor.executeId (file:///D:/50K142-NEW/CoCo/node_modules/vite-node/dist/client.mjs:166:10)\n    at collectTests (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:1174:4)\n    at startTests (file:///D:/50K142-NEW/CoCo/node_modules/@vitest/runner/dist/chunk-hooks.js:1817:17)\n    at file:///D:/50K142-NEW/CoCo/node_modules/vitest/dist/chunks/runBaseTests.9Ij9_de-.js:117:26\n    at withEnv (file:///D:/50K142-NEW/CoCo/node_modules/vitest/dist/chunks/runBaseTests.9Ij9_de-.js:84:3)\n    at run (file:///D:/50K142-NEW/CoCo/node_modules/vitest/dist/chunks/runBaseTests.9Ij9_de-.js:109:2)"
+    ]
+  }
+]

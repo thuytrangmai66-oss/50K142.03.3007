@@ -1,0 +1,33 @@
+{
+  "capturedAt": "2026-11-11T16:22:03.839Z",
+  "unitIntegration": 172,
+  "chromium": {
+    "passed": 63,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "retries": 0
+  },
+  "focusedCustomerUi": 2,
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "build": "PASS",
+  "audit": 5,
+  "roles": [
+    "owner",
+    "staff"
+  ],
+  "viewports": [
+    "1366x768",
+    "1440x900",
+    "1920x1080"
+  ],
+  "assertions": [
+    "No row divider, empty/nonempty purchase list and editor",
+    "Name-only gray suggestion directly below phone, before name",
+    "Actual UI customer selection, persistence, stale lookup cancellation",
+    "IDB failure shows error, selection remains retryable",
+    "No browser console errors"
+  ],
+  "publish": "No commit/push/deploy"
+}

@@ -1,5 +1,7 @@
 # Vấn đề và quyết định cần chốt
 
+> Cập nhật12/11/2026: Q10 và cách làm tròn **khoản giảm30% G7** đã được chủ dự án xác nhận, ghi tại [Decision Log G7](../phase7/DECISION_LOG.md). Nhân viên đổi giá reset như Chủ; giá sau giảm=giá gốc chu kỳ×0,70 nearest/half-up. Không tự áp dụng xác nhận này cho ưu đãi20% G8. P10 cũng đã xác nhận riêng: luôn đúng20.000đ. Ghi chú các phần này còn thiếu bên dưới là lịch sử.
+
 Cập nhật 10/11/2026: người dùng đã phê chuẩn toàn bộ phương án kỹ thuật đề xuất trong tài liệu này và nghiệm thu Giai đoạn 0 ĐẠT điều kiện chuyển tiếp. Các bảng dưới giữ bằng chứng và công việc chi tiết còn phải thực hiện; thiếu thông số chưa từng được đề xuất không được coi là đã có giá trị cụ thể.
 
 | ID | Trạng thái | Bằng chứng và kết luận hiện tại | Quyết định hoặc bước xử lý còn cần | Phạm vi bị ảnh hưởng |
@@ -34,3 +36,9 @@ Các quyết định về cấu trúc lưu kỹ thuật có thể được duy�
 Chỉ đạo người dùng: “Phê chuẩn toàn bộ các phương án đề xuất kỹ thuật trong planning/phase0/OPEN_ISSUES.md. Coi như Giai đoạn 0 đã nghiệm thu đạt điều kiện chuyển tiếp.”
 
 Q01–Q22: APPROVED_USER cho phương án và hướng xử lý đã nêu. Không yêu cầu phê chuẩn lại. Q05/Q07/Q08/Q09 còn bảng mapping cần cụ thể hóa trong Giai đoạn 2; Q10, cách làm tròn khoản giảm ở Q12, Q20 và Q21 chưa có giá trị/thuật toán cụ thể trong đề xuất gốc, được theo dõi khi triển khai module tương ứng. Việc duyệt không tạo ra dữ liệu nguồn hay bằng chứng đối chiếu 285 màn hình chưa xem. Các chi tiết này không chặn Giai đoạn 1.
+
+## Đối chiếu khi lập master plan ngày 11/11/2026
+
+Giữ nguyên phê chuẩn Q01–Q22 và lịch sử bên trên. Mapping lưu trữ Q05/Q06/Q07/Q08/Q09 đã được cụ thể hóa trong [DATA_MAPPING Giai đoạn 2](../phase2/DATA_MAPPING.md), nhưng auth/membership/scheduler/thu mua chưa vì vậy trở thành chức năng hoàn tất. Các thông số Q10, làm tròn khoản giảm Q12, Q20 và Q21 vẫn cần quyết định đúng module.
+
+Bản [OPEN_ISSUES tổng thể](../OPEN_ISSUES.md) dùng P01–P11 cho quyết định triển khai còn cần và C01–C08 cho xung đột/giới hạn; không ghi đè Q đã được phê chuẩn. Theo chỉ đạo mới, thiết kế chủ/nhân viên đọc từ CODEX local, không yêu cầu truy cập link Figma. Master plan G3–G11 mới ở trạng thái đề xuất chờ duyệt, chưa được phép code tính năng mới trong lượt lập kế hoạch.

@@ -1,0 +1,289 @@
+{
+  "capturedAt": "2026-11-10T18:44:09.668Z",
+  "baseCommit": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "branch": "coco/phase-3-auth",
+  "workingTree": "uncommitted; no new commit/push/merge/deploy",
+  "pathBasis": "application root (CoCo)",
+  "testEnvironment": {
+    "node": "v24.22.0",
+    "npm": "11.19.1",
+    "playwright": "1.64.1",
+    "vitest": "3.2.7",
+    "chromiumBundledVersion": "156.0.8078.4",
+    "chromiumRevision": "1248",
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    }
+  },
+  "results": {
+    "vitest": {
+      "passed": 49,
+      "failed": 0,
+      "skipped": 0
+    },
+    "chromium": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "staticAudit": {
+      "passed": 5,
+      "total": 5
+    },
+    "pixelComparison": "NOT RUN",
+    "ciForWorkingTree": "NOT RUN",
+    "pagesForWorkingTree": "NOT RUN"
+  },
+  "documentChecks": {
+    "checkedMarkdownFiles": 23,
+    "brokenLinks": 0,
+    "approvedADandQRows": "unchanged",
+    "workflowDependenciesBaseConfig": "unchanged",
+    "head": "unchanged",
+    "stagedFiles": 0,
+    "diffCheck": "PASS"
+  },
+  "codeFiles": [
+    {
+      "pathFromApp": "package-lock.json",
+      "sha256": "40101addab4a06ec7e1aefa8d03ede85132e16bed68c968efc7cbdf1b0165d58"
+    },
+    {
+      "pathFromApp": "package.json",
+      "sha256": "3c7b2b5cddbbe3e42a9cfd602f57ec61d9f8cf5f79096e77fa149b3333af1628"
+    },
+    {
+      "pathFromApp": "playwright.config.ts",
+      "sha256": "560fd564faf64f2769bd35cbde1757cd1119b2be5c0ca156a76998b40bc9dac1"
+    },
+    {
+      "pathFromApp": "scripts/audit-phase1.mjs",
+      "sha256": "673278559157485e9d18f3bf476826f878af81013aea9f3580420da83ad347ff"
+    },
+    {
+      "pathFromApp": "src/App.tsx",
+      "sha256": "c1c76bdc6ec4d63959c02a7e785f01e1e9bc0f89fd9b85d784aef8e66e05a4fd"
+    },
+    {
+      "pathFromApp": "src/app/providers.tsx",
+      "sha256": "9bce9ddadd55ecb45e3496aeb9c9091b25dcd2619f23ba9810ad6ae3b2ee3713"
+    },
+    {
+      "pathFromApp": "src/app/router.tsx",
+      "sha256": "19869d42bac4928770ccf387ab0f7c85fda49640cbce58498dfa300c14eb648f"
+    },
+    {
+      "pathFromApp": "src/assets/coco-mark.png",
+      "sha256": "69d06b27c6906dc97d08fe096e72bcd60cb11bf65cc6f0d99c3f08de94599410"
+    },
+    {
+      "pathFromApp": "src/components/layout/CoCoLayout.tsx",
+      "sha256": "8cf08e3918ffbe22c2356cd528d76091f9b79ffdaaa8a6e2b3f5ad1f828b850e"
+    },
+    {
+      "pathFromApp": "src/components/ui/Button.tsx",
+      "sha256": "34e361feb632d50b5940b98820376d6dc1e46fbfcbbefcf4b9f43bbcc456e5ea"
+    },
+    {
+      "pathFromApp": "src/components/ui/Field.tsx",
+      "sha256": "f677fc85af83989620e3b1440cbe7607a12d83c4b0b3ca283053622d685a942a"
+    },
+    {
+      "pathFromApp": "src/components/ui/Notice.tsx",
+      "sha256": "21e2397295df0da12d953edab8b16845a9916e3e0ba258c4b5314f25c900f254"
+    },
+    {
+      "pathFromApp": "src/components/ui/ResultDialog.tsx",
+      "sha256": "12e1d8dd83cba63e57ac8336a4dd0ce0cddb2fa8d3fae822986233350cbd0345"
+    },
+    {
+      "pathFromApp": "src/db/index.ts",
+      "sha256": "04cb0756d8523de1335c39c868366690239b9a80ee81020a5a4041368e33ca0b"
+    },
+    {
+      "pathFromApp": "src/db/schema.ts",
+      "sha256": "e6b19b9245052467dfb6da35dbf34ab68e34cc6956d1a29a55f4c7bd9ec3ccd2"
+    },
+    {
+      "pathFromApp": "src/domain/auth.ts",
+      "sha256": "493dbec501f150afb57eebe72e752816a04cbb956c99348278c461a985d863c6"
+    },
+    {
+      "pathFromApp": "src/domain/records.ts",
+      "sha256": "5e16f7be2aad01ee0f61775b3158498f50421375e125b9d3a7b3a26da1302036"
+    },
+    {
+      "pathFromApp": "src/features/auth/AuthPage.tsx",
+      "sha256": "7383bbe261b869e91565d378295d670be2f8eeb4f4db464483a8e469b3f68db7"
+    },
+    {
+      "pathFromApp": "src/features/auth/AuthProvider.tsx",
+      "sha256": "eee12259a1aea4b43342b3425cbaddbce23e6e476a04e6c7487b0c0305daa698"
+    },
+    {
+      "pathFromApp": "src/features/auth/context.ts",
+      "sha256": "4f877a07cf2df8e0dbf2a619734aca423767e45b56761f7dd981d0b4f5d3203a"
+    },
+    {
+      "pathFromApp": "src/features/auth/use-auth.ts",
+      "sha256": "c59f283b45d19f77a77b99f6d1e901ac4d95c723cadb6be426a8e1cc0e2fb5fe"
+    },
+    {
+      "pathFromApp": "src/features/home/HomePage.tsx",
+      "sha256": "a4963a548fe5e1da85d49652404e1cd31a5f4056516d360906ea530d1d588af9"
+    },
+    {
+      "pathFromApp": "src/index.css",
+      "sha256": "d1c5af36be7679ee4f00c0249be9a73fd35ec7744092f3a92c09fdb83a0dd38c"
+    },
+    {
+      "pathFromApp": "src/main.tsx",
+      "sha256": "e11d62b317fddd796a860b83ab04f8f947f8cbaed9c1a1083a02e2058e9fd9da"
+    },
+    {
+      "pathFromApp": "src/repositories/constraints.ts",
+      "sha256": "b99494a1f3ebfdcf207fc6048d17cb0d0964f4ce42489b895a489b4ee1f71446"
+    },
+    {
+      "pathFromApp": "src/repositories/index.ts",
+      "sha256": "b2507c3a82a26d59b53e3b4ff4187dcab37c8656dda0730e72b22015fbd793ed"
+    },
+    {
+      "pathFromApp": "src/services/auth/crypto.ts",
+      "sha256": "8b95459cd3f14d3a32ef43d68ae2b7de335a602b663d7b9644e44d47ea1a16cc"
+    },
+    {
+      "pathFromApp": "src/services/auth/errors.ts",
+      "sha256": "f74ba7708d684b6d6bf5fce85a4ce756193c148433a5ee73e42e9dbd397c5a1a"
+    },
+    {
+      "pathFromApp": "src/services/auth/service.ts",
+      "sha256": "99946ac75ec4b75e10af2ea61856caf688aee49bb66b229800ac04258103fc68"
+    },
+    {
+      "pathFromApp": "src/services/auth/storage.ts",
+      "sha256": "deb6cb43d596562060ced5633ee2f2d52e69ada76818b639985b41ddfe15a233"
+    },
+    {
+      "pathFromApp": "src/services/permissions.ts",
+      "sha256": "7d001389660657d119664bebfc47306429dfd48d67dd5328a5d14f5d3da4174b"
+    },
+    {
+      "pathFromApp": "src/vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "pathFromApp": "tests/e2e/auth-helpers.ts",
+      "sha256": "3d61ef176b5389682fa2ec5ef574d2e142c06b6f110af8a42b7b560ba08d4679"
+    },
+    {
+      "pathFromApp": "tests/e2e/auth.spec.ts",
+      "sha256": "c9032223cc7178c72e29a1259a4e00cb4672f636f44bd8decbf2a0716a388ca1"
+    },
+    {
+      "pathFromApp": "tests/e2e/shell.spec.ts",
+      "sha256": "de2c3fe4f8699cf05c7517db641a2ce8daf4fd2fd70e301a6566fc51b1795274"
+    },
+    {
+      "pathFromApp": "tests/fixtures/phase2-schema.ts",
+      "sha256": "36fe376751ab5fb61e87d2eddf55aaea119f17cc9a7d7d92d547668dad13f1b4"
+    },
+    {
+      "pathFromApp": "tests/unit/auth.test.ts",
+      "sha256": "454de3d691a44b52074bfab58d55b1b1c33769fd471e00cc30b51676307c8f82"
+    },
+    {
+      "pathFromApp": "tests/unit/database.test.ts",
+      "sha256": "923ee674b0e6a4f263e9854e77f8a33f2a4fe5e3f2940f43d93f516492908cfc"
+    },
+    {
+      "pathFromApp": "tests/unit/repositories.test.ts",
+      "sha256": "7e0a89d859fb594b9b6e5620c322d8964d4d3ab105d9284bd33456e29e57ddac"
+    },
+    {
+      "pathFromApp": "tests/unit/setup.ts",
+      "sha256": "5413d12d1fa831e4777b23845e86d6219a5763543c8e3e203ea048670e4bfd62"
+    },
+    {
+      "pathFromApp": "vite.config.ts",
+      "sha256": "0c1e06cace51c43ed2dec645367d29db94c08e61f78a7a14f8201e6f21afc3f0"
+    }
+  ],
+  "screenshots": [
+    {
+      "pathFromApp": "test-results/auth-bootstrap-is-race-safe-across-two-browser-tabs-chromium/P01-bootstrap.png",
+      "sha256": "176666b01e20eca407c24441d97270dc6c0445cbb274045aeb22b215b340941f",
+      "bytes": 143048
+    },
+    {
+      "pathFromApp": "test-results/auth-owner-login-states-so-7255f--logout-and-Back-protection-chromium/SC001-empty.png",
+      "sha256": "5e43401d969adf1ed2cca2c1740228b6beaa66a067defd4f214cdc961111dcf1",
+      "bytes": 138187
+    },
+    {
+      "pathFromApp": "test-results/auth-owner-login-states-so-7255f--logout-and-Back-protection-chromium/SC002-filled.png",
+      "sha256": "441ad352d4685a2784a1438a49de66dad7330452fdb05f18e68f8e30ab397fb5",
+      "bytes": 135572
+    },
+    {
+      "pathFromApp": "test-results/auth-owner-login-states-so-7255f--logout-and-Back-protection-chromium/SC003-invalid.png",
+      "sha256": "bb03205ea7f5e43d0e9d97925d7319200ff8d3c79897407efbeee8ba125691a2",
+      "bytes": 140665
+    },
+    {
+      "pathFromApp": "test-results/auth-owner-login-states-so-7255f--logout-and-Back-protection-chromium/SC004-required.png",
+      "sha256": "9844341e90236010a2898b0a101ed54de064adebad731aeba67e6be3ab6c9bd7",
+      "bytes": 145117
+    },
+    {
+      "pathFromApp": "test-results/auth-owner-login-states-so-7255f--logout-and-Back-protection-chromium/SC005-system-error.png",
+      "sha256": "88d200698e4bb6888b1aa37dc2fe87f55fe8f923a07ebf00e3cc36f472257284",
+      "bytes": 119223
+    },
+    {
+      "pathFromApp": "test-results/auth-owner-login-states-so-7255f--logout-and-Back-protection-chromium/SC006-success.png",
+      "sha256": "19a8f81255060c3264bbc049d2852bcae9d84deae8591a6cbbf1ca397b4ebdee",
+      "bytes": 119335
+    },
+    {
+      "pathFromApp": "test-results/auth-staff-login-states-so-ce6dc--logout-and-Back-protection-chromium/SC192-empty.png",
+      "sha256": "5e43401d969adf1ed2cca2c1740228b6beaa66a067defd4f214cdc961111dcf1",
+      "bytes": 138187
+    },
+    {
+      "pathFromApp": "test-results/auth-staff-login-states-so-ce6dc--logout-and-Back-protection-chromium/SC193-filled.png",
+      "sha256": "65097327fda5d955b754666fc31aa63b4a238132e22cfae69d004495abcf8902",
+      "bytes": 135235
+    },
+    {
+      "pathFromApp": "test-results/auth-staff-login-states-so-ce6dc--logout-and-Back-protection-chromium/SC194-invalid.png",
+      "sha256": "3dd3953bab22228f415d826f351e7dd778b3c98708749341929a85823e927012",
+      "bytes": 140316
+    },
+    {
+      "pathFromApp": "test-results/auth-staff-login-states-so-ce6dc--logout-and-Back-protection-chromium/SC195-required.png",
+      "sha256": "9844341e90236010a2898b0a101ed54de064adebad731aeba67e6be3ab6c9bd7",
+      "bytes": 145117
+    },
+    {
+      "pathFromApp": "test-results/auth-staff-login-states-so-ce6dc--logout-and-Back-protection-chromium/SC196-system-error.png",
+      "sha256": "3c0f5984062733ae57497c2f78d851e4205d82d1905247bef51591f62f5d0c22",
+      "bytes": 119220
+    },
+    {
+      "pathFromApp": "test-results/auth-staff-login-states-so-ce6dc--logout-and-Back-protection-chromium/SC197-success.png",
+      "sha256": "4d7bc4bf6fb3a4f2bcb84fcd182325605fba6a1fc04a2c6131f6dfee80738f17",
+      "bytes": 119331
+    },
+    {
+      "pathFromApp": "test-results/coco-shell.png",
+      "sha256": "81c3775f61f66d141e7e1a35c0b62205e055630fc09929a7d792c7cfba00997f",
+      "bytes": 47471
+    }
+  ]
+}

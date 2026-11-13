@@ -1,0 +1,109 @@
+{
+  "capturedAt": "2026-11-11T16:08:58.719Z",
+  "files": [
+    {
+      "path": "src/features/purchases/PurchasesPage.tsx",
+      "sha256": "25938e2971a76692fad02e9729e5046a3aa5e9c6baeec87e9a8b4ae8dadd805c"
+    },
+    {
+      "path": "src/features/purchases/PurchaseEditor.tsx",
+      "sha256": "e3e9aae8bea4c054f2d0c3ea0bef5348caefe35166ac8571ac10f71cec78b3cb"
+    },
+    {
+      "path": "src/services/purchase-drafts.ts",
+      "sha256": "4bc523b261b3cc1777fde328fca092fbf84dd40c2aa1c1e4917151cedcc52a9a"
+    },
+    {
+      "path": "src/app/router.tsx",
+      "sha256": "e09525d7f935437d7f9cf576b027cd24eff2dbb64489de49f1197afb8015615a"
+    },
+    {
+      "path": "src/components/layout/CoCoLayout.tsx",
+      "sha256": "a36a3b676001dc917af79fe3e8c3862cdcd00a2ef4b09fd640b087ae53c4a8b5"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "a683ab0010c91cef9a4554bc73e6203f0ed29ed02b5c4ed2107cda9a9ee5f7ce"
+    },
+    {
+      "path": "tests/e2e/purchase-list.spec.ts",
+      "sha256": "dee69bb8940f4cdc9dc963be015e123b43d1b31cb8e2fe1ec8fd346f1ca17c44"
+    },
+    {
+      "path": "tests/e2e/purchase-drafts.spec.ts",
+      "sha256": "8ed4420acbc0b5a29900b84b1ca39c82734587ce4a995aef96edbd6df88748af"
+    },
+    {
+      "path": "tests/unit/purchase-drafts.test.ts",
+      "sha256": "6f3a622e720e6db9a59a38fde8908cd73c8111477d2422c55de8191277854e78"
+    },
+    {
+      "path": "planning/phase6/PURCHASE_LIST_ENTRY_REVIEW.md",
+      "sha256": "6b3d17890e75a8ed8e1612db06c19e23c645b557a9fdd6c8d45ca9d902348d98"
+    },
+    {
+      "path": "planning/phase6/REPORT_PHASE_6.md",
+      "sha256": "5de853734623f1b0d9b6bb9de5eceed2edc3ab16c320a5b65df0d4b60370df49"
+    },
+    {
+      "path": "planning/phase6/T02_EXECUTION.md",
+      "sha256": "0345f98d293c6ca237e33f65e002a281797892c9fe674814c7d94c5640a4d2e4"
+    },
+    {
+      "path": "planning/phase6/PLAN_PHASE_6.md",
+      "sha256": "da10b0ba2472ee870c8170ca836d8760067818db449a1847fff4f2fc81519c03"
+    },
+    {
+      "path": "planning/phase6/ACCEPTANCE_CHECKLIST.md",
+      "sha256": "9967f68ab2d15507285609661e833bbfb2d98f35a523ec5faa2a4ec5a59540ae"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b14e22eb8377800b2a7994f6b0459f681d2cbf601f34c6ea6ed36c9e1fe7b8cc"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/audit-results.json",
+      "sha256": "2c0e6778e9a3fa56381be6be2458a6130342bb1d9bd0620a3524e2339b6f4642"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/execution.json",
+      "sha256": "85c3cf0ec4651cc960bf5f7f2a63cc8c19fe12f191241a0fd6abf14af1ca2639"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/owner-1366x768.png",
+      "sha256": "abee209db7a2dbd01e750ea3c00be9dffd7194be40e9e3840ab7bec797b3785b"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/owner-1440x900.png",
+      "sha256": "c5418deb3e3f902015fdde85a4f32d99449b139e9e46a361d130ddb3bca1a2df"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/owner-1920x1080.png",
+      "sha256": "95a695fa92df2ce58381e7dfd34b68071487304d34d2da9e989e628c29c9a7a6"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/owner-empty.png",
+      "sha256": "0b9af67345dc97c1ae654c41fafb370642b21021df8b050f1e80884ab60fb218"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/playwright-last-run.json",
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/staff-1366x768.png",
+      "sha256": "468f9a5fc4fc01fe061e07c00895b46c9111fa63382908e2af028bf418b55ed4"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/staff-1440x900.png",
+      "sha256": "50a77189d07664ffcd47b86c8bb6bceb95e6a7576f79698c4ddd411e9bc2261d"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/staff-1920x1080.png",
+      "sha256": "229edd87297a3df7e541dc8d5550a3877b9a3bfaf1001ff6c4f62cbd05b0105f"
+    },
+    {
+      "path": "planning/phase6/evidence/list-entry/staff-empty.png",
+      "sha256": "6b519b0e36ce77cd509c826bd564bea4bb99ee61eb51f58a255d8d823bc1da76"
+    }
+  ]
+}

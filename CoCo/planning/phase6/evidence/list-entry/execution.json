@@ -1,0 +1,31 @@
+{
+  "capturedAt": "2026-11-11T16:08:58.719Z",
+  "scope": "Purchase list landing correction requested by user; no phase completion",
+  "unitIntegration": {
+    "passed": 172,
+    "failed": 0
+  },
+  "chromium": {
+    "passed": 61,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "retries": 0,
+    "command": "CI=1 npm.cmd run test:e2e -- --retries=0 --reporter=line"
+  },
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "build": "PASS",
+  "audit": "5/5 PASS",
+  "viewport": [
+    "1366x768",
+    "1440x900",
+    "1920x1080"
+  ],
+  "roles": [
+    "owner",
+    "staff"
+  ],
+  "storage": "Read-only invoices/customer list; unfinished drafts excluded; no migration or user data reset",
+  "publish": "No commit/push/deploy"
+}

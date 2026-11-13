@@ -1,0 +1,21 @@
+{
+  "upgradeRejected": true,
+  "rollbackNativeVersion": 30,
+  "rollbackStoreCount": 21,
+  "rollbackPreservedEveryLegacyStore": true,
+  "runtimeNativeVersion": 40,
+  "runtimeStoreCount": 27,
+  "successPreservedEveryLegacyStore": true,
+  "addedStores": [
+    "purchaseApprovals",
+    "purchaseDrafts",
+    "purchaseFinalizations",
+    "purchaseLines",
+    "purchaseNotices",
+    "purchaseProvenance"
+  ],
+  "newStoresEmpty": true,
+  "legacyInvoiceStatus": 90,
+  "legacyProductStatus": 90,
+  "legacyCondition": 90
+}

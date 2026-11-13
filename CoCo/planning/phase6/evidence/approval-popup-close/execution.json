@@ -1,0 +1,30 @@
+﻿{
+    "recordedAt":  "2026-11-12T08:59:36.0744775+07:00",
+    "fix":  "Close approval detail route when dismissing successful approve or reject result",
+    "lint":  "PASS",
+    "typecheck":  "PASS",
+    "build":  "PASS",
+    "unit":  {
+                 "success":  true,
+                 "failed":  0,
+                 "passed":  202
+             },
+    "chromium":  {
+                     "startTime":  "2026-11-12T01:57:17.429Z",
+                     "duration":  99029.68599999999,
+                     "expected":  75,
+                     "skipped":  0,
+                     "unexpected":  0,
+                     "flaky":  0
+                 },
+    "files":  [
+                  {
+                      "path":  "src/features/approvals/ApprovalsPage.tsx",
+                      "sha256":  "7581ef3a5cca88419c799368800e97265418697aa7f573115e4182b6a34e9936"
+                  },
+                  {
+                      "path":  "tests/e2e/purchase-approvals.spec.ts",
+                      "sha256":  "99e8a97da100f344fe1589fe940f02efe2077214a6f209677a806db29d570f91"
+                  }
+              ]
+}

@@ -22,6 +22,7 @@ interface PreparedChange {
 }
 
 const referenceKey = (table: RecordName, key: RecordKey<RecordName>) => JSON.stringify([table, key]);
+export { referenceKey as recordVersionKey };
 const protectedIdentifiers: ReadonlySet<RecordName> = new Set(['sanPham', 'hoaDonThuMua', 'hoaDonBanHang']);
 
 function stableJson(value: unknown): string {
@@ -89,7 +90,7 @@ export class CoCoRepository {
     });
   }
 
-  async commit(command: Command): Promise<{ duplicate: boolean; executedAt: string }> {
+  async commit(command: Command, authorize?: () => Promise<{ username: string }>): Promise<{ duplicate: boolean; executedAt: string }> {
     if (!command || typeof command.id !== 'string' || !command.id.trim() || command.id.length > 200 ||
       !Array.isArray(command.changes) || command.changes.length === 0) {
       throw new RepositoryError('VALIDATION', 'Command id and nonempty changes are required');
@@ -106,6 +107,9 @@ export class CoCoRepository {
 
     // Shared store scope serializes conflicting transactions across connections/tabs.
     return this.db.transaction('rw', this.db.tables, async () => {
+      // A service guard runs in this same transaction, including on retries.
+      // It may await IndexedDB work only; hashing is prepared before commit().
+      const effectiveActor = authorize ? (await authorize()).username : actor;
       const receipt = await this.db.operations.get(id);
       if (receipt) {
         if (receipt.fingerprint !== fingerprint) throw new RepositoryError('OPERATION_REUSED', 'Command id has a different payload');
@@ -145,9 +149,9 @@ export class CoCoRepository {
         await this.db.recordVersions.put({ key: ref, version: version + 1, updatedAt: executedAt });
       }
       await validateReferences(this.db);
-      if (actor && !await this.db.taiKhoan.get(actor)) throw new RepositoryError('REFERENCE', 'Audit actor does not exist');
+      if (effectiveActor && !await this.db.taiKhoan.get(effectiveActor)) throw new RepositoryError('REFERENCE', 'Audit actor does not exist');
       await this.db.operations.add({ id, fingerprint, executedAt });
-      await this.db.auditEntries.add({ id, actor, executedAt, changed: refs });
+      await this.db.auditEntries.add({ id, actor: effectiveActor, executedAt, changed: refs });
       return { duplicate: false, executedAt };
     });
   }

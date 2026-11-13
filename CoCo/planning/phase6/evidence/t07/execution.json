@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-11-12T13:46:10.330Z",
+  "scope": "T07 verification only; application source unchanged; T06 read-error test oracle corrected",
+  "checks": {
+    "test": 0,
+    "build": 0,
+    "typecheck": 0,
+    "lint": 0
+  },
+  "unitFinal": {
+    "maxWorkers": 2,
+    "test": 0
+  },
+  "build": {
+    "build": 0
+  },
+  "firstUnitRun": {
+    "pass": 247,
+    "fail": 2,
+    "skip": 0
+  },
+  "finalUnitRun": {
+    "pass": 249,
+    "fail": 0,
+    "skip": 0,
+    "files": 12
+  },
+  "chromium": {
+    "startTime": "2026-11-12T13:40:42.175Z",
+    "duration": 285808.127,
+    "expected": 95,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "chromiumExit": {
+    "chromium": 0
+  },
+  "staticAudit": {
+    "scope": "Static runtime checks during Phase 6; local only; browser tests recorded separately",
+    "results": [
+      {
+        "id": "P1-01",
+        "pass": true,
+        "detail": "No legacy domain or external integrations in source, dependencies, config or workflow"
+      },
+      {
+        "id": "P1-02",
+        "pass": true,
+        "detail": "No legacy seed, repository, adapter or engine"
+      },
+      {
+        "id": "P1-03",
+        "pass": true,
+        "detail": "Removed cloud SQL and old service worker"
+      },
+      {
+        "id": "P1-04",
+        "pass": true,
+        "detail": "Dedicated CoCoDB; session storage isolated to coco:session token module; no inherited storage"
+      },
+      {
+        "id": "P1-05",
+        "pass": true,
+        "detail": "No external HTTP endpoint in application source"
+      }
+    ]
+  },
+  "npmAudit": {
+    "exit": {
+      "npmAudit": 1
+    },
+    "counts": {
+      "info": 0,
+      "low": 0,
+      "moderate": 10,
+      "high": 1,
+      "critical": 2,
+      "total": 13
+    }
+  },
+  "t06ManifestUnchanged": false,
+  "productionSourceUnchanged": true,
+  "changedT06Files": [
+    "tests/e2e/purchase-queries.spec.ts"
+  ],
+  "status": {
+    "T05": "PENDING REVIEW",
+    "T06": "PENDING REVIEW",
+    "T07": "PENDING REVIEW",
+    "G6": "PENDING REVIEW"
+  },
+  "blocked": [
+    "BR-UC1-16 employee in detail UI",
+    "BR-UC1-16 / UC_4.6 status in detail UI"
+  ],
+  "acceptance": "Not granted; visual final acceptance pending; dependency audit failed"
+}

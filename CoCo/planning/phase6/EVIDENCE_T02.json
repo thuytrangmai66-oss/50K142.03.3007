@@ -1,0 +1,288 @@
+{
+  "capturedAt": "2026-11-11T15:51:40.903Z",
+  "branch": "coco/phase-5-staff",
+  "baseHead": "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+  "scope": "T01 accepted/runtime v4 activated; T02 ready for review; no G6 acceptance",
+  "files": [
+    {
+      "path": "src/db/schema.ts",
+      "sha256": "d4b72ce6498c4e3132eeead35cb916b229f35b109006782bd981966d0b771e46",
+      "bytes": 3269
+    },
+    {
+      "path": "src/db/purchase-metadata.ts",
+      "sha256": "6d8083b371da560b2be5e283084fe23c79eb315d75a15e41a4bd2a136bd39c1d",
+      "bytes": 939
+    },
+    {
+      "path": "src/domain/purchases.ts",
+      "sha256": "22c826604a8dd79ccee15b5b68057a2ba54573c2766ef16b7f251618a9c6ce8e",
+      "bytes": 7262
+    },
+    {
+      "path": "src/services/purchase-candidate.ts",
+      "sha256": "8e0dcc1c461ee500db11a81ea0b83ed027a2df0875478328ca398ec710c9e870",
+      "bytes": 7430
+    },
+    {
+      "path": "src/services/purchase-drafts.ts",
+      "sha256": "8b0dadb5483bef366a2bc63056f71326988a6219b8fce6ffdb49277ecbc2606e",
+      "bytes": 7945
+    },
+    {
+      "path": "src/features/auth/context.ts",
+      "sha256": "624788a5c9337a294b9b79c5f2bbd20fc08ed961c99e4020a883d45bbd0c511f",
+      "bytes": 821
+    },
+    {
+      "path": "src/features/auth/AuthProvider.tsx",
+      "sha256": "74f06991c8a2ea8d9d9e65cff1fd96da11ad13471772dac5065591ffb63813e8",
+      "bytes": 4347
+    },
+    {
+      "path": "src/services/reference-data/local.ts",
+      "sha256": "a8f133902d6bfa64880c5f12573c6970baa1f75a8ef760e74fb9589d84536c2a",
+      "bytes": 13678
+    },
+    {
+      "path": "src/features/purchases/PurchaseEditor.tsx",
+      "sha256": "dee0ecfe8225caf501bb29e3e2a8ed86cb6e87429c5b86a0cdb06fb1882dada9",
+      "bytes": 12572
+    },
+    {
+      "path": "src/app/router.tsx",
+      "sha256": "9cf334351d7825c7f902b65c8d89c5a84b6b36393ad85b6b75bc0bca0dfd0bb1",
+      "bytes": 2817
+    },
+    {
+      "path": "src/components/layout/CoCoLayout.tsx",
+      "sha256": "516effde170eb709d9a00aa79078d8f02f10a85e2963861c0ef28d5847a8c05f",
+      "bytes": 4156
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "686cc6836102de6068e87a0ca7a7169fedfc7dc9ec29e0a2142ae5029f2b948f",
+      "bytes": 26261
+    },
+    {
+      "path": "scripts/audit-phase1.mjs",
+      "sha256": "32ab56afa195023002e415dea5701f233cd0961af707b419f87e78e5817ce859",
+      "bytes": 2612
+    },
+    {
+      "path": "tests/unit/auth.test.ts",
+      "sha256": "142f75f870891b7bc7041012c8f7f1855cf3bc600d99fa00d224a672ec4cc5ce",
+      "bytes": 14254
+    },
+    {
+      "path": "tests/unit/repositories.test.ts",
+      "sha256": "f55d27472c7bb4c03928f67d9440cac3f71cdca9bab005701eaeffee51584c85",
+      "bytes": 19196
+    },
+    {
+      "path": "tests/unit/purchase-contract.test.ts",
+      "sha256": "3af89c26d5bcc7dbe059e149791da9121d5bff73f4c16a08a003a3c68d20768f",
+      "bytes": 10453
+    },
+    {
+      "path": "tests/unit/purchase-drafts.test.ts",
+      "sha256": "0d3182ea144655e7640e0f9ab318d4e5bd892fc90249cbf01874eb0f6b2807f5",
+      "bytes": 6029
+    },
+    {
+      "path": "tests/e2e/auth.spec.ts",
+      "sha256": "6dfa51d64cdb8855a0b95a880badd6d3603ba81d7644203077af5755d9cf381a",
+      "bytes": 13923
+    },
+    {
+      "path": "tests/e2e/shell.spec.ts",
+      "sha256": "bed2a06487ea9698df6fbdd670ac87d1534f1ecb74b2c7e2f8bb5e104f546188",
+      "bytes": 4800
+    },
+    {
+      "path": "tests/e2e/purchase-drafts.spec.ts",
+      "sha256": "afd34fda11fb779778983604b37e53b40696217bbbad238281c79c25af0ff106",
+      "bytes": 13880
+    },
+    {
+      "path": "tests/e2e/pagination.spec.ts",
+      "sha256": "88ed9dee5bcc5138b6e908883b4e943187d0d2ba8e2de35f70b266b9230d5e1b",
+      "bytes": 17368
+    },
+    {
+      "path": "planning/phase6/T02_EXECUTION.md",
+      "sha256": "9023b73c863d935b43e4d067ad0b58fa45b3391398815ff96f3f9c4fce197a25",
+      "bytes": 10665
+    },
+    {
+      "path": "planning/phase6/PLAN_PHASE_6.md",
+      "sha256": "ec984b0598e91cee94ceaba6daa510e0e22902f0ef328b91a484dfa4a3857c77",
+      "bytes": 31344
+    },
+    {
+      "path": "planning/phase6/ACCEPTANCE_CHECKLIST.md",
+      "sha256": "cd84c0fc52505b39cbee88e5b3c7cad6364344ec65bd947366c8e03c3ce8ff26",
+      "bytes": 3933
+    },
+    {
+      "path": "planning/phase6/T01_REVIEW_GATE.md",
+      "sha256": "53844de105ddf176cac1fe54b1d86b883b37a475c26165d4c244cf1c31a38dfd",
+      "bytes": 4724
+    },
+    {
+      "path": "planning/phase6/DATA_CONTRACT_REVIEW.md",
+      "sha256": "203b9cd00da4df75592fb6e0e189999073195e1c49e06b61c7a205c611c53fb8",
+      "bytes": 14083
+    },
+    {
+      "path": "planning/phase6/REPORT_PHASE_6.md",
+      "sha256": "3ed0a3610a0dd8e7956e9a47bcbdc1f17de05a1ca3e50c96e09928afe4c149c1",
+      "bytes": 12537
+    },
+    {
+      "path": "planning/MASTER_PLAN_COCO.md",
+      "sha256": "6d60660974f15e14f4daf625eb0e09a01f7bd258b476100aa4462c5000dde2d2",
+      "bytes": 17533
+    },
+    {
+      "path": "planning/PHASE_ROADMAP.md",
+      "sha256": "e72795a11757bada62ebd53d8815095a5af4cb0f348ea53fd81a75c674783e15",
+      "bytes": 8128
+    },
+    {
+      "path": "planning/OPEN_ISSUES.md",
+      "sha256": "c4bd87777d0030f717eba986f3973dc123795bc8e6af8fda01e195e21f0d98ae",
+      "bytes": 13222
+    },
+    {
+      "path": "planning/REQUIREMENT_TRACEABILITY.md",
+      "sha256": "12b7235a9e802900b27796b93aed6ba3a80d9807e2c3ee2b64f2daf1217db8c4",
+      "bytes": 50748
+    },
+    {
+      "path": "planning/phase0/ARCHITECTURE_DECISION.md",
+      "sha256": "e051553b28b8c4ecb45918bba74b1a612edddb242f4ca806799c56449e812141",
+      "bytes": 13131
+    },
+    {
+      "path": "README.md",
+      "sha256": "4f88b56fe87b7eeb8a1915428f20ff7f2c55d1b423a1a6f134a6058e0e586b32",
+      "bytes": 2211
+    },
+    {
+      "path": "planning/phase6/evidence/t02/audit-results.json",
+      "sha256": "2c0e6778e9a3fa56381be6be2458a6130342bb1d9bd0620a3524e2339b6f4642",
+      "bytes": 795
+    },
+    {
+      "path": "planning/phase6/evidence/t02/customer-selected-empty-draft.png",
+      "sha256": "752382fd3db300b970f5b1c545876c772b5d3c69cdfe84ebd8a2cb64bee8cc16",
+      "bytes": 75539
+    },
+    {
+      "path": "planning/phase6/evidence/t02/execution.json",
+      "sha256": "adaf3e73e7208efc8a1ad0c68a5ac10c7c8c66955ae437cd851493da93949cae",
+      "bytes": 2115
+    },
+    {
+      "path": "planning/phase6/evidence/t02/native-candidate-fk.json",
+      "sha256": "82355dc22d455f21cad593cfc4e082239cb5cb5556ab0b3fa378218dc5034215",
+      "bytes": 92
+    },
+    {
+      "path": "planning/phase6/evidence/t02/native-candidate-storage.json",
+      "sha256": "fc8ae857759251ab7ed0fd744df9e830e9c23ef80e5c4a5c6b86f13b305928f3",
+      "bytes": 195
+    },
+    {
+      "path": "planning/phase6/evidence/t02/owner-1366x768.png",
+      "sha256": "8ca68cadf67066c0d45489c489e44b6f44738c94ab9ba5c8996288a28db57a88",
+      "bytes": 67498
+    },
+    {
+      "path": "planning/phase6/evidence/t02/owner-1440x900.png",
+      "sha256": "dba7e68ff11d9f3514dcde21878002a6e68f3b05cc27350cc943bbddad7cb1fa",
+      "bytes": 78908
+    },
+    {
+      "path": "planning/phase6/evidence/t02/owner-1920x1080.png",
+      "sha256": "820f9efd2d69d5b787be22775cc9306a089a1d2d1d5c2e3f936db991355f04a9",
+      "bytes": 82846
+    },
+    {
+      "path": "planning/phase6/evidence/t02/owner-item-required.png",
+      "sha256": "f4c832a76c4bd458be0748b5760174100e615b8807ac26fd6ed1839be7f7ac4d",
+      "bytes": 91970
+    },
+    {
+      "path": "planning/phase6/evidence/t02/owner-price-dialog.png",
+      "sha256": "98bb6fff944d8830752e091e6f1557c26cf282c2b9cec2ec8dcaa39f2943389b",
+      "bytes": 86330
+    },
+    {
+      "path": "planning/phase6/evidence/t02/pagination-owner-customers-3f8ac-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "e49bf6a82a451c443c17fe9ae9e2b7f93883e76def8fd816375b5bc12d893512",
+      "bytes": 16279
+    },
+    {
+      "path": "planning/phase6/evidence/t02/pagination-owner-price-bra-f10c3-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "ff8473aa51dcaad320e619ad3d7f9897f92008153d232a8f2cd816352558a836",
+      "bytes": 16275
+    },
+    {
+      "path": "planning/phase6/evidence/t02/pagination-owner-staff-res-96c2f-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "1bb74a13176c4abd243ed4d9d1ecdef4b8240d4663173fc188df46a3ae85f23e",
+      "bytes": 16279
+    },
+    {
+      "path": "planning/phase6/evidence/t02/pagination-staff-customers-05b67-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "14a529e2ca585071d09d0f4928f0448edc84e40e7e3d59884ec763145cf0089f",
+      "bytes": 16279
+    },
+    {
+      "path": "planning/phase6/evidence/t02/playwright-last-run.json",
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "bytes": 45
+    },
+    {
+      "path": "planning/phase6/evidence/t02/staff-1366x768.png",
+      "sha256": "722768d7b360eaa11b7c82e77e0914109a2a18f3e5ee6b7831b7a43ff9082f7d",
+      "bytes": 63406
+    },
+    {
+      "path": "planning/phase6/evidence/t02/staff-1440x900.png",
+      "sha256": "536b29f5f86b9b47c95d9100d174f9bdde22db295cd524b80b66ff99d4da159d",
+      "bytes": 73331
+    },
+    {
+      "path": "planning/phase6/evidence/t02/staff-1920x1080.png",
+      "sha256": "4b09f13c215d1aa74375a28a6ae3692a6016bfa3071e4693039b5108fa0e66f6",
+      "bytes": 76916
+    },
+    {
+      "path": "planning/phase6/evidence/t02/staff-item-required.png",
+      "sha256": "479894c47300e28a802cea575c0a62acc620ac359f79509710e708dc806fca30",
+      "bytes": 86375
+    },
+    {
+      "path": "planning/phase6/evidence/t02/staff-price-dialog.png",
+      "sha256": "4fc39997f2cb4999e455b35e86f6b5874127cb8e9ca42a16640b1603a167792e",
+      "bytes": 80913
+    },
+    {
+      "path": "planning/phase6/evidence/t02/ten-lines-1366x768.png",
+      "sha256": "052ab00936339891f6b2ac8bb8803c9288ec387660ea7879661893480f710b05",
+      "bytes": 81579
+    },
+    {
+      "path": "planning/phase6/evidence/t02/ten-lines-1440x900.png",
+      "sha256": "2d61cdfa1643afbf1da7e04196c0122bc654647e02f3692d6534ef41a12bff7f",
+      "bytes": 101592
+    },
+    {
+      "path": "planning/phase6/evidence/t02/ten-lines-1920x1080.png",
+      "sha256": "6dbff335e7ef1739b0ba418889776837458c1ed933ee3159e542a3a2dcc64f2c",
+      "bytes": 106794
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "file": "approval-owner-detail-1366.png",
+    "sha256": "c23d4ac682fcb0ba11301dba6d530de5ad095c8f0498a39ac934d37da85a1e88"
+  },
+  {
+    "file": "approval-owner-detail-1440.png",
+    "sha256": "919f88d45eccdd499b74df9b318a3be33a1d2b06dfe43997e07bb14cdaa9d36f"
+  },
+  {
+    "file": "approval-owner-detail-1920.png",
+    "sha256": "8bd16f657c6c904ab225992c7a72ddf370f0db927d658c5d415e0fb08d447be4"
+  },
+  {
+    "file": "approval-owner-rejected.png",
+    "sha256": "9b8fd42d1ee030e8487e35e5039280e233c3f941a9ffc0ff7ef07dd55d6ec477"
+  },
+  {
+    "file": "approval-owner-rejection-reason.png",
+    "sha256": "f691452798057faafce675c428f6bfe3c202ae80a09826a9d505c33ec6a52a10"
+  },
+  {
+    "file": "approval-staff-read-reason.png",
+    "sha256": "04b098fb41e0751cc9834cb54fc6ea762a03284a87b07aabb511e95273675ada"
+  },
+  {
+    "file": "approval-staff-rejection-result.png",
+    "sha256": "f61a1ab73ae6bc0a2c33eb836e63f35d84f36cb795e0ca99f4a7755499a6571b"
+  },
+  {
+    "file": "error-detail.png",
+    "sha256": "3f4e65d60dd3f140fd6e52c8b3830bbf41c4467b6e805fe9f69cbcc5be701b04"
+  },
+  {
+    "file": "error-history.png",
+    "sha256": "26ada78f9bac1354b79712c300fe999387ec8391f62a00b72ca5332af38c239f"
+  },
+  {
+    "file": "error-list.png",
+    "sha256": "a32c10bb161acfc4e6a3cf5595e875918ec584af50e7311addc6e433ea5b4b68"
+  },
+  {
+    "file": "owner-customer-sales-detail.png",
+    "sha256": "0b08953c6e67f4ec0b464ae94394022133f0b358f063dd1d14de69e6d1d3a366"
+  },
+  {
+    "file": "owner-customer-sales-history.png",
+    "sha256": "c22181a5f792ddec1a1c2623b5202f8f474b60724d807f045cb71197a97e9503"
+  },
+  {
+    "file": "owner-detail-1366.png",
+    "sha256": "d571c9629bd8dd30031836c4e0bd2626d23669fbfabde12c6694373f995013dd"
+  },
+  {
+    "file": "owner-detail-1440.png",
+    "sha256": "70042ac164538bad40f6fd53e38bb3db66141c57459ddcd4bbfe5ab63cd20c6a"
+  },
+  {
+    "file": "owner-detail-1920.png",
+    "sha256": "e0a9407fac2bbe6fe14232975204ab8652956c35c7a22e36292c1a68f2065406"
+  },
+  {
+    "file": "owner-search.png",
+    "sha256": "8e45027e15cf20813b874bc336238e55f283d64fac05197d26e8e813f978616a"
+  },
+  {
+    "file": "staff-customer-sales-detail.png",
+    "sha256": "bc6a56940b6d6af55132aa675228ba72b2f27491510105c8d85f173123c5cdf1"
+  },
+  {
+    "file": "staff-customer-sales-history.png",
+    "sha256": "2012068e0cb308be3133388f6ed76c6164b7581c3a655cca8077f1c43b7d8f78"
+  },
+  {
+    "file": "staff-detail-1366.png",
+    "sha256": "cee366b0d76054685fb6eb30318e70887ea1766876ab58654c6bf6ab2ff5bfe0"
+  },
+  {
+    "file": "staff-detail-1440.png",
+    "sha256": "79944cd49287d723c08c2af1c0f46b24ec931639a8da9b247d27da4e0f1e4753"
+  },
+  {
+    "file": "staff-detail-1920.png",
+    "sha256": "6d7a236fa354219a3fdfa42ff4a08287fe2c4979af86ed8fa711f891972213d7"
+  },
+  {
+    "file": "staff-search.png",
+    "sha256": "9437e0673a49fd5071d67e8e922c4f521f86000c83f139c27e85ada6d29443d3"
+  },
+  {
+    "file": "t07-owner-history.png",
+    "sha256": "01aa62dbabede7127ad032a7974a0b790cb105c0521f2c4b03d4ceb69a638515"
+  },
+  {
+    "file": "t07-owner-invoice.png",
+    "sha256": "9ac5c63905d8ce5caef277118bb38c0d1e52fb8f5be59794d6526751b0661012"
+  },
+  {
+    "file": "t07-owner-live-invoice.png",
+    "sha256": "1e70d09e931c166dc323148fd7a87a1eb204f8f6014ab2612160908319404afd"
+  },
+  {
+    "file": "t07-owner-request.png",
+    "sha256": "919f88d45eccdd499b74df9b318a3be33a1d2b06dfe43997e07bb14cdaa9d36f"
+  },
+  {
+    "file": "t07-staff-approved.png",
+    "sha256": "99ed70b49ac8b6357cf356d9447efbfd081194367acb1810ac48e978dc697bba"
+  },
+  {
+    "file": "t07-staff-history.png",
+    "sha256": "b092284996d953ed05e1697020477c6e638da4b38564d2c301ac5fd91a34181f"
+  },
+  {
+    "file": "t07-staff-invoice.png",
+    "sha256": "c9547647bd10199ae072962817a0520c54c3bf23bd6af2fd84dd16a43e9151dd"
+  }
+]

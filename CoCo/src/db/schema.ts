@@ -2,9 +2,11 @@ import Dexie, { type Table } from 'dexie';
 import type {
   AppMetadata, AuditEntry, IssuedIdentifier, OperationReceipt, RecordMap, RecordVersion,
 } from '../domain/records';
+import type { AuthSession } from '../domain/auth';
+import { PURCHASE_METADATA_STORES } from './purchase-metadata';
 
 export const COCO_DATABASE_NAME = 'CoCoDB';
-export const COCO_SCHEMA_VERSION = 2;
+export const COCO_SCHEMA_VERSION = 4;
 export type { AppMetadata } from '../domain/records';
 
 export class CoCoDatabase extends Dexie {
@@ -28,12 +30,13 @@ export class CoCoDatabase extends Dexie {
   declare operations: Table<OperationReceipt, string>;
   declare auditEntries: Table<AuditEntry, string>;
   declare issuedIdentifiers: Table<IssuedIdentifier, string>;
+  declare authSessions: Table<AuthSession, string>;
 
   constructor(name = COCO_DATABASE_NAME) {
     super(name);
     // Keep v1 so existing Pages/browser metadata upgrades without deletion or seed.
     this.version(1).stores({ appMetadata: '&key' });
-    this.version(COCO_SCHEMA_VERSION).stores({
+    this.version(2).stores({
       appMetadata: '&key',
       taiKhoan: '&TenDangNhap, MaNV',
       nhanVien: '&MaNV, &SoDienThoai',
@@ -53,5 +56,8 @@ export class CoCoDatabase extends Dexie {
       recordVersions: '&key', operations: '&id', auditEntries: '&id, actor, executedAt',
       issuedIdentifiers: '&key',
     });
+    this.version(3).stores({ authSessions: '&tokenHash, username' });
+    // T01 and runtime activation explicitly accepted by the user after review.
+    this.version(4).stores(PURCHASE_METADATA_STORES);
   }
 }

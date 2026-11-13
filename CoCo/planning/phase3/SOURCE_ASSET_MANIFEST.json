@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-11",
+  "pathBasis": "repository root unless noted",
+  "method": "local CODEX only; no Figma online",
+  "runtimeLogo": {
+    "pathFromRepo": "CoCo/src/assets/coco-mark.png",
+    "sha256": "69d06b27c6906dc97d08fe096e72bcd60cb11bf65cc6f0d99c3f08de94599410",
+    "width": 380,
+    "height": 235,
+    "source": "CODEX/Figma.Chủ/Quản lý Thu mua 1.pdf",
+    "sourceSha256": "8065a2673b9147349cfad2e5f59274a7e1f771afa0eeeefe9e9b5026eda62e50",
+    "page": 1,
+    "dpi": 144,
+    "cropPx": {
+      "x": 270,
+      "y": 40,
+      "width": 380,
+      "height": 235
+    },
+    "transform": "rendered PDF viewport; CSS invert/multiply for black login logo"
+  },
+  "references": [
+    {
+      "screen": "SC001",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-1.png",
+      "sha256": "708ab9368aa3ae17abd4205fd1fb13924cbe29cfc8be1074c5ca32a507c2c469",
+      "use": "login source"
+    },
+    {
+      "screen": "SC002",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-2.png",
+      "sha256": "a77b1ad4c81a1fa999375f8a7d62a0eaf6fb6cf2a65d2fefa69bc455b567e0d2",
+      "use": "login source"
+    },
+    {
+      "screen": "SC003",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-3.png",
+      "sha256": "85f0d5000ecaa098045ef8a9bbd86e1d31fb56e88c27c1b4c693802a75b82936",
+      "use": "login source"
+    },
+    {
+      "screen": "SC004",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-4.png",
+      "sha256": "73845e822ca52c3cd096a73e2d27f09bdffe5effc0cfd8cc1d3def1baf345a23",
+      "use": "login source"
+    },
+    {
+      "screen": "SC005",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-5.png",
+      "sha256": "3da0b177c0013be472a9f2e3c73b95e990e1874f0b889d6856928b9b2071f895",
+      "use": "login source"
+    },
+    {
+      "screen": "SC006",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-6.png",
+      "sha256": "86b0e2e3ae2a9b433b024784e02727c40798a96a6ffaf39cf4fc515937b8d158",
+      "use": "login source"
+    },
+    {
+      "screen": "SC007",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-7.png",
+      "sha256": "3a10f5b04246da7a886a8802432ac3534ebcd1808f87aae9a59652ccc071a19f",
+      "use": "shell only; KPI deferred"
+    },
+    {
+      "screen": "SC192",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-192.png",
+      "sha256": "708ab9368aa3ae17abd4205fd1fb13924cbe29cfc8be1074c5ca32a507c2c469",
+      "use": "login source"
+    },
+    {
+      "screen": "SC193",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-193.png",
+      "sha256": "a77b1ad4c81a1fa999375f8a7d62a0eaf6fb6cf2a65d2fefa69bc455b567e0d2",
+      "use": "login source"
+    },
+    {
+      "screen": "SC194",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-194.png",
+      "sha256": "85f0d5000ecaa098045ef8a9bbd86e1d31fb56e88c27c1b4c693802a75b82936",
+      "use": "login source"
+    },
+    {
+      "screen": "SC195",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-195.png",
+      "sha256": "73845e822ca52c3cd096a73e2d27f09bdffe5effc0cfd8cc1d3def1baf345a23",
+      "use": "login source"
+    },
+    {
+      "screen": "SC196",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-196.png",
+      "sha256": "3da0b177c0013be472a9f2e3c73b95e990e1874f0b889d6856928b9b2071f895",
+      "use": "login source"
+    },
+    {
+      "screen": "SC197",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-197.png",
+      "sha256": "86b0e2e3ae2a9b433b024784e02727c40798a96a6ffaf39cf4fc515937b8d158",
+      "use": "login source"
+    },
+    {
+      "screen": "SC198",
+      "pathFromRepo": "CODEX/.uc-ui-matrix-qa/frame-198.png",
+      "sha256": "b45d58455ba6d63c67af0d6b35aee6e7f6a15f69e5e91bc85f353ceef354d930",
+      "use": "shell only; KPI deferred"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "capturedAt": "2026-11-12T01:12:44.860Z",
+  "files": [
+    {
+      "path": "src/components/ui/DataTable.tsx",
+      "sha256": "a0c19d5be04ab4a2edb734ed9d9c22064c7bd0ad96d0989739559b661f104bd8"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "b044069d787d3478addde0dfd78d95d76a42bbdbbad20cba7767b56f46ba5c22"
+    },
+    {
+      "path": "src/features/staff/StaffPages.tsx",
+      "sha256": "ba3a4a9b2be07bc6aa2abec8af0e0f9c55f988e071e78dd4f9904d1417f37855"
+    },
+    {
+      "path": "src/features/purchases/PurchasesPage.tsx",
+      "sha256": "25938e2971a76692fad02e9729e5046a3aa5e9c6baeec87e9a8b4ae8dadd805c"
+    },
+    {
+      "path": "src/features/approvals/ApprovalsPage.tsx",
+      "sha256": "21c77809f7f838ea6b45a48d07ef3cc5f32800a5eae2b4e703ba3e3cd20fb1a0"
+    },
+    {
+      "path": "tests/e2e/pagination.spec.ts",
+      "sha256": "3e88dfad70622d1ab072df79c0c48491fa6ad3a7f16b642186817325b559b5bb"
+    },
+    {
+      "path": "tests/e2e/purchase-list.spec.ts",
+      "sha256": "9f163c77cb7d98e8322214a8302e5fa55cd7032948f4b4b953a49af67bbd735d"
+    },
+    {
+      "path": "planning/LIST_ROW_DIVIDERS_REVIEW.md",
+      "sha256": "d601339faf77b7429c548a10bf0a5576d367fc65d4c3ae0a21caa1c6522496c6"
+    },
+    {
+      "path": "planning/phase5/PAGINATION_LAYOUT_REVIEW.md",
+      "sha256": "513d93a94bf657b538b79c00dd38ebdebea15e8c998eaa7a80f1c36e50528499"
+    },
+    {
+      "path": "planning/phase6/REPORT_PHASE_6.md",
+      "sha256": "fcab97e76b85f5c782b4d78a3c448879bc543fcfd179e47967fded6618d6fcc0"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/execution.json",
+      "sha256": "fcf54cd3b4d0788e6993f433178ea53b5afa9bd22e81f560f52649e35bba73fb"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-owner-customers-3f8ac-ooter-no-internal-scrolling-chromium-1440x900.png",
+      "sha256": "008f4008686be0919965cb2c97f9b314580d61e1c10efbf84e9cbdaab4fe6f14"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-owner-customers-3f8ac-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "a73ee7dddb3f6925d8e7342c5a0ed0b84dd000a55636f90489ad53290d299e9a"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-owner-price-bra-f10c3-ooter-no-internal-scrolling-chromium-1440x900.png",
+      "sha256": "ad3c74254e41e3d5b3f015420535ae8c129ceae40636fc3f741282287d48f1e1"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-owner-price-bra-f10c3-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "ee9f8cdbb4cb1ebc89c3bf565c6c6dccd7359445107a6bf0e79e9a96acd42e04"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-owner-staff-res-96c2f-ooter-no-internal-scrolling-chromium-1440x900.png",
+      "sha256": "c149cb129c272f71be23acc51a9fc32b94b33c3188bf528c9952d9405676a760"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-owner-staff-res-96c2f-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "587547324ae49403f449aef14886ebc787873e0b477a79fa2d819dee01bbe7d7"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-staff-customers-05b67-ooter-no-internal-scrolling-chromium-1440x900.png",
+      "sha256": "ef30eac7ad8663859fd13820577f08ee170e59170d3b903e93521d4d5b5be3b6"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/pagination-staff-customers-05b67-ooter-no-internal-scrolling-chromium.json",
+      "sha256": "60b32bbbcf4c59186ee3d9e5ee005799cd572a89b67c3619f9800d7c7f6303ea"
+    },
+    {
+      "path": "planning/evidence/list-row-dividers/playwright.json",
+      "sha256": "6b54543c869efe6042807be31b1755435996b4c5a6e90c3b46dccf44df1901e6"
+    }
+  ]
+}

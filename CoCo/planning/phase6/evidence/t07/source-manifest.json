@@ -1,0 +1,78 @@
+[
+  {
+    "path": "src/services/purchase-queries.ts",
+    "sha256": "a2aa3d6019356c1aa979af169a3082573c84c590bc749ebf0094fa207bad02da"
+  },
+  {
+    "path": "src/services/purchase-candidate.ts",
+    "sha256": "532eeada2adab90bd1779bdb996dde78cdc0c03e318bb6f1ca71b2a8ad87dc55"
+  },
+  {
+    "path": "src/services/purchase-finalization.ts",
+    "sha256": "43ccebaae1dfe4ca8816442a7ba96285c09f0e88324e850977de76f921c3e04a"
+  },
+  {
+    "path": "src/services/purchase-drafts.ts",
+    "sha256": "9baed8fcaf2080285208071195b2c221a2629af0c2de34d10ddeeff8bd1cfccb"
+  },
+  {
+    "path": "src/services/reference-data/local.ts",
+    "sha256": "4ecd9b742ca45a18548d96c366b1e8fe010191b9f0cffe27dee4aeb1fd30ebd8"
+  },
+  {
+    "path": "src/services/reference-data/contracts.ts",
+    "sha256": "d81bb664ad80081e721fca9a635c885fd7eb1892340e3520037f91183aadb507"
+  },
+  {
+    "path": "src/domain/formatters.ts",
+    "sha256": "71af580b57956b67a692e4e01791909bc1cc0b7336a44f23a77a3a6fe644aab3"
+  },
+  {
+    "path": "src/features/purchases/PurchaseInvoicePage.tsx",
+    "sha256": "33d68e8dd4d1211e15ebf3be3b595375d0ac69749e3330a9e8ef5a0efc183e90"
+  },
+  {
+    "path": "src/features/purchases/PurchasesPage.tsx",
+    "sha256": "1eb7f5255aceceb71883fe82fb529c8a8c818059ada264d9555f9bbe35075c04"
+  },
+  {
+    "path": "src/features/customers/CustomerHistoryPage.tsx",
+    "sha256": "3633506d29b9cc145e059699a4da5efdfc5959070ac0c452e60e3182d2ad151a"
+  },
+  {
+    "path": "src/app/router.tsx",
+    "sha256": "ad1320e8220ef88535bfc609e5c31fac4c384448109c024e0a1ee0bbe89799a3"
+  },
+  {
+    "path": "src/components/layout/CoCoLayout.tsx",
+    "sha256": "b88b1e645cfbdb25c32bf6dcb876ff120cc6bc1a7055bc4203e3b1673a16e1a6"
+  },
+  {
+    "path": "src/index.css",
+    "sha256": "55390195aaee0ac196b5ca3c15dca02781c108eb78ef2161a7a0f650e653f22d"
+  },
+  {
+    "path": "tests/unit/purchase-queries.test.ts",
+    "sha256": "349abc12938f9e2884adf1cad9631f8229bacbaa43eb8f23bff2a7c723bc1bce"
+  },
+  {
+    "path": "tests/e2e/purchase-queries.spec.ts",
+    "sha256": "b996b28c1d8dcfecfdeac0037af49313b89ffc3890ec2fec8acbcb824f7a536e"
+  },
+  {
+    "path": "tests/e2e/purchase-list.spec.ts",
+    "sha256": "4b8ad7f541804c1d03c1086a5102e3ff526fb1f6a59bcd74e132a85277515797"
+  },
+  {
+    "path": "tests/e2e/g6-verification.spec.ts",
+    "sha256": "545d1d68683618f56f540783d5688e3b0628f1ec1b912b3eaa32b71b92607159"
+  },
+  {
+    "path": "tests/fixtures/g6-migration-verification.ts",
+    "sha256": "90e09874f4167768f4cbac4fc029650dd34b6957672613ec4ea183bb867296ea"
+  },
+  {
+    "path": "planning/phase6/evidence/t07/summarize.mjs",
+    "sha256": "f154d1c6f5bd1ca5bc84d57bcd1950fdd5188a4108aee0f10b4948d1bc2aa4d8"
+  }
+]

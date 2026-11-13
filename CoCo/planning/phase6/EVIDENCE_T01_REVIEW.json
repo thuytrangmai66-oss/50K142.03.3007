@@ -1,0 +1,72 @@
+{
+    "capturedAt":  "2026-11-11T15:01:38.1520266Z",
+    "branch":  "coco/phase-5-staff",
+    "baseHead":  "22d3fbdd7cee0db717c62e003c5f4075f3707712",
+    "scope":  "T01 candidate only; runtime not activated; no G6 UI or A-F acceptance",
+    "results":  {
+                    "g6Ui":  "NOT RUN",
+                    "chromiumFull":  53,
+                    "nativeArtifactRerun":  1,
+                    "audit":  5,
+                    "unitIntegration":  145
+                },
+    "decisions":  {
+                      "initialSalePrice":  "APPROVED: per-item cost * 1.30, half up",
+                      "P03P04Activation":  "OPEN / NOT APPROVED",
+                      "quality":  "APPROVED: staff checks offline before input, no quality UI/DB"
+                  },
+    "files":  [
+                  {
+                      "sha256":  "305fbf7b3dedd804906bec51e16d40f8ae22535d7280f4db8a75ebbc869308d3",
+                      "path":  "src/domain/purchases.ts"
+                  },
+                  {
+                      "sha256":  "b037ecc7f883905f5eb4807adee8f0c7c1fbe5459d35a9bd853117b191340f19",
+                      "path":  "src/db/purchase-metadata.ts"
+                  },
+                  {
+                      "sha256":  "730949c2d725800a423ee9bf637137dec4bfbd1823025133a7d670695721a25b",
+                      "path":  "src/services/purchase-candidate.ts"
+                  },
+                  {
+                      "sha256":  "15740c4ffe4465f501058b91a3f1dbb1e115542e8677ba94085a57a0c08435c5",
+                      "path":  "src/services/auth/service.ts"
+                  },
+                  {
+                      "sha256":  "3c2e4534cd4960e413fd00c20c0dfd5122087b0d0896d708ba322fa912658dc3",
+                      "path":  "tests/unit/purchase-contract.test.ts"
+                  },
+                  {
+                      "sha256":  "2a5927fdda0efdda0b47a4f8600efb8879a709ac59906165d23b4b2cb26ba794",
+                      "path":  "tests/unit/purchase-candidate.test.ts"
+                  },
+                  {
+                      "sha256":  "0f178d7ed61e2fdbca6d0363776b39d3cdf5a6b2ef3ceeda1ab2f1d282ed96da",
+                      "path":  "tests/fixtures/purchase-candidate-browser.ts"
+                  },
+                  {
+                      "sha256":  "08aa3b915c1cfabcb1c4bbe0077ab7dd874927d852e3793ee06293c48a6ec1dc",
+                      "path":  "tests/e2e/purchase-candidate-storage.spec.ts"
+                  },
+                  {
+                      "sha256":  "cc3a3b0af892f08d571fb290229fb44db2e455fbe7fa8f2fc5a5ef16de5f000f",
+                      "path":  "scripts/audit-phase1.mjs"
+                  },
+                  {
+                      "sha256":  "2c0e6778e9a3fa56381be6be2458a6130342bb1d9bd0620a3524e2339b6f4642",
+                      "path":  "planning/phase6/AUDIT_RESULTS.json"
+                  },
+                  {
+                      "sha256":  "fc8ae857759251ab7ed0fd744df9e830e9c23ef80e5c4a5c6b86f13b305928f3",
+                      "path":  "planning/phase6/evidence/t01-review/native-candidate-storage.json"
+                  },
+                  {
+                      "sha256":  "5ba5b5f56c3c3381c7d63212b4bd79f1365ce98d72ed5f41f868f114454caee9",
+                      "path":  "planning/phase6/evidence/t01-review/owner-staff-list.png"
+                  },
+                  {
+                      "sha256":  "dd72d30402c604c12d52aed2c4741167af4b84cff62f3456a253bfd89a7b4357",
+                      "path":  "planning/phase6/evidence/t01-review/staff-created-ui-session.png"
+                  }
+              ]
+}
