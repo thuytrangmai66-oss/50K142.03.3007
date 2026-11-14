@@ -1,0 +1,55 @@
+{
+  "releaseSha": "4f4b7ff4a191c3d675eada86ece54030a96f4796",
+  "ciRunUrl": "https://github.com/thuytrangmai66-oss/50K142.03.3007/actions/runs/43621194435",
+  "startedAt": "2026-11-14T17:41:01.040Z",
+  "url": "https://thuytrangmai66-oss.github.io/50K142.03.3007/",
+  "checks": [
+    "HTTP 200 and served JS/CSS match validated candidate hashes",
+    "Owner opens Thu mua",
+    "Owner opens Bán hàng",
+    "Owner opens Hàng hóa",
+    "Owner opens Khách hàng",
+    "Owner opens Báo cáo",
+    "Owner opens Phê duyệt",
+    "Owner opens Nhân viên",
+    "Owner opens Khung giá thu mua",
+    "Staff opens Thu mua",
+    "Staff opens Bán hàng",
+    "Staff opens Hàng hóa",
+    "Staff opens Khách hàng",
+    "Independent owner/staff sessions and live shared customer data across two tabs",
+    "Hash routing/reload and native IndexedDB business records retained",
+    "Staff approval route denied",
+    "No page/console JavaScript errors or failed JS/CSS assets"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failedAssets": [],
+  "scope": "Fresh isolated Chromium context, synthetic demo data only; no existing user profile or storage touched.",
+  "htmlSha256": "31ff54345aab383dede8aa17622e5dcfdbd65f92840dab13cd99ac92b7a8bbd5",
+  "assets": [
+    {
+      "asset": "/50K142.03.3007/assets/index-DyN_tYXi.js",
+      "status": 200,
+      "sha256": "cc7fd701171767c99e91413cbf4c3844386bd4d71d9da94ea4c4b5f3daa79512",
+      "matchesCandidate": true
+    },
+    {
+      "asset": "/50K142.03.3007/assets/index-C9qn3B33.css",
+      "status": 200,
+      "sha256": "f61fec5782ffe47bb4de267c2819ed1000c98e65f76081ded6d26304a45e88cb",
+      "matchesCandidate": true
+    }
+  ],
+  "runtimeScripts": [
+    "https://thuytrangmai66-oss.github.io/50K142.03.3007/assets/index-DyN_tYXi.js"
+  ],
+  "indexedDB": {
+    "version": 40,
+    "stores": 27,
+    "customers": 1,
+    "retainedAcrossReload": true
+  },
+  "status": "PASS",
+  "finishedAt": "2026-11-14T17:41:06.105Z"
+}

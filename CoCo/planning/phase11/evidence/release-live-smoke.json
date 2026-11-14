@@ -1,0 +1,44 @@
+{
+  "releaseSha": "4f4b7ff4a191c3d675eada86ece54030a96f4796",
+  "url": "https://thuytrangmai66-oss.github.io/50K142.03.3007/",
+  "stats": {
+    "startTime": "2026-11-14T17:40:19.197Z",
+    "duration": 18058.643,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "file": "g6-verification.spec.ts",
+      "line": 7,
+      "title": "T07 native migration abort restores v3 and successful runtime upgrade preserves all legacy stores and numeric codes",
+      "status": [
+        "expected"
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4520
+        }
+      ]
+    },
+    {
+      "file": "g6-verification.spec.ts",
+      "line": 42,
+      "title": "T07 actual runtime: two UI roles approve, finalize, live-read shared invoice/history and preserve canonical graph on reload",
+      "status": [
+        "expected"
+      ],
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10118
+        }
+      ]
+    }
+  ],
+  "scope": "Existing unchanged tests run against deployed Pages in fresh isolated browser contexts; synthetic data only",
+  "nativeMigrationEvidence": "release-native-migration.json"
+}

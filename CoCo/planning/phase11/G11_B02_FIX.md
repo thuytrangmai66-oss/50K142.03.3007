@@ -28,6 +28,8 @@ FAIL mới nằm ở `phase10-finalize-benchmark.spec.ts:59` → `sales-helpers.
 
 **Lượt full theo quyết định mới: 167 PASS / 0 FAIL / 0 SKIP / 0 FLAKY**, exit 0, không retry. Chạy đúng một lần, bắt đầu 00:13:56 giờ VN; [evidence](evidence/b03-release-verification.json). Đủ gate local để commit/push B02; CI/deploy/smoke mới vẫn chờ, không tuyên bố release thành công trước kiểm chứng.
 
+**Cập nhật sau release:** commit B02 `4f4b7ff` đã push main; [CI 43621194435](https://github.com/thuytrangmai66-oss/50K142.03.3007/actions/runs/43621194435) **538 unit + 167 Chromium PASS**, Pages deploy đúng SHA, G11-T03 smoke PASS (17 kiểm tra và 2 E2E production). [Kết quả cuối](evidence/release-result.json). B03 không được sửa, trạng thái accepted/deferred giữ nguyên. T04/T05 chưa hoàn thành.
+
 ## Giới hạn release
 
 CODEX tiếp tục chỉ ở local, không thuộc commit hoặc lịch sử push. G10-A01–A07 giữ **ACCEPTED FOR RELEASE / DEFERRED**, chưa được khắc phục. G11-T04/T05 chưa thực thi/nghiệm thu; không tự đánh dấu DONE.

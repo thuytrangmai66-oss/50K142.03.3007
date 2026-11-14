@@ -1,6 +1,6 @@
 # G11-B01 — Targeted popup/routing fix
 
-PO phê duyệt xử lý giới hạn G11-B01; giữ ngoại lệ G10-A01–A07. B01 đã sửa và push. Hai ca layout FAIL trên CI dưới đây là checkpoint trước phê duyệt B02; trạng thái release mới nhất xem [RELEASE_EXECUTION.md](RELEASE_EXECUTION.md), hiện BLOCKED tại regression B03, chưa deploy/smoke release mới.
+PO phê duyệt xử lý giới hạn G11-B01; giữ ngoại lệ G10-A01–A07. B01 đã sửa và push. Các FAIL bên dưới là checkpoint lịch sử trước B02 và quyết định PO chấp nhận B03. Cập nhật 15/11/2026: [release mới đã deploy/smoke thành công](RELEASE_EXECUTION.md), CI 538 unit/167 Chromium PASS; B03 vẫn ACCEPTED FOR RELEASE / DEFERRED, chưa khắc phục. Không tự DONE toàn G11.
 
 ## Nguyên nhân và sửa tối thiểu
 

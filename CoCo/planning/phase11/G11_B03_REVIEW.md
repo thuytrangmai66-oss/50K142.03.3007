@@ -16,4 +16,6 @@ Lượt chạy mới bắt đầu **00:13:56 ngày 15/11/2026 (giờ Việt Nam)
 
 Đã đủ điều kiện local để commit B02; CI/deploy/smoke của commit mới còn chờ. Kết quả PASS lần này không xác định nguyên nhân hoặc khắc phục B03. Nếu CI FAIL thì dừng release theo PO.
 
+**Cập nhật sau release 15/11/2026:** B02 đã commit/push `4f4b7ff`; CI **538 unit + 167 Chromium PASS**, deploy đúng SHA và smoke production PASS. [Bằng chứng cuối](evidence/release-result.json). **B03 tiếp tục ACCEPTED FOR RELEASE / DEFERRED, chưa xác định nguyên nhân/chưa khắc phục**; không chuyển kết quả lần FAIL cũ thành PASS. Không sửa benchmark/assertion/timeout hoặc source để xử lý B03.
+
 Bằng chứng: [tổng hợp kiểm chứng B02](evidence/b02-verification.json), [failure context](evidence/b03-error-context.md). Log/trace/JSON chi tiết giữ local trong recovery `b02/`. CODEX 1.162 file giữ nguyên hash, không đưa vào Git.
