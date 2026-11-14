@@ -1,0 +1,4021 @@
+{
+  "reportProvided": true,
+  "reportSuccess": true,
+  "policy": "Individual passing assertions do not override a failed report or certify complete UC/BR coverage",
+  "counts": {
+    "PASS": 501,
+    "FAIL": 0,
+    "SKIP": 0,
+    "NOT_RUN": 0
+  },
+  "tests": [
+    {
+      "id": "f8d1fcb0b013757d1cd94c43",
+      "file": "tests/unit/auth.test.ts",
+      "title": "matches independent native PBKDF2 SHA-256 and uses fresh random salts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 293.7395999999999
+    },
+    {
+      "id": "3d80001ea603cf21ca05550c",
+      "file": "tests/unit/auth.test.ts",
+      "title": "migrates the frozen v2 database to v4, preserving business and metadata without accounts or sessions",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 21.27220000000011
+    },
+    {
+      "id": "4d633b4214d62473a214b6e1",
+      "file": "tests/unit/auth.test.ts",
+      "title": "bootstraps once with caller-entered credentials, hash/salt and atomic evidence",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 218.0157999999999
+    },
+    {
+      "id": "9b522a11e7e7b80bba73f0e5",
+      "file": "tests/unit/auth.test.ts",
+      "title": "serializes simultaneous bootstrap from two connections into exactly one owner",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 110.2536
+    },
+    {
+      "id": "df220e8da3ca7916871334b9",
+      "file": "tests/unit/auth.test.ts",
+      "title": "rolls back bootstrap marker and all account rows if audit write fails, then allows retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 210.14170000000013
+    },
+    {
+      "id": "8ef93f27dc5f4405acfc5962",
+      "file": "tests/unit/auth.test.ts",
+      "title": "rejects malformed bootstrap profile without partial data 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.6662999999998647
+    },
+    {
+      "id": "d5c826a3ce79880e836335f2",
+      "file": "tests/unit/auth.test.ts",
+      "title": "rejects malformed bootstrap profile without partial data 1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.373199999999997
+    },
+    {
+      "id": "fea0fe638b1c6fff9f6a690b",
+      "file": "tests/unit/auth.test.ts",
+      "title": "rejects malformed bootstrap profile without partial data 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 4.047199999999975
+    },
+    {
+      "id": "86431b88a65fbe55b087a6d5",
+      "file": "tests/unit/auth.test.ts",
+      "title": "reports missing login input before writing 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.9947000000001935
+    },
+    {
+      "id": "3a85b31d652ec3aede717920",
+      "file": "tests/unit/auth.test.ts",
+      "title": "reports missing login input before writing 1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 6.73720000000003
+    },
+    {
+      "id": "73ef6bbad28fad068dd6ffb7",
+      "file": "tests/unit/auth.test.ts",
+      "title": "reports missing login input before writing 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.6439000000000306
+    },
+    {
+      "id": "5576021390a0a127a1675da6",
+      "file": "tests/unit/auth.test.ts",
+      "title": "does not distinguish unknown username, wrong password or inactive account and issues no session",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 464.4504000000002
+    },
+    {
+      "id": "55f1963738f6406609729430",
+      "file": "tests/unit/auth.test.ts",
+      "title": "logs in with an opaque token, persists only its hash, reloads session and revokes it on logout",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 237.24900000000025
+    },
+    {
+      "id": "df01808a9baca3935fe4eba2",
+      "file": "tests/unit/auth.test.ts",
+      "title": "checks fresh role/active/version on every service call across connections",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 204.14969999999994
+    },
+    {
+      "id": "0270fa6ba6c664f7d8f7edb0",
+      "file": "tests/unit/auth.test.ts",
+      "title": "revokes role-changed and credential-version-changed sessions",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 305.3179
+    },
+    {
+      "id": "09d507f18cc28b1d717a131c",
+      "file": "tests/unit/auth.test.ts",
+      "title": "binds write guards to the same transaction, ignores forged actor and rechecks permission on replay",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 215.2224000000001
+    },
+    {
+      "id": "079ad73f94035f995c83fefc",
+      "file": "tests/unit/auth.test.ts",
+      "title": "rejects staff relabeling account writes as public permission with no partial write",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 264.5796
+    },
+    {
+      "id": "14453aea53c6fca4f5925af3",
+      "file": "tests/unit/auth.test.ts",
+      "title": "does not allow a read permission to authorize a mutation, even for the owner",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 209.63160000000016
+    },
+    {
+      "id": "c30571bd7c5d59752b11c030",
+      "file": "tests/unit/auth.test.ts",
+      "title": "rolls back a newly issued session if login audit cannot be written",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 320.3011999999999
+    },
+    {
+      "id": "793f7e5a27614180d1c8e848",
+      "file": "tests/unit/auth.test.ts",
+      "title": "keeps the session if logout audit fails, then revokes it atomically on retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 224.41040000000066
+    },
+    {
+      "id": "a053966ec7707a9ec01603e3",
+      "file": "tests/unit/auth.test.ts",
+      "title": "rejects login if account changes while password derivation is in flight",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 205.8805000000002
+    },
+    {
+      "id": "2405741ffd5305fbf331359a",
+      "file": "tests/unit/auth.test.ts",
+      "title": "enforces the SRS owner-only permission contract without a system-run permission in UI",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.5603999999993903
+    },
+    {
+      "id": "9c24811a4a322440eb76d98c",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B records creation at Vietnam midnight with matching receipt/audit, survives reload and never mutates on read",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 258.51060000000007
+    },
+    {
+      "id": "7e10083cc14b34e20ea9390d",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B keeps the original creation day on profile edits and removes the marker with a legitimate deletion",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 227.9308000000001
+    },
+    {
+      "id": "45689edaaf5922544000222c",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B rolls the entire create back on audit failure",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 206.72140000000013
+    },
+    {
+      "id": "de4c411ec9cdf51af5cd0656",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B rolls the entire create back on metadata failure",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 218.961
+    },
+    {
+      "id": "769a9bb555d3158ddcf24942",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B rolls a deletion back when removing its marker fails",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 235.46309999999994
+    },
+    {
+      "id": "e89b23bc718f9523b5ff3fb4",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B serializes duplicate-phone creates across connections, creating one profile and one marker",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 207.1822000000002
+    },
+    {
+      "id": "c21bb747f7f49709ba499331",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B runs the command effect once, returns the original time on replay, and rechecks authorization",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 202.7222999999999
+    },
+    {
+      "id": "abe29e93b1c4932b8ad92b6e",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B excludes absent evidence without backfill or writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 239.85069999999996
+    },
+    {
+      "id": "ea2d88c8990069ae03938908",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B excludes invalid-json evidence without backfill or writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.89609999999993
+    },
+    {
+      "id": "e3702773c1efd2860248c281",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B excludes wrong-id evidence without backfill or writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 202.36599999999999
+    },
+    {
+      "id": "adb857679e0f65bd915c9c39",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B excludes missing-receipt evidence without backfill or writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 209.3777
+    },
+    {
+      "id": "2651d58eab1c2fd2fdf42c3d",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B excludes wrong-actor evidence without backfill or writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.0088999999998
+    },
+    {
+      "id": "f4a8b967bb59fca445e6db83",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B excludes wrong-time evidence without backfill or writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.3206
+    },
+    {
+      "id": "a99c284fa85c1f8faf5a18c8",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B excludes missing-audit evidence without backfill or writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 211.12760000000026
+    },
+    {
+      "id": "7483a08aa21b593b81ed94e2",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B leaves imported/legacy profiles without creation dates after reopen",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 273.64490000000023
+    },
+    {
+      "id": "51c2d5718d6c9db261474806",
+      "file": "tests/unit/customer-creation.test.ts",
+      "title": "M01-B propagates storage faults instead of returning a false zero",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.53079999999954
+    },
+    {
+      "id": "f669aa7f6902d32e3783bd93",
+      "file": "tests/unit/dashboard-comparison.test.ts",
+      "title": "keeps signed mathematical percentages without inventing a zero baseline",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.4746000000000095
+    },
+    {
+      "id": "5faa1f613fb2d3894ab438f5",
+      "file": "tests/unit/dashboard-comparison.test.ts",
+      "title": "rejects invalid comparison input -1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.8034999999999854
+    },
+    {
+      "id": "e19fd23c4da0ca67cf592ea7",
+      "file": "tests/unit/dashboard-comparison.test.ts",
+      "title": "rejects invalid comparison input 1.5",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.18060000000014043
+    },
+    {
+      "id": "c028bdabaa308ec34b350460",
+      "file": "tests/unit/dashboard-comparison.test.ts",
+      "title": "rejects invalid comparison input NaN",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.165000000000191
+    },
+    {
+      "id": "d9c28f33b460d442ec411862",
+      "file": "tests/unit/dashboard-comparison.test.ts",
+      "title": "rejects invalid comparison input 9007199254740992",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.17440000000010514
+    },
+    {
+      "id": "6009f60b10130484a012b0c1",
+      "file": "tests/unit/database.test.ts",
+      "title": "isolates CoCoDB and preserves records across concurrent startup and reopen",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 25.9298
+    },
+    {
+      "id": "67b821ba97dec8bc83ebd122",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "handles day 29 using original cycle price and 45-day catch-up priority",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 287.9017000000001
+    },
+    {
+      "id": "d0e743eec601024e04b6e1ce",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "handles day 30 using original cycle price and 45-day catch-up priority",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 240.99310000000014
+    },
+    {
+      "id": "77ef1ad8a13335f37dc04e2b",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "handles day 44 using original cycle price and 45-day catch-up priority",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 229.01329999999984
+    },
+    {
+      "id": "eea60c42dedfb4c76717d209",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "handles day 45 using original cycle price and 45-day catch-up priority",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.3764000000001
+    },
+    {
+      "id": "deccc1f442449f2477aa245f",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "handles day 80 using original cycle price and 45-day catch-up priority",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.98990000000003
+    },
+    {
+      "id": "161695427a3e6af3411f11c1",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "applies 30 then 45 once across reload/day checks without compounding or rewriting history",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 253.91110000000026
+    },
+    {
+      "id": "87160de7c46297a3915d07c0",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "sets exactly 20000 even when the current/base price is lower, per confirmed P10",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.288
+    },
+    {
+      "id": "9263da7298812a7f8dd51732",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "skips sold products, preserving their prices and never inventing a legacy code mapping",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.2752999999998
+    },
+    {
+      "id": "a1643704841ec8e9a40b9abf",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "serializes two browser connections, producing a single run and one event per product/cycle/milestone",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 233.77390000000014
+    },
+    {
+      "id": "373d60e6b8c59f489c4e2bb4",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "rolls back a failed price/milestone/version/audit transaction and retries only missing milestones",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.5957000000003
+    },
+    {
+      "id": "033f34a89722a1a9196f773a",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "recovers an expired interrupted claim after partial commit without applying the first product twice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 227.1023
+    },
+    {
+      "id": "c8e7c9b269f7e6d63070c0f1",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "rejects stale editor saves after an automatic price update and resets the new cycle after a fresh save",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 246.60969999999998
+    },
+    {
+      "id": "fa2a3b84f7135c4f5016a11c",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "requires monitor read permission/session and has no UI run capability",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.29470000000038
+    },
+    {
+      "id": "b9b47f56e87d1b52659a5356",
+      "file": "tests/unit/discount-scheduler.test.ts",
+      "title": "does not conceal a daily completion receipt whose journal is missing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.3783999999996
+    },
+    {
+      "id": "60dc3846d631492f1323f847",
+      "file": "tests/unit/financial-number.test.ts",
+      "title": "preserves negative values and both safe integer limits",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.9006999999999152
+    },
+    {
+      "id": "c8a85a53db51096f97144863",
+      "file": "tests/unit/financial-number.test.ts",
+      "title": "rejects unsafe aggregate values in either direction",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.8984000000000378
+    },
+    {
+      "id": "fac51b1a52651437e5281c85",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "computes calendar stock days 2026-11-01 at 2026-11-10T16:59:59Z without device timezone dependence",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 267.35720000000015
+    },
+    {
+      "id": "6ce0033504142bdd1867ea20",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "computes calendar stock days 2026-11-01 at 2026-11-10T17:00:00Z without device timezone dependence",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 233.21080000000006
+    },
+    {
+      "id": "234313be055ae7d62dd4104d",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "computes calendar stock days 2024-02-28 at 2024-03-01T00:00:00+07:00 without device timezone dependence",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.47340000000008
+    },
+    {
+      "id": "56d94224ad995f9902e9a906",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "computes calendar stock days 2026-12-31 at 2027-01-01T00:00:00+07:00 without device timezone dependence",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.14969999999994
+    },
+    {
+      "id": "e6290c43ee5e14cbe00b9a65",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "projects real inventory without writes, price recalculation or losing physical item identities",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 236.98489999999993
+    },
+    {
+      "id": "3d15dd08e4bbcb298571d561",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "combines code/name, type, brand and entry day, including empty result and invalid calendar",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 245.71150000000034
+    },
+    {
+      "id": "3760ede164612c63e74d2c4f",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "reads frozen acquisition attributes after shared bracket rename without changing historical data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.22790000000032
+    },
+    {
+      "id": "ed1af8b7280e4482235f6931",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "shows sold only through the invoice-specific approved mapping and never changes status while reading",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.79659999999967
+    },
+    {
+      "id": "ba50f3bc3f62763954b31539",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "does not interpret raw legacy codes as the new mapping, including condition code 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.4468999999999
+    },
+    {
+      "id": "9799f25fd5afc1b68d091d9f",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "displays stored milestone 30 only when tied to the current cycle and current price",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 231.23829999999998
+    },
+    {
+      "id": "edcef90e77c8e9d3d11fe418",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "displays stored milestone 45 only when tied to the current cycle and current price",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 228.98469999999998
+    },
+    {
+      "id": "8d1809d62b40a07f47f760d5",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "fails visibly for missing-bracket instead of fabricating inventory metadata",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 214.70290000000023
+    },
+    {
+      "id": "4ec08733b0f71e3f84513396",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "fails visibly for missing-origin instead of fabricating inventory metadata",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 218.66169999999966
+    },
+    {
+      "id": "ba177cec3d0745e8c31ecf33",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "fails visibly for missing-snapshot instead of fabricating inventory metadata",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 222.35249999999996
+    },
+    {
+      "id": "5173ac676d5d6057f01b3d98",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "fails visibly for unknown-status instead of fabricating inventory metadata",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.53949999999986
+    },
+    {
+      "id": "c2069cd92433eb5c3d4baa9d",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "supports both authenticated roles and rejects invalid/revoked sessions without writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 420.8633
+    },
+    {
+      "id": "54df307069121e500f1d3f10",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "resets cycle on a real price change by owner, preserving entry date, costs and invoice snapshots",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 232.16780000000017
+    },
+    {
+      "id": "121ff52faff7a6ae076ca6c2",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "resets cycle on a real price change by staff, preserving entry date, costs and invoice snapshots",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 415.3817999999992
+    },
+    {
+      "id": "c5519aaa72fc94111e1b7605",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "updates only one item current attributes, without resetting unchanged price or editing the shared bracket",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.3174999999992
+    },
+    {
+      "id": "5e4d1b1c972346a06a6e79cd",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "replays exactly once, rejects changed operation payloads and rechecks revoked sessions on replay",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.70190000000002
+    },
+    {
+      "id": "7210d7d530c387f1659bece1",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "serializes two connections against one product version and prevents stale overwrite",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.41859999999997
+    },
+    {
+      "id": "0603dfcd83a2fe9b9e41a971",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "rolls back product/cycle/attributes/version/receipt after metadata failure and retries safely",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.39049999999952
+    },
+    {
+      "id": "6608cb8c0d5eac876ae338d2",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "rolls back product/cycle/attributes/version/receipt after audit failure and retries safely",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.79349999999977
+    },
+    {
+      "id": "14b8343bc54a65eee784373b",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "refuses fixed-date without partial mutation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.67559999999958
+    },
+    {
+      "id": "35702311cc6982612f149b6f",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "refuses fixed-status without partial mutation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.8675000000003
+    },
+    {
+      "id": "c218b4133da1e42091bcf2d9",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "refuses sold without partial mutation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 214.22379999999976
+    },
+    {
+      "id": "50886379904d31743d770fca",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "refuses empty-name without partial mutation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 214.26329999999962
+    },
+    {
+      "id": "343380ed084ad45e96df1469",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "refuses zero-price without partial mutation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.70889999999963
+    },
+    {
+      "id": "26de038569dd57b6a53d81a7",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "refuses invalid-condition without partial mutation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.98919999999998
+    },
+    {
+      "id": "bcae8a5aaf58d22a9d02aed4",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "refuses corrupt current attribute metadata instead of falling back to an acquisition snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 212.6229999999996
+    },
+    {
+      "id": "cb8375563c68b9095e38f4e4",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "rounds original cycle price 1 to final 70% 1 price undefined half-up",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 208.3221999999987
+    },
+    {
+      "id": "0d8a5bf4e1ecf7c9910f7cb1",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "rounds original cycle price 5 to final 70% 4 price undefined half-up",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 217.67019999999866
+    },
+    {
+      "id": "5194ab82d0eaed97cb817746",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "rounds original cycle price 10 to final 70% 7 price undefined half-up",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 206.83189999999922
+    },
+    {
+      "id": "03d5cb74c0f5fc1afeea8720",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "rounds original cycle price 104007 to final 70% 72805 price undefined half-up",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 205.21379999999954
+    },
+    {
+      "id": "2098cb2b6eaf83d3aeb00c4c",
+      "file": "tests/unit/inventory.test.ts",
+      "title": "prioritizes 45 over missed 30, never applies a milestone twice, and schedules the next Vietnam midnight",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 210.23320000000058
+    },
+    {
+      "id": "8fbbb763fef1a115a2166c7b",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination slices 0 records before rendering",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.5407000000000153
+    },
+    {
+      "id": "c669e370a8c4f2f71f59aa4a",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination slices 1 records before rendering",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.4092000000000553
+    },
+    {
+      "id": "fc7443489329d71ac0bf656e",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination slices 9 records before rendering",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3423000000000229
+    },
+    {
+      "id": "dcc871867afb786e7567a6d0",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination slices 10 records before rendering",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2744000000000142
+    },
+    {
+      "id": "77a8ce2e37cedd132259659a",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination slices 25 records before rendering",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2821999999999889
+    },
+    {
+      "id": "129c2dde2f7172564f248e12",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination partitions 25 records into exactly 9 + 9 + 7 without gaps or duplicates",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.4536000000000513
+    },
+    {
+      "id": "5f7ffc9665b240c8f3fae257",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination clamps a removed/filtered last page and cannot bounce back after data is added",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.23500000000001364
+    },
+    {
+      "id": "1657e541d14bcb209eae344a",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination normalizes invalid requested page 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.14800000000002456
+    },
+    {
+      "id": "c164ca36e3aea5c78b5dafa8",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination normalizes invalid requested page -1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.1170999999999367
+    },
+    {
+      "id": "3fbf77225e00291a352c9261",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination normalizes invalid requested page 1.5",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.14340000000004238
+    },
+    {
+      "id": "31ada34ae26ce3a6e76247f3",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination normalizes invalid requested page NaN",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.07359999999994216
+    },
+    {
+      "id": "cc50dce445c43571c68bbb76",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination normalizes invalid requested page Infinity",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.0663000000000693
+    },
+    {
+      "id": "fad6c91959c9115850233f0c",
+      "file": "tests/unit/pagination.test.ts",
+      "title": "shared list pagination supports an explicit module capacity without mutating the data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3382000000000289
+    },
+    {
+      "id": "544a6008862d22181d600cca",
+      "file": "tests/unit/phase10-audit.test.ts",
+      "title": "never labels list-only or unexecuted cases as passed",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.69179999999983
+    },
+    {
+      "id": "09213db0983daa635c995c34",
+      "file": "tests/unit/phase10-audit.test.ts",
+      "title": "preserves actual failure, interruption, skip and flaky attempts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.6186999999999898
+    },
+    {
+      "id": "741799be54a604824506f28d",
+      "file": "tests/unit/phase10-audit.test.ts",
+      "title": "counts executed success and refuses to turn expected-failure cases into PASS",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.9258000000002085
+    },
+    {
+      "id": "c311fa28c49a1804aa28b5be",
+      "file": "tests/unit/phase10-audit.test.ts",
+      "title": "resolves encoded local design paths while rejecting escape outside CODEX",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.5690999999999349
+    },
+    {
+      "id": "977203cf4cb0c896457413ad",
+      "file": "tests/unit/phase10-audit.test.ts",
+      "title": "keeps unit failures/skips and does not call enumeration or missing-duration assertions PASS",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.03449999999998
+    },
+    {
+      "id": "3425149da2ff4c94dfa73175",
+      "file": "tests/unit/phase10-audit.test.ts",
+      "title": "sanitizes unit file paths and ignores raw failure messages",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.5150000000001
+    },
+    {
+      "id": "7ddbfe41e2895ae3edaf6ae3",
+      "file": "tests/unit/phase10-audit.test.ts",
+      "title": "rejects missing unit reports and refuses PASS without an execution start time",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3423000000000229
+    },
+    {
+      "id": "17ca597e5c6925f05cb26d32",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision continues adding products and selecting a customer after a superseded rejection and second approval",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 505.47450000000003
+    },
+    {
+      "id": "d4f0f6df3d4d0ab667671e49",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision delivers approve only to its creator and acknowledges once",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 434.61350000000016
+    },
+    {
+      "id": "82b04646a0e0443b92ccb10f",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision delivers reject only to its creator and acknowledges once",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 435.1729
+    },
+    {
+      "id": "52c8595addc5176149f2bc67",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision revises rejected price 80000 without changing old history and replays once",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 423.2878999999998
+    },
+    {
+      "id": "f0fcde2c62d00976f9b656ea",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision revises rejected price 130000 without changing old history and replays once",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 433.03679999999986
+    },
+    {
+      "id": "bb0a54db415c529dd1e454ad",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision rolls back acknowledgement and price revision after audit failure",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 442.5214000000001
+    },
+    {
+      "id": "f1b30d70bcc76969b8047ef8",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision uses the newly displayed bracket revision while preserving the original rejected snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 429.82059999999956
+    },
+    {
+      "id": "dd99a96d931c7910d8115afe",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision blocks invalid price, non-rejected lines, foreign sessions and changed brackets",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 415.5717999999997
+    },
+    {
+      "id": "f4da663dee5d15635fe6debb",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision does not show a stale result after remove",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 424.1142
+    },
+    {
+      "id": "76e96f790c12fc15760f58a6",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "T04 recipient results and rejected-price revision does not show a stale result after cancel",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 423.2325000000001
+    },
+    {
+      "id": "1a8438da9596fb41bc7f7867",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "rejects a changed price snapshot before deciding and keeps decision/event/audit unchanged",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 453.8107
+    },
+    {
+      "id": "18cca9ae4e9dd23ef87c0815",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "rejects a changed quantity snapshot before deciding and keeps decision/event/audit unchanged",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 417.5666000000001
+    },
+    {
+      "id": "8774d645493bb9d1572fb2a4",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "rejects a changed bracket snapshot before deciding and keeps decision/event/audit unchanged",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 420.6832999999997
+    },
+    {
+      "id": "5993e64c25534781f2657aa2",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "rejects malformed decision input {\"action\":\"invalid\"} without writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 408.4445000000005
+    },
+    {
+      "id": "1d524ecf7879036366d57ead",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "rejects malformed decision input {\"expectedRevision\":0} without writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 426.0443000000005
+    },
+    {
+      "id": "3a1a6a28ed214f8dca9e47d3",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "rejects malformed decision input {\"expectedRevision\":1.5} without writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 431.2420000000002
+    },
+    {
+      "id": "064a7822b4d00a81c6ebbe4b",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "rejects malformed decision input {\"operationId\":\"\"} without writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 415.5775999999996
+    },
+    {
+      "id": "8bff239c9dfa2131cdb41c9e",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests filters employee names and Vietnam calendar date",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 414.26710000000094
+    },
+    {
+      "id": "0c787939a232613e9c4701c7",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests preserves an existing approve decision when adding another product",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 409.84360000000015
+    },
+    {
+      "id": "51b8ed6a1adbcfeace03baa1",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests preserves an existing reject decision when adding another product",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 414.9351000000006
+    },
+    {
+      "id": "d4ca7d3493fcfeefb8f716be",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests returns empty list when no approvals exist",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 407.9903999999988
+    },
+    {
+      "id": "9306fc761b0ff24da868e5d0",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests shows pending request and marks it eligible",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 421.20570000000043
+    },
+    {
+      "id": "bb4c78603832364b8dfb3d28",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests marks request ineligible when line is removed",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 412.70770000000084
+    },
+    {
+      "id": "eec77a7b25952e811a12c457",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests filters by status=decided after a decision",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 418.1733999999997
+    },
+    {
+      "id": "a3513a88495b9c90cb29a3ec",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "listRequests requires approvals.read permission",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 412.97689999999966
+    },
+    {
+      "id": "074feb6e652e66cffd16cc81",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "loadRequest loads approval with draft and line context",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 420.4944000000014
+    },
+    {
+      "id": "1d02224d7d938d10acdcbbc6",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "loadRequest throws for unknown approvalId",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 420.4508999999998
+    },
+    {
+      "id": "b697a403fe1f5acd5a90de20",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "loadRequest requires approvals.read permission",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 426.09090000000106
+    },
+    {
+      "id": "050add3b8a16deba4954ada2",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — approve approves a pending request atomically and writes persistent notice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 416.6367000000009
+    },
+    {
+      "id": "1c14e999a04eefd2ec725c41",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — approve replays the same operationId without duplicating data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 415.84349999999904
+    },
+    {
+      "id": "952af98bfd1ac9a30951a156",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — reject rejects with reason, updates approval and line, writes notice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 417.0007000000005
+    },
+    {
+      "id": "065124e4e9db1c86f271c78a",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — reject requires non-empty reason when rejecting",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 413.97450000000026
+    },
+    {
+      "id": "e356c832f9f8e39be9eb5f36",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — reject rejects reason longer than 100 characters",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 411.7327000000005
+    },
+    {
+      "id": "84b9f67d49e00480b39de8ac",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — permission and CAS guards prevents staff from deciding approvals",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 420.6386999999995
+    },
+    {
+      "id": "5307a5b1401279c315e167a2",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — permission and CAS guards rejects stale expectedRevision (CAS)",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 419.2047999999995
+    },
+    {
+      "id": "886cf9f807cab370b07ca460",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — permission and CAS guards rejects deciding an already-decided approval",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 428.7379000000001
+    },
+    {
+      "id": "db0adf58b6f1c6b8dc525adf",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — permission and CAS guards two owners collide: second sees CONFLICT and first decision is preserved",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 510.8271999999997
+    },
+    {
+      "id": "964e8e9eb3d243850d10f542",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — permission and CAS guards rolls back all writes on audit failure — no partial state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 428.0043000000005
+    },
+    {
+      "id": "cbc61844a3fa311a52d7648e",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — permission and CAS guards refuses to decide a request where the line has been removed",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 496.53609999999753
+    },
+    {
+      "id": "b9a8dec6fd02cf6725b7e46a",
+      "file": "tests/unit/purchase-approvals.test.ts",
+      "title": "decide — permission and CAS guards requires auth session for decide",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 432.59879999999976
+    },
+    {
+      "id": "3c4f574ebd0b80552c08233e",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "uses approved integer half-up markup 1 -> 1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 351.3707999999999
+    },
+    {
+      "id": "7c8d73566804ac38f6cb136a",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "uses approved integer half-up markup 5 -> 7",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 314.1895000000002
+    },
+    {
+      "id": "e16302560ceacedc7be24ded",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "uses approved integer half-up markup 15 -> 20",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 301.4105000000004
+    },
+    {
+      "id": "09dc426d9dabd299f8005855",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "uses approved integer half-up markup 80001 -> 104001",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 341.22350000000006
+    },
+    {
+      "id": "d3e605861555408e0f3a8b22",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "uses approved integer half-up markup 120000 -> 156000",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 348.47170000000006
+    },
+    {
+      "id": "69918740470eae8a31d7554a",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "uses approved integer half-up markup 6928614811339224 -> 9007199254740991",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 346.40920000000006
+    },
+    {
+      "id": "11420312893f502c3df45d5a",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects fractional/zero/unsafe costs and sale price overflow",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 334.0144
+    },
+    {
+      "id": "9dc51cc652054b76feb2f1ad",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "atomically saves a real authorized draft, without invoice/customer fabrication; owner=false",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 342.3689999999997
+    },
+    {
+      "id": "bfb55b4f2dbd7b6d1701a6a2",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "atomically saves a real authorized draft, without invoice/customer fabrication; owner=true",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 332.65119999999933
+    },
+    {
+      "id": "18f15004d5a580acd33ed44b",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "replays identical commands once and rejects changed payloads without mutation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 345.3226999999997
+    },
+    {
+      "id": "3a9ac92de4d6d7e98e9c5467",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "serializes two connections with the same expected revision into a single winner",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 323.22550000000047
+    },
+    {
+      "id": "e74f54e413e915c7f56af3e0",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects forged provenance and revoked sessions, including replay of a committed command",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 339.5572000000002
+    },
+    {
+      "id": "d24adac52ddf29d60acc5246",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "preserves historical draft actor across real G5 rename, requires new session and records current audit actor",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 456.1927999999998
+    },
+    {
+      "id": "cb6fbcea17934b467ae92094",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects invalid customer link and rolls back all tables",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 312.02840000000015
+    },
+    {
+      "id": "e986a2f384ba76c127114c71",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects invalid bracket link and rolls back all tables",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 326.6945000000005
+    },
+    {
+      "id": "2df41987c2e48076f7455598",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects invalid request link and rolls back all tables",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 322.5171
+    },
+    {
+      "id": "8f7b79048841f77f51967c92",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects invalid cross-draft link and rolls back all tables",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 317.91100000000006
+    },
+    {
+      "id": "4c3c01860321a842b9b1aebb",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "keeps pending price bound to the exact snapshot, cannot inject an approved decision",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 343.7458999999999
+    },
+    {
+      "id": "01a0a66b3f6f9a4398a6ef2c",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects changed bracket versions and preserves old lines until invalidation is implemented",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 330.1327999999994
+    },
+    {
+      "id": "14ce4ee4b9edbf8d52b73354",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "does not reinterpret an untagged legacy condition even when its numeric value is 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 323.6178
+    },
+    {
+      "id": "2cfe6f4b413d53a36dc0da4d",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rolls back draft/lines/receipt when audit fails, then retries exactly once",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 342.72890000000007
+    },
+    {
+      "id": "b575e974f2ce86a9693119d4",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "reads legacy status without interpretation and refuses an incomplete new-format snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 336.02639999999883
+    },
+    {
+      "id": "26dea1a4f303c6893f8811e6",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "detects orphan notification/provenance and inconsistent finalized snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 322.46910000000025
+    },
+    {
+      "id": "7387b31b0332db39ac9b270d",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "checks a complete candidate provenance graph, cost binding and exact physical item count",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 343.2711999999992
+    },
+    {
+      "id": "900b6594ce8011cc17cf7254",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "validates the new-format mixed-price FK without a fabricated legacy aggregate line",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 351.4390000000003
+    },
+    {
+      "id": "e19f187eb369cdf0b1d49015",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects damaged explicit metadata: missing-origin without legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 313.2465000000011
+    },
+    {
+      "id": "a4170684779e8fba2ce4be52",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects damaged explicit metadata: wrong-line without legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 331.02570000000014
+    },
+    {
+      "id": "cf994b18b4bd5f18041cb45f",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects damaged explicit metadata: wrong-invoice without legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 322.6864999999998
+    },
+    {
+      "id": "5a871a07c1897f4ec626b11f",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects damaged explicit metadata: missing-snapshot without legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 328.79320000000007
+    },
+    {
+      "id": "4803679ebbd9f71a4fe59f48",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects damaged explicit metadata: wrong-cost without legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 320.8225000000002
+    },
+    {
+      "id": "c9cacfc1380f807a162e352d",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rejects damaged explicit metadata: unmarked-extra-product without legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 318.53770000000077
+    },
+    {
+      "id": "0ddf129deb286155e9ca0f6a",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "keeps legacy product FK strict in candidate schema when no new-format marker exists",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 311.15469999999914
+    },
+    {
+      "id": "11c4f32f5ca76f3f47e8f8c5",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "rolls back a transaction which breaks a new-format reverse FK after earlier writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 323.8279999999995
+    },
+    {
+      "id": "2d7bc4162bc3be3d9b700d21",
+      "file": "tests/unit/purchase-candidate.test.ts",
+      "title": "revalidates later writes in the same transaction instead of reusing a prior valid FK snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 327.1180999999997
+    },
+    {
+      "id": "79d25c77c154dc6e82fcfd25",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "stores draft identity without fabricating customer or invoice and validates finalization identity",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 5.561899999999923
+    },
+    {
+      "id": "30f1c1d62a7d769af14953ad",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "preserves two same-bracket costs and an odd total without averaging",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.4141000000001895
+    },
+    {
+      "id": "2f04bba2f16a49a48c4c6bcc",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "does not create a below-Min rule and requires approval strictly above Max",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.7071000000000822
+    },
+    {
+      "id": "4045f5add03f457afc08f404",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects invalid line input {\"quantity\":0}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.44620000000008986
+    },
+    {
+      "id": "71732287cf8aa4b898fe6da5",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects invalid line input {\"quantity\":1.5}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.30320000000006075
+    },
+    {
+      "id": "34b3b33f3ae97c61b1f99178",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects invalid line input {\"unitCost\":0}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.25969999999983884
+    },
+    {
+      "id": "2c884faa4d446faf1b856bc1",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects invalid line input {\"unitCost\":-1}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.22239999999987958
+    },
+    {
+      "id": "8067b384eea5e19595424eac",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects invalid line input {\"unitCost\":1.5}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.1688000000001466
+    },
+    {
+      "id": "9cadc4f8987b2be9dc63d9b7",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects invalid line input {\"bracket\":{\"id\":\"KG1\",\"revision\":1,\"type\":\"Áo\",\"brand\":\"CoCo\",\"condition\":90,\"min\":50000,\"max\":100000}}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.6863000000000739
+    },
+    {
+      "id": "915abc4ce4bf2f1f97d4710f",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects invalid line input {\"bracket\":{\"id\":\"KG1\",\"revision\":1,\"type\":\"Áo\",\"brand\":\"CoCo\",\"condition\":2,\"min\":200000,\"max\":100000}}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.22540000000003602
+    },
+    {
+      "id": "9f4002b7f071e958d42db62a",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects duplicate line identities and arithmetic overflow instead of rounding",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.273200000000088
+    },
+    {
+      "id": "cfba1561b9eab4d754633393",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "requires a nonblank refusal reason and does not attach decision fields to pending state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.1849999999999454
+    },
+    {
+      "id": "21ae86963cc668b9e418c4bf",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rejects staff decisions, stale versions and repeat processing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.2175999999999476
+    },
+    {
+      "id": "518f6e471ea2e8e6d0986e89",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "binds approval to exact line revision, price, quantity and bracket snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.7119999999999891
+    },
+    {
+      "id": "7589abf32317284cabf33e7f",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "requires customer/items and valid approvals without reusing a decision after an edit",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.291700000000219
+    },
+    {
+      "id": "38d10d7746a49ddcf404b953",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "separates durable notice from delivery and does not claim a delivery without its time",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.883600000000115
+    },
+    {
+      "id": "4406572c7df326ba9bd52e47",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "migrates a real frozen v3 test DB additively and preserves all legacy keys and records",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 31.117899999999963
+    },
+    {
+      "id": "86f4b16d30e9ae2f0d958f6e",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "activates the accepted v4 schema with all six additive stores",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.310699999999997
+    },
+    {
+      "id": "68a746a6f6ad4272986bff80",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rolls back a failed schema upgrade itself, retaining native v3 stores and data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 12.712999999999965
+    },
+    {
+      "id": "f8ffe62601db7f776227ceb3",
+      "file": "tests/unit/purchase-contract.test.ts",
+      "title": "rolls back candidate draft and lines on a late transaction failure without touching legacy rows",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 5.832599999999957
+    },
+    {
+      "id": "9dfe1116a996eb2f3e0c830b",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "prepares without writes and finds the exact tagged bracket for a valid quantity",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 242.53320000000008
+    },
+    {
+      "id": "6e33adea30268fa18e812ee5",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid quantity  before writing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.35119999999984
+    },
+    {
+      "id": "ee90b29e4af1f970c5953efa",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid quantity 0 before writing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 212.03280000000018
+    },
+    {
+      "id": "0819cf367fcbe876c1166a1d",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid quantity -1 before writing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 204.0048999999999
+    },
+    {
+      "id": "7ffd433a2524f07485874bb9",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid quantity 1.2 before writing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 209.03369999999995
+    },
+    {
+      "id": "825bc405600b8b91da878322",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid quantity 2147483648 before writing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.95510000000013
+    },
+    {
+      "id": "5ae55ecf6adbcb2ae0b9809f",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid quantity abc before writing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 203.2252000000003
+    },
+    {
+      "id": "47a3712e8f70903b745146dd",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "returns required field errors and does not match a different condition or missing brand",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 206.06539999999995
+    },
+    {
+      "id": "c7ca5b85d2c6aa0dacaf776c",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid proposed price 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 207.40830000000005
+    },
+    {
+      "id": "32fa49a8fc64bcc485bcd8d3",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid proposed price -1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 210.6851999999999
+    },
+    {
+      "id": "84a0481fcc3072ebf669fcff",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid proposed price 1.5",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 211.66229999999996
+    },
+    {
+      "id": "1e16a743d94e95a2b3918fa4",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid proposed price abc",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 200.7511999999997
+    },
+    {
+      "id": "73f1bd0eb242beb3f2569d98",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rejects invalid proposed price 9007199254740992",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 202.47699999999986
+    },
+    {
+      "id": "35c05ded4e8d9ae72456b472",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "creates a single real pending request only above Max and replays one command without duplicate",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.83080000000018
+    },
+    {
+      "id": "5682f8eece63bad35c2b9400",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "accepts Max and positive below-Min prices without inventing extra approval rules",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 227.41869999999926
+    },
+    {
+      "id": "3024d0b6ebcedc6a98362de6",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "soft-removes a pending line, retains its request snapshot and does not reuse a cancelled draft",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 229.1967999999997
+    },
+    {
+      "id": "a95de3f72cd3bae7571465a9",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "rolls back remove/cancel on audit failure and rejects revoked sessions",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 245.54140000000007
+    },
+    {
+      "id": "eccc21976321a5c0ae64ab19",
+      "file": "tests/unit/purchase-drafts.test.ts",
+      "title": "lists persisted invoices with customer data, combined filters and Vietnam calendar dates; excludes drafts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 239.21489999999994
+    },
+    {
+      "id": "7852b97a5813ccedd6c74271",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "finalizes real mixed prices without merging cost and preserves legacy data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 294.70949999999993
+    },
+    {
+      "id": "dab989a9e34547e2d3007827",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "issues one product per item, rounds initial price half up and uses Vietnam dates",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.19759999999997
+    },
+    {
+      "id": "cf0af08064a605cf879a3cef",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "never reuses issued/versioned product IDs or a duplicate ID within one finalization batch",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.4973
+    },
+    {
+      "id": "e854e835cbb4e0744235c9b5",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back the invoice, draft and reservations if product ID retries are exhausted",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 224.4190000000001
+    },
+    {
+      "id": "2adbd87fbae2df3ce1c133ec",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "retries a committed operation once and rejects another finalize command or payload",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 223.08820000000014
+    },
+    {
+      "id": "c2c558b0955fd6613b2910ab",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "serializes two tabs finalizing the same revision",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.95219999999972
+    },
+    {
+      "id": "b9dcbbaadb6d6d7a425a9977",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "blocks pending before creating invoice or products",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 220.13549999999987
+    },
+    {
+      "id": "a666bc3b2ceb5c1b01c4f041",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "blocks rejected before creating invoice or products",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 222.3992000000003
+    },
+    {
+      "id": "2377a742b2fb2a0b009e3d44",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "blocks missing-customer before creating invoice or products",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.19039999999995
+    },
+    {
+      "id": "9edbac7b8e2b210da60ed65a",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "blocks empty before creating invoice or products",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 214.48149999999987
+    },
+    {
+      "id": "047fc4e69725f60a0c81d7c5",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "blocks cancelled before creating invoice or products",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.53229999999985
+    },
+    {
+      "id": "9f88a93fb260cd0442d373dc",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "blocks stale before creating invoice or products",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 212.70690000000013
+    },
+    {
+      "id": "5db0533b77c5ea78e90228c3",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when hoaDonThuMua add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 220.63560000000052
+    },
+    {
+      "id": "e6a647697fca6400799d6277",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when sanPham add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 222.1837999999998
+    },
+    {
+      "id": "e2bdba8a8cd46cc64422e672",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when productCosts add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.82470000000012
+    },
+    {
+      "id": "ce715c45b6b2d0de3eb03723",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when purchaseProvenance add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 211.3762999999999
+    },
+    {
+      "id": "fc27693fc6ed9c8284014301",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when purchaseFinalizations add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 211.85229999999956
+    },
+    {
+      "id": "4fcd2f6d922cef0b4200cc3f",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when auditEntries add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.46900000000005
+    },
+    {
+      "id": "f584e44dc12658f0b0967e05",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when issuedIdentifiers add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.58120000000054
+    },
+    {
+      "id": "e4c6eed0fa4440295849ef8c",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rolls back all stores when recordVersions add fails, then safely retries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.39359999999942
+    },
+    {
+      "id": "b1a4b469b3956f70a44818ca",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "rejects a foreign employee and a revoked session even on receipt replay",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 414.2534000000005
+    },
+    {
+      "id": "afaddb95b40b83d4bec1e9b8",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "requires an explicit valid state mapping and valid command",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 215.15920000000006
+    },
+    {
+      "id": "e37cd5125db5de6656cad196",
+      "file": "tests/unit/purchase-finalization.test.ts",
+      "title": "never reuses a reserved product ID and rolls back invoice allocation when random IDs keep colliding",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.39230000000043
+    },
+    {
+      "id": "1169b248e792367df625d81f",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "reads canonical mixed prices, actor and status without writes or current bracket repricing",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 313.51289999999995
+    },
+    {
+      "id": "f2b5df40a5d28e2f77e0757c",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "combines trimmed case-insensitive ID/name, phone and Vietnam calendar date with real pagination",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 276.83550000000014
+    },
+    {
+      "id": "c6d6d11c390332e22ed5bc3b",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "keeps history by customer ID after name/phone change and rejects another customer detail route",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 239.48430000000008
+    },
+    {
+      "id": "8b295480549cecdaa65f2102",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "retains legacy codes and unit prices without inferring their meaning or changing stored rows",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 283.0169000000001
+    },
+    {
+      "id": "dcbf44e7e624c7b3608f28f6",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects corrupt finalized customer without legacy fallback or repairs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 270.08889999999974
+    },
+    {
+      "id": "b5744acff76b2d03a13230db",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects corrupt finalized employee without legacy fallback or repairs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.2592999999997
+    },
+    {
+      "id": "d621b5ac1c640727989b480f",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects corrupt finalized snapshot without legacy fallback or repairs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 235.0300000000002
+    },
+    {
+      "id": "ea035e969635a3b1e04ea5dd",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects corrupt finalized cost without legacy fallback or repairs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 224.75769999999966
+    },
+    {
+      "id": "7dfb7f3a8b758f194d3dd967",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects corrupt finalized product without legacy fallback or repairs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 288.88269999999966
+    },
+    {
+      "id": "cdbc6c06e92c896004abf39d",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects corrupt finalized mapping without legacy fallback or repairs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.07190000000037
+    },
+    {
+      "id": "224a399fd1dc2b4c7d55e30d",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects corrupt finalized total without legacy fallback or repairs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 229.8956000000003
+    },
+    {
+      "id": "44b56f3e80a4560f8ddc623a",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects legacy missing-lines without inventing history",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 217.5640000000003
+    },
+    {
+      "id": "fa2db37145c1be581a052c92",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects legacy wrong-total without inventing history",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 218.0627000000004
+    },
+    {
+      "id": "9dfd40f3ea0b1a1458c3c672",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "rejects legacy missing-bracket without inventing history",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 301.3927999999996
+    },
+    {
+      "id": "737a538bad18c2449a6872de",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "requires a valid session for all read entry points",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 244.1898000000001
+    },
+    {
+      "id": "b3ab97d89242d23f3782b0cf",
+      "file": "tests/unit/purchase-queries.test.ts",
+      "title": "allows staff to read an owner transaction while keeping role/session and every store unchanged",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 450.2539999999999
+    },
+    {
+      "id": "a5a5ce9191460ec551c38ca7",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "creates, searches, renames and deletes a customer, preserving leading zero and points",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 275.7279000000001
+    },
+    {
+      "id": "56f1e9480bc60caf56cd550c",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "validates customer fields in service before persistence 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 212.8062
+    },
+    {
+      "id": "534b52a0dc5bbd3adf52c87d",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "validates customer fields in service before persistence 1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 200.35120000000006
+    },
+    {
+      "id": "a00dcc105b25f6eb3de6e2c5",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "validates customer fields in service before persistence 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 208.8487
+    },
+    {
+      "id": "fa717114d9b0b362de972f0f",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "serializes duplicate phone races across connections and rejects stale edits without overwriting",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 235.2489999999998
+    },
+    {
+      "id": "d91273216c8baea14f6e62d8",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "keeps history under a changed phone, joins invoice snapshots and prevents linked deletion",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 245.3795
+    },
+    {
+      "id": "3250518ee18e5fd358c438db",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "uses only the approved numeric condition codes for new brackets, including create/edit/unique",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.2832000000003
+    },
+    {
+      "id": "2d287c57ac263bad5c51aa60",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "rejects unapproved condition input 0 without storing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 201.4299000000001
+    },
+    {
+      "id": "e577a78ac714b331bbd2c6fb",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "rejects unapproved condition input 4 without storing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 199.3028000000004
+    },
+    {
+      "id": "e70ec580a468140b688f37f6",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "rejects unapproved condition input 90 without storing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 201.4690999999998
+    },
+    {
+      "id": "187a870248d765340aec6c44",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "rejects unapproved condition input Tốt without storing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 199.7739999999999
+    },
+    {
+      "id": "2071234ac9b921cc18398726",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "rejects unapproved condition input 2.5 without storing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 203.76200000000017
+    },
+    {
+      "id": "a248cebf4167459c4f526094",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "checks every required bracket field and integer Min/Max boundaries",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 205.31839999999966
+    },
+    {
+      "id": "4f7f4655cd14c4d533ee1ed4",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "preserves untagged G2 condition 90 and requires review before any reinterpretation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 210.9390000000003
+    },
+    {
+      "id": "8e92dacc7571a32484ba8573",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "preserves untagged G2 condition 2 and requires review before any reinterpretation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 229.4351999999999
+    },
+    {
+      "id": "ec48208df0aa881791100c99",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "rolls back the condition adoption marker and business row when audit fails",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 261.0679
+    },
+    {
+      "id": "191965f4c551975416a91621",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "removes registration metadata atomically only when the customer has no invoices",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 255.73939999999948
+    },
+    {
+      "id": "a04e18b4cc5ba4a272a310a7",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "supports staff customers but denies all bracket entry points and revoked sessions",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 483.0661999999993
+    },
+    {
+      "id": "8d32e35280296b2dfe49c63a",
+      "file": "tests/unit/reference-data.test.ts",
+      "title": "paginates deterministically and clamps a deleted last page",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 228.1967999999997
+    },
+    {
+      "id": "65fa46b51840fd81535bebd3",
+      "file": "tests/unit/report-components.test.tsx",
+      "title": "UI22 selects each real report kind without inventing a total or querying data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 106.27669999999989
+    },
+    {
+      "id": "b56d4a3ac77a213b173cb4a1",
+      "file": "tests/unit/report-components.test.tsx",
+      "title": "SC106 confirms the complete inclusive date range with an exclusive UTC boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 23.64989999999989
+    },
+    {
+      "id": "5cb6a8659584f7716a5b6a74",
+      "file": "tests/unit/report-components.test.tsx",
+      "title": "SC107/109 blocks invalid and reversed dates, then allows correction without stale input",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 43.64390000000003
+    },
+    {
+      "id": "0dc6848fe9e41faee4269cc0",
+      "file": "tests/unit/report-components.test.tsx",
+      "title": "SC110/112 switches month and year formats and does not reuse the previous value",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 23.056499999999915
+    },
+    {
+      "id": "0f544fd5336906932ea1a63e",
+      "file": "tests/unit/report-eligibility.test.ts",
+      "title": "separates payment verification from temporal eligibility without fallback values",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 4.357099999999946
+    },
+    {
+      "id": "ecfd1ea78f2cafb5bbb08d54",
+      "file": "tests/unit/report-eligibility.test.ts",
+      "title": "counts only trusted creation dates in the selected Vietnam period, preserving unknown customers as coverage",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.137499999999818
+    },
+    {
+      "id": "f8843321745ed3d87b9dbaed",
+      "file": "tests/unit/report-eligibility.test.ts",
+      "title": "excludes invalid creation dates and refuses duplicate profile IDs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.9843000000000757
+    },
+    {
+      "id": "4cc4c407b151a0fdf5937e59",
+      "file": "tests/unit/report-legacy-migration.test.ts",
+      "title": "keeps v2 legacy dates/status/customer records unchanged after upgrade and reopening, and never counts them as verified",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 242.81320000000005
+    },
+    {
+      "id": "cd33c3fd700f9b9799b59b70",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods includes the complete last Vietnam day and excludes the following midnight",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.29970000000003
+    },
+    {
+      "id": "9f258748f3dac7ed3b352122",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods does not use host timezone UTC",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.286299999999983
+    },
+    {
+      "id": "57ffcf0dbacf5ab23c832644",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods does not use host timezone America/Los_Angeles",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.39629999999988286
+    },
+    {
+      "id": "8766c4346a3f857c2d5a20bd",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods does not use host timezone Asia/Tokyo",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.326200000000199
+    },
+    {
+      "id": "c7ee2264cf3df88770487b13",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles month 2024-02 through 2024-02-29",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.4681000000000495
+    },
+    {
+      "id": "eb2c7342533f822591cbda6d",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles month 2026-02 through 2026-02-28",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.25299999999992906
+    },
+    {
+      "id": "00dcd8e40b3f73cd9110956e",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles month 2000-02 through 2000-02-29",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.19499999999993634
+    },
+    {
+      "id": "5654b1b71aebc4372f0aa9b5",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles month 1900-02 through 1900-02-28",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.16619999999988977
+    },
+    {
+      "id": "e534b3cd45e15c3792a66fc5",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles month 2026-04 through 2026-04-30",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2235000000000582
+    },
+    {
+      "id": "2ec58b377926017214d2d5ae",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles month 2026-12 through 2026-12-31",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3283000000001266
+    },
+    {
+      "id": "247b48a64a5498a03aa2d9dd",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles full year 2024 without the year-1900 coercion",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.27749999999991815
+    },
+    {
+      "id": "797aee652f125c621f563705",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles full year 2026 without the year-1900 coercion",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.15200000000004366
+    },
+    {
+      "id": "b66d72f52572d284f5770e55",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods handles full year 0099 without the year-1900 coercion",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.08579999999983556
+    },
+    {
+      "id": "2a0e7ca5be6d49776807d481",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"range\",\"start\":\"2026-11-02\",\"end\":\"2026-11-01\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3890000000001237
+    },
+    {
+      "id": "d49e0a236878254d2bac5878",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"range\",\"start\":\"\",\"end\":\"\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.32979999999997744
+    },
+    {
+      "id": "605b9db630420dcb3407da1a",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"day\",\"value\":\"2026-02-29\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.13390000000003965
+    },
+    {
+      "id": "b5a302c7d841fb7bfe62843d",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"day\",\"value\":\"2026-01-33\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.07749999999987267
+    },
+    {
+      "id": "197e0be1c7bad00f4df85d1b",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"day\",\"value\":\"2026-13-01\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.06930000000011205
+    },
+    {
+      "id": "ca98846eb971e1d226d88905",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"day\",\"value\":\"2026-1-1\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.07240000000001601
+    },
+    {
+      "id": "ac9c1462e71d25350618aabd",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"month\",\"value\":\"2026-00\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.05709999999999127
+    },
+    {
+      "id": "d7c5d421256777268ccf6f5a",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"month\",\"value\":\"2026-13\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.04899999999997817
+    },
+    {
+      "id": "26d37a761da19a5cc457f6e2",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"year\",\"value\":\"0000\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.0787000000000262
+    },
+    {
+      "id": "990f020899c852e3d7428e4a",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"year\",\"value\":\"26\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.06610000000000582
+    },
+    {
+      "id": "dcc61b92dc9151b4abe05b3f",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"year\",\"value\":\"\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.060500000000047294
+    },
+    {
+      "id": "a7c93b682397c2eabd7d827d",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects invalid period {\"kind\":\"invalid\",\"value\":\"2026\"}",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.06400000000007822
+    },
+    {
+      "id": "de7a90f699985cae991f757e",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects a missing/invalid payment timestamp 2026-11-13",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.18319999999994252
+    },
+    {
+      "id": "5c37b87b9e106b803e90cee0",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects a missing/invalid payment timestamp 2026-11-13T12:00:00",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.11290000000008149
+    },
+    {
+      "id": "4f0d52e487bfd058129d6128",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects a missing/invalid payment timestamp 2026-02-30T00:00:00Z",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.10519999999996799
+    },
+    {
+      "id": "4b257d62efa204dcc6d212d4",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods rejects a missing/invalid payment timestamp not-a-date",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.09400000000005093
+    },
+    {
+      "id": "b156cbc63cf7b61dc751b40f",
+      "file": "tests/unit/report-period.test.ts",
+      "title": "G9-T01 Vietnam report periods normalizes only the display formats supplied by the local design",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.5280999999999949
+    },
+    {
+      "id": "8669d7446a7fc4dab2a3d059",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T05 staff summary counts all-store verified purchases/imports, sales and existing newly created profiles by Vietnam day",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 424.54449999999997
+    },
+    {
+      "id": "a610a6d43efe58edc86fb9c3",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T06 invalid purchase snapshot duplicate-lines is quarantined without hiding storage errors",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 245.7781
+    },
+    {
+      "id": "bb2bf9e8d837b782f26e36a2",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T06 invalid purchase snapshot unsafe-total is quarantined without hiding storage errors",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 236.71420000000035
+    },
+    {
+      "id": "44557ea258b6b369573cd52f",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T05 owner KPI uses verified paid instants, stock markers and a readonly consistent snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 240.5340000000001
+    },
+    {
+      "id": "3e775d29ea281fcfcd33a3cd",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T05 uses a verified month-end baseline and never invents a percentage when it is zero",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 247.73630000000003
+    },
+    {
+      "id": "28f4835bffc2ad71bfbd14fa",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 reconstructs prior-month stock from complete purchase evidence without writing a snapshot",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 325.3379
+    },
+    {
+      "id": "22bae875e8f57d5db4f40ee2",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 excludes an item sold before cutoff from both counts instead of assuming every imported item was still available",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 237.9025999999999
+    },
+    {
+      "id": "5d606b16423e0383aa6707b3",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 counts an item sold exactly at Vietnam month start in previous stock and not in current stock",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 340.2306000000003
+    },
+    {
+      "id": "c544eeecb511dc0c6a5d20f6",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 missing-paid-at stays insufficient instead of inferring a historical state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 231.41980000000012
+    },
+    {
+      "id": "9bba2b1711458fc3e4ced8b2",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 missing-sale-proof stays insufficient instead of inferring a historical state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 236.92020000000002
+    },
+    {
+      "id": "06bea3f6ae418fbc8eaac129",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 missing-purchase-receipt stays insufficient instead of inferring a historical state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 223.28489999999965
+    },
+    {
+      "id": "52767951e5dd33d1ff3c8cec",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 legacy-status-only stays insufficient instead of inferring a historical state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 244.47950000000037
+    },
+    {
+      "id": "161c8e089391304e3f6cdc39",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 malformed-status-mapping stays insufficient instead of inferring a historical state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 221.95259999999962
+    },
+    {
+      "id": "45878dedcec9dabb5edc4f74",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 missing-purchase-time stays insufficient instead of inferring a historical state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 223.04069999999956
+    },
+    {
+      "id": "c7828fe1e6a7bee5afe82ea1",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 availability-with-sale-link stays insufficient instead of inferring a historical state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 248.41960000000017
+    },
+    {
+      "id": "2c7490eede617bdea7e4d207",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "G9-D05 a real storage failure propagates without returning a false stock percentage",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 247.3711999999996
+    },
+    {
+      "id": "e2e2277ae3d129c988d90339",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T05 pending KPI follows the active approval revision and excludes cancelled drafts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 242.27539999999954
+    },
+    {
+      "id": "95cb39ea7d9c98409689904d",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T05 unverified legacy sales and unknown stock states do not become confirmed KPI values",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 222.46200000000044
+    },
+    {
+      "id": "913be42ae92addd97aa8d02f",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T05 staff home.read permission cannot expose owner financial KPIs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 427.3253999999997
+    },
+    {
+      "id": "c406d7a08cf128a7c7efa075",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 reconciles actual revenue, cost of sold items and cash outflow without counting unsold stock in profit",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.14440000000013
+    },
+    {
+      "id": "878cb625fd03917676e0bede",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 reports outflow-only days and zero totals for empty profit/periods",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.83730000000014
+    },
+    {
+      "id": "819d96ccee78fb54d295b6c4",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 permits a real loss and never clips negative profit to zero",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 224.92619999999988
+    },
+    {
+      "id": "480a2b1990e657bcaeeaf6a9",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 refuses unknown costs on an otherwise verified sale instead of manufacturing zero cost",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 231.83710000000065
+    },
+    {
+      "id": "f9cdc62024bdf3fb9d20b81b",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 ignores unverified legacy sales/purchases and preserves their original numeric codes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 223.86749999999938
+    },
+    {
+      "id": "ab6b3c55d4e5af7e5d8a3665",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 retains costs of sold items across subsequent price bracket edits",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 224.5556999999999
+    },
+    {
+      "id": "a2a3cd673f4d9df131601929",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 stock age uses import day, includes exact threshold and filters available items only",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 222.3818000000001
+    },
+    {
+      "id": "a4a0073d8fa89ea7b6755f94",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 rejects invalid minimum stock days 0 at the service boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.33100000000013
+    },
+    {
+      "id": "9dd77652dcda98fc4e503f45",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 rejects invalid minimum stock days -1 at the service boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 208.8207999999995
+    },
+    {
+      "id": "e91efac4e2ec0c8fa3383c02",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 rejects invalid minimum stock days 0.5 at the service boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 278.60339999999997
+    },
+    {
+      "id": "8e1c0a6657311cfdbbe2a8ad",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 rejects invalid minimum stock days NaN at the service boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 215.8801999999996
+    },
+    {
+      "id": "4288e045685727b7d16c8388",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T04 does not infer stock availability from an untagged legacy numeric state",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 287.2032999999992
+    },
+    {
+      "id": "7fb894046e31b3e8977663f9",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 counts physical items and actual purchase cost, keeps snapshots after price edits and never writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 260.45910000000003
+    },
+    {
+      "id": "0d84aeba636d692c6a4275ad",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 excludes legacy presence/date without reinterpreting its numeric state or changing raw rows",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.55090000000018
+    },
+    {
+      "id": "a258c8a76791a5ec7ba9bc05",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 excludes missing/invalid paidAt undefined without substituting invoice/audit/finalization time",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 211.27639999999883
+    },
+    {
+      "id": "f297c5eec2f7d9e6b69041f8",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 excludes missing/invalid paidAt 2026-02-30T00:00:00Z without substituting invoice/audit/finalization time",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 271.76510000000053
+    },
+    {
+      "id": "65e4fa0e38ae8fcd978cc166",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 refuses inconsistent physical cost evidence rather than recomputing it from the current bracket",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 232.98739999999998
+    },
+    {
+      "id": "4d46689f7c6490db86f487c9",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 does not hide native read errors as an empty report and refuses an unauthenticated service caller",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.87660000000142
+    },
+    {
+      "id": "73214903355b39ac2af33ff9",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 reconciles mixed prices in the same bracket and counts finalization replay once",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.32970000000023
+    },
+    {
+      "id": "b4e9fd6b615608d23fea2a20",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "T03 requires the finalization receipt even when the snapshot and date exist",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 207.99389999999948
+    },
+    {
+      "id": "961f8e3026a35292b2051091",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "does not count a purchase, empty cart or cancelled draft as sales revenue, and never writes while reading",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 289.5691000000006
+    },
+    {
+      "id": "8046e0187799a5c264cc708f",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "reconciles a real two-line discounted sale with its paid total and retains history after profile/catalog edits",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.58959999999934
+    },
+    {
+      "id": "d7e4d9d2d49d436a1175ca18",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "uses payment instants across Vietnam midnight, not a UTC day or imported stock date",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.26260000000002
+    },
+    {
+      "id": "531685d936c703b27bfa19cc",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "excludes UNVERIFIED legacy even with a date and codes matching new invoices, with explicit coverage",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 220.79839999999967
+    },
+    {
+      "id": "11c4ec760dc0e66277425afb",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "classifies corrupt proof as UNVERIFIED and excludes it without repair or a legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 217.26190000000133
+    },
+    {
+      "id": "89cd89bd06f964adb8a9e6b8",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "refuses an orphan paid snapshot without manufacturing a missing invoice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 282.9958999999999
+    },
+    {
+      "id": "39f6c37331273ff9451a04eb",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "requires the finalization receipt before marking an input verified",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 224.6198999999997
+    },
+    {
+      "id": "f9bf59cceab033c7097aca2d",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "rejects an invoice total inconsistent with the paid snapshot instead of recalculating it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 215.36419999999998
+    },
+    {
+      "id": "680a17efb8966f51ad4372f4",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "retains VERIFIED payment with missing time, excludes it from all periods, and never substitutes header/audit dates",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 237.1222000000016
+    },
+    {
+      "id": "a7e0232c887f24ea695d0a4b",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "excludes invalid/untrusted payment time 2026-02-30T00:00:00Z without changing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 222.52429999999913
+    },
+    {
+      "id": "4575d3e76406f47c0ba1d128",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "excludes invalid/untrusted payment time 2026-11-13T00:00:00 without changing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.91179999999986
+    },
+    {
+      "id": "92ea078a84846419a809272a",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "excludes invalid/untrusted payment time 123 without changing it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 216.51159999999982
+    },
+    {
+      "id": "c70a2d761df1853e6a75214d",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "does not turn a storage read error into an empty report or an UNVERIFIED classification",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.4997999999996
+    },
+    {
+      "id": "7ae6ae852207a7e87d4d84fc",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "keeps current customers without creation evidence out of the KPI, even with membership and completed transactions",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.64689999999973
+    },
+    {
+      "id": "4f11f2b9c4f86aa261daf1a5",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "counts an idempotent payment replay only once",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 255.80140000000029
+    },
+    {
+      "id": "cbdfa8912dfc1773fa80b487",
+      "file": "tests/unit/report-queries.test.ts",
+      "title": "guards direct service calls against staff and revoked sessions before exposing report data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 440.34790000000066
+    },
+    {
+      "id": "9c88b87363ea551a5554df97",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "migrates a real v1 schema without resetting metadata or seeding business records",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 26.784599999999955
+    },
+    {
+      "id": "79c5e290cb312b7619fe32c4",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "writes a complete related batch atomically, including both compound-key details",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 34.88630000000012
+    },
+    {
+      "id": "ad105765e904ee1d0ddbf65b",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "rolls back earlier writes, versions, id reservations, audit and receipt on a missing foreign key",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 14.345800000000054
+    },
+    {
+      "id": "fc799392e9965cddb9063ff9",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "enforces unique customer phones across competing connections and rolls back the losing command",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 14.897799999999961
+    },
+    {
+      "id": "6d35dc06bafedf5c14a7b065",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "preserves phone leading zero and rejects duplicate employee phone and login",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 8.33789999999999
+    },
+    {
+      "id": "014c99298ffb9794d9e1e36c",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "enforces unique price-bracket combination and preserves per-item cost after bracket price edits",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 12.481399999999894
+    },
+    {
+      "id": "877c7255668fa2f5530e62f8",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "commits only once for simultaneous identical operation ids across tabs and survives reopen",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 13.8753999999999
+    },
+    {
+      "id": "6977c16b74e0e1b9c8fd6ebd",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "rejects stale writes across tabs without overwriting the winner",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 9.669100000000071
+    },
+    {
+      "id": "8fd0ad8cc69a1463f6accb68",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "retains customer history while changing a phone and prevents deleting linked customers",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 10.19659999999999
+    },
+    {
+      "id": "a37c9f27060542b8619ef5ed",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "keeps tombstone versions to reject a stale edit after delete/recreate",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 8.11239999999998
+    },
+    {
+      "id": "4d161db2d7ef973d319f9395",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "never reuses an issued product id even after deletion",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 8.657400000000052
+    },
+    {
+      "id": "140130373454c528abb9f041",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "keeps product import date and provenance immutable and prevents deleting invoices",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 10.367499999999836
+    },
+    {
+      "id": "591556237cdb79b0c13eb27a",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "stores explicit per-product costs for two different prices in the same invoice/bracket without inference",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 7.10369999999989
+    },
+    {
+      "id": "3d75330aeb2b96bfd8b66543",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "rejects wrong cost provenance and mismatched compound purchase links",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 8.088399999999865
+    },
+    {
+      "id": "eb141dbcd8a74d46d8c5a359",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "makes a discount milestone unique per product/cycle across connections and records actual execution time",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 11.539899999999989
+    },
+    {
+      "id": "e0f526de17695e229f23436c",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "requires explicit membership registration and stores only hash/salt security metadata",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 7.410599999999931
+    },
+    {
+      "id": "fbe8e2640f2cb23d429fdcb8",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "rolls back all writes if persisting audit evidence fails, then permits retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 24.446100000000115
+    },
+    {
+      "id": "c0c405d8647bc34e6e70749c",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "rejects duplicate batch targets, missing versions and malformed compound keys",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.029700000000048
+    },
+    {
+      "id": "9089cdc971e1d646b8728599",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects invalid customer data before persistence 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.93769999999995
+    },
+    {
+      "id": "878045a11e9b2476ea2197a8",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects invalid customer data before persistence 1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.2918999999999414
+    },
+    {
+      "id": "e6de8c62a26689fff15304d9",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects invalid customer data before persistence 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 3.113299999999981
+    },
+    {
+      "id": "699eca1852b5d0f9f6b369a2",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects invalid customer data before persistence 3",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.9098999999998796
+    },
+    {
+      "id": "45e76b2539cff065cb4c418b",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects invalid customer data before persistence 4",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.7923000000000684
+    },
+    {
+      "id": "546a071ac1ce60d9ff075750",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects invalid customer data before persistence 5",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.5798999999999523
+    },
+    {
+      "id": "95663e30d064ad47f536ca6e",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects unsafe, fractional, negative and inconsistent amounts without rounding",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.731899999999996
+    },
+    {
+      "id": "78ab44b1c13f14783d5e733c",
+      "file": "tests/unit/repositories.test.ts",
+      "title": "runtime validation rejects nonexistent dates and plaintext password fields",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.2887000000000626
+    },
+    {
+      "id": "cce985de761476cae4d5b544",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "BR-UC7-02 returns zero rather than NaN or Infinity for an empty verified period",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 2.319099999999935
+    },
+    {
+      "id": "65d86e06bf044d61fc2f539c",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "counts paid headers once and adds actual receipts rather than prices before discounts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.585399999999936
+    },
+    {
+      "id": "f4a3077590751486504a60c5",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "does not invent a persisted rounding rule for a statistical average",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.32370000000014443
+    },
+    {
+      "id": "3c3e69e6ea0b6e55a3fc4c9d",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "uses the complete Vietnam day and not the UTC date of payment",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3169000000000324
+    },
+    {
+      "id": "434c06d8b0110cf1e30d7623",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "rejects duplicate IDs instead of double-counting or silently hiding an inconsistent input",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.8916999999999007
+    },
+    {
+      "id": "43cbe00786a581ef88495e88",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "rejects invalid paid amount -1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.8416999999999462
+    },
+    {
+      "id": "38a3091881fd87c6c641fc12",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "rejects invalid paid amount 0.5",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3713000000000193
+    },
+    {
+      "id": "9d73d64345f8cce5cad771f6",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "rejects invalid paid amount NaN",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2581000000000131
+    },
+    {
+      "id": "bc413ffcc8fb601c5c274b18",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "rejects invalid paid amount Infinity",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2339999999999236
+    },
+    {
+      "id": "682ce534b5cc34c0fcb5f7a2",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "rejects invalid paid amount 9007199254740992",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.32090000000016516
+    },
+    {
+      "id": "b2a40e7a9a3aaa1fdb31f582",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "sums in integers and rejects aggregate overflow",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.31760000000008404
+    },
+    {
+      "id": "68db32a563bc340f5603d744",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "groups by payment day in Vietnam and reconciles rows with the whole-period total",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 8.856699999999819
+    },
+    {
+      "id": "e50808ea5aaf319ceafa4772",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "does not fabricate empty daily rows and validates duplicates before grouping",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.28719999999998436
+    },
+    {
+      "id": "2dd88711164a49772cbf5bef",
+      "file": "tests/unit/revenue-report.test.ts",
+      "title": "keeps 25 daily rows ordered with the exact grand total for real pagination",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 1.807399999999916
+    },
+    {
+      "id": "c341ef12b25b75a21cba2300",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "creates a read-only post-discount transfer quote with exact bank/account and no fake invoice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 295.7214999999999
+    },
+    {
+      "id": "5de202101d896c890e5b1332",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "finalizes cash atomically and never reinterprets a legacy invoice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 250.57129999999984
+    },
+    {
+      "id": "678bab3769a387b1c2a41044",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "finalizes transfer atomically and never reinterprets a legacy invoice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 249.2231999999999
+    },
+    {
+      "id": "c36cc37794bf85ebede8fbf2",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on hoaDonBanHang failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 251.25860000000011
+    },
+    {
+      "id": "d804e59067247a25fff0c1df",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on chiTietHoaDonBH failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.0237000000002
+    },
+    {
+      "id": "ea387e0749d42b3896b97721",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on sanPham failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.46180000000004
+    },
+    {
+      "id": "3af058566f6a9345f8ddd2bc",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on khachHang failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 235.99080000000004
+    },
+    {
+      "id": "d5efb6c626c3c6e6c7727d93",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on appMetadata failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 232.19959999999992
+    },
+    {
+      "id": "86424df34584a42e7d43765d",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on issuedIdentifiers failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 227.07240000000002
+    },
+    {
+      "id": "40871f2d479a052caf0b4aff",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on recordVersions failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 228.76409999999987
+    },
+    {
+      "id": "acefeaa6bc826e80970fea55",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on operations failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 234.1286
+    },
+    {
+      "id": "8c80bbb1424044c476a88125",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rolls back the entire sale on auditEntries failure and permits the identical retry",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 228.32569999999987
+    },
+    {
+      "id": "4b5ff1be393d7a64e8ae5b0c",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "serializes two tabs selling the same item and rejects a replay after logout",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 231.65679999999975
+    },
+    {
+      "id": "4d8f010657d7d41c4135900f",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rejects stale customer points/version even when two different items are purchased",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 221.3778999999995
+    },
+    {
+      "id": "cb31c3c7288382c613929879",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "preserves individual sale prices for products from the same bracket and never rewrites purchase history",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 233.61220000000048
+    },
+    {
+      "id": "dfe28b3d6274cdc4058403d0",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "rejects stale revision, stock price/version, and tampered snapshot without any partial writes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 227.78189999999995
+    },
+    {
+      "id": "6b38528117276c369e707e3e",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "permits nonmember purchases without changing points and refuses a foreign employee cart",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 414.5770000000002
+    },
+    {
+      "id": "4a275162e7ab61eeaa76162d",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "matches independent CRC vectors and rejects invalid QR inputs",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.07330000000002
+    },
+    {
+      "id": "f596815b5458c34dc3c06e61",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "automatically applies the new discount rule at 0 points without trusting the old selection flag",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 219.39130000000023
+    },
+    {
+      "id": "75d85e77c7ac47c2bb9418d5",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "automatically applies the new discount rule at 49 points without trusting the old selection flag",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 227.28530000000046
+    },
+    {
+      "id": "3838425d42a79f3c559d99a7",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "automatically applies the new discount rule at 50 points without trusting the old selection flag",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 225.21060000000034
+    },
+    {
+      "id": "bd7ef73b4d80b065dd867ed6",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "automatically applies the new discount rule at 51 points without trusting the old selection flag",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.60120000000006
+    },
+    {
+      "id": "32b3830b18caa5b716b6a4b6",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "queries real finalized sales with combined filters and stable historical detail without writing data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 245.01830000000064
+    },
+    {
+      "id": "c63c6bd9a0a0d813e121df8b",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "paginates compatible legacy sales without assigning new meanings or backfilling snapshots",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 239.5657000000001
+    },
+    {
+      "id": "53d80c144c842362954861c2",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "refuses malformed or inconsistent saved snapshots instead of falling back to legacy display",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 221.67869999999948
+    },
+    {
+      "id": "1e6cca3328dd8452f58a6e82",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "reads pre-D05 optional-discount invoices without retroactively applying the automatic rule",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 236.66870000000017
+    },
+    {
+      "id": "f35d9700ec7f9ecfedc1302d",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "allows both roles to read invoices through the service and refuses missing legacy details",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 422.22339999999986
+    },
+    {
+      "id": "dc65becbdb235cf6af4f719a",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "joins paid customer history by customer ID and keeps invoice snapshots after profile changes",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 241.1934999999994
+    },
+    {
+      "id": "1857c418ea2dc219cad1558f",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "does not hide a corrupt paid snapshot behind customer-history legacy fallback",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 241.01869999999963
+    },
+    {
+      "id": "5143c4a16bc17543df9b5e21",
+      "file": "tests/unit/sale-payment.test.ts",
+      "title": "serializes the scheduler with payment: sold items cannot be discounted and repriced quotes cannot be paid",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 230.5046000000002
+    },
+    {
+      "id": "911b78aed98ae3f3b155cc22",
+      "file": "tests/unit/sales.test.ts",
+      "title": "snapshots one available mapped product, computes integer subtotal and does not finalize a sale",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 293.35990000000015
+    },
+    {
+      "id": "62586aa1caa279acde58ec20",
+      "file": "tests/unit/sales.test.ts",
+      "title": "persists explicit membership opt-in immediately, audits the actor, and leaves points and sales unchanged",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 237.30829999999992
+    },
+    {
+      "id": "c02acbb90b482858f259d9b1",
+      "file": "tests/unit/sales.test.ts",
+      "title": "serializes competing membership opt-ins without duplicate events",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 222.61480000000006
+    },
+    {
+      "id": "79e16a5d4f2db72f69b3ed60",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rolls back membership if its audit write fails and rejects invalid customer/session access",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 226.86559999999986
+    },
+    {
+      "id": "045bf3b9ccc0497b905afce3",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rejects unmapped, sold and missing products without creating a draft",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 233.45250000000033
+    },
+    {
+      "id": "c2dbd3c202746785361a8046",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rejects a stale cart after the G7 scheduler changes the current price and version",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 243.4128999999998
+    },
+    {
+      "id": "09cd59faffe66fe6fcefcbb4",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rejects a product that becomes sold while its snapshot remains in a saved cart",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 218.32850000000008
+    },
+    {
+      "id": "dcc3ea44d50e65836b1e49f8",
+      "file": "tests/unit/sales.test.ts",
+      "title": "serializes competing writes to one draft and permits independent unfinalized carts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 221.76339999999982
+    },
+    {
+      "id": "e0b7c2fa0f46ac0f0beb1c74",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rolls back a failed audit write and replays an idempotent add without duplicates",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 232.32850000000008
+    },
+    {
+      "id": "4b3157349682bfa0a2a89a84",
+      "file": "tests/unit/sales.test.ts",
+      "title": "enforces per-employee draft access while both roles can create their own carts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 419.3744999999999
+    },
+    {
+      "id": "ab984f2b345c159fcca17272",
+      "file": "tests/unit/sales.test.ts",
+      "title": "cancels a draft without selling the product and rejects empty carts",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 217.3752999999997
+    },
+    {
+      "id": "effb9518c12864e995f2407c",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rejects safe-integer subtotal overflow",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 218.33069999999998
+    },
+    {
+      "id": "4be071ba0bdecb59aefe72fd",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rounds member discount on subtotal and awards points only on the amount actually paid",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 212.89959999999974
+    },
+    {
+      "id": "c87d7bb1518b2d93e12c4ee6",
+      "file": "tests/unit/sales.test.ts",
+      "title": "requires 50 member points for the discount and allows members not to use it",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 232.97029999999995
+    },
+    {
+      "id": "f439948abb0a658907d3a3bd",
+      "file": "tests/unit/sales.test.ts",
+      "title": "does not grant member benefits to nonmembers or change their point balance",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 212.66530000000057
+    },
+    {
+      "id": "6f9a30c9d896dc56fcaa1478",
+      "file": "tests/unit/sales.test.ts",
+      "title": "rejects applying member points to an empty cart and point balance overflow",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 221.28049999999985
+    },
+    {
+      "id": "f0d62c969650e38f1359d4e3",
+      "file": "tests/unit/sales.test.ts",
+      "title": "does not permit a stale version when a product is re-priced between lookup and add",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 233.1907000000001
+    },
+    {
+      "id": "25e67fa9b49a7072ab846646",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "creates real staff credentials atomically, forces staff role and exposes a safe readonly DTO",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 477.9747
+    },
+    {
+      "id": "217de075dd62b6331e1e8560",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 213.11149999999998
+    },
+    {
+      "id": "d079dd2fff857832d46e413c",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 202.56230000000005
+    },
+    {
+      "id": "0f593c29b8e9c5ebcf5f8a2c",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 205.92700000000013
+    },
+    {
+      "id": "59a7dbae634060278ddec17d",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 3",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 214.3804
+    },
+    {
+      "id": "2cf3bd540096d6a2735c71f4",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 4",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 211.44079999999985
+    },
+    {
+      "id": "8de544f08328066e06abc43e",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 5",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 218.9324999999999
+    },
+    {
+      "id": "0e1c68d03383dfa1c5de8ee8",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 6",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 212.13020000000006
+    },
+    {
+      "id": "5252918eced5b36b098982c1",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 7",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 224.0574999999999
+    },
+    {
+      "id": "c2be3e4ce78136f0ae6add39",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "validates required/profile input at the service boundary 8",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 208.06399999999985
+    },
+    {
+      "id": "a551d859709512ea67fbcabd",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "reports both duplicate phone and username, including owner data, without partial records",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 319.96950000000015
+    },
+    {
+      "id": "4ab84f5f7a0f6c115a5fa6db",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "serializes two create races and preserves the winning account",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 326.6172999999999
+    },
+    {
+      "id": "6f6f734b2702a4c1b65ed14d",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "keeps credentials and session when editing only profile, and rejects a stale owner form",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 434.47630000000026
+    },
+    {
+      "id": "cc94cb7c37c218f03cb384e5",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "renames atomically with stable employee, FK links, historical actor and session revocation",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 849.9122000000007
+    },
+    {
+      "id": "a17cbd6eb24cee14b2db11ab",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "does not rename into another existing username or erase either identity",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 417.8327999999992
+    },
+    {
+      "id": "1583368c7a5381b1e6f13f17",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "confirmation cancellation keeps account and sessions; deletion disables account while retaining history identity",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 498.8705
+    },
+    {
+      "id": "2fcde96f9e352d4185c2d6a0",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "rejects all staff CRUD and owner-account mutation without touching data",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 404.58380000000034
+    },
+    {
+      "id": "786d52ae0ceed905a8639a63",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "rolls back every row, aliases and session revocation on create audit failure",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 510.7645000000002
+    },
+    {
+      "id": "9eb927ee5a264053d3858ef0",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "rolls back every row, aliases and session revocation on rename audit failure",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 420.59079999999994
+    },
+    {
+      "id": "bf63433354239cdd9b8a2da4",
+      "file": "tests/unit/staff-accounts.test.ts",
+      "title": "rolls back every row, aliases and session revocation on remove audit failure",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 400.3820999999998
+    },
+    {
+      "id": "8222929c4649daeaf0426b56",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 uses the same cohort for current/previous counts and signed percentages",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 18.701500000000124
+    },
+    {
+      "id": "ff458f1272dd9eb3cbb3efda",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 sale cutoff 2026-10-31T23:59:59.999+07:00 preserves the exclusive end-of-month boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.4977000000001226
+    },
+    {
+      "id": "08b714595800a9d93d8a961b",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 sale cutoff 2026-11-01T00:00:00+07:00 preserves the exclusive end-of-month boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.40619999999989886
+    },
+    {
+      "id": "a35da6f85c9ecd6e748cddbd",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 sale cutoff 2026-11-01T00:00:00.001+07:00 preserves the exclusive end-of-month boundary",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.34750000000008185
+    },
+    {
+      "id": "e82c1bcd716ea5c5bd8954c6",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 an import at/after cutoff 2026-11-01T00:00:00+07:00 is not previous stock",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.4076999999999771
+    },
+    {
+      "id": "12178a95cbd0200924a1ec84",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 an import at/after cutoff 2026-11-01T00:00:00.001+07:00 is not previous stock",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.29520000000002256
+    },
+    {
+      "id": "decdf1151af7e701e558faa1",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 cutoff respects Vietnam calendar/month/year/leap boundary 2027-01-01T00:00:00+07:00",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3304000000000542
+    },
+    {
+      "id": "5f1bed4bf6f6ddc17a5d4d24",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 cutoff respects Vietnam calendar/month/year/leap boundary 2028-03-01T00:00:00+07:00",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2925999999999931
+    },
+    {
+      "id": "71ff839f35b55849e6685672",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 cutoff respects Vietnam calendar/month/year/leap boundary 2026-11-30T17:00:00Z",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3451999999999771
+    },
+    {
+      "id": "a5bb3cc26684cae8f66e7e78",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 zero and incomplete evidence never fabricate a percentage",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.5985000000000582
+    },
+    {
+      "id": "71a324716003322c6a85d194",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 invalid/future/contradictory chronology is insufficient 0",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.43200000000001637
+    },
+    {
+      "id": "8e9cb7f2c74065f969fdee62",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 invalid/future/contradictory chronology is insufficient 1",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2865999999999076
+    },
+    {
+      "id": "258c1840af4c0568febec43e",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 invalid/future/contradictory chronology is insufficient 2",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.2600999999999658
+    },
+    {
+      "id": "6fe2dbdc18ac0f737fa88318",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 invalid/future/contradictory chronology is insufficient 3",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.3614000000000033
+    },
+    {
+      "id": "86e177610ed3e6440728e5c4",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 invalid/future/contradictory chronology is insufficient 4",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.34379999999987376
+    },
+    {
+      "id": "e13305f503e275211c4b56ae",
+      "file": "tests/unit/stock-comparison.test.ts",
+      "title": "G9-D05 rejects duplicate product facts rather than counting twice",
+      "project": "vitest",
+      "status": "PASS",
+      "durationMs": 0.9420000000000073
+    }
+  ]
+}

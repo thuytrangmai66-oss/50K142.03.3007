@@ -1,0 +1,38 @@
+{
+  "id": "SC105",
+  "scope": "Report picker component only; not a full-screen verdict",
+  "authorization": "G10-D05: user approved only this cropped source baseline and metadata on 2026-11-14",
+  "source": {
+    "path": "CODEX/Figma.Chủ/Màn hình Báo cáo 1.png",
+    "sha256": "114c0f7d92f587e8518008590673f9892bb80b8229746ab1ae4d291f71b0b72d",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "clip": {
+      "x": 476,
+      "y": 198,
+      "width": 913,
+      "height": 396
+    }
+  },
+  "baseline": {
+    "file": "SC105-picker.png",
+    "sha256": "c54fc0b16abee3a0336449de3ea3deca0f0906a5bbbe4ddc2382fc2271fa634f",
+    "width": 913,
+    "height": 396,
+    "bytes": 16447
+  },
+  "comparison": {
+    "dpr": 1,
+    "threshold": 0.2,
+    "maxDiffPixelRatio": 0.01,
+    "geometryTolerancePx": 2,
+    "masks": [],
+    "fontNormalization": [
+      "--disable-lcd-text",
+      "--font-render-hinting=none"
+    ]
+  },
+  "provenance": "Cropped from immutable source pixels, never from application output; no automatic baseline update"
+}

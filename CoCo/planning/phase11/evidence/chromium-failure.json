@@ -1,0 +1,31 @@
+[
+  {
+    "file": "purchase-approvals.spec.ts",
+    "line": 160,
+    "title": "G10 opposing approve/reject UI decisions commit once and both owner tabs recover without reload",
+    "status": "unexpected",
+    "results": [
+      {
+        "status": "failed",
+        "durationMs": 8687,
+        "errors": [
+          {
+            "message": "Error: expect(page).toHaveURL(expected) failed\n\nExpected pattern: /#\\/approvals$/\nReceived string:  \"http://127.0.0.1:4173/50K142.03.3007/#/approvals/Yc2f5a1ba\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toHaveURL\" with timeout 5000ms\n    14 × locator resolved to <html lang=\"vi\">…</html>\n       - unexpected value \"http://127.0.0.1:4173/50K142.03.3007/#/approvals/Yc2f5a1ba\"\n\n\n   at purchase-helpers.ts:10\n\n   8 |\n   9 | export async function expectApprovalList(page: Page) {\n> 10 |   await expect(page).toHaveURL(/#\\/approvals$/);\n     |                      ^\n  11 |   await expect(page.locator('dialog[open]')).toHaveCount(0);\n  12 |   await expect(page.locator(':modal')).toHaveCount(0);\n  13 |   await expect(page.locator('.approval-list')).toBeVisible();\n    at expectApprovalList (D:\\50K142-NEW\\.g11-release\\CoCo\\tests\\e2e\\purchase-helpers.ts:10:22)\n    at D:\\50K142-NEW\\.g11-release\\CoCo\\tests\\e2e\\purchase-approvals.spec.ts:190:11",
+            "location": {
+              "file": "D:\\50K142-NEW\\.g11-release\\CoCo\\tests\\e2e\\purchase-helpers.ts",
+              "column": 22,
+              "line": 10
+            }
+          }
+        ],
+        "attachments": [
+          {
+            "name": "error-context",
+            "path": "D:\\50K142-NEW\\.g11-release\\CoCo\\test-results\\purchase-approvals-G10-opp-e0a6f-tabs-recover-without-reload-chromium\\error-context.md",
+            "contentType": "text/markdown"
+          }
+        ]
+      }
+    ]
+  }
+]

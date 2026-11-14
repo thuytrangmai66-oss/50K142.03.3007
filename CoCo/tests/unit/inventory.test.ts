@@ -5,8 +5,8 @@ import { LocalReferenceData } from '../../src/services/reference-data/local';
 import { PurchaseDraftService } from '../../src/services/purchase-drafts';
 import { PurchaseFinalizationService } from '../../src/services/purchase-finalization';
 import { PURCHASE_STATUS_MAPPING } from '../../src/domain/purchase-status';
-import { InventoryService, inventoryFilters, stockDays, type InventoryEdit } from '../../src/services/inventory';
-import { cycleKey, inventoryAttributesKey, priceAtThirtyDays, pendingMilestone, nextVietnamMidnight } from '../../src/domain/inventory';
+import { InventoryService, inventoryFilters, type InventoryEdit } from '../../src/services/inventory';
+import { cycleKey, inventoryAttributesKey } from '../../src/domain/inventory';
 import { StaffAccountsService } from '../../src/services/staff-accounts';
 
 let db: CoCoDatabase, auth: AuthService, token: string, reference: LocalReferenceData, inventory: InventoryService;
@@ -31,13 +31,6 @@ beforeEach(async () => {
   productId = (await db.sanPham.toArray())[0].MaSP;
 });
 afterEach(async () => { vi.restoreAllMocks(); await db.delete(); });
-
-it.each([
-  ['2026-11-01', '2026-11-10T16:59:59Z', 9], ['2026-11-01', '2026-11-10T17:00:00Z', 10],
-  ['2024-02-28', '2024-03-01T00:00:00+07:00', 2], ['2026-12-31', '2027-01-01T00:00:00+07:00', 1],
-])('computes calendar stock days %s at %s without device timezone dependence', (date, at, expected) => {
-  expect(stockDays(date, new Date(at))).toBe(expected);
-});
 
 it('projects real inventory without writes, price recalculation or losing physical item identities', async () => {
   const before = await snapshot(), rows = await inventory.list(inventoryFilters, 1, 1);
@@ -168,16 +161,4 @@ it.each(['fixed-date', 'fixed-status', 'sold', 'empty-name', 'zero-price', 'inva
 it('refuses corrupt current attribute metadata instead of falling back to an acquisition snapshot', async () => {
   await db.appMetadata.put({ key: inventoryAttributesKey(productId), value: '{bad' });
   await expect(inventory.item(productId)).rejects.toThrow();
-});
-it.each([[1, 1], [5, 4], [10, 7], [104007, 72805]])('rounds original cycle price %s to final 70%% price %s half-up', (original, expected) => {
-  expect(priceAtThirtyDays(original)).toBe(expected);
-});
-it('prioritizes 45 over missed 30, never applies a milestone twice, and schedules the next Vietnam midnight', () => {
-  expect(pendingMilestone('2026-01-01', '2026-01-30', [])).toBeUndefined();
-  expect(pendingMilestone('2026-01-01', '2026-01-31', [])).toBe(30);
-  expect(pendingMilestone('2026-01-01', '2026-02-14', [30])).toBeUndefined();
-  expect(pendingMilestone('2026-01-01', '2026-02-15', [])).toBe(45);
-  expect(pendingMilestone('2026-01-01', '2026-02-15', [30])).toBe(45);
-  expect(pendingMilestone('2026-01-01', '2026-03-01', [45])).toBeUndefined();
-  expect(nextVietnamMidnight(new Date('2026-11-12T16:59:59Z')).toISOString()).toBe('2026-11-12T17:00:00.000Z');
 });

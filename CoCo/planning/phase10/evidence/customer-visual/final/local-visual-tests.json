@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "startTime": "2026-11-14T10:39:17.226Z",
+    "duration": 18776.487,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC101 owner confirm: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1873,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC102 owner linked: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2420,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC103 owner success: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1620,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC104 owner failure: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1802,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC294 staff confirm: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1709,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC295 staff linked: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3096,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC296 staff success: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1722,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "customer-dialogs.local.spec.ts",
+      "line": 97,
+      "title": "SC297 staff failure: exact private source comparison and actual deletion rules",
+      "expectedStatus": "passed",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1749,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

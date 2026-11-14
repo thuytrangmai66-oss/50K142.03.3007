@@ -1,0 +1,66 @@
+[
+  {
+    "file": "phase10-finalize-benchmark-3def4-its-without-an-invented-SLA-chromium/owner-1000-committed-list.png",
+    "sha256": "ccd53728e85ade4106add0826d0c5e30725282d87fe8fa28207a1d98a480ff99"
+  },
+  {
+    "file": "phase10-finalize-benchmark-3f100-its-without-an-invented-SLA-chromium/staff-25-committed-list.png",
+    "sha256": "809191b69d5f1aeb86ddbe3319c675a576b04fb571a86ef0e3830d8599b3302e"
+  },
+  {
+    "file": "phase10-finalize-benchmark-5b50a-its-without-an-invented-SLA-chromium/owner-25-committed-list.png",
+    "sha256": "b5a030fe7bd20d3e2e0fae7adb036b20c696a5c6213a795e1c8c9df10bad406b"
+  },
+  {
+    "file": "phase10-finalize-benchmark-c7287-its-without-an-invented-SLA-chromium/staff-1000-committed-list.png",
+    "sha256": "7fd23417ded43c1ad0b0c6bfa5674f587f639e561f0d0a13a26912bdf296399d"
+  },
+  {
+    "file": "phase10-integrity-G10-T04--8898d--retry-commits-exactly-once-chromium/1000-item-atomic-rollback.png",
+    "sha256": "dc4069b38b2e17acb403a5b8c7fc0c1af481af11df3fa1c7cb88d91a267b22cd"
+  },
+  {
+    "file": "phase10-journey-G10-T01-ow-21bcc-y-and-all-financial-reports-chromium/owner-first-owner-dashboard.png",
+    "sha256": "37c9e6b181b03cdb29b3d5a61611356571ca761d640f43028a7875d706e1b53e"
+  },
+  {
+    "file": "phase10-journey-G10-T01-ow-21bcc-y-and-all-financial-reports-chromium/owner-first-staff-dashboard.png",
+    "sha256": "4ec4cbd01318f99d5b3e46efbb1926c81700eaafb1bcfdf2802fcf77a5db0577"
+  },
+  {
+    "file": "phase10-journey-G10-T01-st-85492-y-and-all-financial-reports-chromium/staff-first-owner-dashboard.png",
+    "sha256": "37c9e6b181b03cdb29b3d5a61611356571ca761d640f43028a7875d706e1b53e"
+  },
+  {
+    "file": "phase10-journey-G10-T01-st-85492-y-and-all-financial-reports-chromium/staff-first-staff-dashboard.png",
+    "sha256": "4ec4cbd01318f99d5b3e46efbb1926c81700eaafb1bcfdf2802fcf77a5db0577"
+  },
+  {
+    "file": "phase10-security-G10-T04-o-9f5f8-h-detail-history-and-reload-chromium/owner-literal-customer.png",
+    "sha256": "eedb5f86a9a7d57b471679ab0d0a1de61054f74d0426325fb8a51ed1a665292d"
+  },
+  {
+    "file": "phase10-security-G10-T04-r-c4473-harmless-after-owner-reload-chromium/owner-literal-rejection.png",
+    "sha256": "759912d477bab9fe8f60fbe076c1976ebbad81bdea8c6b8b60dfc8d7e3abdf62"
+  },
+  {
+    "file": "phase10-security-G10-T04-r-c4473-harmless-after-owner-reload-chromium/staff-literal-rejection.png",
+    "sha256": "7429f640714542479405c7055f47d3c5f3ba9bad7bb3e1bdb18f06bf744e4c3d"
+  },
+  {
+    "file": "phase10-security-G10-T04-s-153a3-h-detail-history-and-reload-chromium/staff-literal-customer.png",
+    "sha256": "0cb3f112b7c55237cfd25e313f7ece236d47793c08e726b3923a5a39e56f25e0"
+  },
+  {
+    "file": "phase10-usability-benchmar-9cac0-nd-error-free-create-delete-chromium/owner-touch-customer-list.png",
+    "sha256": "a2264d8af6625e1fd861518f1ac613f9e4d72dc74ac7b6dfb239fd40068fc3f2"
+  },
+  {
+    "file": "phase10-usability-benchmar-9cc6f-nd-error-free-create-delete-chromium/staff-touch-customer-list.png",
+    "sha256": "b3b0013c36f49171ba150ea5ee3ee16422d10ebbdd7c292383db3b849fb7a743"
+  },
+  {
+    "file": "phase10-visual-G10-T03-SC1-05ce6--no-runtime-baseline-update-chromium/SC105-picker-actual.png",
+    "sha256": "670ea0f2b91685eafdb8893996e4a070d3cd0e0fccd179ec989133ed305f365d"
+  }
+]

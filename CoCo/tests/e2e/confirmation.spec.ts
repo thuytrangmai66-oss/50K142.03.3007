@@ -28,12 +28,18 @@ for(const setting of [{kind:'customers',role:'owner'},{kind:'customers',role:'st
   for(const viewport of [{width:1366,height:768},{width:1440,height:900},{width:1920,height:1080},{width:390,height:844},{width:320,height:640}]){
     await page.setViewportSize(viewport);const dialog=await open(page);const b=(await dialog.boundingBox())!;
     expect(Math.abs(b.x+b.width/2-viewport.width/2)).toBeLessThanOrEqual(1);expect(Math.abs(b.y+b.height/2-viewport.height/2)).toBeLessThanOrEqual(1);
-    expect(b.width).toBe(Math.min(480,viewport.width-32));expect(b.height).toBeLessThanOrEqual(viewport.width>=512?335:250);expect(b.height).toBeGreaterThan(viewport.width>=512?280:185);
+    // Clean customer SC101/294 source is 477px; staff retains its 480px design.
+    expect(b.width).toBe(Math.min(setting.kind==='customers'?477:480,viewport.width-32));expect(b.height).toBeLessThanOrEqual(viewport.width>=512?335:250);expect(b.height).toBeGreaterThan(viewport.width>=512?280:185);
     await expect(dialog).toBeInViewport({ratio:1});await expect(dialog.locator('header')).toHaveCount(0);
     await expect(dialog.getByRole('heading')).toHaveCSS('font-weight','700');await expect(dialog.getByRole('button',{name:'Xác nhận',exact:true})).toHaveCSS('background-color','rgb(231, 231, 231)');
     await expect(dialog.getByRole('button',{name:'Hủy',exact:true})).toHaveCSS('background-color','rgb(232, 221, 206)');
-    const order=await dialog.evaluate(el=>{const icon=el.querySelector('.confirmation-icon')!.getBoundingClientRect(),text=el.querySelector('h2')!.getBoundingClientRect(),buttons=el.querySelector('.confirmation-actions')!.getBoundingClientRect(),close=el.querySelector('.confirm-close')!.getBoundingClientRect(),r=el.getBoundingClientRect();return{iconBottom:icon.bottom,textTop:text.top,textBottom:text.bottom,buttonsTop:buttons.top,buttonCenter:buttons.left+buttons.width/2,center:r.left+r.width/2,closeRight:close.right,closeTop:close.top,right:r.right,top:r.top};});
-    expect(order.iconBottom).toBeLessThan(order.textTop);expect(order.textBottom).toBeLessThan(order.buttonsTop);expect(Math.abs(order.buttonCenter-order.center)).toBeLessThanOrEqual(1);expect(order.closeRight).toBeLessThan(order.right);expect(order.closeTop).toBeGreaterThan(order.top);
+    const order=await dialog.evaluate(el=>{const icon=el.querySelector('.confirmation-icon')!.getBoundingClientRect(),text=el.querySelector('h2')!.getBoundingClientRect(),buttons=el.querySelector('.confirmation-actions')!.getBoundingClientRect(),controls=el.querySelectorAll('.confirmation-actions button'),first=controls[0].getBoundingClientRect(),last=controls[controls.length-1].getBoundingClientRect(),close=el.querySelector('.confirm-close')!.getBoundingClientRect(),r=el.getBoundingClientRect();return{iconBottom:icon.bottom,textTop:text.top,textBottom:text.bottom,buttonsTop:buttons.top,buttonCenter:(first.left+last.right)/2,center:r.left+r.width/2,closeRight:close.right,closeTop:close.top,right:r.right,top:r.top};});
+    // Native SC101/294: buttons x567..712 and x747..892 in the
+    // x481..958 frame, so their group is 10px right of frame center.
+    // Measure the actual controls, retain the 1px tolerance and scale only
+    // for the existing compact layout; staff keeps its centered design.
+    const sourceOffset=setting.kind==='customers'?10*(viewport.width<512?.6708595388:1):0;
+    expect(order.iconBottom).toBeLessThan(order.textTop);expect(order.textBottom).toBeLessThan(order.buttonsTop);expect(Math.abs(order.buttonCenter-order.center-sourceOffset)).toBeLessThanOrEqual(1);expect(order.closeRight).toBeLessThan(order.right);expect(order.closeTop).toBeGreaterThan(order.top);
     await page.screenshot({path:info.outputPath(`${viewport.width}x${viewport.height}.png`),fullPage:false});await dialog.screenshot({path:info.outputPath(`popup-${viewport.width}x${viewport.height}.png`)});
     await dialog.getByRole('button',{name:'Hủy',exact:true}).click();await expect(dialog).toHaveCount(0);expect(await snapshot(page)).toBe(before);
   }

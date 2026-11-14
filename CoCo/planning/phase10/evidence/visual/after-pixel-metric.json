@@ -1,0 +1,10 @@
+{
+  "scope": "SC105 report picker component only",
+  "differentPixels": 1115,
+  "pixels": 361548,
+  "ratio": 0.003083961189109053,
+  "threshold": 0.2,
+  "maxDiffPixelRatio": 0.01,
+  "baseline": "immutable CODEX source pixels; not runtime",
+  "measurement": "installed Playwright pixelmatch; corroborates actual passing Playwright assertion"
+}

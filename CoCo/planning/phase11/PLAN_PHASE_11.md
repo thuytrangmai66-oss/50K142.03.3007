@@ -1,6 +1,8 @@
 # Kế hoạch Giai đoạn 11 Release, xác minh Pages và bàn giao
 
-Ngày 11/11/2026. **NOT STARTED**. Roadmap đã được cho phép qua chỉ đạo tiếp tục P02; phase này chưa triển khai. Giữ dependency, review phase trước và quyết định chặn module. Không commit/push/deploy khi chưa được cho phép.
+> **14/11/2026: IN PROGRESS — G11-T02 RELEASE BLOCKED tại preflight Chromium (166 PASS / 1 FAIL).** PO đã phê duyệt release và chấp nhận tạm thời G10-A01–A07 theo G10-D08, giữ nguyên kết quả chưa hoàn thành/rủi ro; không coi G10 đã kiểm chứng đầy đủ. Chưa commit/push hoặc có CI/deploy/smoke mới. [Checkpoint và blocker G11-B01](RELEASE_EXECUTION.md). Không tự DONE G11-T02/T03/T04/T05 hoặc toàn G11.
+
+Ngày lập 11/11/2026. Phạm vi/thứ tự task gốc dưới đây giữ nguyên. Quyền release cụ thể G10-D08 và quy tắc main trong AGENTS.md thay các chỉ dẫn nhánh/quyền cũ; ngoại lệ PO không cho phép bỏ check CI/CD hoặc tuyên bố tồn đọng đã sửa.
 
 ## 1 Mục tiêu
 

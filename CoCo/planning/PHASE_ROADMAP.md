@@ -1,5 +1,11 @@
 # Roadmap CoCo
 
+> **PO 14/11/2026 — G11 release được phê duyệt:** chấp nhận tạm thời G10-A01–A07, giữ kết quả chưa hoàn thành và rủi ro; không chuyển thành PASS. G11-T02/T03 được thực thi theo [báo cáo release](phase11/RELEASE_EXECUTION.md), không bỏ CI/CD hoặc tự DONE G11. G9 đã nghiệm thu; các mốc chưa mở G11 phía dưới là lịch sử trước phê duyệt mới. Thứ tự/phạm vi task không đổi.
+
+> G10 tiếp tục14/11: đã review assertion98 BR và thực thi538 unit/167 Chromium/8 visual local PASS; chưa đủ mọi nhánh/control/visual hoặc gate để chuyển G11. [Execution hiện hành](phase10/BR_REVIEW_EXECUTION.md). Thứ tự/phạm vi task không đổi, chưa commit/push phase chưa hoàn tất.
+
+> **14/11/2026 — G10 đang thực hiện:** người dùng cho phép kiểm chứng sau G9, duyệt ngưỡng visual/đo trước và gói nâng major tại [Decision Log G10](phase10/DECISION_LOG.md). Đã có hành trình liên module, audit nguồn, benchmark và sửa tương thích; xem [báo cáo hiện hành](phase10/REPORT_PHASE_10.md). G9 vẫn PENDING REVIEW; G10 chưa DONE, G11 chưa bắt đầu. Các mốc “G10 NOT STARTED” và giao việc G8 phía dưới là lịch sử; roadmap/task/dependency không thay đổi.
+
 > Cập nhật13/11/2026: đã nhận nghiệm thu người dùng cho phần G7 đã triển khai; [phạm vi/ngoại lệ](phase7/ACCEPTANCE_2026_11_13.md). Giao Copilot [G8-T01 giỏ hàng/snapshot giá phần độc lập](phase8/COPILOT_T01_TASK.md), chưa coding G8 trong lượt giao việc. Barcode G7, audit và G6 UI vẫn mở; không tự ghi toàn G7 DONE hoặc miễn trừ SRS.
 
 > Cập nhật G7 ngày12/11/2026: theo chỉ đạo tiếp tục, bắt đầu T01 Hàng hóa chỉ đọc trên dữ liệu G6; **G7 IN PROGRESS / T01 PARTIAL**, G6 vẫn PENDING REVIEW. [Báo cáo G7 và các gate chưa chốt](phase7/REPORT_PHASE_7.md). Giữ nguyên thứ tự T01–T06, không tự nghiệm thu G6/G7 hoặc thay quyết định đang OPEN. Các dòng chưa chuyển G7 phía dưới là trạng thái trước chỉ đạo này.

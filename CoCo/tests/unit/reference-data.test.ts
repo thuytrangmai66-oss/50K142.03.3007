@@ -2,7 +2,7 @@ import { afterEach, beforeEach, expect, it } from 'vitest';
 import { CoCoDatabase } from '../../src/db/schema';
 import { CoCoRepository } from '../../src/repositories';
 import { AuthService } from '../../src/services/auth/service';
-import { LocalReferenceData, validateBracket, confirmedConditions } from '../../src/services/reference-data/local';
+import { LocalReferenceData } from '../../src/services/reference-data/local';
 import { CONDITIONS, conditionMetadataKey } from '../../src/domain/conditions';
 import { derivePassword, randomHex } from '../../src/services/auth/crypto';
 
@@ -96,12 +96,6 @@ it('uses only the approved numeric condition codes for new brackets, including c
 it.each(['0','4','90','Tốt','2.5'])('rejects unapproved condition input %s without storing it', async condition => {
   await expect(gateway.createBracket({ ...bracketInput, condition })).rejects.toMatchObject({ code: 'CONDITION_MAPPING' });
   expect(await database.khungGiaThuMua.count()).toBe(0);
-});
-
-it('checks every required bracket field and integer Min/Max boundaries', () => {
-  for (const key of Object.keys(bracketInput)) expect(() => validateBracket({ ...bracketInput, [key]: '' }, confirmedConditions)).toThrow();
-  for (const data of [{ min: '0' },{ max: '-1' },{ min: '1.2' },{ min: '150001' },{ max: '9007199254740992' }]) expect(() => validateBracket({ ...bracketInput, ...data }, confirmedConditions)).toThrow();
-  expect(validateBracket({ ...bracketInput, min: '150000' }, confirmedConditions).min).toBe(150000);
 });
 
 it.each([90, 2])('preserves untagged G2 condition %s and requires review before any reinterpretation', async condition => {

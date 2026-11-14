@@ -1,0 +1,124 @@
+{
+  "createdAt": "2026-11-14T12:04:20.997Z",
+  "basis": "planning/phase10/evidence/br-review/final/execution.json",
+  "logicalCases": 713,
+  "sourceDeclarations": 453,
+  "files": 69,
+  "unmatched": [],
+  "byKind": {
+    "Unit": {
+      "cases": 138,
+      "caseDurationSumMs": 8596.350199999999,
+      "caseP50Ms": 0.6662999999998647,
+      "caseP95Ms": 434.9922999999999
+    },
+    "Integration": {
+      "cases": 404,
+      "caseDurationSumMs": 139182.49619999994,
+      "caseP50Ms": 308.87300000000005,
+      "caseP95Ms": 618.5422999999992
+    },
+    "E2E": {
+      "cases": 162,
+      "caseDurationSumMs": 608485,
+      "caseP50Ms": 3039,
+      "caseP95Ms": 9109
+    },
+    "Visual": {
+      "cases": 9,
+      "caseDurationSumMs": 49957,
+      "caseP50Ms": 4807,
+      "caseP95Ms": 10313
+    }
+  },
+  "classification": {
+    "KEEP": 685,
+    "MERGE": 4,
+    "REFACTOR": 24,
+    "REMOVE": 0
+  },
+  "proposals": {
+    "R01": {
+      "cases": 23,
+      "measuredCaseEnvelopeMs": 7887.696500000001,
+      "ids": [
+        "T-8a10bf9e0595",
+        "T-c4e398bffe33",
+        "T-fd5e5b886fd6",
+        "T-a4e513a047d7",
+        "T-5fe961ab66c3",
+        "T-0705efd01208",
+        "T-f6f31b0c389b",
+        "T-4830484e0ac0",
+        "T-7a9a4a2ece88",
+        "T-b6c7764eec89",
+        "T-6e592a46d418",
+        "T-3461201b5fcc",
+        "T-c914f4681606",
+        "T-0de0e5899525",
+        "T-25cbf1fcfe8f",
+        "T-6f5b9f4c2ee5",
+        "T-d47580681978",
+        "T-55c5b9ba6d26",
+        "T-86123d596e1b",
+        "T-cdc655d3d759",
+        "T-5f1af8730b05",
+        "T-37409132ac84",
+        "T-af466fe5c0ee"
+      ]
+    },
+    "R02": {
+      "cases": 1,
+      "measuredCaseEnvelopeMs": 1636,
+      "ids": [
+        "T-59ae7b241794"
+      ]
+    },
+    "M01-1366x650": {
+      "cases": 2,
+      "measuredCaseEnvelopeMs": 3534,
+      "ids": [
+        "T-39dcfab25dac",
+        "T-eb16d7f241b2"
+      ]
+    },
+    "M01-1280x720": {
+      "cases": 2,
+      "measuredCaseEnvelopeMs": 3672,
+      "ids": [
+        "T-e6109476fde2",
+        "T-6cb0d73c8bef"
+      ]
+    }
+  },
+  "runner": {
+    "vitest": {
+      "cases": 538,
+      "caseSumMs": 145144.84639999992
+    },
+    "chromium": {
+      "cases": 167,
+      "caseSumMs": 612401
+    },
+    "visual-local": {
+      "cases": 8,
+      "caseSumMs": 48675
+    }
+  },
+  "zeroMatchedDeclarations": [],
+  "assertionOverlapGroups": 710,
+  "sourceAssertionSites": 2593,
+  "traceStatusCounts": {
+    "FILE_CANDIDATE_NOT_PER_TEST_CERTIFIED": 584,
+    "EXPLICIT_BR_IN_TEST_AND_ASSERTIONS_REVIEWED": 13,
+    "APPROVED_DASHBOARD_EXTENSION_NOT_SEPARATE_UC": 12,
+    "CROSS_CUTTING_TECHNICAL_CONTRACT": 42,
+    "QA_EVIDENCE_INFRASTRUCTURE": 7,
+    "AUDIT_SUPPLEMENT_SOURCE_REVIEWED_CANDIDATE": 53,
+    "SOURCE_REVIEWED_MULTI_MODULE_VIEWPORT": 2
+  },
+  "standaloneLayerScripts": {
+    "unit": "NOT CONFIGURED separately; npm test runs mixed Unit/Integration",
+    "integration": "NOT CONFIGURED separately; no separate process-wall measurement for semantic layers"
+  }
+}

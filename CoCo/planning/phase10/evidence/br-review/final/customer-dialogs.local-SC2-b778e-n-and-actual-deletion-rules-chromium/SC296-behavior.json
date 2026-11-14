@@ -1,0 +1,9 @@
+{
+  "id": "SC296",
+  "role": "staff",
+  "state": "success",
+  "businessAssertionsExecuted": true,
+  "data": "Selected customer deleted",
+  "browserErrors": 0,
+  "visualVerdict": "Recorded separately by Playwright; business success does not override visual failures"
+}

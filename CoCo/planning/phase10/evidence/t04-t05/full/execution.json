@@ -1,0 +1,21 @@
+{
+  "unit": {
+    "passed": 501,
+    "failed": 0,
+    "pending": 0,
+    "todo": 0,
+    "success": true
+  },
+  "chromium": {
+    "startTime": "2026-11-14T06:02:00.897Z",
+    "duration": 579307.841,
+    "expected": 164,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "guard": {
+    "checked": 193,
+    "changed": []
+  }
+}

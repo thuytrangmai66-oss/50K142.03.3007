@@ -1,0 +1,9 @@
+{
+  "id": "SC295",
+  "role": "staff",
+  "state": "linked",
+  "businessAssertionsExecuted": true,
+  "data": "All stores unchanged",
+  "browserErrors": 0,
+  "visualVerdict": "Recorded separately by Playwright; business success does not override visual failures"
+}

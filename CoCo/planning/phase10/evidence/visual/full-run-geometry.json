@@ -1,0 +1,54 @@
+{
+  "sourceSha256": "114c0f7d92f587e8518008590673f9892bb80b8229746ab1ae4d291f71b0b72d",
+  "scope": "Report picker component only; not a full SC105 verdict",
+  "clip": {
+    "x": 476,
+    "y": 198,
+    "width": 913,
+    "height": 396
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "dpr": 1,
+  "fontNormalization": [
+    "--disable-lcd-text",
+    "--font-render-hinting=none"
+  ],
+  "threshold": 0.2,
+  "maxDiffPixelRatio": 0.01,
+  "geometryTolerancePx": 2,
+  "boxes": [
+    {
+      "x": 476,
+      "y": 198,
+      "width": 287,
+      "height": 190
+    },
+    {
+      "x": 789,
+      "y": 198,
+      "width": 287,
+      "height": 190
+    },
+    {
+      "x": 1102,
+      "y": 198,
+      "width": 287,
+      "height": 190
+    },
+    {
+      "x": 476,
+      "y": 404,
+      "width": 287,
+      "height": 190
+    },
+    {
+      "x": 789,
+      "y": 404,
+      "width": 287,
+      "height": 190
+    }
+  ]
+}

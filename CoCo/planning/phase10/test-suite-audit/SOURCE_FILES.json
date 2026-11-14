@@ -1,0 +1,347 @@
+[
+  {
+    "file": "tests/unit/auth.test.ts",
+    "sha256": "142f75f870891b7bc7041012c8f7f1855cf3bc600d99fa00d224a672ec4cc5ce",
+    "bytes": 14254
+  },
+  {
+    "file": "tests/unit/customer-creation.test.ts",
+    "sha256": "3aae9be30029519a5d3e234c3977ea74a42d24594bb67116d217678e6ea20f77",
+    "bytes": 7830
+  },
+  {
+    "file": "tests/unit/customer-edit.test.ts",
+    "sha256": "8b3caa6e5434386a2f0a48c858a39d182e7e3e675be071a321f4c37517bb14bd",
+    "bytes": 5030
+  },
+  {
+    "file": "tests/unit/dashboard-comparison.test.ts",
+    "sha256": "8e18e4428bb3700c4c665215d70e73f82cc9675067b8547c0842c6a3e57369ee",
+    "bytes": 694
+  },
+  {
+    "file": "tests/unit/database.test.ts",
+    "sha256": "923ee674b0e6a4f263e9854e77f8a33f2a4fe5e3f2940f43d93f516492908cfc",
+    "bytes": 1310
+  },
+  {
+    "file": "tests/unit/discount-scheduler.test.ts",
+    "sha256": "61029ff85f1b7554af15f225b74397cfaa1a5cc819c5a3d95861707768ab1364",
+    "bytes": 8870
+  },
+  {
+    "file": "tests/unit/financial-number.test.ts",
+    "sha256": "26def00cde9ae3334bdc86268e64a8a92707466d751791f527f7333ca5b4e047",
+    "bytes": 649
+  },
+  {
+    "file": "tests/unit/inventory.test.ts",
+    "sha256": "dc54522fbc95520f37c0988154c2dcbcc2e7d11faafddcb51add05c4c6a07cc0",
+    "bytes": 14229
+  },
+  {
+    "file": "tests/unit/pagination.test.ts",
+    "sha256": "6d35c76e4ad2a85450f4d37afe4ea1787ea92f08642aa63d9a1e8e0f8793e5a2",
+    "bytes": 1703
+  },
+  {
+    "file": "tests/unit/phase10-audit.test.ts",
+    "sha256": "86703a97af231ea0f4ec4830de3c3938e652fb7b9d5f0e8a9f32e1fdfccb8aca",
+    "bytes": 3348
+  },
+  {
+    "file": "tests/unit/purchase-approvals.test.ts",
+    "sha256": "b9a7ba109d8565f4382a38991980619d579075f79a6991e8cb8543ff4787177f",
+    "bytes": 31127
+  },
+  {
+    "file": "tests/unit/purchase-candidate.test.ts",
+    "sha256": "2b9cc96d5f59efae48c7fa5db0a2f059e34caf5119c3ff974b3c4b3f766d0e2f",
+    "bytes": 17078
+  },
+  {
+    "file": "tests/unit/purchase-contract.test.ts",
+    "sha256": "3af89c26d5bcc7dbe059e149791da9121d5bff73f4c16a08a003a3c68d20768f",
+    "bytes": 10453
+  },
+  {
+    "file": "tests/unit/purchase-drafts.test.ts",
+    "sha256": "6f3a622e720e6db9a59a38fde8908cd73c8111477d2422c55de8191277854e78",
+    "bytes": 7631
+  },
+  {
+    "file": "tests/unit/purchase-finalization.test.ts",
+    "sha256": "839c35f621799ca82b83cc32ef942d84d68da4808a00152dd52a734a5a935361",
+    "bytes": 14661
+  },
+  {
+    "file": "tests/unit/purchase-queries.test.ts",
+    "sha256": "349abc12938f9e2884adf1cad9631f8229bacbaa43eb8f23bff2a7c723bc1bce",
+    "bytes": 9060
+  },
+  {
+    "file": "tests/unit/reference-data.test.ts",
+    "sha256": "c6434bb4e2f4f79bf58eff81b7273e3c8f88db9f079d5ad4fd12cae37e55b9d6",
+    "bytes": 11922
+  },
+  {
+    "file": "tests/unit/report-components.test.tsx",
+    "sha256": "4f3e056ce848669c82c56fbc368bc409ea091bd3762f49af187f5de98af44623",
+    "bytes": 3803
+  },
+  {
+    "file": "tests/unit/report-eligibility.test.ts",
+    "sha256": "8ad1f79df1b2ef96aae527c9b4fc39b53a24a229ddfb42665229c28a68d3fe18",
+    "bytes": 2327
+  },
+  {
+    "file": "tests/unit/report-legacy-migration.test.ts",
+    "sha256": "77eaedf2acbc4df859e1319091914206082153733a8e16ef2df26a4f11e2961c",
+    "bytes": 2548
+  },
+  {
+    "file": "tests/unit/report-period.test.ts",
+    "sha256": "006876124227c5cbdb7b9c0818de7dfc03b14666179828016cedada5fc1a6afb",
+    "bytes": 3969
+  },
+  {
+    "file": "tests/unit/report-queries.test.ts",
+    "sha256": "90dd37e2aa2e7785b793109acc4f5d4768cc71e777007950338c8201440265c4",
+    "bytes": 31428
+  },
+  {
+    "file": "tests/unit/repositories.test.ts",
+    "sha256": "f55d27472c7bb4c03928f67d9440cac3f71cdca9bab005701eaeffee51584c85",
+    "bytes": 19196
+  },
+  {
+    "file": "tests/unit/revenue-report.test.ts",
+    "sha256": "8735c6f4b8e7ecda8115d56912dc00c954dffc299e4693fd96f4e6c3955a7261",
+    "bytes": 3925
+  },
+  {
+    "file": "tests/unit/sale-payment.test.ts",
+    "sha256": "aa4b78c951aaa32ac1f0931ae1967c49a877cea22455d046efda8810acf45467",
+    "bytes": 24684
+  },
+  {
+    "file": "tests/unit/sales.test.ts",
+    "sha256": "e82f0069675947066a7c4c62d96a486ecdf95434d8c14ecb86b75c5926bf0aaa",
+    "bytes": 17078
+  },
+  {
+    "file": "tests/unit/staff-accounts.test.ts",
+    "sha256": "5a7cb46df06867e6e5c89482a038d5038675219abfadb9050f2feef7bbb6aa64",
+    "bytes": 11605
+  },
+  {
+    "file": "tests/unit/stock-comparison.test.ts",
+    "sha256": "775580f1357164ce9d788f130023362ff6136776631607a7f30e923a00d6688f",
+    "bytes": 3073
+  },
+  {
+    "file": "tests/e2e/auth.spec.ts",
+    "sha256": "12c1ec321231644ed5d9cd4d7b23dcf5247b8bb6771e8ef4d31dc97ea4f0d375",
+    "bytes": 14022
+  },
+  {
+    "file": "tests/e2e/confirmation.spec.ts",
+    "sha256": "05caa85ce1089ea174f3ec4cadbedb6c18b8e456da8b603852a23ab343899ad5",
+    "bytes": 11607
+  },
+  {
+    "file": "tests/e2e/discount-scheduler.spec.ts",
+    "sha256": "3c329560534cb62eb53b834f62008fa11f58e0c36f6c4c518e09ca6b7bf0f4b1",
+    "bytes": 5745
+  },
+  {
+    "file": "tests/e2e/g6-verification.spec.ts",
+    "sha256": "545d1d68683618f56f540783d5688e3b0628f1ec1b912b3eaa32b71b92607159",
+    "bytes": 10016
+  },
+  {
+    "file": "tests/e2e/home-stock-comparison.spec.ts",
+    "sha256": "895c2cc8c814e96d0d7c6d95505dfde3db6a05a8cb593d41e684cbaee92ddf5f",
+    "bytes": 4468
+  },
+  {
+    "file": "tests/e2e/home-t05.spec.ts",
+    "sha256": "8773b0da172d17c2296c3eb3049ff655d5790f925ade9bf64c77868ecd9e7f8a",
+    "bytes": 9262
+  },
+  {
+    "file": "tests/e2e/inventory-edit.spec.ts",
+    "sha256": "a29720d93d4fc22a04de4510918f6e272968777df61e2d23f452fad8055a79a0",
+    "bytes": 6471
+  },
+  {
+    "file": "tests/e2e/inventory.spec.ts",
+    "sha256": "d5b664c1e7884d04434cdd6c820b4a7298f6ca0f2fb2b124dfd85ca1d135ac37",
+    "bytes": 14706
+  },
+  {
+    "file": "tests/e2e/pagination.spec.ts",
+    "sha256": "3e88dfad70622d1ab072df79c0c48491fa6ad3a7f16b642186817325b559b5bb",
+    "bytes": 17358
+  },
+  {
+    "file": "tests/e2e/phase10-customer-edit.spec.ts",
+    "sha256": "40ded7d125a3607639918a7968a2e4b01bf917a55151601b89229afd59c7bab3",
+    "bytes": 4459
+  },
+  {
+    "file": "tests/e2e/phase10-finalize-benchmark.spec.ts",
+    "sha256": "a1151ba4b2704bf66f0740166865adcf35fa5d6aff87d33049163e5d82e68c22",
+    "bytes": 6901
+  },
+  {
+    "file": "tests/e2e/phase10-integrity.spec.ts",
+    "sha256": "eb4f545e2bf486dc31fe6428f20be61a009b7d7deb039724e637d104c60153fd",
+    "bytes": 2775
+  },
+  {
+    "file": "tests/e2e/phase10-journey.spec.ts",
+    "sha256": "baa9c3e589f5718feca024d4c0faa3d6ef9296df6e3021dcc5be287650f3cc49",
+    "bytes": 9661
+  },
+  {
+    "file": "tests/e2e/phase10-security.spec.ts",
+    "sha256": "9d22337dd06e3ae67377cb41241be123f3e1494dd4c0f9d8022a3db3999a6b9c",
+    "bytes": 5150
+  },
+  {
+    "file": "tests/e2e/phase10-usability-benchmark.spec.ts",
+    "sha256": "43359510807452302901341a3b64e1768787ac61baf8c444d1f163e55c1f13f1",
+    "bytes": 5159
+  },
+  {
+    "file": "tests/e2e/phase10-visual.spec.ts",
+    "sha256": "4c75af23f964078ddb6612beef4953435e663773e2aab1f3b7e11a8e4955d0a4",
+    "bytes": 3076
+  },
+  {
+    "file": "tests/e2e/purchase-approvals.spec.ts",
+    "sha256": "a3c26827ca951532aa2b70fb60920fab392029b5d9a161ddeeaa1137b2dafc7e",
+    "bytes": 18661
+  },
+  {
+    "file": "tests/e2e/purchase-candidate-storage.spec.ts",
+    "sha256": "f9110c0b7506342f52be32ffc003e2d79929eae940170a5a77949a855564b3cc",
+    "bytes": 2387
+  },
+  {
+    "file": "tests/e2e/purchase-customer-layout.spec.ts",
+    "sha256": "51d288f6df8bb6033de48c88ecc7d8310932ebfe480c7ef22654eb2a75e61848",
+    "bytes": 5884
+  },
+  {
+    "file": "tests/e2e/purchase-drafts.spec.ts",
+    "sha256": "ce13c6d69f78b659fb86655810cb87da3b5ccfd4a724d22a0e0ea6c6ca1fb25f",
+    "bytes": 14462
+  },
+  {
+    "file": "tests/e2e/purchase-editor-figma.spec.ts",
+    "sha256": "b60aec64d6cbf14799a73344a65774097f6d11a3f9a28044347d15a5def20f7d",
+    "bytes": 10448
+  },
+  {
+    "file": "tests/e2e/purchase-finalization-storage.spec.ts",
+    "sha256": "c4de5ecff81242241df8fdb3822687966bea3c3574cf4a50140a29d5912796c2",
+    "bytes": 1232
+  },
+  {
+    "file": "tests/e2e/purchase-finalization.spec.ts",
+    "sha256": "2c0230f8ed0fdf82eee543d0039552d1340fc55bb65f419830c271838ceb8e70",
+    "bytes": 14687
+  },
+  {
+    "file": "tests/e2e/purchase-list.spec.ts",
+    "sha256": "4b8ad7f541804c1d03c1086a5102e3ff526fb1f6a59bcd74e132a85277515797",
+    "bytes": 7383
+  },
+  {
+    "file": "tests/e2e/purchase-queries.spec.ts",
+    "sha256": "b996b28c1d8dcfecfdeac0037af49313b89ffc3890ec2fec8acbcb824f7a536e",
+    "bytes": 10436
+  },
+  {
+    "file": "tests/e2e/purchase-results.spec.ts",
+    "sha256": "a047d7f73a7ec61ba4eaf616b0645ab5b1a1a92bf949720a9794ca55ba15a044",
+    "bytes": 11186
+  },
+  {
+    "file": "tests/e2e/reference-data.spec.ts",
+    "sha256": "8950694ba182d5c496b30eef8b57ceb114449aca5165774f015494f17d26b949",
+    "bytes": 20913
+  },
+  {
+    "file": "tests/e2e/reports-purchase-cost.spec.ts",
+    "sha256": "0f9a11002e8f232411c97772fb65ffd9439b3fe23c7864ed9719e71d4ff2c308",
+    "bytes": 7478
+  },
+  {
+    "file": "tests/e2e/reports-reconciliation.spec.ts",
+    "sha256": "0debb35a717fc737e3ee9986cd6b4a978575126ec4fbd1b79d915bbc86b58bf2",
+    "bytes": 11367
+  },
+  {
+    "file": "tests/e2e/reports-revenue.spec.ts",
+    "sha256": "627f737e1d15c746eef03c20efed4bb9c65a372135caca71b637eaeac56780bf",
+    "bytes": 11521
+  },
+  {
+    "file": "tests/e2e/reports-t04.spec.ts",
+    "sha256": "c2853cb8af58790d082555162186613ac111966fc15a3eade182c632965f5e85",
+    "bytes": 9561
+  },
+  {
+    "file": "tests/e2e/sale-payment.spec.ts",
+    "sha256": "6e7aaa20cadecdca095870d3c58343fee2bd60c9f594200ed5ec00674a3b4da6",
+    "bytes": 9188
+  },
+  {
+    "file": "tests/e2e/sales-draft.spec.ts",
+    "sha256": "1e41cb28cbe787960713a9f96e39d6e6f2605418f02edea2984efa25e4cbf452",
+    "bytes": 15148
+  },
+  {
+    "file": "tests/e2e/sales-pages.spec.ts",
+    "sha256": "19c0a30e317dc4598c6f14184653fe15f64242b3c5fdd4ccf56401ae3aa76258",
+    "bytes": 13195
+  },
+  {
+    "file": "tests/e2e/sales-t05-errors.spec.ts",
+    "sha256": "bcd6ba05e791b31ccd8e18543e579a58bdbb08bbd71802ef74707617f85e5187",
+    "bytes": 5596
+  },
+  {
+    "file": "tests/e2e/sales-t05-t06.spec.ts",
+    "sha256": "a4da8ff1b5c978ea7a83bd6de249fc2a378ea54ce46f59b5969e9bffda68a499",
+    "bytes": 10273
+  },
+  {
+    "file": "tests/e2e/sales-t06-recovery.spec.ts",
+    "sha256": "5271ed98cf0aecf98d1bb5b5a6c2040a76503401f890071e28e87cae6f223e3c",
+    "bytes": 6730
+  },
+  {
+    "file": "tests/e2e/shell.spec.ts",
+    "sha256": "bed2a06487ea9698df6fbdd670ac87d1534f1ecb74b2c7e2f8bb5e104f546188",
+    "bytes": 4800
+  },
+  {
+    "file": "tests/e2e/staff-review.spec.ts",
+    "sha256": "c980acf515794a3085ec7706f8c2534e6fd55c3945ed7d9a11f7bb3fde503f3f",
+    "bytes": 16450
+  },
+  {
+    "file": "tests/e2e/staff.spec.ts",
+    "sha256": "399b43d5fb788f96c45aa1a93a17923da0ca051ea9d0d115b0d750481150e8c9",
+    "bytes": 13193
+  },
+  {
+    "file": "tests/visual/customer-dialogs.local.spec.ts",
+    "sha256": "1f570ba1bb1c5db6e6fc79e01b44c7f69dbf1486f08e2287fdbb887b8d996a9a",
+    "bytes": 9440
+  }
+]

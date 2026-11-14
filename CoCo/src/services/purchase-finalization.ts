@@ -43,6 +43,32 @@ export class PurchaseFinalizationService {
     throw new RepositoryError('DUPLICATE', 'Không thể cấp mã duy nhất, hãy thử lại');
   }
 
+  private async issueProductCodes(count: number, executedAt: string) {
+    // Reserve against the current write transaction, including deleted IDs and
+    // version tombstones. Local sets also prevent duplicates within this batch.
+    const [existing, issued, versions] = await Promise.all([
+      this.db.sanPham.toCollection().primaryKeys(), this.db.issuedIdentifiers.toCollection().primaryKeys(),
+      this.db.recordVersions.toCollection().primaryKeys(),
+    ]);
+    const products = new Set(existing), reserved = new Set([...issued, ...versions]), ids: string[] = [];
+    for (let item = 0; item < count; item++) {
+      let selected: string | undefined;
+      for (let attempt = 0; attempt < 16; attempt++) {
+        const id = `SP${randomHex(4)}`, key = recordVersionKey('sanPham', id);
+        if (products.has(id) || reserved.has(key)) continue;
+        products.add(id); reserved.add(key); selected = id; break;
+      }
+      if (!selected) throw new RepositoryError('DUPLICATE', 'Không thể cấp mã duy nhất, hãy thử lại');
+      ids.push(selected);
+    }
+    await Promise.all(ids.map(async id => {
+      const key = recordVersionKey('sanPham', id);
+      await this.db.issuedIdentifiers.add({ key, issuedAt: executedAt });
+      await this.db.recordVersions.add({ key, version: 1, updatedAt: executedAt });
+    }));
+    return ids;
+  }
+
   async finalize(input: FinalizePurchaseCommand): Promise<{ invoiceId: string; duplicate: boolean }> {
     const command = commandSchema.parse(input);
     const fingerprint = await sha256(canonical(command));
@@ -85,8 +111,10 @@ export class PurchaseFinalizationService {
       const changed = [`hoaDonThuMua:${invoiceId}`, `purchaseDrafts:${draft.id}`, `purchaseFinalizations:${invoiceId}`];
       for (const line of lines) {
         const salePrice = initialSalePrice(line.unitCost);
-        for (let item = 0; item < line.quantity; item++) {
-          const productId = await this.issueCode('sanPham', 'SP', executedAt);
+        const productIds = await this.issueProductCodes(line.quantity, executedAt);
+        // Queue independent item writes together; the enclosing transaction
+        // still aborts every row/reservation on any failed add or FK check.
+        await Promise.all(productIds.map(async productId => {
           await this.db.sanPham.add(entitySchemas.sanPham.parse({
             MaSP: productId, TenSP: line.bracket.type, NgayNhapKho: importedOn,
             GiaGocChuKyGiam: salePrice, GiaBanHienHanh: salePrice, TrangThai: this.statuses.productAvailable,
@@ -99,8 +127,8 @@ export class PurchaseFinalizationService {
             format: PURCHASE_FORMAT, productId, invoiceId, lineId: line.id,
             unitCost: line.unitCost, recordedAt: executedAt,
           }));
-          changed.push(`sanPham:${productId}`, `productCosts:${productId}`, `purchaseProvenance:${productId}`);
-        }
+        }));
+        for (const productId of productIds) changed.push(`sanPham:${productId}`, `productCosts:${productId}`, `purchaseProvenance:${productId}`);
       }
       await validateReferences(this.db);
       await this.db.operations.add({ id: receiptId, fingerprint, executedAt });

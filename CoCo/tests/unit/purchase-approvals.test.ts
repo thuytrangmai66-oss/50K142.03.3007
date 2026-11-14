@@ -389,3 +389,78 @@ describe('decide — permission and CAS guards', () => {
       .rejects.toMatchObject({ code: 'AUTH_REQUIRED' });
   });
 });
+
+describe('G10 approval integrity review', () => {
+  const allRows = () => db.transaction('r', db.tables, () => Promise.all(db.tables.map(async table => ({ table: table.name, rows: await table.toArray() }))));
+
+  it.each(['purchaseApprovals', 'purchaseLines', 'purchaseNotices', 'operations', 'auditEntries'])('rolls every store back on %s failure, then retries and replays exactly once', async name => {
+    const { approvalId, approval } = await createPendingRequest();
+    // Match the handles used by the service: typed properties and table(name)
+    // need not be the same Dexie Table instance for spies.
+    const before = await allRows(), table = name === 'operations' ? db.operations : name === 'auditEntries' ? db.auditEntries : db.table(name);
+    const method = name === 'purchaseApprovals' || name === 'purchaseLines' ? 'put' : 'add';
+    const failure = vi.spyOn(table, method).mockRejectedValueOnce(new Error(`G10 ${name} write failure`));
+    const command = { operationId: crypto.randomUUID(), approvalId, expectedRevision: approval.revision,
+      action: 'reject' as const, reason: 'Giá không phù hợp' };
+    await expect(approvalService.decide(command)).rejects.toThrow(`G10 ${name} write failure`);
+    expect(failure).toHaveBeenCalledTimes(1);
+    failure.mockRestore();
+    expect(await allRows()).toEqual(before);
+    expect(await approvalService.decide(command)).toEqual({ duplicate: false });
+    const saved = await allRows();
+    expect(await approvalService.decide(command)).toEqual({ duplicate: true });
+    expect(await allRows()).toEqual(saved);
+    expect(await db.table('purchaseNotices').count()).toBe(1);
+    expect(await db.hoaDonThuMua.count()).toBe(0);
+    expect(await db.sanPham.count()).toBe(0);
+  });
+
+  it.each(['action', 'revision', 'request', 'reason'])('rejects reusing a decision operation with changed %s without touching any store', async field => {
+    const first = await createPendingRequest(), second = await createPendingRequest();
+    const command = { operationId: crypto.randomUUID(), approvalId: first.approvalId,
+      expectedRevision: first.approval.revision, action: 'approve' as 'approve' | 'reject', reason: '' };
+    await approvalService.decide(command);
+    const before = await allRows(), changed = { ...command };
+    if (field === 'action') { changed.action = 'reject'; changed.reason = 'Đổi quyết định'; }
+    if (field === 'revision') changed.expectedRevision++;
+    if (field === 'request') changed.approvalId = second.approvalId;
+    if (field === 'reason') changed.reason = 'Nội dung khác';
+    await expect(approvalService.decide(changed)).rejects.toMatchObject({ code: 'OPERATION_REUSED' });
+    expect(await allRows()).toEqual(before);
+  });
+
+  it.each(['approve', 'reject'] as const)('rechecks a revoked owner session before replaying a successful %s', async action => {
+    const { approvalId, approval } = await createPendingRequest();
+    const command = { operationId: crypto.randomUUID(), approvalId, expectedRevision: approval.revision, action, reason: 'Giá cao' };
+    await approvalService.decide(command);
+    await auth.logout(ownerToken);
+    const before = await allRows();
+    await expect(approvalService.decide(command)).rejects.toMatchObject({ code: 'AUTH_REQUIRED' });
+    expect(await allRows()).toEqual(before);
+  });
+
+  it('serializes opposing decisions through two live connections and independent sessions', async () => {
+    const { approvalId, approval } = await createPendingRequest();
+    const otherDb = new CoCoDatabase(db.name);
+    try {
+      const otherToken = (await new AuthService(otherDb).login('owner', 'approval-test!')).token;
+      const other = new PurchaseApprovalService(otherDb, () => otherToken);
+      const results = await Promise.allSettled([
+        approvalService.decide({ operationId: crypto.randomUUID(), approvalId, expectedRevision: approval.revision, action: 'approve' }),
+        other.decide({ operationId: crypto.randomUUID(), approvalId, expectedRevision: approval.revision, action: 'reject', reason: 'Giá cao' }),
+      ]);
+      expect(results.filter(result => result.status === 'fulfilled')).toHaveLength(1);
+      const failed = results.find(result => result.status === 'rejected');
+      expect(failed?.status === 'rejected' ? failed.reason : undefined).toMatchObject({ code: 'CONFLICT' });
+      const saved = purchaseApprovalSchema.parse(await db.table('purchaseApprovals').get(approvalId));
+      expect(saved.revision).toBe(approval.revision + 1);
+      expect(saved.decision.status).toBe(results[0].status === 'fulfilled' ? 'approved' : 'rejected');
+      expect((await db.table('purchaseLines').get(approval.lineId)).status).toBe(saved.decision.status);
+      expect(await db.table('purchaseNotices').count()).toBe(1);
+      expect(await db.operations.filter(row => row.id.startsWith('g6-approval:')).count()).toBe(1);
+      expect(await db.auditEntries.filter(row => row.id.startsWith('g6-approval:')).count()).toBe(1);
+      const beforeReopen = await allRows(); db.close(); await db.open();
+      expect(await allRows()).toEqual(beforeReopen);
+    } finally { otherDb.close(); }
+  });
+});

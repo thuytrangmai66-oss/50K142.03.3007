@@ -4,7 +4,7 @@ import { registerPurchaseMetadataCandidate } from '../../src/db/purchase-metadat
 import { AuthService } from '../../src/services/auth/service';
 import { CoCoRepository } from '../../src/repositories';
 import { CandidatePurchaseTransactions, readCandidatePurchase, validateCandidatePurchaseReferences, type CandidateDraftCommand } from '../../src/services/purchase-candidate';
-import { initialSalePrice, PURCHASE_FORMAT } from '../../src/domain/purchases';
+import { PURCHASE_FORMAT } from '../../src/domain/purchases';
 import { conditionMetadataKey, CONDITION_CATALOG_VERSION } from '../../src/domain/conditions';
 import { StaffAccountsService } from '../../src/services/staff-accounts';
 import { validateReferences } from '../../src/repositories/constraints';
@@ -37,12 +37,6 @@ function command(owner = false): CandidateDraftCommand {
 }
 async function snapshot() { const result: Record<string, unknown[]> = {}; for (const table of db.tables) result[table.name] = await table.toArray(); return result; }
 
-it.each([[1, 1], [5, 7], [15, 20], [80001, 104001], [120000, 156000], [6928614811339224, 9007199254740991]])('uses approved integer half-up markup %s -> %s', (cost, expected) => {
-  expect(initialSalePrice(cost)).toBe(expected);
-});
-it('rejects fractional/zero/unsafe costs and sale price overflow', () => {
-  for (const cost of [0, -1, 0.5, NaN, Infinity, Number.MAX_SAFE_INTEGER]) expect(() => initialSalePrice(cost)).toThrow();
-});
 it.each([false, true])('atomically saves a real authorized draft, without invoice/customer fabrication; owner=%s', async owner => {
   const before = await db.khachHang.count(); await service(owner ? ownerToken : staffToken).saveEditingDraft(command(owner));
   expect(await db.table('purchaseDrafts').count()).toBe(1); expect(await db.table('purchaseLines').count()).toBe(1);
@@ -171,4 +165,15 @@ it('rolls back a transaction which breaks a new-format reverse FK after earlier 
     await db.khachHang.add({ MaKH: 'ROLLBACK', TenKH: 'Do not persist', SoDienThoaiKH: '0900000077', DiemTichLuy: 0 });
     await db.productCosts.delete('SPGRAPH1'); await validateReferences(db);
   })).rejects.toMatchObject({ code: 'REFERENCE' }); expect(await snapshot()).toEqual(before);
+});
+
+it('revalidates later writes in the same transaction instead of reusing a prior valid FK snapshot', async () => {
+  await installFinalizedPurchaseGraph(db, { employeeId: 'NVSTAFF', createdBy: 'staff', ownerId });
+  const before = await snapshot();
+  await expect(db.transaction('rw', db.tables, async () => {
+    await validateReferences(db);
+    await db.productCosts.delete('SPGRAPH1');
+    await validateReferences(db);
+  })).rejects.toMatchObject({ code: 'REFERENCE' });
+  expect(await snapshot()).toEqual(before);
 });

@@ -1,0 +1,521 @@
+{
+  "policy": "Observed p50/p95, original samples retained, no SLA set or pass claim",
+  "records": [
+    {
+      "source": "test-results\\phase10-finalize-benchmark-3def4-its-without-an-invented-SLA-chromium\\finalize-benchmark.json",
+      "role": "owner",
+      "initialProducts": 1000,
+      "warmup": 1,
+      "measuredSamples": 5,
+      "measurement": "Click Save through visible real success dialog; includes Playwright interaction/auto-wait. Setup, input and verification excluded. No SLA verdict.",
+      "datasetGrowth": "Each iteration buys one physical item and sells one; total records grow by one. Per-sample productsBefore records that growth.",
+      "machine": {
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logicalCpus": 12,
+        "memoryGiB": 16,
+        "node": "v24.22.0"
+      },
+      "browser": "156.0.8078.4",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "purchase": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 1000,
+            "elapsedMs": 340.40000000596046
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 1001,
+            "elapsedMs": 432.69999999552965
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 1002,
+            "elapsedMs": 331.29999999701977
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 1003,
+            "elapsedMs": 327.3999999985099
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 1004,
+            "elapsedMs": 316
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 1005,
+            "elapsedMs": 348
+          }
+        ],
+        "p50Ms": 331.29999999701977,
+        "p95Ms": 432.69999999552965
+      },
+      "sale": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 1001,
+            "elapsedMs": 140.19999999552965
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 1002,
+            "elapsedMs": 138
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 1003,
+            "elapsedMs": 136.70000000298023
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 1004,
+            "elapsedMs": 136.79999999701977
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 1005,
+            "elapsedMs": 128.39999999850988
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 1006,
+            "elapsedMs": 132.10000000149012
+          }
+        ],
+        "p50Ms": 136.70000000298023,
+        "p95Ms": 138
+      }
+    },
+    {
+      "source": "test-results\\phase10-finalize-benchmark-3f100-its-without-an-invented-SLA-chromium\\finalize-benchmark.json",
+      "role": "staff",
+      "initialProducts": 25,
+      "warmup": 1,
+      "measuredSamples": 5,
+      "measurement": "Click Save through visible real success dialog; includes Playwright interaction/auto-wait. Setup, input and verification excluded. No SLA verdict.",
+      "datasetGrowth": "Each iteration buys one physical item and sells one; total records grow by one. Per-sample productsBefore records that growth.",
+      "machine": {
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logicalCpus": 12,
+        "memoryGiB": 16,
+        "node": "v24.22.0"
+      },
+      "browser": "156.0.8078.4",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "purchase": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 25,
+            "elapsedMs": 104.79999999701977
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 26,
+            "elapsedMs": 109.70000000298023
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 27,
+            "elapsedMs": 104.70000000298023
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 28,
+            "elapsedMs": 107.5
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 29,
+            "elapsedMs": 102.60000000149012
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 30,
+            "elapsedMs": 90.79999999701977
+          }
+        ],
+        "p50Ms": 104.70000000298023,
+        "p95Ms": 109.70000000298023
+      },
+      "sale": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 26,
+            "elapsedMs": 87.70000000298023
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 27,
+            "elapsedMs": 86.39999999850988
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 28,
+            "elapsedMs": 84.5
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 29,
+            "elapsedMs": 63.80000000447035
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 30,
+            "elapsedMs": 78.30000000447035
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 31,
+            "elapsedMs": 82.79999999701977
+          }
+        ],
+        "p50Ms": 82.79999999701977,
+        "p95Ms": 86.39999999850988
+      }
+    },
+    {
+      "source": "test-results\\phase10-finalize-benchmark-5b50a-its-without-an-invented-SLA-chromium\\finalize-benchmark.json",
+      "role": "owner",
+      "initialProducts": 25,
+      "warmup": 1,
+      "measuredSamples": 5,
+      "measurement": "Click Save through visible real success dialog; includes Playwright interaction/auto-wait. Setup, input and verification excluded. No SLA verdict.",
+      "datasetGrowth": "Each iteration buys one physical item and sells one; total records grow by one. Per-sample productsBefore records that growth.",
+      "machine": {
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logicalCpus": 12,
+        "memoryGiB": 16,
+        "node": "v24.22.0"
+      },
+      "browser": "156.0.8078.4",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "purchase": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 25,
+            "elapsedMs": 95.60000000149012
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 26,
+            "elapsedMs": 113.10000000149012
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 27,
+            "elapsedMs": 92.5
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 28,
+            "elapsedMs": 96.70000000298023
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 29,
+            "elapsedMs": 111.10000000149012
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 30,
+            "elapsedMs": 89.39999999850988
+          }
+        ],
+        "p50Ms": 96.70000000298023,
+        "p95Ms": 113.10000000149012
+      },
+      "sale": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 26,
+            "elapsedMs": 79.80000000447035
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 27,
+            "elapsedMs": 83.40000000596046
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 28,
+            "elapsedMs": 80
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 29,
+            "elapsedMs": 80.39999999850988
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 30,
+            "elapsedMs": 82.20000000298023
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 31,
+            "elapsedMs": 84.10000000149012
+          }
+        ],
+        "p50Ms": 82.20000000298023,
+        "p95Ms": 84.10000000149012
+      }
+    },
+    {
+      "source": "test-results\\phase10-finalize-benchmark-c7287-its-without-an-invented-SLA-chromium\\finalize-benchmark.json",
+      "role": "staff",
+      "initialProducts": 1000,
+      "warmup": 1,
+      "measuredSamples": 5,
+      "measurement": "Click Save through visible real success dialog; includes Playwright interaction/auto-wait. Setup, input and verification excluded. No SLA verdict.",
+      "datasetGrowth": "Each iteration buys one physical item and sells one; total records grow by one. Per-sample productsBefore records that growth.",
+      "machine": {
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logicalCpus": 12,
+        "memoryGiB": 16,
+        "node": "v24.22.0"
+      },
+      "browser": "156.0.8078.4",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "purchase": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 1000,
+            "elapsedMs": 362.79999999701977
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 1001,
+            "elapsedMs": 443
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 1002,
+            "elapsedMs": 480.59999999403954
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 1003,
+            "elapsedMs": 338
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 1004,
+            "elapsedMs": 332.30000000447035
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 1005,
+            "elapsedMs": 426.79999999701977
+          }
+        ],
+        "p50Ms": 426.79999999701977,
+        "p95Ms": 480.59999999403954
+      },
+      "sale": {
+        "samples": [
+          {
+            "iteration": 0,
+            "warmup": true,
+            "productsBefore": 1001,
+            "elapsedMs": 159.60000000149012
+          },
+          {
+            "iteration": 1,
+            "warmup": false,
+            "productsBefore": 1002,
+            "elapsedMs": 152.5
+          },
+          {
+            "iteration": 2,
+            "warmup": false,
+            "productsBefore": 1003,
+            "elapsedMs": 140
+          },
+          {
+            "iteration": 3,
+            "warmup": false,
+            "productsBefore": 1004,
+            "elapsedMs": 127.5
+          },
+          {
+            "iteration": 4,
+            "warmup": false,
+            "productsBefore": 1005,
+            "elapsedMs": 132.20000000298023
+          },
+          {
+            "iteration": 5,
+            "warmup": false,
+            "productsBefore": 1006,
+            "elapsedMs": 139.79999999701977
+          }
+        ],
+        "p50Ms": 139.79999999701977,
+        "p95Ms": 152.5
+      }
+    },
+    {
+      "source": "test-results\\phase10-usability-benchmar-9cac0-nd-error-free-create-delete-chromium\\search-benchmark.json",
+      "role": "owner",
+      "measurement": "UI latency including Playwright interaction/auto-wait; no SLA verdict",
+      "machine": {
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logicalCpus": 12,
+        "memoryGiB": 16,
+        "node": "v24.22.0"
+      },
+      "browser": "156.0.8078.4",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "results": [
+        {
+          "records": 25,
+          "warmup": 1,
+          "samplesMs": [
+            58.100000001490116,
+            51.70000000298023,
+            64.60000000149012,
+            68.39999999850988,
+            56.399999998509884
+          ],
+          "p50Ms": 58.100000001490116,
+          "p95Ms": 68.39999999850988
+        },
+        {
+          "records": 1000,
+          "warmup": 1,
+          "samplesMs": [
+            61.5,
+            63.600000001490116,
+            61.899999998509884,
+            70,
+            58.899999998509884
+          ],
+          "p50Ms": 61.899999998509884,
+          "p95Ms": 70
+        }
+      ]
+    },
+    {
+      "source": "test-results\\phase10-usability-benchmar-9cc6f-nd-error-free-create-delete-chromium\\search-benchmark.json",
+      "role": "staff",
+      "measurement": "UI latency including Playwright interaction/auto-wait; no SLA verdict",
+      "machine": {
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+        "logicalCpus": 12,
+        "memoryGiB": 16,
+        "node": "v24.22.0"
+      },
+      "browser": "156.0.8078.4",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "results": [
+        {
+          "records": 25,
+          "warmup": 1,
+          "samplesMs": [
+            60.5,
+            60.600000001490116,
+            65.60000000149012,
+            48.5,
+            47.599999994039536
+          ],
+          "p50Ms": 60.5,
+          "p95Ms": 65.60000000149012
+        },
+        {
+          "records": 1000,
+          "warmup": 1,
+          "samplesMs": [
+            59.899999998509884,
+            62.399999998509884,
+            63.29999999701977,
+            65.89999999850988,
+            62.30000000447035
+          ],
+          "p50Ms": 62.399999998509884,
+          "p95Ms": 65.89999999850988
+        }
+      ]
+    }
+  ]
+}

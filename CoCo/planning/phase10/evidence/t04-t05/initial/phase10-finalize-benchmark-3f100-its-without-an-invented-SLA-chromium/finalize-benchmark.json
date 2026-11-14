@@ -1,0 +1,105 @@
+{
+  "role": "staff",
+  "initialProducts": 25,
+  "warmup": 1,
+  "measuredSamples": 5,
+  "measurement": "Click Save through visible real success dialog; includes Playwright interaction/auto-wait. Setup, input and verification excluded. No SLA verdict.",
+  "datasetGrowth": "Each iteration buys one physical item and sells one; total records grow by one. Per-sample productsBefore records that growth.",
+  "machine": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "logicalCpus": 12,
+    "memoryGiB": 16,
+    "node": "v24.22.0"
+  },
+  "browser": "156.0.8078.4",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "purchase": {
+    "samples": [
+      {
+        "iteration": 0,
+        "warmup": true,
+        "productsBefore": 25,
+        "elapsedMs": 156.89999999850988
+      },
+      {
+        "iteration": 1,
+        "warmup": false,
+        "productsBefore": 26,
+        "elapsedMs": 273.30000000074506
+      },
+      {
+        "iteration": 2,
+        "warmup": false,
+        "productsBefore": 27,
+        "elapsedMs": 289.8999999985099
+      },
+      {
+        "iteration": 3,
+        "warmup": false,
+        "productsBefore": 28,
+        "elapsedMs": 264
+      },
+      {
+        "iteration": 4,
+        "warmup": false,
+        "productsBefore": 29,
+        "elapsedMs": 390.3999999985099
+      },
+      {
+        "iteration": 5,
+        "warmup": false,
+        "productsBefore": 30,
+        "elapsedMs": 397.8999999985099
+      }
+    ],
+    "p50Ms": 289.8999999985099,
+    "p95Ms": 397.8999999985099
+  },
+  "sale": {
+    "samples": [
+      {
+        "iteration": 0,
+        "warmup": true,
+        "productsBefore": 26,
+        "elapsedMs": 177
+      },
+      {
+        "iteration": 1,
+        "warmup": false,
+        "productsBefore": 27,
+        "elapsedMs": 181.30000000074506
+      },
+      {
+        "iteration": 2,
+        "warmup": false,
+        "productsBefore": 28,
+        "elapsedMs": 205.60000000149012
+      },
+      {
+        "iteration": 3,
+        "warmup": false,
+        "productsBefore": 29,
+        "elapsedMs": 188.29999999701977
+      },
+      {
+        "iteration": 4,
+        "warmup": false,
+        "productsBefore": 30,
+        "elapsedMs": 176
+      },
+      {
+        "iteration": 5,
+        "warmup": false,
+        "productsBefore": 31,
+        "elapsedMs": 283.5999999977648
+      }
+    ],
+    "p50Ms": 188.29999999701977,
+    "p95Ms": 283.5999999977648
+  }
+}

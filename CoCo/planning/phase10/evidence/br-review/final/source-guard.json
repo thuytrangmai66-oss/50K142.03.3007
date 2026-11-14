@@ -1,0 +1,1546 @@
+{
+  "browserBefore": [
+    {
+      "file": "src\\app\\providers.tsx",
+      "sha256": "8230f9a407e31afed444904d6a3160e5223cc57a6cf60ffe33ebe586dd7b337a"
+    },
+    {
+      "file": "src\\app\\router.tsx",
+      "sha256": "ac5883816d6bf65ab3e776248016c362d2e01cab8377e920d7ba0939c3457c12"
+    },
+    {
+      "file": "src\\App.tsx",
+      "sha256": "c1c76bdc6ec4d63959c02a7e785f01e1e9bc0f89fd9b85d784aef8e66e05a4fd"
+    },
+    {
+      "file": "src\\assets\\coco-mark.png",
+      "sha256": "69d06b27c6906dc97d08fe096e72bcd60cb11bf65cc6f0d99c3f08de94599410"
+    },
+    {
+      "file": "src\\components\\layout\\CoCoLayout.tsx",
+      "sha256": "333050fc242583750e01e930c86cf470f60e18ba25984ff58ac18bb4a5b8aad6"
+    },
+    {
+      "file": "src\\components\\ui\\Button.tsx",
+      "sha256": "34e361feb632d50b5940b98820376d6dc1e46fbfcbbefcf4b9f43bbcc456e5ea"
+    },
+    {
+      "file": "src\\components\\ui\\ConfirmDialog.tsx",
+      "sha256": "8ce8b9502209f401a4f1ce7b9542852692e08615303468e4fcdaf977e27be7b2"
+    },
+    {
+      "file": "src\\components\\ui\\DataTable.tsx",
+      "sha256": "528157706bd2bcf7bf237de805231049eb5e439365d100485e6eca2227c32d6f"
+    },
+    {
+      "file": "src\\components\\ui\\Field.tsx",
+      "sha256": "8562951e23bf42bd65e2580facd9fab16dc9dfc948fd17f77f52f1d8bbe87f4c"
+    },
+    {
+      "file": "src\\components\\ui\\FormDialog.tsx",
+      "sha256": "6705fd73f1c96d36da9acaab6961033a6c2fe5c7c73a1bd7173347e95cb9b7f9"
+    },
+    {
+      "file": "src\\components\\ui\\Notice.tsx",
+      "sha256": "21e2397295df0da12d953edab8b16845a9916e3e0ba258c4b5314f25c900f254"
+    },
+    {
+      "file": "src\\components\\ui\\ResultDialog.tsx",
+      "sha256": "4bea1d2f8da5e037dc51ec41cc5d2f107057d7828e548a7829e7a8f4f1e24f8d"
+    },
+    {
+      "file": "src\\db\\index.ts",
+      "sha256": "04cb0756d8523de1335c39c868366690239b9a80ee81020a5a4041368e33ca0b"
+    },
+    {
+      "file": "src\\db\\purchase-metadata.ts",
+      "sha256": "6d8083b371da560b2be5e283084fe23c79eb315d75a15e41a4bd2a136bd39c1d"
+    },
+    {
+      "file": "src\\db\\schema.ts",
+      "sha256": "d4b72ce6498c4e3132eeead35cb916b229f35b109006782bd981966d0b771e46"
+    },
+    {
+      "file": "src\\domain\\auth.ts",
+      "sha256": "493dbec501f150afb57eebe72e752816a04cbb956c99348278c461a985d863c6"
+    },
+    {
+      "file": "src\\domain\\conditions.ts",
+      "sha256": "587ab9534080cec3e9750999cfadbb770f4606f446ccd8b16d1f4e6fd290c0fa"
+    },
+    {
+      "file": "src\\domain\\formatters.ts",
+      "sha256": "71af580b57956b67a692e4e01791909bc1cc0b7336a44f23a77a3a6fe644aab3"
+    },
+    {
+      "file": "src\\domain\\inventory.ts",
+      "sha256": "24d6730d54fc25c76e5920931d5aad40141e151c6543ae822dbe9a141a30b968"
+    },
+    {
+      "file": "src\\domain\\pagination.ts",
+      "sha256": "3e68194ac877b3b4eea9973c3168f5b02ae7daa110d1ac0cea9c0913a3b4664e"
+    },
+    {
+      "file": "src\\domain\\purchase-status.ts",
+      "sha256": "c6665dc14fed5f945481e04f12986ca2ed9b693785144a5029e943b7a93f18e1"
+    },
+    {
+      "file": "src\\domain\\purchases.ts",
+      "sha256": "a5e3944a325a4d24dbdd4ae13f280016b74adeba429ee09138c8e318bd68208f"
+    },
+    {
+      "file": "src\\domain\\records.ts",
+      "sha256": "5e16f7be2aad01ee0f61775b3158498f50421375e125b9d3a7b3a26da1302036"
+    },
+    {
+      "file": "src\\domain\\report-eligibility.ts",
+      "sha256": "9cf9f6511d8724f060686db32f87a663d48f5c34ef326eb3a152ed93c61a120e"
+    },
+    {
+      "file": "src\\domain\\revenue-report.ts",
+      "sha256": "82c9fa601421f41a6c2d381896fbfa70a3b640296716c4f9c6cc9543a81d9dbe"
+    },
+    {
+      "file": "src\\domain\\sale-payment.ts",
+      "sha256": "2b4f45fdd07163bbb8bd524561fad26955176a6ce8acad3825ac6e1b9fcce89e"
+    },
+    {
+      "file": "src\\domain\\sales.ts",
+      "sha256": "5a92fa9f629ba7e80a2d346c93b4fd5577af766a3f8d9ef1ec5e1a01d282760e"
+    },
+    {
+      "file": "src\\domain\\stock-comparison.ts",
+      "sha256": "3fab2f9fe13ff8b36611737ca5eec45d1e49758688a5719b6012c4739ef4d872"
+    },
+    {
+      "file": "src\\features\\approvals\\ApprovalsPage.tsx",
+      "sha256": "7581ef3a5cca88419c799368800e97265418697aa7f573115e4182b6a34e9936"
+    },
+    {
+      "file": "src\\features\\auth\\AuthPage.tsx",
+      "sha256": "7383bbe261b869e91565d378295d670be2f8eeb4f4db464483a8e469b3f68db7"
+    },
+    {
+      "file": "src\\features\\auth\\AuthProvider.tsx",
+      "sha256": "efec3b801d4a5317ab6f15829b0b56dfb0cc1c5f5b15079a0e2576f00285c7bd"
+    },
+    {
+      "file": "src\\features\\auth\\context.ts",
+      "sha256": "6dfa43afdafa3c62247320992db97e96ef46d8abaa151a0e6297f5b265a654e5"
+    },
+    {
+      "file": "src\\features\\auth\\use-auth.ts",
+      "sha256": "c59f283b45d19f77a77b99f6d1e901ac4d95c723cadb6be426a8e1cc0e2fb5fe"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerDetailPage.tsx",
+      "sha256": "228e209de8a047d4984ae15b442840ae9f634eac68e2e6a27dea8e8d4fad8e8a"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerForm.tsx",
+      "sha256": "3a5e91023e10367c7fe2f9ebd1414f25bb3874fa44b22085a0a40b39a0781d33"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerHistoryPage.tsx",
+      "sha256": "3204669fa8faeff2b50e32da4559d01c5cfd37386db05abd1c0f835109903bc1"
+    },
+    {
+      "file": "src\\features\\customers\\CustomersPage.tsx",
+      "sha256": "bb53569351b8802f730c043afd49f81ef9685029b1f66f3d7d21d7f0bd565c27"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerToolbar.tsx",
+      "sha256": "c08a40549de92f8998e42bf3e2db6c0dc3a3574259065f7c51b65fa7606eeafc"
+    },
+    {
+      "file": "src\\features\\home\\HomePage.tsx",
+      "sha256": "66943eaeb81fded95157dc665977cb704129cc738d8d1e55657c283f6e14fc22"
+    },
+    {
+      "file": "src\\features\\home\\HomeQuickActions.tsx",
+      "sha256": "805a8e92cfd9a8b4c598601c8a015f86a0ac6a75606272031a9728c358b79569"
+    },
+    {
+      "file": "src\\features\\inventory\\DiscountMonitor.tsx",
+      "sha256": "ece44e19e1bd78d8c7e803cfd93a3de381ac1fd934741b4557ad830140d17458"
+    },
+    {
+      "file": "src\\features\\inventory\\InventoryEditForm.tsx",
+      "sha256": "fa0721bd5e0f8eb18ac19847e6a9e0342497603203472bfa93dcc0f4025932a1"
+    },
+    {
+      "file": "src\\features\\inventory\\InventoryPages.tsx",
+      "sha256": "b8e0f777d58ae3c47cb9766e22e404306fa971dbbe2f8c1fae65246c2adedab1"
+    },
+    {
+      "file": "src\\features\\price-brackets\\BracketForm.tsx",
+      "sha256": "56b88e31386c63d0de09f238d682db747d66189e4732994541dbf28f74a6a90a"
+    },
+    {
+      "file": "src\\features\\price-brackets\\PriceBracketsPage.tsx",
+      "sha256": "18760e481e47b596b690f815eb59f9875f1f3741369f7eead66126f2cd3d9c77"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchaseEditor.tsx",
+      "sha256": "6caad46e75b924157195d72b81c4ca3bb5609f3fad2c192e84bf7010acc14e24"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchaseInvoicePage.tsx",
+      "sha256": "33d68e8dd4d1211e15ebf3be3b595375d0ac69749e3330a9e8ef5a0efc183e90"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchaseResults.tsx",
+      "sha256": "be5722b1b57eb159713edde1bf5aaf9d299795de82efacb260ea4edc3daadfcb"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchasesPage.tsx",
+      "sha256": "1eb7f5255aceceb71883fe82fb529c8a8c818059ada264d9555f9bbe35075c04"
+    },
+    {
+      "file": "src\\features\\reference-data\\use-list-page-size.ts",
+      "sha256": "ddf50c5d140d2be29e1b99519a6cc076a9fe94b24dfb77a1d40d4eb23dd9d6f0"
+    },
+    {
+      "file": "src\\features\\reference-data\\use-resource.ts",
+      "sha256": "bee8bbefc6485db021e4b12b9da812fe540cd3990694d6344d07f58fd81b8597"
+    },
+    {
+      "file": "src\\features\\reports\\AgedStockReportPage.tsx",
+      "sha256": "869aec49867557dfd16b8984924f1454d5187d3c3b1df2e24b0d6b21f628259f"
+    },
+    {
+      "file": "src\\features\\reports\\FinancialReportPage.tsx",
+      "sha256": "d65c82658a598593a56f8bf776fbb5122596427ca7004bdc6407aaf675e0c09f"
+    },
+    {
+      "file": "src\\features\\reports\\PurchaseCostReportPage.tsx",
+      "sha256": "1b7b07a39a7aefdb679f4b987410949af6f804245fe4457b1c3ababddb3c43fe"
+    },
+    {
+      "file": "src\\features\\reports\\report-catalog.ts",
+      "sha256": "ea843dcd8bfd4042ac584843038c1928f9bbc89a07a6b36e23a72a4b4d3ae762"
+    },
+    {
+      "file": "src\\features\\reports\\ReportPeriodForm.tsx",
+      "sha256": "0a3592ee1fbfa6fab544eb5e1d1c87e76e229173d18ef438f782cb75c62b8225"
+    },
+    {
+      "file": "src\\features\\reports\\ReportPicker.tsx",
+      "sha256": "2cf23835773b33b3013809b5d1b262f37eca6d2ea5e8b06087dee19d60ec0d3d"
+    },
+    {
+      "file": "src\\features\\reports\\RevenueReportPage.tsx",
+      "sha256": "1b79ed6a233bb0928dca037629ad0aaceacaa80148c97826b4cfae2cee5f3a58"
+    },
+    {
+      "file": "src\\features\\sales\\SaleInvoiceCard.tsx",
+      "sha256": "d6d31f05f254558d99082a512787e05b82f79a634096da228213f682d6215b8a"
+    },
+    {
+      "file": "src\\features\\sales\\SalesEditor.tsx",
+      "sha256": "462fe02db7d5119053a868f735605196d533198980b14a3e0622714cc46c23aa"
+    },
+    {
+      "file": "src\\features\\sales\\SalesPages.tsx",
+      "sha256": "0713a6a542d249f9932f43aaa58163d6040438c92eb03fec56309e431fa38483"
+    },
+    {
+      "file": "src\\features\\sales\\TransferQrDialog.tsx",
+      "sha256": "57deadba736536caa5c5f0c370ecfe5e48b1a99ee6dbf2569ad09b73d9dfa275"
+    },
+    {
+      "file": "src\\features\\staff\\StaffForm.tsx",
+      "sha256": "980759b5503a36813a3d5212a80fbebfec3ddcf4ec2d1e2ec94f6f984e638e53"
+    },
+    {
+      "file": "src\\features\\staff\\StaffPages.tsx",
+      "sha256": "ba3a4a9b2be07bc6aa2abec8af0e0f9c55f988e071e78dd4f9904d1417f37855"
+    },
+    {
+      "file": "src\\index.css",
+      "sha256": "8383fa1bafa74a689b288fe1d0fb1d4c0d04f9651fb7d1b184d36dfea2e85d0a"
+    },
+    {
+      "file": "src\\lib\\payment\\vietqr.ts",
+      "sha256": "271635a79037002ab2aa699684602743569a196230730b898283c00461a3de39"
+    },
+    {
+      "file": "src\\lib\\vietnam-time.ts",
+      "sha256": "326ce9f78ffc0f75db8d46ff9222868bc82d87954f28b1bcd672d50a99cc5ac4"
+    },
+    {
+      "file": "src\\main.tsx",
+      "sha256": "e11d62b317fddd796a860b83ab04f8f947f8cbaed9c1a1083a02e2058e9fd9da"
+    },
+    {
+      "file": "src\\repositories\\constraints.ts",
+      "sha256": "739fb56a1d2bf585aac592ee95cf767065ba2020befb8dd1f37fff5f01267fb0"
+    },
+    {
+      "file": "src\\repositories\\errors.ts",
+      "sha256": "98e2625f8b6fe81496df8c055686cb0c70504f083db4a33b79c1e58e6bdde989"
+    },
+    {
+      "file": "src\\repositories\\index.ts",
+      "sha256": "5a4183e0b67afccc2e08d4a4b2edc137c1d074aa22ebe5cf605f074850c7c0dc"
+    },
+    {
+      "file": "src\\repositories\\purchase-links.ts",
+      "sha256": "b49d9b6f3f699237bfbf4e52baabe3cdaa3a7057edb43fad137541873cd13db5"
+    },
+    {
+      "file": "src\\services\\aged-stock-report.ts",
+      "sha256": "c4c3bffd82c1eb636b546eab2219e9a7c876280528003975df8ee32bb47fa4a2"
+    },
+    {
+      "file": "src\\services\\auth\\crypto.ts",
+      "sha256": "8b95459cd3f14d3a32ef43d68ae2b7de335a602b663d7b9644e44d47ea1a16cc"
+    },
+    {
+      "file": "src\\services\\auth\\errors.ts",
+      "sha256": "f74ba7708d684b6d6bf5fce85a4ce756193c148433a5ee73e42e9dbd397c5a1a"
+    },
+    {
+      "file": "src\\services\\auth\\service.ts",
+      "sha256": "eabb75ac6043dae6d5e1cd9850917854d695112e691d054ad8582521b1a050cb"
+    },
+    {
+      "file": "src\\services\\auth\\storage.ts",
+      "sha256": "deb6cb43d596562060ced5633ee2f2d52e69ada76818b639985b41ddfe15a233"
+    },
+    {
+      "file": "src\\services\\customer-creation.ts",
+      "sha256": "d730d6429bdb95ced38a20504ff463fe14e84cb059832f2741f8f8ef1dedeb99"
+    },
+    {
+      "file": "src\\services\\dashboard.ts",
+      "sha256": "bb5ac13eaa8667eceb6ef77fe174587f6ba11fa0a06d567a5a610a58ce842d9c"
+    },
+    {
+      "file": "src\\services\\discount-scheduler.ts",
+      "sha256": "73ff7d51dea898b1e52ee0a2a690534114913207d2160a3aadf96ae195c17124"
+    },
+    {
+      "file": "src\\services\\financial-reports.ts",
+      "sha256": "10b3b965519cfd0f51b4655e1f37784f1e8fdbcb982e45a8bf1d8fb5dd6bd2d0"
+    },
+    {
+      "file": "src\\services\\inventory.ts",
+      "sha256": "c7c16323af965a94ca8c53dd7a00bb61eb70693bb8b1b373bff9b72b5aaf55b8"
+    },
+    {
+      "file": "src\\services\\permissions.ts",
+      "sha256": "7d001389660657d119664bebfc47306429dfd48d67dd5328a5d14f5d3da4174b"
+    },
+    {
+      "file": "src\\services\\purchase-approvals.ts",
+      "sha256": "95d7cb5dc597cdf4f3d931760511bbd76fc5e769a9c7605e9828a51d2166a0a8"
+    },
+    {
+      "file": "src\\services\\purchase-candidate.ts",
+      "sha256": "532eeada2adab90bd1779bdb996dde78cdc0c03e318bb6f1ca71b2a8ad87dc55"
+    },
+    {
+      "file": "src\\services\\purchase-drafts.ts",
+      "sha256": "9baed8fcaf2080285208071195b2c221a2629af0c2de34d10ddeeff8bd1cfccb"
+    },
+    {
+      "file": "src\\services\\purchase-finalization.ts",
+      "sha256": "c2beae4d4031c6bd3fa284d134c975945d622d671c74362b50ee88ee206d65d4"
+    },
+    {
+      "file": "src\\services\\purchase-queries.ts",
+      "sha256": "a2aa3d6019356c1aa979af169a3082573c84c590bc749ebf0094fa207bad02da"
+    },
+    {
+      "file": "src\\services\\purchase-report.ts",
+      "sha256": "e13749d031ad731d381dff215eff25d1a3d3c76df73e057a694528607bed04bc"
+    },
+    {
+      "file": "src\\services\\reference-data\\contracts.ts",
+      "sha256": "2d490a626031f2674f883be84e6104523036fce63992411a8658f583cd901e06"
+    },
+    {
+      "file": "src\\services\\reference-data\\local.ts",
+      "sha256": "14ec56443af3e852e6fb0bc10746c2991e202be4eff05931441be371479021b5"
+    },
+    {
+      "file": "src\\services\\report-queries.ts",
+      "sha256": "e9b75a7ce29d2c3166d0c542749353d8e9e286051bb952a3e7e321fd82e0602b"
+    },
+    {
+      "file": "src\\services\\sales-payment.ts",
+      "sha256": "ff8a4efcde7845736c03297ba4ecc44a9d3cc5ff92462e27ae0ebd5a4a36be1e"
+    },
+    {
+      "file": "src\\services\\sales-queries.ts",
+      "sha256": "76ef5c5262b929848c17aa921060ccb41e0e167be0fadbbb7439abd91b1bee4c"
+    },
+    {
+      "file": "src\\services\\sales-report-ledger.ts",
+      "sha256": "32438be3583f734d6ae8015829bc267fb157b4fdedd166ad71c39278ef81c803"
+    },
+    {
+      "file": "src\\services\\sales.ts",
+      "sha256": "06ad2a9e6d482abf082f256f66cef0bf53c36a9b7aad843c8d05a05afdd7b975"
+    },
+    {
+      "file": "src\\services\\staff-accounts.ts",
+      "sha256": "edc4825883ee89ab2c9933ed0bdc7bde9997d3809545d91462207cda18e0d29d"
+    },
+    {
+      "file": "src\\services\\stock-comparison.ts",
+      "sha256": "5f138cdff2ca52a0c7272d7c9fb6a4d8da5a8af0522622e26910bc56f5ae1286"
+    },
+    {
+      "file": "src\\vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "file": "tests\\e2e\\auth-helpers.ts",
+      "sha256": "3d61ef176b5389682fa2ec5ef574d2e142c06b6f110af8a42b7b560ba08d4679"
+    },
+    {
+      "file": "tests\\e2e\\auth.spec.ts",
+      "sha256": "12c1ec321231644ed5d9cd4d7b23dcf5247b8bb6771e8ef4d31dc97ea4f0d375"
+    },
+    {
+      "file": "tests\\e2e\\confirmation.spec.ts",
+      "sha256": "05caa85ce1089ea174f3ec4cadbedb6c18b8e456da8b603852a23ab343899ad5"
+    },
+    {
+      "file": "tests\\e2e\\discount-scheduler.spec.ts",
+      "sha256": "3c329560534cb62eb53b834f62008fa11f58e0c36f6c4c518e09ca6b7bf0f4b1"
+    },
+    {
+      "file": "tests\\e2e\\g6-verification.spec.ts",
+      "sha256": "545d1d68683618f56f540783d5688e3b0628f1ec1b912b3eaa32b71b92607159"
+    },
+    {
+      "file": "tests\\e2e\\home-stock-comparison.spec.ts",
+      "sha256": "895c2cc8c814e96d0d7c6d95505dfde3db6a05a8cb593d41e684cbaee92ddf5f"
+    },
+    {
+      "file": "tests\\e2e\\home-t05.spec.ts",
+      "sha256": "8773b0da172d17c2296c3eb3049ff655d5790f925ade9bf64c77868ecd9e7f8a"
+    },
+    {
+      "file": "tests\\e2e\\inventory-edit.spec.ts",
+      "sha256": "a29720d93d4fc22a04de4510918f6e272968777df61e2d23f452fad8055a79a0"
+    },
+    {
+      "file": "tests\\e2e\\inventory-helpers.ts",
+      "sha256": "f8440a36a16385776e17a8ed1dc7725464400b3603fde5228662b6faa40bd479"
+    },
+    {
+      "file": "tests\\e2e\\inventory.spec.ts",
+      "sha256": "d5b664c1e7884d04434cdd6c820b4a7298f6ca0f2fb2b124dfd85ca1d135ac37"
+    },
+    {
+      "file": "tests\\e2e\\pagination-helpers.ts",
+      "sha256": "479baf1ca68dceac917d4323a304ef1880b25eb6bfcef0c33f44deae35e38779"
+    },
+    {
+      "file": "tests\\e2e\\pagination.spec.ts",
+      "sha256": "3e88dfad70622d1ab072df79c0c48491fa6ad3a7f16b642186817325b559b5bb"
+    },
+    {
+      "file": "tests\\e2e\\phase10-customer-edit.spec.ts",
+      "sha256": "40ded7d125a3607639918a7968a2e4b01bf917a55151601b89229afd59c7bab3"
+    },
+    {
+      "file": "tests\\e2e\\phase10-finalize-benchmark.spec.ts",
+      "sha256": "a1151ba4b2704bf66f0740166865adcf35fa5d6aff87d33049163e5d82e68c22"
+    },
+    {
+      "file": "tests\\e2e\\phase10-integrity.spec.ts",
+      "sha256": "eb4f545e2bf486dc31fe6428f20be61a009b7d7deb039724e637d104c60153fd"
+    },
+    {
+      "file": "tests\\e2e\\phase10-journey.spec.ts",
+      "sha256": "baa9c3e589f5718feca024d4c0faa3d6ef9296df6e3021dcc5be287650f3cc49"
+    },
+    {
+      "file": "tests\\e2e\\phase10-security.spec.ts",
+      "sha256": "9d22337dd06e3ae67377cb41241be123f3e1494dd4c0f9d8022a3db3999a6b9c"
+    },
+    {
+      "file": "tests\\e2e\\phase10-usability-benchmark.spec.ts",
+      "sha256": "43359510807452302901341a3b64e1768787ac61baf8c444d1f163e55c1f13f1"
+    },
+    {
+      "file": "tests\\e2e\\phase10-visual.spec.ts",
+      "sha256": "4c75af23f964078ddb6612beef4953435e663773e2aab1f3b7e11a8e4955d0a4"
+    },
+    {
+      "file": "tests\\e2e\\purchase-approvals.spec.ts",
+      "sha256": "a3c26827ca951532aa2b70fb60920fab392029b5d9a161ddeeaa1137b2dafc7e"
+    },
+    {
+      "file": "tests\\e2e\\purchase-candidate-storage.spec.ts",
+      "sha256": "f9110c0b7506342f52be32ffc003e2d79929eae940170a5a77949a855564b3cc"
+    },
+    {
+      "file": "tests\\e2e\\purchase-customer-layout.spec.ts",
+      "sha256": "51d288f6df8bb6033de48c88ecc7d8310932ebfe480c7ef22654eb2a75e61848"
+    },
+    {
+      "file": "tests\\e2e\\purchase-drafts.spec.ts",
+      "sha256": "ce13c6d69f78b659fb86655810cb87da3b5ccfd4a724d22a0e0ea6c6ca1fb25f"
+    },
+    {
+      "file": "tests\\e2e\\purchase-editor-figma.spec.ts",
+      "sha256": "b60aec64d6cbf14799a73344a65774097f6d11a3f9a28044347d15a5def20f7d"
+    },
+    {
+      "file": "tests\\e2e\\purchase-finalization-storage.spec.ts",
+      "sha256": "c4de5ecff81242241df8fdb3822687966bea3c3574cf4a50140a29d5912796c2"
+    },
+    {
+      "file": "tests\\e2e\\purchase-finalization.spec.ts",
+      "sha256": "2c0230f8ed0fdf82eee543d0039552d1340fc55bb65f419830c271838ceb8e70"
+    },
+    {
+      "file": "tests\\e2e\\purchase-helpers.ts",
+      "sha256": "25538bdb5835e1ca390b2145672821f98bc136da8e856215df980341dd7ca302"
+    },
+    {
+      "file": "tests\\e2e\\purchase-list.spec.ts",
+      "sha256": "4b8ad7f541804c1d03c1086a5102e3ff526fb1f6a59bcd74e132a85277515797"
+    },
+    {
+      "file": "tests\\e2e\\purchase-queries.spec.ts",
+      "sha256": "b996b28c1d8dcfecfdeac0037af49313b89ffc3890ec2fec8acbcb824f7a536e"
+    },
+    {
+      "file": "tests\\e2e\\purchase-results.spec.ts",
+      "sha256": "a047d7f73a7ec61ba4eaf616b0645ab5b1a1a92bf949720a9794ca55ba15a044"
+    },
+    {
+      "file": "tests\\e2e\\reference-data.spec.ts",
+      "sha256": "8950694ba182d5c496b30eef8b57ceb114449aca5165774f015494f17d26b949"
+    },
+    {
+      "file": "tests\\e2e\\reports-purchase-cost.spec.ts",
+      "sha256": "0f9a11002e8f232411c97772fb65ffd9439b3fe23c7864ed9719e71d4ff2c308"
+    },
+    {
+      "file": "tests\\e2e\\reports-reconciliation.spec.ts",
+      "sha256": "0debb35a717fc737e3ee9986cd6b4a978575126ec4fbd1b79d915bbc86b58bf2"
+    },
+    {
+      "file": "tests\\e2e\\reports-revenue.spec.ts",
+      "sha256": "627f737e1d15c746eef03c20efed4bb9c65a372135caca71b637eaeac56780bf"
+    },
+    {
+      "file": "tests\\e2e\\reports-t04.spec.ts",
+      "sha256": "c2853cb8af58790d082555162186613ac111966fc15a3eade182c632965f5e85"
+    },
+    {
+      "file": "tests\\e2e\\sale-payment.spec.ts",
+      "sha256": "6e7aaa20cadecdca095870d3c58343fee2bd60c9f594200ed5ec00674a3b4da6"
+    },
+    {
+      "file": "tests\\e2e\\sales-draft.spec.ts",
+      "sha256": "1e41cb28cbe787960713a9f96e39d6e6f2605418f02edea2984efa25e4cbf452"
+    },
+    {
+      "file": "tests\\e2e\\sales-helpers.ts",
+      "sha256": "0a5cd2f1f4916a790c9e17b1be6b22c9cccd46828d6bd8961a6c629012d349ad"
+    },
+    {
+      "file": "tests\\e2e\\sales-pages.spec.ts",
+      "sha256": "19c0a30e317dc4598c6f14184653fe15f64242b3c5fdd4ccf56401ae3aa76258"
+    },
+    {
+      "file": "tests\\e2e\\sales-t05-errors.spec.ts",
+      "sha256": "bcd6ba05e791b31ccd8e18543e579a58bdbb08bbd71802ef74707617f85e5187"
+    },
+    {
+      "file": "tests\\e2e\\sales-t05-t06.spec.ts",
+      "sha256": "a4da8ff1b5c978ea7a83bd6de249fc2a378ea54ce46f59b5969e9bffda68a499"
+    },
+    {
+      "file": "tests\\e2e\\sales-t06-recovery.spec.ts",
+      "sha256": "5271ed98cf0aecf98d1bb5b5a6c2040a76503401f890071e28e87cae6f223e3c"
+    },
+    {
+      "file": "tests\\e2e\\shell.spec.ts",
+      "sha256": "bed2a06487ea9698df6fbdd670ac87d1534f1ecb74b2c7e2f8bb5e104f546188"
+    },
+    {
+      "file": "tests\\e2e\\staff-review.spec.ts",
+      "sha256": "c980acf515794a3085ec7706f8c2534e6fd55c3945ed7d9a11f7bb3fde503f3f"
+    },
+    {
+      "file": "tests\\e2e\\staff.spec.ts",
+      "sha256": "399b43d5fb788f96c45aa1a93a17923da0ca051ea9d0d115b0d750481150e8c9"
+    },
+    {
+      "file": "tests\\fixtures\\g6-migration-verification.ts",
+      "sha256": "90e09874f4167768f4cbac4fc029650dd34b6957672613ec4ea183bb867296ea"
+    },
+    {
+      "file": "tests\\fixtures\\phase2-schema.ts",
+      "sha256": "36fe376751ab5fb61e87d2eddf55aaea119f17cc9a7d7d92d547668dad13f1b4"
+    },
+    {
+      "file": "tests\\fixtures\\purchase-candidate-browser.ts",
+      "sha256": "9c278d095b5d81884d77218521297b3d859e5cb71949c04d22250608b7a08140"
+    },
+    {
+      "file": "tests\\fixtures\\purchase-finalization-browser.ts",
+      "sha256": "d28fbdbb3df49ad841aef627c2357884e7eeb08da8b511511dccce7e8c866f31"
+    },
+    {
+      "file": "tests\\fixtures\\purchase-finalized-graph.ts",
+      "sha256": "123d7cf33a49540e55881c26476d38abc56d04ddb17e09800335b2a0b370b172"
+    },
+    {
+      "file": "tests\\unit\\auth.test.ts",
+      "sha256": "142f75f870891b7bc7041012c8f7f1855cf3bc600d99fa00d224a672ec4cc5ce"
+    },
+    {
+      "file": "tests\\unit\\customer-creation.test.ts",
+      "sha256": "3aae9be30029519a5d3e234c3977ea74a42d24594bb67116d217678e6ea20f77"
+    },
+    {
+      "file": "tests\\unit\\customer-edit.test.ts",
+      "sha256": "8b3caa6e5434386a2f0a48c858a39d182e7e3e675be071a321f4c37517bb14bd"
+    },
+    {
+      "file": "tests\\unit\\dashboard-comparison.test.ts",
+      "sha256": "8e18e4428bb3700c4c665215d70e73f82cc9675067b8547c0842c6a3e57369ee"
+    },
+    {
+      "file": "tests\\unit\\database.test.ts",
+      "sha256": "923ee674b0e6a4f263e9854e77f8a33f2a4fe5e3f2940f43d93f516492908cfc"
+    },
+    {
+      "file": "tests\\unit\\discount-scheduler.test.ts",
+      "sha256": "61029ff85f1b7554af15f225b74397cfaa1a5cc819c5a3d95861707768ab1364"
+    },
+    {
+      "file": "tests\\unit\\financial-number.test.ts",
+      "sha256": "26def00cde9ae3334bdc86268e64a8a92707466d751791f527f7333ca5b4e047"
+    },
+    {
+      "file": "tests\\unit\\inventory.test.ts",
+      "sha256": "dc54522fbc95520f37c0988154c2dcbcc2e7d11faafddcb51add05c4c6a07cc0"
+    },
+    {
+      "file": "tests\\unit\\pagination.test.ts",
+      "sha256": "6d35c76e4ad2a85450f4d37afe4ea1787ea92f08642aa63d9a1e8e0f8793e5a2"
+    },
+    {
+      "file": "tests\\unit\\phase10-audit.test.ts",
+      "sha256": "86703a97af231ea0f4ec4830de3c3938e652fb7b9d5f0e8a9f32e1fdfccb8aca"
+    },
+    {
+      "file": "tests\\unit\\purchase-approvals.test.ts",
+      "sha256": "b9a7ba109d8565f4382a38991980619d579075f79a6991e8cb8543ff4787177f"
+    },
+    {
+      "file": "tests\\unit\\purchase-candidate.test.ts",
+      "sha256": "2b9cc96d5f59efae48c7fa5db0a2f059e34caf5119c3ff974b3c4b3f766d0e2f"
+    },
+    {
+      "file": "tests\\unit\\purchase-contract.test.ts",
+      "sha256": "3af89c26d5bcc7dbe059e149791da9121d5bff73f4c16a08a003a3c68d20768f"
+    },
+    {
+      "file": "tests\\unit\\purchase-drafts.test.ts",
+      "sha256": "6f3a622e720e6db9a59a38fde8908cd73c8111477d2422c55de8191277854e78"
+    },
+    {
+      "file": "tests\\unit\\purchase-finalization.test.ts",
+      "sha256": "228aad9e802fa6215d167c4228a9d43a4b798788efe1cf9d858465eb839e48f0"
+    },
+    {
+      "file": "tests\\unit\\purchase-queries.test.ts",
+      "sha256": "349abc12938f9e2884adf1cad9631f8229bacbaa43eb8f23bff2a7c723bc1bce"
+    },
+    {
+      "file": "tests\\unit\\reference-data.test.ts",
+      "sha256": "c6434bb4e2f4f79bf58eff81b7273e3c8f88db9f079d5ad4fd12cae37e55b9d6"
+    },
+    {
+      "file": "tests\\unit\\report-components.test.tsx",
+      "sha256": "4f3e056ce848669c82c56fbc368bc409ea091bd3762f49af187f5de98af44623"
+    },
+    {
+      "file": "tests\\unit\\report-eligibility.test.ts",
+      "sha256": "8ad1f79df1b2ef96aae527c9b4fc39b53a24a229ddfb42665229c28a68d3fe18"
+    },
+    {
+      "file": "tests\\unit\\report-legacy-migration.test.ts",
+      "sha256": "77eaedf2acbc4df859e1319091914206082153733a8e16ef2df26a4f11e2961c"
+    },
+    {
+      "file": "tests\\unit\\report-period.test.ts",
+      "sha256": "006876124227c5cbdb7b9c0818de7dfc03b14666179828016cedada5fc1a6afb"
+    },
+    {
+      "file": "tests\\unit\\report-queries.test.ts",
+      "sha256": "90dd37e2aa2e7785b793109acc4f5d4768cc71e777007950338c8201440265c4"
+    },
+    {
+      "file": "tests\\unit\\repositories.test.ts",
+      "sha256": "f55d27472c7bb4c03928f67d9440cac3f71cdca9bab005701eaeffee51584c85"
+    },
+    {
+      "file": "tests\\unit\\revenue-report.test.ts",
+      "sha256": "8735c6f4b8e7ecda8115d56912dc00c954dffc299e4693fd96f4e6c3955a7261"
+    },
+    {
+      "file": "tests\\unit\\sale-payment.test.ts",
+      "sha256": "9505cf67b486ed473e88a8dc615c1d2967170e4133bd1ff2571ec4752c148b99"
+    },
+    {
+      "file": "tests\\unit\\sales.test.ts",
+      "sha256": "e82f0069675947066a7c4c62d96a486ecdf95434d8c14ecb86b75c5926bf0aaa"
+    },
+    {
+      "file": "tests\\unit\\setup.ts",
+      "sha256": "5413d12d1fa831e4777b23845e86d6219a5763543c8e3e203ea048670e4bfd62"
+    },
+    {
+      "file": "tests\\unit\\staff-accounts.test.ts",
+      "sha256": "5a7cb46df06867e6e5c89482a038d5038675219abfadb9050f2feef7bbb6aa64"
+    },
+    {
+      "file": "tests\\unit\\stock-comparison.test.ts",
+      "sha256": "775580f1357164ce9d788f130023362ff6136776631607a7f30e923a00d6688f"
+    },
+    {
+      "file": "tests\\visual\\customer-dialogs.local.spec.ts",
+      "sha256": "1f570ba1bb1c5db6e6fc79e01b44c7f69dbf1486f08e2287fdbb887b8d996a9a"
+    },
+    {
+      "file": "tests\\visual\\references\\SC105-picker.json",
+      "sha256": "0f86594a6c2e10d0933160a006288a7be0b9b0ab26cabab9332250cbe4c70e88"
+    },
+    {
+      "file": "tests\\visual\\references\\SC105-picker.png",
+      "sha256": "c54fc0b16abee3a0336449de3ea3deca0f0906a5bbbe4ddc2382fc2271fa634f"
+    },
+    {
+      "file": "scripts\\audit-phase1.mjs",
+      "sha256": "32ab56afa195023002e415dea5701f233cd0961af707b419f87e78e5817ce859"
+    },
+    {
+      "file": "scripts\\measure.mjs",
+      "sha256": "1a0a15908e12a30e6ee81ffd20ecbfd02ac5f1df525332bf6a58d589b00cc109"
+    },
+    {
+      "file": "scripts\\phase10-audit.ts",
+      "sha256": "88cc2f8feffce8f9fcd7ae7fcbd25081f2c114ab767ce0b51772c1efad3cbd9c"
+    },
+    {
+      "file": "scripts\\render-pdf-reference.mjs",
+      "sha256": "01d18b543ffc77bc4654acd917cd19d555e65acb59129c151f6a449eff7fe2d4"
+    },
+    {
+      "file": "package.json",
+      "sha256": "edd26d762a33e222f4bb560be4751167916a9e9c5519691421a54b9b39bab027"
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "0466a148e350cdc3d7fdc6bfdbaa8780c2ec98c2413bf3cd36a29320e51f2ca3"
+    },
+    {
+      "file": "tsconfig.json",
+      "sha256": "a5c2c487c36dffa3e043b7fe9c77bcf3f81c63776493c2cb96d3fb920da095d7"
+    },
+    {
+      "file": "playwright.config.ts",
+      "sha256": "560fd564faf64f2769bd35cbde1757cd1119b2be5c0ca156a76998b40bc9dac1"
+    },
+    {
+      "file": "playwright.visual.config.ts",
+      "sha256": "53ff7677527d720eaf9a073033c121e0fb80c468a1b4e9c4252df05ab2b442d3"
+    },
+    {
+      "file": "vite.config.ts",
+      "sha256": "0c1e06cace51c43ed2dec645367d29db94c08e61f78a7a14f8201e6f21afc3f0"
+    }
+  ],
+  "unitBefore": [
+    {
+      "file": "src\\app\\providers.tsx",
+      "sha256": "8230f9a407e31afed444904d6a3160e5223cc57a6cf60ffe33ebe586dd7b337a"
+    },
+    {
+      "file": "src\\app\\router.tsx",
+      "sha256": "ac5883816d6bf65ab3e776248016c362d2e01cab8377e920d7ba0939c3457c12"
+    },
+    {
+      "file": "src\\App.tsx",
+      "sha256": "c1c76bdc6ec4d63959c02a7e785f01e1e9bc0f89fd9b85d784aef8e66e05a4fd"
+    },
+    {
+      "file": "src\\assets\\coco-mark.png",
+      "sha256": "69d06b27c6906dc97d08fe096e72bcd60cb11bf65cc6f0d99c3f08de94599410"
+    },
+    {
+      "file": "src\\components\\layout\\CoCoLayout.tsx",
+      "sha256": "333050fc242583750e01e930c86cf470f60e18ba25984ff58ac18bb4a5b8aad6"
+    },
+    {
+      "file": "src\\components\\ui\\Button.tsx",
+      "sha256": "34e361feb632d50b5940b98820376d6dc1e46fbfcbbefcf4b9f43bbcc456e5ea"
+    },
+    {
+      "file": "src\\components\\ui\\ConfirmDialog.tsx",
+      "sha256": "8ce8b9502209f401a4f1ce7b9542852692e08615303468e4fcdaf977e27be7b2"
+    },
+    {
+      "file": "src\\components\\ui\\DataTable.tsx",
+      "sha256": "528157706bd2bcf7bf237de805231049eb5e439365d100485e6eca2227c32d6f"
+    },
+    {
+      "file": "src\\components\\ui\\Field.tsx",
+      "sha256": "8562951e23bf42bd65e2580facd9fab16dc9dfc948fd17f77f52f1d8bbe87f4c"
+    },
+    {
+      "file": "src\\components\\ui\\FormDialog.tsx",
+      "sha256": "6705fd73f1c96d36da9acaab6961033a6c2fe5c7c73a1bd7173347e95cb9b7f9"
+    },
+    {
+      "file": "src\\components\\ui\\Notice.tsx",
+      "sha256": "21e2397295df0da12d953edab8b16845a9916e3e0ba258c4b5314f25c900f254"
+    },
+    {
+      "file": "src\\components\\ui\\ResultDialog.tsx",
+      "sha256": "4bea1d2f8da5e037dc51ec41cc5d2f107057d7828e548a7829e7a8f4f1e24f8d"
+    },
+    {
+      "file": "src\\db\\index.ts",
+      "sha256": "04cb0756d8523de1335c39c868366690239b9a80ee81020a5a4041368e33ca0b"
+    },
+    {
+      "file": "src\\db\\purchase-metadata.ts",
+      "sha256": "6d8083b371da560b2be5e283084fe23c79eb315d75a15e41a4bd2a136bd39c1d"
+    },
+    {
+      "file": "src\\db\\schema.ts",
+      "sha256": "d4b72ce6498c4e3132eeead35cb916b229f35b109006782bd981966d0b771e46"
+    },
+    {
+      "file": "src\\domain\\auth.ts",
+      "sha256": "493dbec501f150afb57eebe72e752816a04cbb956c99348278c461a985d863c6"
+    },
+    {
+      "file": "src\\domain\\conditions.ts",
+      "sha256": "587ab9534080cec3e9750999cfadbb770f4606f446ccd8b16d1f4e6fd290c0fa"
+    },
+    {
+      "file": "src\\domain\\formatters.ts",
+      "sha256": "71af580b57956b67a692e4e01791909bc1cc0b7336a44f23a77a3a6fe644aab3"
+    },
+    {
+      "file": "src\\domain\\inventory.ts",
+      "sha256": "24d6730d54fc25c76e5920931d5aad40141e151c6543ae822dbe9a141a30b968"
+    },
+    {
+      "file": "src\\domain\\pagination.ts",
+      "sha256": "3e68194ac877b3b4eea9973c3168f5b02ae7daa110d1ac0cea9c0913a3b4664e"
+    },
+    {
+      "file": "src\\domain\\purchase-status.ts",
+      "sha256": "c6665dc14fed5f945481e04f12986ca2ed9b693785144a5029e943b7a93f18e1"
+    },
+    {
+      "file": "src\\domain\\purchases.ts",
+      "sha256": "a5e3944a325a4d24dbdd4ae13f280016b74adeba429ee09138c8e318bd68208f"
+    },
+    {
+      "file": "src\\domain\\records.ts",
+      "sha256": "5e16f7be2aad01ee0f61775b3158498f50421375e125b9d3a7b3a26da1302036"
+    },
+    {
+      "file": "src\\domain\\report-eligibility.ts",
+      "sha256": "9cf9f6511d8724f060686db32f87a663d48f5c34ef326eb3a152ed93c61a120e"
+    },
+    {
+      "file": "src\\domain\\revenue-report.ts",
+      "sha256": "82c9fa601421f41a6c2d381896fbfa70a3b640296716c4f9c6cc9543a81d9dbe"
+    },
+    {
+      "file": "src\\domain\\sale-payment.ts",
+      "sha256": "2b4f45fdd07163bbb8bd524561fad26955176a6ce8acad3825ac6e1b9fcce89e"
+    },
+    {
+      "file": "src\\domain\\sales.ts",
+      "sha256": "5a92fa9f629ba7e80a2d346c93b4fd5577af766a3f8d9ef1ec5e1a01d282760e"
+    },
+    {
+      "file": "src\\domain\\stock-comparison.ts",
+      "sha256": "3fab2f9fe13ff8b36611737ca5eec45d1e49758688a5719b6012c4739ef4d872"
+    },
+    {
+      "file": "src\\features\\approvals\\ApprovalsPage.tsx",
+      "sha256": "7581ef3a5cca88419c799368800e97265418697aa7f573115e4182b6a34e9936"
+    },
+    {
+      "file": "src\\features\\auth\\AuthPage.tsx",
+      "sha256": "7383bbe261b869e91565d378295d670be2f8eeb4f4db464483a8e469b3f68db7"
+    },
+    {
+      "file": "src\\features\\auth\\AuthProvider.tsx",
+      "sha256": "efec3b801d4a5317ab6f15829b0b56dfb0cc1c5f5b15079a0e2576f00285c7bd"
+    },
+    {
+      "file": "src\\features\\auth\\context.ts",
+      "sha256": "6dfa43afdafa3c62247320992db97e96ef46d8abaa151a0e6297f5b265a654e5"
+    },
+    {
+      "file": "src\\features\\auth\\use-auth.ts",
+      "sha256": "c59f283b45d19f77a77b99f6d1e901ac4d95c723cadb6be426a8e1cc0e2fb5fe"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerDetailPage.tsx",
+      "sha256": "228e209de8a047d4984ae15b442840ae9f634eac68e2e6a27dea8e8d4fad8e8a"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerForm.tsx",
+      "sha256": "3a5e91023e10367c7fe2f9ebd1414f25bb3874fa44b22085a0a40b39a0781d33"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerHistoryPage.tsx",
+      "sha256": "3204669fa8faeff2b50e32da4559d01c5cfd37386db05abd1c0f835109903bc1"
+    },
+    {
+      "file": "src\\features\\customers\\CustomersPage.tsx",
+      "sha256": "bb53569351b8802f730c043afd49f81ef9685029b1f66f3d7d21d7f0bd565c27"
+    },
+    {
+      "file": "src\\features\\customers\\CustomerToolbar.tsx",
+      "sha256": "c08a40549de92f8998e42bf3e2db6c0dc3a3574259065f7c51b65fa7606eeafc"
+    },
+    {
+      "file": "src\\features\\home\\HomePage.tsx",
+      "sha256": "66943eaeb81fded95157dc665977cb704129cc738d8d1e55657c283f6e14fc22"
+    },
+    {
+      "file": "src\\features\\home\\HomeQuickActions.tsx",
+      "sha256": "805a8e92cfd9a8b4c598601c8a015f86a0ac6a75606272031a9728c358b79569"
+    },
+    {
+      "file": "src\\features\\inventory\\DiscountMonitor.tsx",
+      "sha256": "ece44e19e1bd78d8c7e803cfd93a3de381ac1fd934741b4557ad830140d17458"
+    },
+    {
+      "file": "src\\features\\inventory\\InventoryEditForm.tsx",
+      "sha256": "fa0721bd5e0f8eb18ac19847e6a9e0342497603203472bfa93dcc0f4025932a1"
+    },
+    {
+      "file": "src\\features\\inventory\\InventoryPages.tsx",
+      "sha256": "b8e0f777d58ae3c47cb9766e22e404306fa971dbbe2f8c1fae65246c2adedab1"
+    },
+    {
+      "file": "src\\features\\price-brackets\\BracketForm.tsx",
+      "sha256": "56b88e31386c63d0de09f238d682db747d66189e4732994541dbf28f74a6a90a"
+    },
+    {
+      "file": "src\\features\\price-brackets\\PriceBracketsPage.tsx",
+      "sha256": "18760e481e47b596b690f815eb59f9875f1f3741369f7eead66126f2cd3d9c77"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchaseEditor.tsx",
+      "sha256": "6caad46e75b924157195d72b81c4ca3bb5609f3fad2c192e84bf7010acc14e24"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchaseInvoicePage.tsx",
+      "sha256": "33d68e8dd4d1211e15ebf3be3b595375d0ac69749e3330a9e8ef5a0efc183e90"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchaseResults.tsx",
+      "sha256": "be5722b1b57eb159713edde1bf5aaf9d299795de82efacb260ea4edc3daadfcb"
+    },
+    {
+      "file": "src\\features\\purchases\\PurchasesPage.tsx",
+      "sha256": "1eb7f5255aceceb71883fe82fb529c8a8c818059ada264d9555f9bbe35075c04"
+    },
+    {
+      "file": "src\\features\\reference-data\\use-list-page-size.ts",
+      "sha256": "ddf50c5d140d2be29e1b99519a6cc076a9fe94b24dfb77a1d40d4eb23dd9d6f0"
+    },
+    {
+      "file": "src\\features\\reference-data\\use-resource.ts",
+      "sha256": "bee8bbefc6485db021e4b12b9da812fe540cd3990694d6344d07f58fd81b8597"
+    },
+    {
+      "file": "src\\features\\reports\\AgedStockReportPage.tsx",
+      "sha256": "869aec49867557dfd16b8984924f1454d5187d3c3b1df2e24b0d6b21f628259f"
+    },
+    {
+      "file": "src\\features\\reports\\FinancialReportPage.tsx",
+      "sha256": "d65c82658a598593a56f8bf776fbb5122596427ca7004bdc6407aaf675e0c09f"
+    },
+    {
+      "file": "src\\features\\reports\\PurchaseCostReportPage.tsx",
+      "sha256": "1b7b07a39a7aefdb679f4b987410949af6f804245fe4457b1c3ababddb3c43fe"
+    },
+    {
+      "file": "src\\features\\reports\\report-catalog.ts",
+      "sha256": "ea843dcd8bfd4042ac584843038c1928f9bbc89a07a6b36e23a72a4b4d3ae762"
+    },
+    {
+      "file": "src\\features\\reports\\ReportPeriodForm.tsx",
+      "sha256": "0a3592ee1fbfa6fab544eb5e1d1c87e76e229173d18ef438f782cb75c62b8225"
+    },
+    {
+      "file": "src\\features\\reports\\ReportPicker.tsx",
+      "sha256": "2cf23835773b33b3013809b5d1b262f37eca6d2ea5e8b06087dee19d60ec0d3d"
+    },
+    {
+      "file": "src\\features\\reports\\RevenueReportPage.tsx",
+      "sha256": "1b79ed6a233bb0928dca037629ad0aaceacaa80148c97826b4cfae2cee5f3a58"
+    },
+    {
+      "file": "src\\features\\sales\\SaleInvoiceCard.tsx",
+      "sha256": "d6d31f05f254558d99082a512787e05b82f79a634096da228213f682d6215b8a"
+    },
+    {
+      "file": "src\\features\\sales\\SalesEditor.tsx",
+      "sha256": "462fe02db7d5119053a868f735605196d533198980b14a3e0622714cc46c23aa"
+    },
+    {
+      "file": "src\\features\\sales\\SalesPages.tsx",
+      "sha256": "0713a6a542d249f9932f43aaa58163d6040438c92eb03fec56309e431fa38483"
+    },
+    {
+      "file": "src\\features\\sales\\TransferQrDialog.tsx",
+      "sha256": "57deadba736536caa5c5f0c370ecfe5e48b1a99ee6dbf2569ad09b73d9dfa275"
+    },
+    {
+      "file": "src\\features\\staff\\StaffForm.tsx",
+      "sha256": "980759b5503a36813a3d5212a80fbebfec3ddcf4ec2d1e2ec94f6f984e638e53"
+    },
+    {
+      "file": "src\\features\\staff\\StaffPages.tsx",
+      "sha256": "ba3a4a9b2be07bc6aa2abec8af0e0f9c55f988e071e78dd4f9904d1417f37855"
+    },
+    {
+      "file": "src\\index.css",
+      "sha256": "8383fa1bafa74a689b288fe1d0fb1d4c0d04f9651fb7d1b184d36dfea2e85d0a"
+    },
+    {
+      "file": "src\\lib\\payment\\vietqr.ts",
+      "sha256": "271635a79037002ab2aa699684602743569a196230730b898283c00461a3de39"
+    },
+    {
+      "file": "src\\lib\\vietnam-time.ts",
+      "sha256": "326ce9f78ffc0f75db8d46ff9222868bc82d87954f28b1bcd672d50a99cc5ac4"
+    },
+    {
+      "file": "src\\main.tsx",
+      "sha256": "e11d62b317fddd796a860b83ab04f8f947f8cbaed9c1a1083a02e2058e9fd9da"
+    },
+    {
+      "file": "src\\repositories\\constraints.ts",
+      "sha256": "739fb56a1d2bf585aac592ee95cf767065ba2020befb8dd1f37fff5f01267fb0"
+    },
+    {
+      "file": "src\\repositories\\errors.ts",
+      "sha256": "98e2625f8b6fe81496df8c055686cb0c70504f083db4a33b79c1e58e6bdde989"
+    },
+    {
+      "file": "src\\repositories\\index.ts",
+      "sha256": "5a4183e0b67afccc2e08d4a4b2edc137c1d074aa22ebe5cf605f074850c7c0dc"
+    },
+    {
+      "file": "src\\repositories\\purchase-links.ts",
+      "sha256": "b49d9b6f3f699237bfbf4e52baabe3cdaa3a7057edb43fad137541873cd13db5"
+    },
+    {
+      "file": "src\\services\\aged-stock-report.ts",
+      "sha256": "c4c3bffd82c1eb636b546eab2219e9a7c876280528003975df8ee32bb47fa4a2"
+    },
+    {
+      "file": "src\\services\\auth\\crypto.ts",
+      "sha256": "8b95459cd3f14d3a32ef43d68ae2b7de335a602b663d7b9644e44d47ea1a16cc"
+    },
+    {
+      "file": "src\\services\\auth\\errors.ts",
+      "sha256": "f74ba7708d684b6d6bf5fce85a4ce756193c148433a5ee73e42e9dbd397c5a1a"
+    },
+    {
+      "file": "src\\services\\auth\\service.ts",
+      "sha256": "eabb75ac6043dae6d5e1cd9850917854d695112e691d054ad8582521b1a050cb"
+    },
+    {
+      "file": "src\\services\\auth\\storage.ts",
+      "sha256": "deb6cb43d596562060ced5633ee2f2d52e69ada76818b639985b41ddfe15a233"
+    },
+    {
+      "file": "src\\services\\customer-creation.ts",
+      "sha256": "d730d6429bdb95ced38a20504ff463fe14e84cb059832f2741f8f8ef1dedeb99"
+    },
+    {
+      "file": "src\\services\\dashboard.ts",
+      "sha256": "bb5ac13eaa8667eceb6ef77fe174587f6ba11fa0a06d567a5a610a58ce842d9c"
+    },
+    {
+      "file": "src\\services\\discount-scheduler.ts",
+      "sha256": "73ff7d51dea898b1e52ee0a2a690534114913207d2160a3aadf96ae195c17124"
+    },
+    {
+      "file": "src\\services\\financial-reports.ts",
+      "sha256": "10b3b965519cfd0f51b4655e1f37784f1e8fdbcb982e45a8bf1d8fb5dd6bd2d0"
+    },
+    {
+      "file": "src\\services\\inventory.ts",
+      "sha256": "c7c16323af965a94ca8c53dd7a00bb61eb70693bb8b1b373bff9b72b5aaf55b8"
+    },
+    {
+      "file": "src\\services\\permissions.ts",
+      "sha256": "7d001389660657d119664bebfc47306429dfd48d67dd5328a5d14f5d3da4174b"
+    },
+    {
+      "file": "src\\services\\purchase-approvals.ts",
+      "sha256": "95d7cb5dc597cdf4f3d931760511bbd76fc5e769a9c7605e9828a51d2166a0a8"
+    },
+    {
+      "file": "src\\services\\purchase-candidate.ts",
+      "sha256": "532eeada2adab90bd1779bdb996dde78cdc0c03e318bb6f1ca71b2a8ad87dc55"
+    },
+    {
+      "file": "src\\services\\purchase-drafts.ts",
+      "sha256": "9baed8fcaf2080285208071195b2c221a2629af0c2de34d10ddeeff8bd1cfccb"
+    },
+    {
+      "file": "src\\services\\purchase-finalization.ts",
+      "sha256": "c2beae4d4031c6bd3fa284d134c975945d622d671c74362b50ee88ee206d65d4"
+    },
+    {
+      "file": "src\\services\\purchase-queries.ts",
+      "sha256": "a2aa3d6019356c1aa979af169a3082573c84c590bc749ebf0094fa207bad02da"
+    },
+    {
+      "file": "src\\services\\purchase-report.ts",
+      "sha256": "e13749d031ad731d381dff215eff25d1a3d3c76df73e057a694528607bed04bc"
+    },
+    {
+      "file": "src\\services\\reference-data\\contracts.ts",
+      "sha256": "2d490a626031f2674f883be84e6104523036fce63992411a8658f583cd901e06"
+    },
+    {
+      "file": "src\\services\\reference-data\\local.ts",
+      "sha256": "14ec56443af3e852e6fb0bc10746c2991e202be4eff05931441be371479021b5"
+    },
+    {
+      "file": "src\\services\\report-queries.ts",
+      "sha256": "e9b75a7ce29d2c3166d0c542749353d8e9e286051bb952a3e7e321fd82e0602b"
+    },
+    {
+      "file": "src\\services\\sales-payment.ts",
+      "sha256": "ff8a4efcde7845736c03297ba4ecc44a9d3cc5ff92462e27ae0ebd5a4a36be1e"
+    },
+    {
+      "file": "src\\services\\sales-queries.ts",
+      "sha256": "76ef5c5262b929848c17aa921060ccb41e0e167be0fadbbb7439abd91b1bee4c"
+    },
+    {
+      "file": "src\\services\\sales-report-ledger.ts",
+      "sha256": "32438be3583f734d6ae8015829bc267fb157b4fdedd166ad71c39278ef81c803"
+    },
+    {
+      "file": "src\\services\\sales.ts",
+      "sha256": "06ad2a9e6d482abf082f256f66cef0bf53c36a9b7aad843c8d05a05afdd7b975"
+    },
+    {
+      "file": "src\\services\\staff-accounts.ts",
+      "sha256": "edc4825883ee89ab2c9933ed0bdc7bde9997d3809545d91462207cda18e0d29d"
+    },
+    {
+      "file": "src\\services\\stock-comparison.ts",
+      "sha256": "5f138cdff2ca52a0c7272d7c9fb6a4d8da5a8af0522622e26910bc56f5ae1286"
+    },
+    {
+      "file": "src\\vite-env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "file": "tests\\e2e\\auth-helpers.ts",
+      "sha256": "3d61ef176b5389682fa2ec5ef574d2e142c06b6f110af8a42b7b560ba08d4679"
+    },
+    {
+      "file": "tests\\e2e\\auth.spec.ts",
+      "sha256": "12c1ec321231644ed5d9cd4d7b23dcf5247b8bb6771e8ef4d31dc97ea4f0d375"
+    },
+    {
+      "file": "tests\\e2e\\confirmation.spec.ts",
+      "sha256": "05caa85ce1089ea174f3ec4cadbedb6c18b8e456da8b603852a23ab343899ad5"
+    },
+    {
+      "file": "tests\\e2e\\discount-scheduler.spec.ts",
+      "sha256": "3c329560534cb62eb53b834f62008fa11f58e0c36f6c4c518e09ca6b7bf0f4b1"
+    },
+    {
+      "file": "tests\\e2e\\g6-verification.spec.ts",
+      "sha256": "545d1d68683618f56f540783d5688e3b0628f1ec1b912b3eaa32b71b92607159"
+    },
+    {
+      "file": "tests\\e2e\\home-stock-comparison.spec.ts",
+      "sha256": "895c2cc8c814e96d0d7c6d95505dfde3db6a05a8cb593d41e684cbaee92ddf5f"
+    },
+    {
+      "file": "tests\\e2e\\home-t05.spec.ts",
+      "sha256": "8773b0da172d17c2296c3eb3049ff655d5790f925ade9bf64c77868ecd9e7f8a"
+    },
+    {
+      "file": "tests\\e2e\\inventory-edit.spec.ts",
+      "sha256": "a29720d93d4fc22a04de4510918f6e272968777df61e2d23f452fad8055a79a0"
+    },
+    {
+      "file": "tests\\e2e\\inventory-helpers.ts",
+      "sha256": "f8440a36a16385776e17a8ed1dc7725464400b3603fde5228662b6faa40bd479"
+    },
+    {
+      "file": "tests\\e2e\\inventory.spec.ts",
+      "sha256": "d5b664c1e7884d04434cdd6c820b4a7298f6ca0f2fb2b124dfd85ca1d135ac37"
+    },
+    {
+      "file": "tests\\e2e\\pagination-helpers.ts",
+      "sha256": "479baf1ca68dceac917d4323a304ef1880b25eb6bfcef0c33f44deae35e38779"
+    },
+    {
+      "file": "tests\\e2e\\pagination.spec.ts",
+      "sha256": "3e88dfad70622d1ab072df79c0c48491fa6ad3a7f16b642186817325b559b5bb"
+    },
+    {
+      "file": "tests\\e2e\\phase10-customer-edit.spec.ts",
+      "sha256": "40ded7d125a3607639918a7968a2e4b01bf917a55151601b89229afd59c7bab3"
+    },
+    {
+      "file": "tests\\e2e\\phase10-finalize-benchmark.spec.ts",
+      "sha256": "a1151ba4b2704bf66f0740166865adcf35fa5d6aff87d33049163e5d82e68c22"
+    },
+    {
+      "file": "tests\\e2e\\phase10-integrity.spec.ts",
+      "sha256": "eb4f545e2bf486dc31fe6428f20be61a009b7d7deb039724e637d104c60153fd"
+    },
+    {
+      "file": "tests\\e2e\\phase10-journey.spec.ts",
+      "sha256": "baa9c3e589f5718feca024d4c0faa3d6ef9296df6e3021dcc5be287650f3cc49"
+    },
+    {
+      "file": "tests\\e2e\\phase10-security.spec.ts",
+      "sha256": "9d22337dd06e3ae67377cb41241be123f3e1494dd4c0f9d8022a3db3999a6b9c"
+    },
+    {
+      "file": "tests\\e2e\\phase10-usability-benchmark.spec.ts",
+      "sha256": "43359510807452302901341a3b64e1768787ac61baf8c444d1f163e55c1f13f1"
+    },
+    {
+      "file": "tests\\e2e\\phase10-visual.spec.ts",
+      "sha256": "4c75af23f964078ddb6612beef4953435e663773e2aab1f3b7e11a8e4955d0a4"
+    },
+    {
+      "file": "tests\\e2e\\purchase-approvals.spec.ts",
+      "sha256": "a3c26827ca951532aa2b70fb60920fab392029b5d9a161ddeeaa1137b2dafc7e"
+    },
+    {
+      "file": "tests\\e2e\\purchase-candidate-storage.spec.ts",
+      "sha256": "f9110c0b7506342f52be32ffc003e2d79929eae940170a5a77949a855564b3cc"
+    },
+    {
+      "file": "tests\\e2e\\purchase-customer-layout.spec.ts",
+      "sha256": "51d288f6df8bb6033de48c88ecc7d8310932ebfe480c7ef22654eb2a75e61848"
+    },
+    {
+      "file": "tests\\e2e\\purchase-drafts.spec.ts",
+      "sha256": "ce13c6d69f78b659fb86655810cb87da3b5ccfd4a724d22a0e0ea6c6ca1fb25f"
+    },
+    {
+      "file": "tests\\e2e\\purchase-editor-figma.spec.ts",
+      "sha256": "b60aec64d6cbf14799a73344a65774097f6d11a3f9a28044347d15a5def20f7d"
+    },
+    {
+      "file": "tests\\e2e\\purchase-finalization-storage.spec.ts",
+      "sha256": "c4de5ecff81242241df8fdb3822687966bea3c3574cf4a50140a29d5912796c2"
+    },
+    {
+      "file": "tests\\e2e\\purchase-finalization.spec.ts",
+      "sha256": "2c0230f8ed0fdf82eee543d0039552d1340fc55bb65f419830c271838ceb8e70"
+    },
+    {
+      "file": "tests\\e2e\\purchase-helpers.ts",
+      "sha256": "25538bdb5835e1ca390b2145672821f98bc136da8e856215df980341dd7ca302"
+    },
+    {
+      "file": "tests\\e2e\\purchase-list.spec.ts",
+      "sha256": "4b8ad7f541804c1d03c1086a5102e3ff526fb1f6a59bcd74e132a85277515797"
+    },
+    {
+      "file": "tests\\e2e\\purchase-queries.spec.ts",
+      "sha256": "b996b28c1d8dcfecfdeac0037af49313b89ffc3890ec2fec8acbcb824f7a536e"
+    },
+    {
+      "file": "tests\\e2e\\purchase-results.spec.ts",
+      "sha256": "a047d7f73a7ec61ba4eaf616b0645ab5b1a1a92bf949720a9794ca55ba15a044"
+    },
+    {
+      "file": "tests\\e2e\\reference-data.spec.ts",
+      "sha256": "8950694ba182d5c496b30eef8b57ceb114449aca5165774f015494f17d26b949"
+    },
+    {
+      "file": "tests\\e2e\\reports-purchase-cost.spec.ts",
+      "sha256": "0f9a11002e8f232411c97772fb65ffd9439b3fe23c7864ed9719e71d4ff2c308"
+    },
+    {
+      "file": "tests\\e2e\\reports-reconciliation.spec.ts",
+      "sha256": "0debb35a717fc737e3ee9986cd6b4a978575126ec4fbd1b79d915bbc86b58bf2"
+    },
+    {
+      "file": "tests\\e2e\\reports-revenue.spec.ts",
+      "sha256": "627f737e1d15c746eef03c20efed4bb9c65a372135caca71b637eaeac56780bf"
+    },
+    {
+      "file": "tests\\e2e\\reports-t04.spec.ts",
+      "sha256": "c2853cb8af58790d082555162186613ac111966fc15a3eade182c632965f5e85"
+    },
+    {
+      "file": "tests\\e2e\\sale-payment.spec.ts",
+      "sha256": "6e7aaa20cadecdca095870d3c58343fee2bd60c9f594200ed5ec00674a3b4da6"
+    },
+    {
+      "file": "tests\\e2e\\sales-draft.spec.ts",
+      "sha256": "1e41cb28cbe787960713a9f96e39d6e6f2605418f02edea2984efa25e4cbf452"
+    },
+    {
+      "file": "tests\\e2e\\sales-helpers.ts",
+      "sha256": "0a5cd2f1f4916a790c9e17b1be6b22c9cccd46828d6bd8961a6c629012d349ad"
+    },
+    {
+      "file": "tests\\e2e\\sales-pages.spec.ts",
+      "sha256": "19c0a30e317dc4598c6f14184653fe15f64242b3c5fdd4ccf56401ae3aa76258"
+    },
+    {
+      "file": "tests\\e2e\\sales-t05-errors.spec.ts",
+      "sha256": "bcd6ba05e791b31ccd8e18543e579a58bdbb08bbd71802ef74707617f85e5187"
+    },
+    {
+      "file": "tests\\e2e\\sales-t05-t06.spec.ts",
+      "sha256": "a4da8ff1b5c978ea7a83bd6de249fc2a378ea54ce46f59b5969e9bffda68a499"
+    },
+    {
+      "file": "tests\\e2e\\sales-t06-recovery.spec.ts",
+      "sha256": "5271ed98cf0aecf98d1bb5b5a6c2040a76503401f890071e28e87cae6f223e3c"
+    },
+    {
+      "file": "tests\\e2e\\shell.spec.ts",
+      "sha256": "bed2a06487ea9698df6fbdd670ac87d1534f1ecb74b2c7e2f8bb5e104f546188"
+    },
+    {
+      "file": "tests\\e2e\\staff-review.spec.ts",
+      "sha256": "c980acf515794a3085ec7706f8c2534e6fd55c3945ed7d9a11f7bb3fde503f3f"
+    },
+    {
+      "file": "tests\\e2e\\staff.spec.ts",
+      "sha256": "399b43d5fb788f96c45aa1a93a17923da0ca051ea9d0d115b0d750481150e8c9"
+    },
+    {
+      "file": "tests\\fixtures\\g6-migration-verification.ts",
+      "sha256": "90e09874f4167768f4cbac4fc029650dd34b6957672613ec4ea183bb867296ea"
+    },
+    {
+      "file": "tests\\fixtures\\phase2-schema.ts",
+      "sha256": "36fe376751ab5fb61e87d2eddf55aaea119f17cc9a7d7d92d547668dad13f1b4"
+    },
+    {
+      "file": "tests\\fixtures\\purchase-candidate-browser.ts",
+      "sha256": "9c278d095b5d81884d77218521297b3d859e5cb71949c04d22250608b7a08140"
+    },
+    {
+      "file": "tests\\fixtures\\purchase-finalization-browser.ts",
+      "sha256": "d28fbdbb3df49ad841aef627c2357884e7eeb08da8b511511dccce7e8c866f31"
+    },
+    {
+      "file": "tests\\fixtures\\purchase-finalized-graph.ts",
+      "sha256": "123d7cf33a49540e55881c26476d38abc56d04ddb17e09800335b2a0b370b172"
+    },
+    {
+      "file": "tests\\unit\\auth.test.ts",
+      "sha256": "142f75f870891b7bc7041012c8f7f1855cf3bc600d99fa00d224a672ec4cc5ce"
+    },
+    {
+      "file": "tests\\unit\\customer-creation.test.ts",
+      "sha256": "3aae9be30029519a5d3e234c3977ea74a42d24594bb67116d217678e6ea20f77"
+    },
+    {
+      "file": "tests\\unit\\customer-edit.test.ts",
+      "sha256": "8b3caa6e5434386a2f0a48c858a39d182e7e3e675be071a321f4c37517bb14bd"
+    },
+    {
+      "file": "tests\\unit\\dashboard-comparison.test.ts",
+      "sha256": "8e18e4428bb3700c4c665215d70e73f82cc9675067b8547c0842c6a3e57369ee"
+    },
+    {
+      "file": "tests\\unit\\database.test.ts",
+      "sha256": "923ee674b0e6a4f263e9854e77f8a33f2a4fe5e3f2940f43d93f516492908cfc"
+    },
+    {
+      "file": "tests\\unit\\discount-scheduler.test.ts",
+      "sha256": "61029ff85f1b7554af15f225b74397cfaa1a5cc819c5a3d95861707768ab1364"
+    },
+    {
+      "file": "tests\\unit\\financial-number.test.ts",
+      "sha256": "26def00cde9ae3334bdc86268e64a8a92707466d751791f527f7333ca5b4e047"
+    },
+    {
+      "file": "tests\\unit\\inventory.test.ts",
+      "sha256": "dc54522fbc95520f37c0988154c2dcbcc2e7d11faafddcb51add05c4c6a07cc0"
+    },
+    {
+      "file": "tests\\unit\\pagination.test.ts",
+      "sha256": "6d35c76e4ad2a85450f4d37afe4ea1787ea92f08642aa63d9a1e8e0f8793e5a2"
+    },
+    {
+      "file": "tests\\unit\\phase10-audit.test.ts",
+      "sha256": "86703a97af231ea0f4ec4830de3c3938e652fb7b9d5f0e8a9f32e1fdfccb8aca"
+    },
+    {
+      "file": "tests\\unit\\purchase-approvals.test.ts",
+      "sha256": "b9a7ba109d8565f4382a38991980619d579075f79a6991e8cb8543ff4787177f"
+    },
+    {
+      "file": "tests\\unit\\purchase-candidate.test.ts",
+      "sha256": "2b9cc96d5f59efae48c7fa5db0a2f059e34caf5119c3ff974b3c4b3f766d0e2f"
+    },
+    {
+      "file": "tests\\unit\\purchase-contract.test.ts",
+      "sha256": "3af89c26d5bcc7dbe059e149791da9121d5bff73f4c16a08a003a3c68d20768f"
+    },
+    {
+      "file": "tests\\unit\\purchase-drafts.test.ts",
+      "sha256": "6f3a622e720e6db9a59a38fde8908cd73c8111477d2422c55de8191277854e78"
+    },
+    {
+      "file": "tests\\unit\\purchase-finalization.test.ts",
+      "sha256": "839c35f621799ca82b83cc32ef942d84d68da4808a00152dd52a734a5a935361"
+    },
+    {
+      "file": "tests\\unit\\purchase-queries.test.ts",
+      "sha256": "349abc12938f9e2884adf1cad9631f8229bacbaa43eb8f23bff2a7c723bc1bce"
+    },
+    {
+      "file": "tests\\unit\\reference-data.test.ts",
+      "sha256": "c6434bb4e2f4f79bf58eff81b7273e3c8f88db9f079d5ad4fd12cae37e55b9d6"
+    },
+    {
+      "file": "tests\\unit\\report-components.test.tsx",
+      "sha256": "4f3e056ce848669c82c56fbc368bc409ea091bd3762f49af187f5de98af44623"
+    },
+    {
+      "file": "tests\\unit\\report-eligibility.test.ts",
+      "sha256": "8ad1f79df1b2ef96aae527c9b4fc39b53a24a229ddfb42665229c28a68d3fe18"
+    },
+    {
+      "file": "tests\\unit\\report-legacy-migration.test.ts",
+      "sha256": "77eaedf2acbc4df859e1319091914206082153733a8e16ef2df26a4f11e2961c"
+    },
+    {
+      "file": "tests\\unit\\report-period.test.ts",
+      "sha256": "006876124227c5cbdb7b9c0818de7dfc03b14666179828016cedada5fc1a6afb"
+    },
+    {
+      "file": "tests\\unit\\report-queries.test.ts",
+      "sha256": "90dd37e2aa2e7785b793109acc4f5d4768cc71e777007950338c8201440265c4"
+    },
+    {
+      "file": "tests\\unit\\repositories.test.ts",
+      "sha256": "f55d27472c7bb4c03928f67d9440cac3f71cdca9bab005701eaeffee51584c85"
+    },
+    {
+      "file": "tests\\unit\\revenue-report.test.ts",
+      "sha256": "8735c6f4b8e7ecda8115d56912dc00c954dffc299e4693fd96f4e6c3955a7261"
+    },
+    {
+      "file": "tests\\unit\\sale-payment.test.ts",
+      "sha256": "aa4b78c951aaa32ac1f0931ae1967c49a877cea22455d046efda8810acf45467"
+    },
+    {
+      "file": "tests\\unit\\sales.test.ts",
+      "sha256": "e82f0069675947066a7c4c62d96a486ecdf95434d8c14ecb86b75c5926bf0aaa"
+    },
+    {
+      "file": "tests\\unit\\setup.ts",
+      "sha256": "5413d12d1fa831e4777b23845e86d6219a5763543c8e3e203ea048670e4bfd62"
+    },
+    {
+      "file": "tests\\unit\\staff-accounts.test.ts",
+      "sha256": "5a7cb46df06867e6e5c89482a038d5038675219abfadb9050f2feef7bbb6aa64"
+    },
+    {
+      "file": "tests\\unit\\stock-comparison.test.ts",
+      "sha256": "775580f1357164ce9d788f130023362ff6136776631607a7f30e923a00d6688f"
+    },
+    {
+      "file": "tests\\visual\\customer-dialogs.local.spec.ts",
+      "sha256": "1f570ba1bb1c5db6e6fc79e01b44c7f69dbf1486f08e2287fdbb887b8d996a9a"
+    },
+    {
+      "file": "tests\\visual\\references\\SC105-picker.json",
+      "sha256": "0f86594a6c2e10d0933160a006288a7be0b9b0ab26cabab9332250cbe4c70e88"
+    },
+    {
+      "file": "tests\\visual\\references\\SC105-picker.png",
+      "sha256": "c54fc0b16abee3a0336449de3ea3deca0f0906a5bbbe4ddc2382fc2271fa634f"
+    },
+    {
+      "file": "scripts\\audit-phase1.mjs",
+      "sha256": "32ab56afa195023002e415dea5701f233cd0961af707b419f87e78e5817ce859"
+    },
+    {
+      "file": "scripts\\measure.mjs",
+      "sha256": "1a0a15908e12a30e6ee81ffd20ecbfd02ac5f1df525332bf6a58d589b00cc109"
+    },
+    {
+      "file": "scripts\\phase10-audit.ts",
+      "sha256": "88cc2f8feffce8f9fcd7ae7fcbd25081f2c114ab767ce0b51772c1efad3cbd9c"
+    },
+    {
+      "file": "scripts\\render-pdf-reference.mjs",
+      "sha256": "01d18b543ffc77bc4654acd917cd19d555e65acb59129c151f6a449eff7fe2d4"
+    },
+    {
+      "file": "package.json",
+      "sha256": "edd26d762a33e222f4bb560be4751167916a9e9c5519691421a54b9b39bab027"
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "0466a148e350cdc3d7fdc6bfdbaa8780c2ec98c2413bf3cd36a29320e51f2ca3"
+    },
+    {
+      "file": "tsconfig.json",
+      "sha256": "a5c2c487c36dffa3e043b7fe9c77bcf3f81c63776493c2cb96d3fb920da095d7"
+    },
+    {
+      "file": "playwright.config.ts",
+      "sha256": "560fd564faf64f2769bd35cbde1757cd1119b2be5c0ca156a76998b40bc9dac1"
+    },
+    {
+      "file": "playwright.visual.config.ts",
+      "sha256": "53ff7677527d720eaf9a073033c121e0fb80c468a1b4e9c4252df05ab2b442d3"
+    },
+    {
+      "file": "vite.config.ts",
+      "sha256": "0c1e06cace51c43ed2dec645367d29db94c08e61f78a7a14f8201e6f21afc3f0"
+    }
+  ],
+  "unitDelta": [],
+  "browserDelta": [
+    "tests\\unit\\purchase-finalization.test.ts",
+    "tests\\unit\\sale-payment.test.ts"
+  ],
+  "unexpected": [],
+  "bundle": {
+    "checked": 22,
+    "changed": [],
+    "missing": [],
+    "identical": true
+  }
+}

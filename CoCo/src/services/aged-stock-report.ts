@@ -2,7 +2,7 @@ import { z } from 'zod';
 import type { CoCoDatabase } from '../db/schema';
 import { entitySchemas, metadataSchemas } from '../domain/records';
 import { inventoryAttributesKey, inventoryAttributesSchema, vietnamDay, daysBetween } from '../domain/inventory';
-import { purchaseFinalizationSchema, purchaseProvenanceSchema, purchaseSubtotal } from '../domain/purchases';
+import { purchaseFinalizationFieldsSchema, purchaseProvenanceSchema, purchaseSubtotal } from '../domain/purchases';
 import { statusMappingSchema } from './purchase-finalization';
 import { RepositoryError } from '../repositories/errors';
 
@@ -25,7 +25,7 @@ export async function agedStockReport(db: CoCoDatabase, input: AgedStockFilters,
     let finalized = await db.table('purchaseFinalizations').get(product.MaHDTM);
     if (finalized) {
       // Validate the snapshot except payment time, never used for inventory age.
-      const saved = purchaseFinalizationSchema.innerType().extend({ paidAt: z.unknown().optional() }).parse(finalized);
+      const saved = purchaseFinalizationFieldsSchema.extend({ paidAt: z.unknown().optional() }).parse(finalized);
       if (saved.invoiceId !== product.MaHDTM || purchaseSubtotal(saved.lines) !== saved.subtotal || saved.paidTotal !== saved.subtotal
         || saved.lines.some(line => line.draftId !== saved.draftId || line.removedAt || !['priced', 'approved'].includes(line.status))) throw invalid();
       finalized = saved;

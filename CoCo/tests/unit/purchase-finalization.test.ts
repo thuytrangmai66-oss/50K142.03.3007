@@ -9,6 +9,7 @@ import { StaffAccountsService } from '../../src/services/staff-accounts';
 import { readCandidatePurchase } from '../../src/services/purchase-candidate';
 import { recordVersionKey } from '../../src/repositories';
 import { PURCHASE_STATUS_MAPPING } from '../../src/domain/purchase-status';
+import * as cryptoHelpers from '../../src/services/auth/crypto';
 
 const testMapping = PURCHASE_STATUS_MAPPING;
 let db: CoCoDatabase, auth: AuthService, token: string;
@@ -77,6 +78,56 @@ it('issues one product per item, rounds initial price half up and uses Vietnam d
   expect(products).toHaveLength(3); expect(new Set(products.map(row => row.MaSP)).size).toBe(3);
   for (const product of products) expect(product).toMatchObject({ GiaBanHienHanh: 104007, GiaGocChuKyGiam: 104007, TrangThai: 1, NgayNhapKho: date, NgayBatDauChuKyGiam: date });
   expect(snapshot.subtotal).toBe(240015);
+});
+
+it('G10 invoice allocation skips existing, issued and version-tombstoned invoice IDs without altering legacy data', async () => {
+  const { command, current } = await ready();
+  const legacy = { MaHDTM: 'TMaaaaaaaa', NgayThuMua: '2020-01-01T00:00:00Z', TongTienTM: 7, TrangThai: 90,
+    MaNV: current.draft.employeeId, MaKH: current.draft.customerId! };
+  await db.hoaDonThuMua.add(legacy);
+  const issued = { key: recordVersionKey('hoaDonThuMua', 'TMbbbbbbbb'), issuedAt: '2020-01-01T00:00:00Z' };
+  const version = { key: recordVersionKey('hoaDonThuMua', 'TMcccccccc'), version: 5, updatedAt: '2020-01-01T00:00:00Z' };
+  await db.issuedIdentifiers.add(issued); await db.recordVersions.add(version);
+  const random = vi.spyOn(cryptoHelpers, 'randomHex');
+  for (const suffix of ['aaaaaaaa', 'bbbbbbbb', 'cccccccc', 'dddddddd', 'eeeeeeee']) random.mockReturnValueOnce(suffix);
+  const result = await finalizer.finalize(command);
+  expect(result.invoiceId).toBe('TMdddddddd');
+  expect(await db.hoaDonThuMua.get(legacy.MaHDTM)).toEqual(legacy);
+  expect(await db.issuedIdentifiers.get(issued.key)).toEqual(issued);
+  expect(await db.recordVersions.get(version.key)).toEqual(version);
+  expect(await db.hoaDonThuMua.count()).toBe(2);
+});
+
+it('G10 exhausted invoice IDs leave all stores unchanged and allow a fresh retry', async () => {
+  const { command } = await ready();
+  await db.issuedIdentifiers.add({ key: recordVersionKey('hoaDonThuMua', 'TMaaaaaaaa'), issuedAt: '2020-01-01T00:00:00Z' });
+  const before = await databaseSnapshot(), random = vi.spyOn(cryptoHelpers, 'randomHex').mockReturnValue('aaaaaaaa');
+  await expect(finalizer.finalize(command)).rejects.toMatchObject({ code: 'DUPLICATE' });
+  expect(await databaseSnapshot()).toEqual(before);
+  random.mockRestore();
+  expect((await finalizer.finalize(command)).duplicate).toBe(false);
+  expect(await db.hoaDonThuMua.count()).toBe(1);
+});
+
+it('never reuses issued/versioned product IDs or a duplicate ID within one finalization batch', async () => {
+  const { command } = await ready(2, '80005');
+  await db.issuedIdentifiers.add({ key: recordVersionKey('sanPham', 'SPaaaaaaaa'), issuedAt: '2020-01-01T00:00:00Z' });
+  await db.recordVersions.add({ key: recordVersionKey('sanPham', 'SPbbbbbbbb'), version: 7, updatedAt: '2020-01-01T00:00:00Z' });
+  const random = vi.spyOn(cryptoHelpers, 'randomHex');
+  for (const id of ['11111111', 'aaaaaaaa', 'bbbbbbbb', 'cccccccc', 'cccccccc', 'dddddddd']) random.mockReturnValueOnce(id);
+  await finalizer.finalize(command);
+  expect((await db.sanPham.toArray()).map(row => row.MaSP).sort()).toEqual(['SPcccccccc', 'SPdddddddd']);
+  expect(await db.recordVersions.get(recordVersionKey('sanPham', 'SPbbbbbbbb'))).toMatchObject({ version: 7 });
+  expect(await db.issuedIdentifiers.get(recordVersionKey('sanPham', 'SPaaaaaaaa'))).toMatchObject({ issuedAt: '2020-01-01T00:00:00Z' });
+});
+
+it('rolls back the invoice, draft and reservations if product ID retries are exhausted', async () => {
+  const { command } = await ready();
+  await db.issuedIdentifiers.add({ key: recordVersionKey('sanPham', 'SPaaaaaaaa'), issuedAt: '2020-01-01T00:00:00Z' });
+  const before = await databaseSnapshot();
+  vi.spyOn(cryptoHelpers, 'randomHex').mockReturnValueOnce('11111111').mockReturnValue('aaaaaaaa');
+  await expect(finalizer.finalize(command)).rejects.toMatchObject({ code: 'DUPLICATE' });
+  expect(await databaseSnapshot()).toEqual(before);
 });
 
 it('retries a committed operation once and rejects another finalize command or payload', async () => {

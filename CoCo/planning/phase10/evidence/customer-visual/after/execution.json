@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "startTime": "2026-11-14T10:10:08.177Z",
+    "duration": 19638.630999999998,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "title": "SC101 owner confirm: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1775,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "SC102 owner linked: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2441,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "SC103 owner success: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1635,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "SC104 owner failure: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1709,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "SC294 staff confirm: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1917,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "SC295 staff linked: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3517,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "SC296 staff success: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2072,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "SC297 staff failure: exact private source comparison and actual deletion rules",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1762,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

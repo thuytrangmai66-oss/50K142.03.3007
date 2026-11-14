@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-11-14T12:08:21.570Z",
+  "os": "win32",
+  "release": "10.0.26200",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+  "logicalCpus": 12,
+  "memoryGiB": 16,
+  "node": "v24.22.0",
+  "packages": {
+    "vitest": "5.1.0",
+    "@playwright/test": "1.64.1",
+    "vite": "6.4.5",
+    "react": "18.3.1",
+    "dexie": "4.4.7",
+    "fake-indexeddb": "6.2.7",
+    "jsdom": "26.1.0",
+    "zod": "4.6.7"
+  }
+}

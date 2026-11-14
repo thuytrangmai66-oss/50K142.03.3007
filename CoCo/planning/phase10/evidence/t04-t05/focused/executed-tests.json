@@ -1,0 +1,76 @@
+{
+  "stats": {
+    "startTime": "2026-11-14T05:56:26.685Z",
+    "duration": 69082.038,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "id": "e65446ef24e245e5019f-bcb6321b0a680c1dc5b3",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 owner 25: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 8015
+    },
+    {
+      "id": "e65446ef24e245e5019f-0980fa4145d82e999f2b",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 owner 1000: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 19386
+    },
+    {
+      "id": "e65446ef24e245e5019f-94a73a71336a587e709c",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 staff 25: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 8800
+    },
+    {
+      "id": "e65446ef24e245e5019f-90ae9e7da4d05afd1150",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 staff 1000: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 20722
+    },
+    {
+      "id": "389a5707b4b281917fd5-fc730358faa5c404344d",
+      "file": "phase10-security.spec.ts",
+      "title": "G10-T04 owner: persisted HTML customer name stays literal through detail, history and reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1613
+    },
+    {
+      "id": "389a5707b4b281917fd5-24fc86d12e790cb4a50f",
+      "file": "phase10-security.spec.ts",
+      "title": "G10-T04 staff: persisted HTML customer name stays literal through detail, history and reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1953
+    },
+    {
+      "id": "389a5707b4b281917fd5-0c7e1ff75063f869b22f",
+      "file": "phase10-security.spec.ts",
+      "title": "G10-T04 rejection HTML is stored literally, delivered across tabs and harmless after owner reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3293
+    },
+    {
+      "id": "f5f4d20f86a85c04e0d3-60a9f271f954bee67887",
+      "file": "phase10-visual.spec.ts",
+      "title": "G10-T03 SC105 report picker: source geometry and pixel comparison, no runtime baseline update",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1265
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "checked": 187,
+  "changed": [],
+  "additionalQaTool": {
+    "path": "scripts/render-pdf-reference.mjs",
+    "sha256": "01d18b543ffc77bc4654acd917cd19d555e65acb59129c151f6a449eff7fe2d4",
+    "validation": "single PDF and batch 154 executed; lint PASS; not bundled into app"
+  }
+}

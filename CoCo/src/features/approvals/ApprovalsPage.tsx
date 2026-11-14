@@ -81,7 +81,8 @@ function ApprovalDetail({ approvalId }: { approvalId: string }) {
       reload();
     } catch (cause) {
       const conflict = cause instanceof RepositoryError && cause.code === 'CONFLICT';
-      setNotice({ message: conflict ? 'Yêu cầu không còn đủ điều kiện phê duyệt' : action === 'approve' ? 'Không thể lưu kết quả phê duyệt' : 'Không thể lưu kết quả từ chối', error: true });
+      // A stale decision cannot be retried; dismissing it must unmount the whole nested flow.
+      setNotice({ message: conflict ? 'Yêu cầu không còn đủ điều kiện phê duyệt' : action === 'approve' ? 'Không thể lưu kết quả phê duyệt' : 'Không thể lưu kết quả từ chối', error: true, closeFlow: conflict });
     } finally { lock.current = false; setBusy(false); }
   }
   return <>

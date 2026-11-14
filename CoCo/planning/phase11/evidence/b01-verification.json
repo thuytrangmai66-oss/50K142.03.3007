@@ -1,0 +1,47 @@
+{
+  "recordedAt": "2026-11-14T16:22:55.764Z",
+  "scope": "G11-B01 only; source error fixed, tests and database/business rules unchanged",
+  "sourceFile": "src/features/approvals/ApprovalsPage.tsx",
+  "fix": "Set closeFlow only for RepositoryError CONFLICT so dismissing notice unmounts nested approval dialogs and navigates to /approvals",
+  "before": {
+    "failed": 3,
+    "passed": 0,
+    "trace": "Local b01-before/*/trace.zip; reviewed"
+  },
+  "targeted": {
+    "startTime": "2026-11-14T16:07:29.786Z",
+    "duration": 167964.501,
+    "expected": 33,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "unit": {
+    "passed": 538,
+    "failed": 0,
+    "skipped": 0,
+    "files": 29,
+    "durationSeconds": 191.53
+  },
+  "chromium": {
+    "startTime": "2026-11-14T16:11:07.490Z",
+    "duration": 614668.1460000001,
+    "expected": 167,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "build": "PASS; same 22-file bundle through full Chromium",
+  "sourceGuard": {
+    "checkedAt": "2026-11-14T16:13:02.032Z",
+    "changedSourceFiles": [
+      "CoCo/src/features/approvals/ApprovalsPage.tsx"
+    ],
+    "testFilesUnchanged": true,
+    "servicesRepositoriesSchemaUnchanged": true,
+    "workflowUnchanged": true
+  },
+  "acceptedG10Issues": "A01-A07 ACCEPTED FOR RELEASE / DEFERRED; not fixed or certified PASS"
+}

@@ -17,12 +17,13 @@ export function CustomerDetailPage() {
   const load = useCallback(() => referenceData.customer(customerId), [referenceData, customerId]);
   const { data, loading, error, reload } = useResource(load);
   const [editing, setEditing] = useState<Customer>(), [confirm, setConfirm] = useState<Customer>(), [busy, setBusy] = useState(false);
-  const [notice, setNotice] = useState<{ text: string; error: boolean; deleted?: boolean }>();
+  const [notice, setNotice] = useState<{ text: string; error: boolean; deletion?: boolean; deleted?: boolean; linked?: boolean }>();
   useEffect(() => setConfirm(undefined), [customerId]);
   async function remove() {
     if (!confirm || busy) return; setBusy(true);
-    try { await referenceData.deleteCustomer(confirm.record.MaKH, confirm.version, true); setConfirm(undefined); setNotice({ text: 'Đã xóa thông tin khách hàng', error: false, deleted: true }); }
-    catch (cause) { setConfirm(undefined); setNotice({ text: cause instanceof DataServiceError ? cause.message : 'Xóa không thành công', error: true }); }
+    try { await referenceData.deleteCustomer(confirm.record.MaKH, confirm.version, true); setConfirm(undefined); setNotice({ text: 'Đã xóa thông tin khách hàng', error: false, deletion: true, deleted: true }); }
+    catch (cause) { setConfirm(undefined); setNotice({ text: cause instanceof DataServiceError ? cause.message : 'Xóa không thành công', error: true,
+      deletion: true, linked: cause instanceof DataServiceError && cause.code === 'HAS_HISTORY' }); }
     finally { setBusy(false); }
   }
   return <section className="reference-page">
@@ -35,7 +36,7 @@ export function CustomerDetailPage() {
         <div className="form-actions"><Button className="button-danger" onClick={() => setConfirm(data)}><Trash2 aria-hidden="true" />Xóa tài khoản</Button><Button className="button-beige" onClick={() => setEditing(data)}><Pencil aria-hidden="true" />Sửa thông tin</Button></div>
       </div></article>}
     {editing && <CustomerForm customer={editing} onClose={() => setEditing(undefined)} onSaved={text => { setEditing(undefined); setNotice({ text, error: false }); reload(); }} />}
-    {confirm && <ConfirmDialog message="Có chắc chắn xóa thông tin khách hàng không?" onClose={() => setConfirm(undefined)} busy={busy} onConfirm={remove} />}
-    {notice && <ResultDialog message={notice.text} error={notice.error} onClose={() => { if (notice.deleted) navigate('/customers'); setNotice(undefined); }} />}
+    {confirm && <ConfirmDialog className="customer-delete-confirm" message="Có chắc chắn xóa thông tin khách hàng không?" onClose={() => setConfirm(undefined)} busy={busy} onConfirm={remove} />}
+    {notice && <ResultDialog className={notice.deletion ? `customer-delete-result${notice.linked ? ' customer-delete-linked' : ''}` : ''} message={notice.text} error={notice.error} onClose={() => { if (notice.deleted) navigate('/customers'); setNotice(undefined); }} />}
   </section>;
 }

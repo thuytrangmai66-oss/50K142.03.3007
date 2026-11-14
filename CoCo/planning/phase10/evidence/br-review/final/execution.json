@@ -1,0 +1,55 @@
+{
+  "executedAt": "2026-11-14T11:27:16.127Z",
+  "timeZone": "Asia/Saigon",
+  "baseCommit": "1fd4ad4a04e3b870a1c673fd7abd344af50dea69",
+  "workingTree": "Uncommitted G10; not a release SHA",
+  "unit": {
+    "passed": 538,
+    "failed": 0,
+    "pending": 0,
+    "todo": 0,
+    "success": true
+  },
+  "chromium": {
+    "startTime": "2026-11-14T11:12:47.859Z",
+    "duration": 620118.409,
+    "expected": 167,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "visual": {
+    "startTime": "2026-11-14T11:25:15.296Z",
+    "duration": 55271.923,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS"
+  },
+  "sourceGuard": {
+    "files": 191,
+    "unitRunChanged": [],
+    "chromiumRunIntentionalUnitOnlyChanges": [
+      "tests\\unit\\purchase-finalization.test.ts",
+      "tests\\unit\\sale-payment.test.ts"
+    ],
+    "chromiumRuntimeOrE2EChanged": []
+  },
+  "productionBundle": {
+    "checked": 22,
+    "changed": [],
+    "missing": [],
+    "identical": true
+  },
+  "staticAudit": {
+    "status": "NOT_RERUN",
+    "baseline": "../../customer-visual/final/static-audit.json",
+    "reason": "Runtime/dependency/config inputs unchanged; preserve historical phase5 audit file"
+  },
+  "g10Acceptance": "IN_PROGRESS_NOT_ACCEPTED"
+}

@@ -1,0 +1,82 @@
+{
+  "recordedAt": "2026-11-14T15:56:27.928Z",
+  "conclusion": "RELEASE BLOCKED",
+  "blockingGate": "Local full Chromium preflight failed; commit/push/CI/deploy not attempted",
+  "branch": "main",
+  "baseHead": "1fd4ad4a04e3b870a1c673fd7abd344af50dea69",
+  "candidate": {
+    "candidate": "D:\\50K142-NEW\\.g11-release",
+    "tree": "d2dd0e86341303874cdd60e84888a15a7983dd53",
+    "snapshot": "2c8db14446dec5ab00db25b3a7c8c3c26304245f",
+    "ref": "refs/coco-local-backup/2026-11-14T15-30-53-634Z/release-candidate",
+    "createdAt": "2026-11-14T15:36:22.454Z"
+  },
+  "checks": {
+    "install": {
+      "status": "PASS in isolated candidate",
+      "durationSeconds": 17,
+      "workspaceAttempt": "EPERM esbuild.exe lock; workspace dependencies restored from same lockfile without deleting data or stopping local server"
+    },
+    "lint": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "typecheck": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "unit": {
+      "status": "PASS",
+      "passed": 538,
+      "failed": 0,
+      "skipped": 0,
+      "files": 29,
+      "runnerSeconds": 201.21
+    },
+    "build": {
+      "status": "PASS",
+      "artifactFiles": 22,
+      "warning": "chunk >500 kB unchanged"
+    },
+    "chromium": {
+      "status": "FAIL",
+      "startTime": "2026-11-14T15:43:36.571Z",
+      "duration": 618048.595,
+      "expected": 166,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0,
+      "failedTest": "G10 opposing approve/reject UI decisions commit once and both owner tabs recover without reload"
+    }
+  },
+  "sourceGuard": {
+    "protectedFiles": 198,
+    "workspaceByteIdentical": true,
+    "candidateGitContentIdentical": true,
+    "newlineOnlyCheckoutDifferences": 188,
+    "createdAt": "2026-11-14T15:46:17.933Z"
+  },
+  "codex": {
+    "files": 1162,
+    "bytes": 579440653,
+    "manifestSha256": "e81df9148d53e98425dc9270388a1d8c7cc92f6f7bd9baa1d19c28a0fe4d8696",
+    "allFileHashesUnchanged": true,
+    "checkedAt": "2026-11-14T15:48:20.605Z"
+  },
+  "releaseCommit": null,
+  "push": "NOT RUN",
+  "ciRun": null,
+  "ci": "NOT RUN for this candidate",
+  "pages": "NO NEW DEPLOYMENT",
+  "smoke": "NOT RUN",
+  "acceptedIssues": [
+    "G10-A01",
+    "G10-A02",
+    "G10-A03",
+    "G10-A04",
+    "G10-A05",
+    "G10-A06",
+    "G10-A07"
+  ],
+  "policy": "Accepted/deferred issues have not been fixed or converted to PASS. No assertion, schema, runtime source or workflow changed during this release task."
+}

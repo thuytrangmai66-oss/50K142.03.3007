@@ -2,8 +2,8 @@ import { useEffect, useId, useRef } from 'react';
 import { TriangleAlert, X } from 'lucide-react';
 import { Button } from './Button';
 
-export function ConfirmDialog({ message, busy = false, onConfirm, onClose }: {
-  message: string; busy?: boolean; onConfirm(): Promise<void>; onClose(): void;
+export function ConfirmDialog({ message, busy = false, className = '', onConfirm, onClose }: {
+  message: string; busy?: boolean; className?: string; onConfirm(): Promise<void>; onClose(): void;
 }) {
   const ref = useRef<HTMLDialogElement>(null), pending = useRef(false), titleId = useId();
   useEffect(() => {
@@ -16,7 +16,7 @@ export function ConfirmDialog({ message, busy = false, onConfirm, onClose }: {
     pending.current = true;
     try { await onConfirm(); } finally { pending.current = false; }
   }
-  return <dialog ref={ref} className="confirm-dialog" aria-labelledby={titleId} aria-busy={busy}
+  return <dialog ref={ref} className={`confirm-dialog ${className}`} aria-labelledby={titleId} aria-busy={busy}
     onCancel={event => { event.preventDefault(); close(); }}>
     <button type="button" className="confirm-close" aria-label="Đóng xác nhận" disabled={busy} onClick={close}><X aria-hidden="true" /></button>
     <div className="confirmation-icon"><TriangleAlert aria-hidden="true" /></div>

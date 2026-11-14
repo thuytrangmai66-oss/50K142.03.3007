@@ -1,0 +1,45 @@
+{
+  "role": "staff",
+  "measurement": "UI latency including Playwright interaction/auto-wait; no SLA verdict",
+  "machine": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "logicalCpus": 12,
+    "memoryGiB": 16,
+    "node": "v24.22.0"
+  },
+  "browser": "156.0.8078.4",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "results": [
+    {
+      "records": 25,
+      "warmup": 1,
+      "samplesMs": [
+        52,
+        60.100000001490116,
+        57.400000002235174,
+        49.899999998509884,
+        48.19999999925494
+      ],
+      "p50Ms": 52,
+      "p95Ms": 60.100000001490116
+    },
+    {
+      "records": 1000,
+      "warmup": 1,
+      "samplesMs": [
+        45.5,
+        47.900000002235174,
+        50.5,
+        69.10000000149012,
+        63.30000000074506
+      ],
+      "p50Ms": 50.5,
+      "p95Ms": 69.10000000149012
+    }
+  ]
+}

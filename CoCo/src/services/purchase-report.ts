@@ -1,6 +1,6 @@
 import { z, ZodError } from 'zod';
 import type { CoCoDatabase } from '../db/schema';
-import { purchaseDraftSchema, purchaseFinalizationSchema, purchaseProvenanceSchema, purchaseSubtotal } from '../domain/purchases';
+import { purchaseDraftSchema, purchaseFinalizationFieldsSchema, purchaseProvenanceSchema, purchaseSubtotal } from '../domain/purchases';
 import { entitySchemas, metadataSchemas, timestamp } from '../domain/records';
 import { reportingEligibility, eligibilityCoverage, type Eligibility } from '../domain/report-eligibility';
 import { inReportPeriod, type ReportPeriod } from '../lib/vietnam-time';
@@ -8,7 +8,7 @@ import { canonical, historicalEmployee } from '../repositories/purchase-links';
 import { RepositoryError } from '../repositories/errors';
 
 // Reporting tolerates missing payment TIME, without weakening the write contract.
-const evidenceSchema = purchaseFinalizationSchema.innerType().omit({ paidAt: true }).extend({ paidAt: z.unknown().optional() });
+const evidenceSchema = purchaseFinalizationFieldsSchema.omit({ paidAt: true }).extend({ paidAt: z.unknown().optional() });
 const invalid = () => new RepositoryError('REFERENCE', 'Bằng chứng thu mua không nhất quán');
 export async function purchaseCostReport(db: CoCoDatabase, period: ReportPeriod) {
   const invoices = await db.hoaDonThuMua.toArray();

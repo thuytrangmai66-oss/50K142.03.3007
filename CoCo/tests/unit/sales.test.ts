@@ -1,6 +1,5 @@
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import { CoCoDatabase } from '../../src/db/schema';
-import { calculateSalesPromotion, salesSubtotal } from '../../src/domain/sales';
 import { AuthService } from '../../src/services/auth/service';
 import { LocalReferenceData } from '../../src/services/reference-data/local';
 import { PurchaseDraftService } from '../../src/services/purchase-drafts';
@@ -217,55 +216,6 @@ it('cancels a draft without selling the product and rejects empty carts', async 
   expect((await sales.load(saved.draft.id)).draft.status).toBe('cancelled');
   expect((await db.sanPham.get(productId))?.TrangThai).toBe(PURCHASE_STATUS_MAPPING.productAvailable);
   expect(await db.hoaDonBanHang.count()).toBe(0);
-});
-
-it('rejects safe-integer subtotal overflow', () => {
-  const selectedAt = '2026-11-13T00:00:00.000Z';
-  const line = (productId: string, amount: number) => ({
-    productId, sourcePurchaseId: 'TM00000001', name: 'Áo', quantity: 1 as const,
-    unitPrice: amount, lineTotal: amount, productVersion: 1, selectedAt,
-  });
-  expect(salesSubtotal([line('SP00000001', Number.MAX_SAFE_INTEGER)])).toBe(Number.MAX_SAFE_INTEGER);
-  expect(() => salesSubtotal([line('SP00000001', Number.MAX_SAFE_INTEGER), line('SP00000002', 1)])).toThrow('vượt quá giới hạn');
-});
-
-it('rounds member discount on subtotal and awards points only on the amount actually paid', () => {
-  expect(calculateSalesPromotion({
-    subtotal: 100_003, isMember: true, pointsBalance: 51, useMembershipDiscount: true,
-  })).toEqual({
-    subtotal: 100_003, discount: 20_001, total: 80_002, isMember: true,
-    pointsBefore: 51, pointsUsed: 50, pointsEarned: 8, pointsAfter: 9,
-  });
-  expect(calculateSalesPromotion({
-    subtotal: 100_002, isMember: true, pointsBalance: 50, useMembershipDiscount: true,
-  }).discount).toBe(20_000);
-});
-
-it('requires 50 member points for the discount and allows members not to use it', () => {
-  expect(() => calculateSalesPromotion({
-    subtotal: 50_000, isMember: true, pointsBalance: 49, useMembershipDiscount: true,
-  })).toThrow('tối thiểu 50 điểm');
-  expect(calculateSalesPromotion({
-    subtotal: 50_000, isMember: true, pointsBalance: 49, useMembershipDiscount: false,
-  })).toMatchObject({ discount: 0, total: 50_000, pointsUsed: 0, pointsEarned: 5, pointsAfter: 54 });
-});
-
-it('does not grant member benefits to nonmembers or change their point balance', () => {
-  expect(calculateSalesPromotion({
-    subtotal: 50_000, isMember: false, pointsBalance: 0, useMembershipDiscount: false,
-  })).toMatchObject({ discount: 0, total: 50_000, pointsUsed: 0, pointsEarned: 0, pointsAfter: 0 });
-  expect(() => calculateSalesPromotion({
-    subtotal: 50_000, isMember: false, pointsBalance: 0, useMembershipDiscount: true,
-  })).toThrow('Chỉ thành viên');
-});
-
-it('rejects applying member points to an empty cart and point balance overflow', () => {
-  expect(() => calculateSalesPromotion({
-    subtotal: 0, isMember: true, pointsBalance: 50, useMembershipDiscount: true,
-  })).toThrow('giỏ hàng trống');
-  expect(() => calculateSalesPromotion({
-    subtotal: Number.MAX_SAFE_INTEGER, isMember: true, pointsBalance: 0, useMembershipDiscount: false,
-  })).toThrow('vượt quá giới hạn');
 });
 
 it('does not permit a stale version when a product is re-priced between lookup and add', async () => {

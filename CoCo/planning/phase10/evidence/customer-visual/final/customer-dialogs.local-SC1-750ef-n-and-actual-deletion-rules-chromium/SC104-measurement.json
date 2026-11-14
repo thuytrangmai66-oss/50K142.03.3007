@@ -1,0 +1,46 @@
+{
+  "id": "SC104",
+  "role": "owner",
+  "state": "failure",
+  "scope": "Customer deletion modal only; not a full-screen SC verdict",
+  "sourceSha256": "370303a88d7b1faed59f0fde4f98a56a944fbfd79fd01eed4e5d60f06f45070d",
+  "rasterSha256": "6d4ce3d11c19f31ea10b59641dd967d71c4002586ce19ee3aa23fda64011a9e9",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "dpr": 1,
+  "sourceBounds": {
+    "x": 481,
+    "y": 319,
+    "width": 477,
+    "height": 263
+  },
+  "actualBox": {
+    "x": 481,
+    "y": 319,
+    "width": 477,
+    "height": 263
+  },
+  "typography": {
+    "font": "bold 25px \"Be Vietnam Pro\", sans-serif",
+    "lineHeight": "32px",
+    "lines": [
+      {
+        "x": 578.09375,
+        "y": 478,
+        "width": 281.8125,
+        "height": 32,
+        "top": 478,
+        "right": 859.90625,
+        "bottom": 510,
+        "left": 578.09375
+      }
+    ],
+    "confirmFirstLineWidth": 344.324951171875
+  },
+  "masks": [],
+  "threshold": 0.2,
+  "maxDiffPixelRatio": 0.01,
+  "geometryTolerancePx": 2
+}

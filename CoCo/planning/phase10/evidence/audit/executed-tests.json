@@ -1,0 +1,1325 @@
+{
+  "reportProvided": true,
+  "counts": {
+    "PASS": 164,
+    "FAIL": 0,
+    "SKIP": 0,
+    "FLAKY": 0,
+    "NOT_RUN": 0,
+    "NON_STANDARD_EXPECTATION": 0
+  },
+  "tests": [
+    {
+      "id": "d748ac400d08b85935ef-6aeb8f604a468d5a426b",
+      "file": "auth.spec.ts",
+      "title": "owner: login states, source geometry, real session, logout and Back protection",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2201
+    },
+    {
+      "id": "d748ac400d08b85935ef-f8207b6ff4211b737003",
+      "file": "auth.spec.ts",
+      "title": "staff: login states, source geometry, real session, logout and Back protection",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2036
+    },
+    {
+      "id": "d748ac400d08b85935ef-6d65c6ad9291c011aa04",
+      "file": "auth.spec.ts",
+      "title": "owner and staff share DB with separate sessions, staff route denied and revoked account loses access",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1696
+    },
+    {
+      "id": "d748ac400d08b85935ef-24658aa3c6aae15f586e",
+      "file": "auth.spec.ts",
+      "title": "real browser v2 migration preserves existing owner credentials and customer data",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 737
+    },
+    {
+      "id": "d748ac400d08b85935ef-fe1bb6455c01a8efb698",
+      "file": "auth.spec.ts",
+      "title": "forged session data cannot select an owner identity",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1044
+    },
+    {
+      "id": "d748ac400d08b85935ef-9e9c24aa645d53fc44fa",
+      "file": "auth.spec.ts",
+      "title": "failed browser session persistence rolls back the new login session and offers recovery",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 793
+    },
+    {
+      "id": "d748ac400d08b85935ef-702040ac06b9097fe95e",
+      "file": "auth.spec.ts",
+      "title": "bootstrap is race-safe across two browser tabs",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 715
+    },
+    {
+      "id": "017c55d4f5a868839d60-cd18cd468a2dba8d59c9",
+      "file": "confirmation.spec.ts",
+      "title": "owner customers: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2988
+    },
+    {
+      "id": "017c55d4f5a868839d60-bd06222c11322d4035eb",
+      "file": "confirmation.spec.ts",
+      "title": "staff customers: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3125
+    },
+    {
+      "id": "017c55d4f5a868839d60-37308c19b38576e8247e",
+      "file": "confirmation.spec.ts",
+      "title": "owner staff: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3476
+    },
+    {
+      "id": "017c55d4f5a868839d60-de9d12decaa42d02ac54",
+      "file": "confirmation.spec.ts",
+      "title": "delete failure rolls back data, shows an error, and allows a real retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1610
+    },
+    {
+      "id": "017c55d4f5a868839d60-353aaa4e2106627e5739",
+      "file": "confirmation.spec.ts",
+      "title": "busy confirmation blocks repeat clicks, X, cancel and Escape until one transaction finishes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1514
+    },
+    {
+      "id": "017c55d4f5a868839d60-0bd747a4fd4732c3d3d0",
+      "file": "confirmation.spec.ts",
+      "title": "a changed customer cannot be deleted using an old open confirmation snapshot",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2273
+    },
+    {
+      "id": "c1dfccb1b79b56f0cff4-54d74886145bb06d282b",
+      "file": "discount-scheduler.spec.ts",
+      "title": "G7 automatic delayed reopening and two native tabs apply 45 first, including below-20000, and both roles read real monitor logs",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3938
+    },
+    {
+      "id": "c1dfccb1b79b56f0cff4-ade26e357367ec3de6f0",
+      "file": "discount-scheduler.spec.ts",
+      "title": "G7 native scheduled write failure rolls back price/event/version, logs failure and recovers on another opening without duplicates",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2863
+    },
+    {
+      "id": "c1dfccb1b79b56f0cff4-273d1c2c9f786a840ded",
+      "file": "discount-scheduler.spec.ts",
+      "title": "G7 open app runs at Vietnam midnight with no manual trigger",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2207
+    },
+    {
+      "id": "6b5b13d2c5f8da76bdeb-1a9b30cea494604c7e6b",
+      "file": "g6-verification.spec.ts",
+      "title": "T07 native migration abort restores v3 and successful runtime upgrade preserves all legacy stores and numeric codes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 308
+    },
+    {
+      "id": "6b5b13d2c5f8da76bdeb-89e36502e4646dcee42f",
+      "file": "g6-verification.spec.ts",
+      "title": "T07 actual runtime: two UI roles approve, finalize, live-read shared invoice/history and preserve canonical graph on reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4834
+    },
+    {
+      "id": "961dc9275c152ce0ed76-05d1571736e14af25c5e",
+      "file": "home-stock-comparison.spec.ts",
+      "title": "G9-D05 sell: verified month-end comparison through real UI, foreign timezone and readonly reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3114
+    },
+    {
+      "id": "961dc9275c152ce0ed76-4eaf15bfe7f088a8e29d",
+      "file": "home-stock-comparison.spec.ts",
+      "title": "G9-D05 purchase: verified month-end comparison through real UI, foreign timezone and readonly reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3041
+    },
+    {
+      "id": "cc777a68e149cabce5af-ee2f9bf4b1a1e1d6170e",
+      "file": "home-t05.spec.ts",
+      "title": "T05 approved M01-B: independent staff dashboard updates live on real profile create/delete and preserves legacy after reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2362
+    },
+    {
+      "id": "cc777a68e149cabce5af-ea7fd798635df2dfef34",
+      "file": "home-t05.spec.ts",
+      "title": "T05 dashboard storage failure reports an error, offers retry and never displays a false zero",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1108
+    },
+    {
+      "id": "cc777a68e149cabce5af-953bcda7dc5e0cbf14ab",
+      "file": "home-t05.spec.ts",
+      "title": "T05 owner: real quick actions open lists without creating any business records",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1520
+    },
+    {
+      "id": "cc777a68e149cabce5af-1afac4e327d10860894b",
+      "file": "home-t05.spec.ts",
+      "title": "T05 staff: real quick actions open lists without creating any business records",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1700
+    },
+    {
+      "id": "cc777a68e149cabce5af-ba775a92ec14f52f48fc",
+      "file": "home-t05.spec.ts",
+      "title": "T05 review-only: render proposed card wording outside runtime for approval",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 321
+    },
+    {
+      "id": "7ab843560eab3575fa8d-60f8a34958e5c72d9b75",
+      "file": "inventory-edit.spec.ts",
+      "title": "G7 owner edits one physical item, validates, cancels, resets cycle and preserves historical records",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2649
+    },
+    {
+      "id": "7ab843560eab3575fa8d-a63f42f4ab98883f82d7",
+      "file": "inventory-edit.spec.ts",
+      "title": "G7 staff edits one physical item, validates, cancels, resets cycle and preserves historical records",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3394
+    },
+    {
+      "id": "7ab843560eab3575fa8d-c775b5402901d16e3b7d",
+      "file": "inventory-edit.spec.ts",
+      "title": "G7 stale editor reloads the real current form after conflict and never overwrites another tab",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3058
+    },
+    {
+      "id": "7ab843560eab3575fa8d-8662d5a8de8ca6b6cb90",
+      "file": "inventory-edit.spec.ts",
+      "title": "G7 native metadata write failure rolls back the whole edit, keeps form and permits one retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2026
+    },
+    {
+      "id": "491382254a121adeeb47-9bd2e8b31ce81ca4125b",
+      "file": "inventory.spec.ts",
+      "title": "G7 T01 owner: real inventory, combined filters, pagination, three desktop viewports, detail and read-only reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5717
+    },
+    {
+      "id": "491382254a121adeeb47-0812f988c5ce6066cd88",
+      "file": "inventory.spec.ts",
+      "title": "G7 T01 staff: real inventory, combined filters, pagination, three desktop viewports, detail and read-only reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5759
+    },
+    {
+      "id": "491382254a121adeeb47-10e1fab9c80b474097fd",
+      "file": "inventory.spec.ts",
+      "title": "G7 T01 empty inventory and native read failure use source error notices without writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1296
+    },
+    {
+      "id": "491382254a121adeeb47-2a2ba4a718d23d1eb616",
+      "file": "inventory.spec.ts",
+      "title": "G7 T01 inventory list spacing and typography match Thu mua at 1440x900",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1167
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-74f2471bc1140a57ba88",
+      "file": "pagination.spec.ts",
+      "title": "owner customers: responsive pages, stable footer, no internal scrolling",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 12096
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-84edc8b0f40db37e128c",
+      "file": "pagination.spec.ts",
+      "title": "staff customers: responsive pages, stable footer, no internal scrolling",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 11372
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-35209862d68e1817a5ca",
+      "file": "pagination.spec.ts",
+      "title": "owner staff: responsive pages, stable footer, no internal scrolling",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 9335
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-c91d92c30fa49c5f4916",
+      "file": "pagination.spec.ts",
+      "title": "owner price-brackets: responsive pages, stable footer, no internal scrolling",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 11748
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-875d4a310672756718ab",
+      "file": "pagination.spec.ts",
+      "title": "customer search paginates the filtered set and preserves the query across pages",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1195
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-267cbbfc76f975811ee3",
+      "file": "pagination.spec.ts",
+      "title": "bracket condition filter preserves its value while paging and resets a removed page",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1227
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-82ca8989e2de7d5c77f1",
+      "file": "pagination.spec.ts",
+      "title": "customers: UI add creates page 2; live delete clamps page 2 and keeps it clamped on later add",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1968
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-f7805a05d11023187f75",
+      "file": "pagination.spec.ts",
+      "title": "staff: UI add creates page 2; live delete clamps page 2 and keeps it clamped on later add",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2326
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-3fb09f0bd45977e27fa5",
+      "file": "pagination.spec.ts",
+      "title": "creating a tenth bracket updates the page count using the active filter",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1132
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-a5e8291a182dc2733c25",
+      "file": "pagination.spec.ts",
+      "title": "many pages use ellipsis and never link to a nonexistent page",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1245
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-4392fd9f3c0b30331f2a",
+      "file": "pagination.spec.ts",
+      "title": "owner customers: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1481
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-bc731c9de2ceeb13ec89",
+      "file": "pagination.spec.ts",
+      "title": "staff customers: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1660
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-9a9b729ce73de30aad05",
+      "file": "pagination.spec.ts",
+      "title": "owner staff: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1709
+    },
+    {
+      "id": "ffb96fb2c9977d04c390-65b1cd47902542038cef",
+      "file": "pagination.spec.ts",
+      "title": "owner price-brackets: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1975
+    },
+    {
+      "id": "e65446ef24e245e5019f-bcb6321b0a680c1dc5b3",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 owner 25: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 7870
+    },
+    {
+      "id": "e65446ef24e245e5019f-0980fa4145d82e999f2b",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 owner 1000: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 20124
+    },
+    {
+      "id": "e65446ef24e245e5019f-94a73a71336a587e709c",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 staff 25: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 8689
+    },
+    {
+      "id": "e65446ef24e245e5019f-90ae9e7da4d05afd1150",
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "title": "G10-T05 staff 1000: measure real purchase and cash-sale commits without an invented SLA",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 20359
+    },
+    {
+      "id": "68a1f091368433c0b9b2-f38de64422b8265f5727",
+      "file": "phase10-integrity.spec.ts",
+      "title": "G10-T04 native 1000-item graph: a final audit failure rolls back every write and retry commits exactly once",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4579
+    },
+    {
+      "id": "341d74eacde3883cb5de-67f77a062a1eb2ea4481",
+      "file": "phase10-journey.spec.ts",
+      "title": "G10-T01 staff sells first: approval, real earned points, redemption, history and all financial reports",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 6404
+    },
+    {
+      "id": "341d74eacde3883cb5de-7113f01f559cc82a6973",
+      "file": "phase10-journey.spec.ts",
+      "title": "G10-T01 owner sells first: approval, real earned points, redemption, history and all financial reports",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 6375
+    },
+    {
+      "id": "389a5707b4b281917fd5-fc730358faa5c404344d",
+      "file": "phase10-security.spec.ts",
+      "title": "G10-T04 owner: persisted HTML customer name stays literal through detail, history and reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1487
+    },
+    {
+      "id": "389a5707b4b281917fd5-24fc86d12e790cb4a50f",
+      "file": "phase10-security.spec.ts",
+      "title": "G10-T04 staff: persisted HTML customer name stays literal through detail, history and reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1558
+    },
+    {
+      "id": "389a5707b4b281917fd5-0c7e1ff75063f869b22f",
+      "file": "phase10-security.spec.ts",
+      "title": "G10-T04 rejection HTML is stored literally, delivered across tabs and harmless after owner reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3167
+    },
+    {
+      "id": "91d345f7a4197de79598-555a45e3a00246540cdf",
+      "file": "phase10-usability-benchmark.spec.ts",
+      "title": "G10-T05 owner: measured customer search, keyboard, touch and error-free create/delete",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3362
+    },
+    {
+      "id": "91d345f7a4197de79598-2d13e9f5f37c7c5f66b2",
+      "file": "phase10-usability-benchmark.spec.ts",
+      "title": "G10-T05 staff: measured customer search, keyboard, touch and error-free create/delete",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3309
+    },
+    {
+      "id": "f5f4d20f86a85c04e0d3-60a9f271f954bee67887",
+      "file": "phase10-visual.spec.ts",
+      "title": "G10-T03 SC105 report picker: source geometry and pixel comparison, no runtime baseline update",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1135
+    },
+    {
+      "id": "964addbbad63486b6cdc-1b959422d45d667d547e",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 approve through UI, independent sessions, live data, search/date and screenshots",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3405
+    },
+    {
+      "id": "964addbbad63486b6cdc-59c0aaef38f479f1011e",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 reject requires reason, cancel preserves data and shared decision updates live",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3239
+    },
+    {
+      "id": "964addbbad63486b6cdc-b66699b0f549a757fd72",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 approve write failure rolls back, retry commits once and delivery failure preserves the decision",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2976
+    },
+    {
+      "id": "964addbbad63486b6cdc-dca481fc22b7d41b9d3a",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 reject write failure rolls back, retry commits once and delivery failure preserves the decision",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2830
+    },
+    {
+      "id": "964addbbad63486b6cdc-fc4233a479ea16400293",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 refuses a request after employee remove",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2565
+    },
+    {
+      "id": "964addbbad63486b6cdc-c7b5ca14fa7ce26b0551",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 refuses a request after employee cancel",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2627
+    },
+    {
+      "id": "964addbbad63486b6cdc-838e2bbf8f846309bc7e",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 two owner tabs racing preserve a single decision and notice",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3113
+    },
+    {
+      "id": "964addbbad63486b6cdc-2a272f9280bf244cc62d",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 approve: dismiss success with Escape, preserve filters and open another request without overlay",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3063
+    },
+    {
+      "id": "964addbbad63486b6cdc-3f268fd5b9b6c2c81186",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 reject: dismiss success with Escape, preserve filters and open another request without overlay",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3171
+    },
+    {
+      "id": "964addbbad63486b6cdc-4e6bcf3894b15363a700",
+      "file": "purchase-approvals.spec.ts",
+      "title": "T03 real requests paginate and list read error recovers through navigation",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5710
+    },
+    {
+      "id": "52ed545ef03d686f1acf-cff667583f4893a3b7bc",
+      "file": "purchase-candidate-storage.spec.ts",
+      "title": "T01 native Chromium storage integration: candidate migration, CAS, replay, audit rollback and revoked session; no G6 UI claim",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 682
+    },
+    {
+      "id": "52ed545ef03d686f1acf-423954f24cbc8d78b95c",
+      "file": "purchase-candidate-storage.spec.ts",
+      "title": "T01 native FK integration: mixed-price lines, strict provenance and rollback; no finalize UI claim",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 497
+    },
+    {
+      "id": "00f1a7f331c1fe157141-150aabc015e839c175dc",
+      "file": "purchase-customer-layout.spec.ts",
+      "title": "owner: existing purchase customer follows local Figma phone suggestion and selected states",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2339
+    },
+    {
+      "id": "00f1a7f331c1fe157141-c1365b4eaab025e38597",
+      "file": "purchase-customer-layout.spec.ts",
+      "title": "staff: existing purchase customer follows local Figma phone suggestion and selected states",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2388
+    },
+    {
+      "id": "861f8cc3a033e3eaae44-24cf32871f15afa179a1",
+      "file": "purchase-drafts.spec.ts",
+      "title": "T02 owner: real UI input, validation, pending request, reload, remove and cancel",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2464
+    },
+    {
+      "id": "861f8cc3a033e3eaae44-1da09aec9b635335879a",
+      "file": "purchase-drafts.spec.ts",
+      "title": "T02 staff: real UI input, validation, pending request, reload, remove and cancel",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3365
+    },
+    {
+      "id": "861f8cc3a033e3eaae44-923eed47a6f5f9f49255",
+      "file": "purchase-drafts.spec.ts",
+      "title": "T02 native IDB failure keeps the price form, rolls back and retries without duplicate request",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1527
+    },
+    {
+      "id": "861f8cc3a033e3eaae44-dd2461d2b926e5c663ab",
+      "file": "purchase-drafts.spec.ts",
+      "title": "T02 real customer creation and selection persist without creating an invoice or stock",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1435
+    },
+    {
+      "id": "861f8cc3a033e3eaae44-b701159149eedd65ca9f",
+      "file": "purchase-drafts.spec.ts",
+      "title": "T02 missing bracket is recoverable and ten real lines paginate without hidden rows",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4574
+    },
+    {
+      "id": "00b2857266e179bf33fa-3e2a0112d4d3d07ad6ed",
+      "file": "purchase-editor-figma.spec.ts",
+      "title": "owner: empty purchase editor preserves the local Figma canvas layout",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1239
+    },
+    {
+      "id": "00b2857266e179bf33fa-f9edeb628678a5503fab",
+      "file": "purchase-editor-figma.spec.ts",
+      "title": "staff: empty purchase editor preserves the local Figma canvas layout",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1338
+    },
+    {
+      "id": "00b2857266e179bf33fa-1c89d3382f0892c5e3fb",
+      "file": "purchase-editor-figma.spec.ts",
+      "title": "purchase editor keeps the shared shell and reference typography across desktop viewports",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1935
+    },
+    {
+      "id": "c58d738a0840cd4f2711-4026fcbe5dd65956b6d6",
+      "file": "purchase-finalization-storage.spec.ts",
+      "title": "T05 native storage transaction rolls back, retries, reserves IDs and serializes connections",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 755
+    },
+    {
+      "id": "90446d4fe3ed13c8d685-0f06074665e07e18e64f",
+      "file": "purchase-finalization.spec.ts",
+      "title": "T05 owner validates empty and missing customer, finalizes mixed prices and quantity once, then reloads safely",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2725
+    },
+    {
+      "id": "90446d4fe3ed13c8d685-f1615438e1143c68cb75",
+      "file": "purchase-finalization.spec.ts",
+      "title": "T05 staff cannot finalize pending/rejected prices, then completes an approved mixed-price purchase",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4425
+    },
+    {
+      "id": "90446d4fe3ed13c8d685-920fe5710882a1ef59b6",
+      "file": "purchase-finalization.spec.ts",
+      "title": "T05 productCosts failure rolls back and keeps the editor for a single successful retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1942
+    },
+    {
+      "id": "90446d4fe3ed13c8d685-55b37ef5a7e746b01b14",
+      "file": "purchase-finalization.spec.ts",
+      "title": "T05 auditEntries failure rolls back and keeps the editor for a single successful retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2023
+    },
+    {
+      "id": "90446d4fe3ed13c8d685-86648b54c3a48b0d9114",
+      "file": "purchase-finalization.spec.ts",
+      "title": "T05 two owner tabs finalize one draft once and the losing tab recovers to the list",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2370
+    },
+    {
+      "id": "90446d4fe3ed13c8d685-6273d18f6f31f18f650a",
+      "file": "purchase-finalization.spec.ts",
+      "title": "T05 reload immediately after native commit restores the completed draft without a second invoice",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1982
+    },
+    {
+      "id": "90446d4fe3ed13c8d685-5df20aeca0f88b4704ba",
+      "file": "purchase-finalization.spec.ts",
+      "title": "T05 cancel customer creation leaves no customer and concurrent phone creation stays unique",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2108
+    },
+    {
+      "id": "12f13656cd02f7d87bec-fca1b9f4518e4021bba9",
+      "file": "purchase-list.spec.ts",
+      "title": "owner: Thu mua opens list, filters and pages real legacy data, then explicitly opens creation",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4781
+    },
+    {
+      "id": "12f13656cd02f7d87bec-57168fc352e1d6387bd5",
+      "file": "purchase-list.spec.ts",
+      "title": "staff: Thu mua opens list, filters and pages real legacy data, then explicitly opens creation",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4678
+    },
+    {
+      "id": "226d0cdd0378a0619e5a-3a8161117b1ff7d6e615",
+      "file": "purchase-queries.spec.ts",
+      "title": "T06 owner: real mixed-price purchase, combined search, reload, stable customer history and read-only views",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3665
+    },
+    {
+      "id": "226d0cdd0378a0619e5a-80deb7b464d7ad81426f",
+      "file": "purchase-queries.spec.ts",
+      "title": "T06 staff: real mixed-price purchase, combined search, reload, stable customer history and read-only views",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4220
+    },
+    {
+      "id": "226d0cdd0378a0619e5a-4be8863ef3e70bf2d014",
+      "file": "purchase-queries.spec.ts",
+      "title": "T06 read error list: Figma notice closes without fabricated data or writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2273
+    },
+    {
+      "id": "226d0cdd0378a0619e5a-6a0a16c54c72cf18eb07",
+      "file": "purchase-queries.spec.ts",
+      "title": "T06 read error detail: Figma notice closes without fabricated data or writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2366
+    },
+    {
+      "id": "226d0cdd0378a0619e5a-59a052d62d59864f6681",
+      "file": "purchase-queries.spec.ts",
+      "title": "T06 read error history: Figma notice closes without fabricated data or writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2452
+    },
+    {
+      "id": "87515726f1f3ea7570d6-1bdf4aa60714c1489811",
+      "file": "purchase-results.spec.ts",
+      "title": "T04 approval reaches the creator live, is acknowledged once and survives replay/reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3716
+    },
+    {
+      "id": "87515726f1f3ea7570d6-a952a504fc7aa61f92a8",
+      "file": "purchase-results.spec.ts",
+      "title": "T04 rejection reason and real price revision 80000, immutable history and new snapshot",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3372
+    },
+    {
+      "id": "87515726f1f3ea7570d6-60ce5d2fdc1b3ce0eba6",
+      "file": "purchase-results.spec.ts",
+      "title": "T04 rejection reason and real price revision 130000, immutable history and new snapshot",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3493
+    },
+    {
+      "id": "87515726f1f3ea7570d6-af2044fbca18171a0415",
+      "file": "purchase-results.spec.ts",
+      "title": "T04 unread result recovers after signal failure and two creator tabs display it once",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3467
+    },
+    {
+      "id": "87515726f1f3ea7570d6-95c4a1e59bbae8e50d3a",
+      "file": "purchase-results.spec.ts",
+      "title": "T04 acknowledgement and price write failures retain the dialog, rollback and retry once",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3152
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-c96a5e9eee373fac2a27",
+      "file": "reference-data.spec.ts",
+      "title": "owner customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2485
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-3c562da2acc4862a832b",
+      "file": "reference-data.spec.ts",
+      "title": "staff customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2975
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-bd9512e32183caa14b4e",
+      "file": "reference-data.spec.ts",
+      "title": "two tabs keep independent identities, live customer data without F5, and reject stale UI writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2305
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-a50d41d39b8bc843b8f4",
+      "file": "reference-data.spec.ts",
+      "title": "owner bracket UI uses fixed dropdown, validates, cancels, edits and blocks staff route",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2595
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-076b7158c440f93918c9",
+      "file": "reference-data.spec.ts",
+      "title": "customer UI reads existing purchase/sale history and snapshots, and refuses linked deletion",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1765
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-0109c5a469667231e25a",
+      "file": "reference-data.spec.ts",
+      "title": "customer UI handles a real IDB write failure without partial data and allows retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1293
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-e7542affc9b907266896",
+      "file": "reference-data.spec.ts",
+      "title": "customer pagination changes real rows and search reset returns to the first page",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2702
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-1ae1ff0a88dd1442dd8b",
+      "file": "reference-data.spec.ts",
+      "title": "layout fits 1366x650 without browser zoom",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1284
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-c32f178c75d921da9abf",
+      "file": "reference-data.spec.ts",
+      "title": "layout fits 1280x720 without browser zoom",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1273
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-b1dd4576e255ded51168",
+      "file": "reference-data.spec.ts",
+      "title": "layout fits 1024x768 without browser zoom",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1269
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-c7b7553333ce3d8fe35e",
+      "file": "reference-data.spec.ts",
+      "title": "layout fits 768x1024 without browser zoom",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1330
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-c0346eeb4d08ca67ba77",
+      "file": "reference-data.spec.ts",
+      "title": "layout fits 390x844 without browser zoom",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1288
+    },
+    {
+      "id": "72ea94e9c5dd86fa0359-49731c929f189673ec97",
+      "file": "reference-data.spec.ts",
+      "title": "layout fits 320x640 without browser zoom",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1248
+    },
+    {
+      "id": "5e12a72ef9762d57cd8b-a73461f2fb4cefa18f22",
+      "file": "reports-purchase-cost.spec.ts",
+      "title": "T03 actual purchase, four filters, read-only reload, source empty/error and three desktop viewports",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3054
+    },
+    {
+      "id": "5e12a72ef9762d57cd8b-7b7bbbb2c64f407a506a",
+      "file": "reports-purchase-cost.spec.ts",
+      "title": "T03 staff direct route is denied with an independent owner tab",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2380
+    },
+    {
+      "id": "5e12a72ef9762d57cd8b-65b64dfa50d3f49b7527",
+      "file": "reports-purchase-cost.spec.ts",
+      "title": "T03 25 daily rows from real transactions paginate without changing period totals",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 17314
+    },
+    {
+      "id": "76877b7602db7666a3db-a427a272a923398a1199",
+      "file": "reports-reconciliation.spec.ts",
+      "title": "G9-T06 approved purchase journey reconciles mixed-price stock, a real sale and both role dashboards",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4598
+    },
+    {
+      "id": "76877b7602db7666a3db-55c666b52c484a4e7c71",
+      "file": "reports-reconciliation.spec.ts",
+      "title": "G9-T06 partial: independent staff sales update owner reports live and reconcile invoices, stock and costs",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4665
+    },
+    {
+      "id": "90c5b04e7e6ed44c8cba-4577d1904d3d07b697e8",
+      "file": "reports-revenue.spec.ts",
+      "title": "G9-T02 owner: real discounted revenue, four period filters, reload, read-only and empty/error recovery",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3751
+    },
+    {
+      "id": "90c5b04e7e6ed44c8cba-1940a04a5808e84e1687",
+      "file": "reports-revenue.spec.ts",
+      "title": "G9-T02: 25 actual UI-completed invoices, daily pagination, stable totals and desktop screenshots",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 11730
+    },
+    {
+      "id": "90c5b04e7e6ed44c8cba-01bb43bd300510e25b18",
+      "file": "reports-revenue.spec.ts",
+      "title": "G9-T02 staff: sidebar hidden and direct report route denied, owner session remains independent",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3269
+    },
+    {
+      "id": "90c5b04e7e6ed44c8cba-7ff97b043e67e1535870",
+      "file": "reports-revenue.spec.ts",
+      "title": "G9-D01 native reload: missing payment time and legacy sale date never manufacture report revenue",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2802
+    },
+    {
+      "id": "860aa0f0056809245bf6-7cbdeab14095fb4fa977",
+      "file": "reports-t04.spec.ts",
+      "title": "T04 profit: real paid totals, period filters, empty/error, reload and desktop geometry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4367
+    },
+    {
+      "id": "860aa0f0056809245bf6-5a5c90603f74fd80e55c",
+      "file": "reports-t04.spec.ts",
+      "title": "T04 cash-flow: real paid totals, period filters, empty/error, reload and desktop geometry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5037
+    },
+    {
+      "id": "860aa0f0056809245bf6-9901eef8b33eea10f146",
+      "file": "reports-t04.spec.ts",
+      "title": "T04 aged stock: exact threshold, filters, 25 real products, pagination, empty/error and readonly reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5858
+    },
+    {
+      "id": "860aa0f0056809245bf6-4d69d722a554e7e92a94",
+      "file": "reports-t04.spec.ts",
+      "title": "T04 staff cannot access any new report while owner session remains independent",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2781
+    },
+    {
+      "id": "8f463ec47e692b419ccc-de0331a714ef81a38df4",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T03/T04 owner cash: real payment, immutable totals, exact points and close all dialogs",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3112
+    },
+    {
+      "id": "8f463ec47e692b419ccc-1d313354c4e4256fb5af",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T03/T04 owner transfer: real payment, immutable totals, exact points and close all dialogs",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4641
+    },
+    {
+      "id": "8f463ec47e692b419ccc-53381876792ec7bcbe3e",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T03/T04 staff cash: real payment, immutable totals, exact points and close all dialogs",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3903
+    },
+    {
+      "id": "8f463ec47e692b419ccc-9c760fc03a651d55bd3d",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T03/T04 staff transfer: real payment, immutable totals, exact points and close all dialogs",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5379
+    },
+    {
+      "id": "8f463ec47e692b419ccc-c31f872937aa0124858a",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T04 native appMetadata failure rolls back and allows one retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3496
+    },
+    {
+      "id": "8f463ec47e692b419ccc-3c9f5047ecf575e742ce",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T04 native auditEntries failure rolls back and allows one retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2911
+    },
+    {
+      "id": "8f463ec47e692b419ccc-c8b4106600fe4334632c",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T04 two real tabs cannot sell the same product twice and stale QR remains recoverable",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3712
+    },
+    {
+      "id": "8f463ec47e692b419ccc-e017368ae89e052c3e36",
+      "file": "sale-payment.spec.ts",
+      "title": "G8-T04 point overflow leaves the real cart recoverable and cannot create a sale",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2670
+    },
+    {
+      "id": "9c9e60b57108d84be0eb-3be355256e56d16deb1d",
+      "file": "sales-draft.spec.ts",
+      "title": "G8-T01 owner: mapped products remain draft-only",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4485
+    },
+    {
+      "id": "9c9e60b57108d84be0eb-2d2d5a9bfd5e6129ea96",
+      "file": "sales-draft.spec.ts",
+      "title": "G8-T01 staff: mapped products remain draft-only",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4962
+    },
+    {
+      "id": "9c9e60b57108d84be0eb-4f30c372bb56747422dd",
+      "file": "sales-draft.spec.ts",
+      "title": "G8-T02 owner: explicit membership opt-in persists before payment",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4117
+    },
+    {
+      "id": "9c9e60b57108d84be0eb-a02636b0875ab65e045a",
+      "file": "sales-draft.spec.ts",
+      "title": "G8-T02 staff: explicit membership opt-in persists before payment",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5511
+    },
+    {
+      "id": "6e8fb5373ace79c23a74-ff6fa54083a4ffaf49ed",
+      "file": "sales-pages.spec.ts",
+      "title": "G8 sales list: real UI invoices, combined search/reset, pagination, immutable detail and both roles",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 12047
+    },
+    {
+      "id": "6e8fb5373ace79c23a74-fbf9b9478cf07bde7b37",
+      "file": "sales-pages.spec.ts",
+      "title": "G8 sales list shows a native loading error and can retry without writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2402
+    },
+    {
+      "id": "6e8fb5373ace79c23a74-271ee66753225579bc65",
+      "file": "sales-pages.spec.ts",
+      "title": "G8 inline entry: manual/wedge Enter, duplicates and invalid codes preserve the real cart",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2952
+    },
+    {
+      "id": "6e8fb5373ace79c23a74-c6d18667b722d01a9737",
+      "file": "sales-pages.spec.ts",
+      "title": "G8 automatic discount updates live after another role earns points through a real sale",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4048
+    },
+    {
+      "id": "ab4d7ca3a47b8e239750-e298b9f37e346b257860",
+      "file": "sales-t05-errors.spec.ts",
+      "title": "T05 owner: invoice and customer purchase-history read errors use Figma notices and recover without writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3934
+    },
+    {
+      "id": "ab4d7ca3a47b8e239750-0de749b51d1cbaf1d69b",
+      "file": "sales-t05-errors.spec.ts",
+      "title": "T05 staff: invoice and customer purchase-history read errors use Figma notices and recover without writes",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4647
+    },
+    {
+      "id": "2a5b03c2f9ad5e1baa56-3cc043aaac5e0f9b148b",
+      "file": "sales-t05-t06.spec.ts",
+      "title": "T05 both roles: customer purchase history preserves paid snapshots after profile edits and prints read-only",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 6401
+    },
+    {
+      "id": "2a5b03c2f9ad5e1baa56-416a8cc4a078223d4753",
+      "file": "sales-t05-t06.spec.ts",
+      "title": "T06 two roles holding QR for different items cannot consume the same 50 points twice; stale tab recovers without reload",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5572
+    },
+    {
+      "id": "2a5b03c2f9ad5e1baa56-5c2e00d3a2de369458fe",
+      "file": "sales-t05-t06.spec.ts",
+      "title": "T06 scheduler catch-up invalidates an open QR and retry uses the real new price",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3650
+    },
+    {
+      "id": "9cb516a1fe2b9ce5f454-729e030654dac3020c1d",
+      "file": "sales-t06-recovery.spec.ts",
+      "title": "T06 owner: reload after native payment failure preserves cart and retries exactly once",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4228
+    },
+    {
+      "id": "9cb516a1fe2b9ce5f454-35fd7e8ef171f8cc2b9b",
+      "file": "sales-t06-recovery.spec.ts",
+      "title": "T06 staff: reload after native payment failure preserves cart and retries exactly once",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 4937
+    },
+    {
+      "id": "9cb516a1fe2b9ce5f454-8c1bd86d35c0916229d9",
+      "file": "sales-t06-recovery.spec.ts",
+      "title": "T06 owner and staff confirming the same product concurrently commit one invoice and one point update",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5231
+    },
+    {
+      "id": "3420664513cb0bae123e-25e0edf2a354c62afec7",
+      "file": "shell.spec.ts",
+      "title": "shell, fallback route, persisted metadata and local requests",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1253
+    },
+    {
+      "id": "3420664513cb0bae123e-86409b56e4cd14c0d524",
+      "file": "shell.spec.ts",
+      "title": "unavailable IndexedDB displays a recoverable startup error",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 239
+    },
+    {
+      "id": "3420664513cb0bae123e-0dbd434ccf61ae998477",
+      "file": "shell.spec.ts",
+      "title": "upgrades phase 1 browser data without deleting existing metadata or seeding accounts",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 549
+    },
+    {
+      "id": "1bca2bd0aa350d62078e-b8c98d940c4c2bb10173",
+      "file": "staff-review.spec.ts",
+      "title": "G5 source controls and successful states SC145/146/148/149/150/152-155/157-160/162 through real UI",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 5170
+    },
+    {
+      "id": "1bca2bd0aa350d62078e-93d16290e521eac917e5",
+      "file": "staff-review.spec.ts",
+      "title": "G5 failures SC147/151/156/161 preserve complete DB and recover through UI retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3385
+    },
+    {
+      "id": "1bca2bd0aa350d62078e-cb0e83880204d36801bb",
+      "file": "staff-review.spec.ts",
+      "title": "G5 create form and password control fit desktop and narrow viewports without console errors",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1877
+    },
+    {
+      "id": "2545a61da953aa54eb88-de81735abe1980d80903",
+      "file": "staff.spec.ts",
+      "title": "staff management UI validates all fields, cancels, creates, reads safe details and checks duplicates",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2264
+    },
+    {
+      "id": "2545a61da953aa54eb88-c1dc376ffcb6c713b546",
+      "file": "staff.spec.ts",
+      "title": "two real UI-created roles retain independent sessions; rename and delete revoke staff live",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 3103
+    },
+    {
+      "id": "2545a61da953aa54eb88-3c5ade4603a681d9f983",
+      "file": "staff.spec.ts",
+      "title": "two owner forms cannot overwrite a staff profile with a stale version",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2146
+    },
+    {
+      "id": "2545a61da953aa54eb88-9286d6c74609be68970e",
+      "file": "staff.spec.ts",
+      "title": "account create storage failure keeps form, rolls back and allows UI retry",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 1809
+    },
+    {
+      "id": "2545a61da953aa54eb88-8a315d0d40829b836c39",
+      "file": "staff.spec.ts",
+      "title": "desktop details land on loaded content at 1366x650",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2125
+    },
+    {
+      "id": "2545a61da953aa54eb88-6390de4c27ec05f6c7c3",
+      "file": "staff.spec.ts",
+      "title": "desktop details land on loaded content at 1280x720",
+      "project": "chromium",
+      "status": "PASS",
+      "durationMs": 2204
+    }
+  ]
+}

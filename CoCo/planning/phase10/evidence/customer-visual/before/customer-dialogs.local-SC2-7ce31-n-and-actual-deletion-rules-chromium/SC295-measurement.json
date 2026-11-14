@@ -1,0 +1,29 @@
+{
+  "id": "SC295",
+  "role": "staff",
+  "state": "linked",
+  "scope": "Customer deletion modal only; not a full-screen SC verdict",
+  "sourceSha256": "6270dc14a7418ebee39b82a9651bd7816da7c2ddedb0bd734bbb852c4bc20f8b",
+  "rasterSha256": "0c51f98d9efe4b95bd0198728813c152b0b9b1e5b2a4b0bbddf1510374e80a13",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "dpr": 1,
+  "sourceBounds": {
+    "x": 481,
+    "y": 319,
+    "width": 477,
+    "height": 263
+  },
+  "actualBox": {
+    "x": 480,
+    "y": 308.5,
+    "width": 480,
+    "height": 283
+  },
+  "masks": [],
+  "threshold": 0.2,
+  "maxDiffPixelRatio": 0.01,
+  "geometryTolerancePx": 2
+}

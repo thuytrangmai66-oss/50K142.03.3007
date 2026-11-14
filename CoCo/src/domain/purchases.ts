@@ -48,11 +48,15 @@ export type PurchaseLine = z.infer<typeof purchaseLineSchema>;
 export type PurchaseApproval = z.infer<typeof purchaseApprovalSchema>;
 export type PurchaseNotice = z.infer<typeof purchaseNoticeSchema>;
 
-export const purchaseFinalizationSchema = z.object({
+// Explicit structural projection replaces Zod 3's innerType(). Report readers
+// validate relations separately and may classify an absent payment timestamp.
+// Writers continue using the fully refined purchaseFinalizationSchema below.
+export const purchaseFinalizationFieldsSchema = z.object({
   format: z.literal(PURCHASE_FORMAT), invoiceId: identifier, draftId: identifier,
   lines: z.array(purchaseLineSchema).min(1), subtotal: money, paidTotal: money,
   finalizedAt: timestamp, paidAt: timestamp,
-  }).strict().refine(value => value.lines.every(line => line.draftId === value.draftId && !line.removedAt && ['priced', 'approved'].includes(line.status)) &&
+  }).strict();
+export const purchaseFinalizationSchema = purchaseFinalizationFieldsSchema.refine(value => value.lines.every(line => line.draftId === value.draftId && !line.removedAt && ['priced', 'approved'].includes(line.status)) &&
   purchaseSubtotal(value.lines) === value.subtotal && value.paidTotal === value.subtotal, 'Invalid finalized purchase snapshot');
 export const purchaseProvenanceSchema = z.object({
   format: z.literal(PURCHASE_FORMAT), productId: identifier, invoiceId: identifier, lineId: key,

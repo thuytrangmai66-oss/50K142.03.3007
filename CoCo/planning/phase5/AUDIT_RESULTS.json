@@ -1,5 +1,5 @@
 {
-  "scope": "Static runtime checks after Phase 5 staff accounts; local only; browser tests recorded separately",
+  "scope": "Static runtime checks during Phase 5; local only; browser tests recorded separately",
   "results": [
     {
       "id": "P1-01",

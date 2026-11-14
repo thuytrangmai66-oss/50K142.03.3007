@@ -1,0 +1,22 @@
+# G10-T02 — Review assertion nhóm khách hàng
+
+Ngày 14/11/2026. Đối chiếu 12 BR-UC4 với nội dung/locator trong `REQUIREMENT_TRACEABILITY.md`, không sửa quy tắc nguồn. Đây là review từng assertion, không dùng số test hoặc tên file làm chứng nhận đầy đủ UC/BR.
+
+| BR | Assertion đã đọc | Bằng chứng chức năng | Giới hạn review |
+|---|---|---|---|
+| UC4-01 | Tra số điện thoại giữ số 0 đầu, tìm thấy đúng khách, kết quả rỗng | `reference-data.test.ts` “creates, searches…”; `reference-data.spec.ts` hai role tìm số và xóa tìm kiếm | Chưa chứng nhận toàn bộ visual/action SC |
+| UC4-02 | Duplicate-phone race chỉ một hồ sơ; cùng MaKH có history mua và bán riêng | `reference-data.test.ts` “serializes duplicate phone races…” và “keeps history…”; `phase10-journey.spec.ts` liên module | Giữ nguyên profile, không tạo bộ dữ liệu riêng theo role |
+| UC4-03 | Sửa tên/phone rỗng hoặc whitespace bị VALIDATION, mọi store/version/provenance nguyên vẹn | **Mới** `customer-edit.test.ts`, tham số 0/1/2; `phase10-customer-edit.spec.ts` cả hai role submit sửa rỗng, targeted PASS | Full regression cuối ghi riêng |
+| UC4-04 | Sửa phone 9/11 chữ số, ký tự chữ, full-width Unicode bị từ chối trước ghi | **Mới** `customer-edit.test.ts`, tham số 3–6; `phase10-customer-edit.spec.ts` hai role kiểm số 9 chữ số/Unicode, targeted PASS | Không tự đổi regex hoặc chuẩn hóa số để chấp nhận dữ liệu khác hợp đồng |
+| UC4-05 | Sửa sang phone đã dùng bị DUPLICATE/no-write; giữ phone cũ khi đổi tên hợp lệ; race hai profile chỉ một winner, loser không đổi sau reopen | **Mới** ba test riêng trong `customer-edit.test.ts`; `phase10-customer-edit.spec.ts` hai role kiểm trùng/giữ phone/rename/reload, targeted PASS | Không dùng data PASS thành toàn bộ visual PASS |
+| UC4-06 | Sửa không tạo hồ sơ mới; history giữ MaKH sau đổi tên và số | `reference-data.test.ts:53`; `purchase-queries.test.ts` “keeps history by customer ID…”; `purchase-queries.spec.ts` hai role sửa rồi mở lại lịch sử | Kiểm snapshot lịch sử riêng với dữ liệu profile hiện tại; không ghi lại giá cũ |
+| UC4-07 | Không confirm thì dữ liệu nguyên vẹn; Hủy/X/Escape không xóa; confirm xóa đúng target, busy chống lặp | `confirmation.spec.ts`; `reference-data.test.ts:20`; tám modal local có assertion dữ liệu | Tám modal visual PASS không chứng nhận toàn bộ SC |
+| UC4-08 | Có lịch sử thì HAS_HISTORY; không đổi mọi store; UI thông điệp đúng | `reference-data.test.ts:53`; `reference-data.spec.ts:138`; local SC102/295 PASS; **hai ca mới purchase-only/sale-only** trong `customer-edit.test.ts` targeted PASS | Mã legacy 90 giữ nguyên trong fixture, không suy diễn thanh toán; không yêu cầu có cả hai quan hệ mới chặn xóa |
+| UC4-09 | Lịch sử khách mua từ CoCo giữ invoice sau đổi tên/số, chi tiết dùng snapshot đã thanh toán | `sales-t05-t06.spec.ts:17`: hai role, reload, tổng 166.411, read-only snapshot tất cả store | Ngoại lệ trường trạng thái chi tiết G8 vẫn BLOCKED theo quyết định giữ Figma |
+| UC4-10 | Lịch sử mua chỉ chứa hóa đơn bán cho đúng khách, không xuất hiện ở lịch sử bán của khách | `reference-data.test.ts:53` đúng BH01/TM01 và chặn khách khác; `sales-t05-t06.spec.ts` kiểm invoice không ở history sales | Không suy đoán trạng thái legacy đã thanh toán |
+| UC4-11 | Lịch sử bán cho CoCo là hóa đơn thu mua đúng khách, giá/tổng từ snapshot | `purchase-queries.spec.ts` hai role, tổng 250.010, hai giá trong cùng khung; `purchase-queries.test.ts` | Ngoại lệ Nhân viên/Trạng thái giao dịch BR-UC1-16 giữ BLOCKED |
+| UC4-12 | Sau sửa cả tên/phone, lịch sử thu mua và chi tiết vẫn đúng; reload không ghi vào DB | `purchase-queries.spec.ts:70–94`; `purchase-queries.test.ts:63` | Không nhầm với lịch sử khách mua hàng từ CoCo |
+
+13 ca unit mới chạy thực tế PASS (5,76 giây), nằm trong full mới **514/514 PASS**, 28 file (153,33 giây). Hai E2E mới tái hiện lỗi class popup sửa (2 FAIL trước sửa); sau giới hạn class theo luồng deletion, nhóm confirmation + sửa **8/8 PASS** (28,1 giây). Chỉ thay state/class popup, không thay production service, schema hoặc dữ liệu. Full Chromium cuối **166/166 PASS**, 8 visual local PASS; [execution](CONTINUATION_EXECUTION.md). Không cộng targeted 13/8 vào full nếu cùng ca đã nằm trong full mới.
+
+Visual/action SC chưa kiểm đủ ghi rõ ở trên; **không đổi toàn bộ 12 BR thành PASS hoặc đánh dấu các UC DONE**. Phần source/test G10 được giữ riêng với file ngoài phạm vi. Đây là bước tiến review assertion, không miễn trừ 98 BR hoặc thay gate G11.

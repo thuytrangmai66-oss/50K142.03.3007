@@ -90,10 +90,24 @@ export async function validateCandidatePurchaseReferences(db: CoCoDatabase): Pro
   }
 }
 
+export interface PurchaseReferenceSnapshot {
+  origins: ReadonlyMap<string, unknown>;
+  finalizations: ReadonlyMap<string, unknown>;
+}
 /** Select a new-format FK only with a complete, validated explicit marker. */
 export async function resolveCandidatePurchaseDetail(db: CoCoDatabase, product: RecordMap['sanPham']): Promise<boolean> {
   const rawOrigin = await db.table('purchaseProvenance').get(product.MaSP);
   const rawSnapshot = await db.table('purchaseFinalizations').get(product.MaHDTM);
+  return checkCandidatePurchaseDetail(product, rawOrigin, rawSnapshot);
+}
+/** Pure joins must stay synchronous inside an IndexedDB transaction: awaiting
+ * an already-resolved native promise per row can exhaust Dexie's microtick
+ * scope and let Chromium commit before the final receipt/audit writes.
+ */
+export function resolveCandidatePurchaseDetailSnapshot(product: RecordMap['sanPham'], snapshot: PurchaseReferenceSnapshot): boolean {
+  return checkCandidatePurchaseDetail(product, snapshot.origins.get(product.MaSP), snapshot.finalizations.get(product.MaHDTM));
+}
+function checkCandidatePurchaseDetail(product: RecordMap['sanPham'], rawOrigin: unknown, rawSnapshot: unknown): boolean {
   if (!rawOrigin && !rawSnapshot) return false;
   if (!rawOrigin || !rawSnapshot) throw referenceFailure();
   const origin = purchaseProvenanceSchema.parse(rawOrigin), finalized = purchaseFinalizationSchema.parse(rawSnapshot);

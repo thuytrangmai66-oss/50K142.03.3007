@@ -1,6 +1,7 @@
 ﻿import { test, expect, type Page, type BrowserContext } from '@playwright/test';
 import { login } from './auth-helpers';
 import { addProduct, closeNotice, expectApprovalList, setup, snapshot } from './purchase-helpers';
+import { purchaseApprovalSchema } from '../../src/domain/purchases';
 
 const browserErrors = new WeakMap<BrowserContext, string[]>();
 test.beforeEach(async ({ context }) => {
@@ -154,6 +155,44 @@ test('T03 two owner tabs racing preserve a single decision and notice', async ({
   expect(messages.filter(message => message.includes('Phê duyệt giá thu mua thành công'))).toHaveLength(1);
   expect(messages.filter(message => message.includes('Yêu cầu không còn đủ điều kiện phê duyệt'))).toHaveLength(1);
   expect((await snapshot(page)).purchaseNotices).toHaveLength(1);
+});
+
+test('G10 opposing approve/reject UI decisions commit once and both owner tabs recover without reload', async ({ page, context }, info) => {
+  await setup(page, context);
+  const errors: string[] = [];
+  context.on('weberror', error => errors.push(error.error().message));
+  const second = await context.newPage(); await second.goto('./'); await login(second); await second.goto(page.url());
+  const firstSession = await page.evaluate(() => sessionStorage.getItem('coco:session'));
+  expect(await second.evaluate(() => sessionStorage.getItem('coco:session'))).not.toBe(firstSession);
+  await second.getByRole('button', { name: 'Từ chối', exact: true }).click();
+  const reason = second.getByRole('dialog', { name: 'Lý do từ chối', exact: true });
+  await reason.getByLabel('Lý do từ chối', { exact: true }).fill('Giá cao');
+  await Promise.all([
+    page.getByRole('button', { name: 'Phê duyệt', exact: true }).evaluate(button => (button as HTMLButtonElement).click()),
+    reason.getByRole('button', { name: 'Xác nhận', exact: true }).evaluate(button => (button as HTMLButtonElement).click()),
+  ]);
+  const messages = await Promise.all([page, second].map(async tab => {
+    await expect(tab.getByRole('alertdialog')).toBeVisible(); return tab.getByRole('alertdialog').innerText();
+  }));
+  const success = messages.map(message => message.includes('Phê duyệt giá thu mua thành công') || message.includes('Đã từ chối yêu cầu phê duyệt'));
+  expect(success.filter(Boolean)).toHaveLength(1);
+  expect(messages.filter(message => message.includes('Yêu cầu không còn đủ điều kiện phê duyệt'))).toHaveLength(1);
+  const decided = await snapshot(page), approval = purchaseApprovalSchema.parse(decided.purchaseApprovals[0]);
+  expect(approval.decision.status).toBe(success[0] ? 'approved' : 'rejected');
+  if (approval.decision.status === 'rejected') expect(approval.decision.reason).toBe('Giá cao');
+  expect(decided.purchaseLines[0].status).toBe(approval.decision.status);
+  expect(decided.purchaseNotices).toHaveLength(1);
+  expect(decided.operations.filter(row => String(row.id).startsWith('g6-approval:'))).toHaveLength(1);
+  expect(decided.hoaDonThuMua).toHaveLength(0); expect(decided.sanPham).toHaveLength(0);
+  for (const [index, tab] of [page, second].entries()) {
+    await tab.getByRole('button', { name: 'Đóng thông báo', exact: true }).click();
+    if (!success[index]) await tab.keyboard.press('Escape');
+    await expectApprovalList(tab);
+    await expect(tab.locator('.approval-list tbody tr')).toContainText(success[0] ? 'Đã phê duyệt' : 'Đã từ chối');
+  }
+  expect(await snapshot(page)).toEqual(decided);
+  await page.screenshot({ path: info.outputPath('opposing-decisions-owner-list.png') });
+  expect(errors).toEqual([]);
 });
 
 for (const action of ['approve', 'reject'] as const) test(`T03 ${action}: dismiss success with Escape, preserve filters and open another request without overlay`, async ({ page, context }, info) => {

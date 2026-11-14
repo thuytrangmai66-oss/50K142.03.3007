@@ -1,0 +1,2350 @@
+{
+  "stats": {
+    "startTime": "2026-11-14T11:12:47.859Z",
+    "duration": 620118.409,
+    "expected": 167,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "file": "auth.spec.ts",
+      "line": 6,
+      "title": "owner: login states, source geometry, real session, logout and Back protection",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2309,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 6,
+      "title": "staff: login states, source geometry, real session, logout and Back protection",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2170,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 65,
+      "title": "owner and staff share DB with separate sessions, staff route denied and revoked account loses access",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2102,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 94,
+      "title": "real browser v2 migration preserves existing owner credentials and customer data",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 856,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 152,
+      "title": "forged session data cannot select an owner identity",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1168,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 160,
+      "title": "failed browser session persistence rolls back the new login session and offers recovery",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 859,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 181,
+      "title": "bootstrap is race-safe across two browser tabs",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 770,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "confirmation.spec.ts",
+      "line": 26,
+      "title": "owner customers: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3412,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "confirmation.spec.ts",
+      "line": 26,
+      "title": "staff customers: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3636,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "confirmation.spec.ts",
+      "line": 26,
+      "title": "owner staff: compact centered confirmation, cancel/X/Escape preserve data, confirm targets only selected record",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3394,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "confirmation.spec.ts",
+      "line": 58,
+      "title": "delete failure rolls back data, shows an error, and allows a real retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1748,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "confirmation.spec.ts",
+      "line": 67,
+      "title": "busy confirmation blocks repeat clicks, X, cancel and Escape until one transaction finishes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1636,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "confirmation.spec.ts",
+      "line": 76,
+      "title": "a changed customer cannot be deleted using an old open confirmation snapshot",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2295,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "discount-scheduler.spec.ts",
+      "line": 17,
+      "title": "G7 automatic delayed reopening and two native tabs apply 45 first, including below-20000, and both roles read real monitor logs",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4094,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "discount-scheduler.spec.ts",
+      "line": 46,
+      "title": "G7 native scheduled write failure rolls back price/event/version, logs failure and recovers on another opening without duplicates",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3106,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "discount-scheduler.spec.ts",
+      "line": 60,
+      "title": "G7 open app runs at Vietnam midnight with no manual trigger",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2292,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "g6-verification.spec.ts",
+      "line": 7,
+      "title": "T07 native migration abort restores v3 and successful runtime upgrade preserves all legacy stores and numeric codes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 338,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "g6-verification.spec.ts",
+      "line": 42,
+      "title": "T07 actual runtime: two UI roles approve, finalize, live-read shared invoice/history and preserve canonical graph on reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4939,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "home-stock-comparison.spec.ts",
+      "line": 8,
+      "title": "G9-D05 sell: verified month-end comparison through real UI, foreign timezone and readonly reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3393,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "home-stock-comparison.spec.ts",
+      "line": 8,
+      "title": "G9-D05 purchase: verified month-end comparison through real UI, foreign timezone and readonly reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3042,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 11,
+      "title": "T05 approved M01-B: independent staff dashboard updates live on real profile create/delete and preserves legacy after reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2287,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 62,
+      "title": "T05 dashboard storage failure reports an error, offers retry and never displays a false zero",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1150,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 82,
+      "title": "T05 owner: real quick actions open lists without creating any business records",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1639,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 82,
+      "title": "T05 staff: real quick actions open lists without creating any business records",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1766,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 112,
+      "title": "T05 review-only: render proposed card wording outside runtime for approval",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 332,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory-edit.spec.ts",
+      "line": 6,
+      "title": "G7 owner edits one physical item, validates, cancels, resets cycle and preserves historical records",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2916,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory-edit.spec.ts",
+      "line": 6,
+      "title": "G7 staff edits one physical item, validates, cancels, resets cycle and preserves historical records",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3430,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory-edit.spec.ts",
+      "line": 42,
+      "title": "G7 stale editor reloads the real current form after conflict and never overwrites another tab",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3426,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory-edit.spec.ts",
+      "line": 56,
+      "title": "G7 native metadata write failure rolls back the whole edit, keeps form and permits one retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2328,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 32,
+      "title": "G7 T01 owner: real inventory, combined filters, pagination, three desktop viewports, detail and read-only reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6123,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 32,
+      "title": "G7 T01 staff: real inventory, combined filters, pagination, three desktop viewports, detail and read-only reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6523,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 112,
+      "title": "G7 T01 empty inventory and native read failure use source error notices without writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1486,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 135,
+      "title": "G7 T01 inventory list spacing and typography match Thu mua at 1440x900",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1208,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 30,
+      "title": "owner customers: responsive pages, stable footer, no internal scrolling",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 13034,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 30,
+      "title": "staff customers: responsive pages, stable footer, no internal scrolling",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 12604,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 30,
+      "title": "owner staff: responsive pages, stable footer, no internal scrolling",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9999,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 30,
+      "title": "owner price-brackets: responsive pages, stable footer, no internal scrolling",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 12650,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 94,
+      "title": "customer search paginates the filtered set and preserves the query across pages",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1309,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 106,
+      "title": "bracket condition filter preserves its value while paging and resets a removed page",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1224,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 117,
+      "title": "customers: UI add creates page 2; live delete clamps page 2 and keeps it clamped on later add",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2108,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 117,
+      "title": "staff: UI add creates page 2; live delete clamps page 2 and keeps it clamped on later add",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2917,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 137,
+      "title": "creating a tenth bracket updates the page count using the active filter",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1199,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 148,
+      "title": "many pages use ellipsis and never link to a nonexistent page",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1257,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 159,
+      "title": "owner customers: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1742,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 159,
+      "title": "staff customers: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1965,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 159,
+      "title": "owner staff: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2079,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "pagination.spec.ts",
+      "line": 159,
+      "title": "owner price-brackets: shrinking preserves filters, reslices without gaps, and expanding restores nine",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2424,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-customer-edit.spec.ts",
+      "line": 15,
+      "title": "G10 BR-UC4-03/04/05 owner: invalid and duplicate edits preserve all data, cancel and rename retain identity",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2275,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-customer-edit.spec.ts",
+      "line": 15,
+      "title": "G10 BR-UC4-03/04/05 staff: invalid and duplicate edits preserve all data, cancel and rename retain identity",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2292,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "line": 17,
+      "title": "G10-T05 owner 25: measure real purchase and cash-sale commits without an invented SLA",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8264,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "line": 17,
+      "title": "G10-T05 owner 1000: measure real purchase and cash-sale commits without an invented SLA",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 20967,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "line": 17,
+      "title": "G10-T05 staff 25: measure real purchase and cash-sale commits without an invented SLA",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9109,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "line": 17,
+      "title": "G10-T05 staff 1000: measure real purchase and cash-sale commits without an invented SLA",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 22967,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-integrity.spec.ts",
+      "line": 6,
+      "title": "G10-T04 native 1000-item graph: a final audit failure rolls back every write and retry commits exactly once",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5871,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-journey.spec.ts",
+      "line": 25,
+      "title": "G10-T01 staff sells first: approval, real earned points, redemption, history and all financial reports",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7634,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-journey.spec.ts",
+      "line": 25,
+      "title": "G10-T01 owner sells first: approval, real earned points, redemption, history and all financial reports",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8500,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-security.spec.ts",
+      "line": 18,
+      "title": "G10-T04 owner: persisted HTML customer name stays literal through detail, history and reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1882,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-security.spec.ts",
+      "line": 18,
+      "title": "G10-T04 staff: persisted HTML customer name stays literal through detail, history and reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1949,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-security.spec.ts",
+      "line": 52,
+      "title": "G10-T04 rejection HTML is stored literally, delivered across tabs and harmless after owner reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3539,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-usability-benchmark.spec.ts",
+      "line": 8,
+      "title": "G10-T05 owner: measured customer search, keyboard, touch and error-free create/delete",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3803,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-usability-benchmark.spec.ts",
+      "line": 8,
+      "title": "G10-T05 staff: measured customer search, keyboard, touch and error-free create/delete",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3836,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "phase10-visual.spec.ts",
+      "line": 9,
+      "title": "G10-T03 SC105 report picker: source geometry and pixel comparison, no runtime baseline update",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1282,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 19,
+      "title": "T03 approve through UI, independent sessions, live data, search/date and screenshots",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3884,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 60,
+      "title": "T03 reject requires reason, cancel preserves data and shared decision updates live",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3729,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 102,
+      "title": "T03 approve write failure rolls back, retry commits once and delivery failure preserves the decision",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3248,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 102,
+      "title": "T03 reject write failure rolls back, retry commits once and delivery failure preserves the decision",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3322,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 140,
+      "title": "T03 refuses a request after employee remove",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3129,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 140,
+      "title": "T03 refuses a request after employee cancel",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3172,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 149,
+      "title": "T03 two owner tabs racing preserve a single decision and notice",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3669,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 160,
+      "title": "G10 opposing approve/reject UI decisions commit once and both owner tabs recover without reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3978,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 198,
+      "title": "T03 approve: dismiss success with Escape, preserve filters and open another request without overlay",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3759,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 198,
+      "title": "T03 reject: dismiss success with Escape, preserve filters and open another request without overlay",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3615,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-approvals.spec.ts",
+      "line": 236,
+      "title": "T03 real requests paginate and list read error recovers through navigation",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6664,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-candidate-storage.spec.ts",
+      "line": 6,
+      "title": "T01 native Chromium storage integration: candidate migration, CAS, replay, audit rollback and revoked session; no G6 UI claim",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 857,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-candidate-storage.spec.ts",
+      "line": 21,
+      "title": "T01 native FK integration: mixed-price lines, strict provenance and rollback; no finalize UI claim",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 640,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-customer-layout.spec.ts",
+      "line": 12,
+      "title": "owner: existing purchase customer follows local Figma phone suggestion and selected states",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3039,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-customer-layout.spec.ts",
+      "line": 12,
+      "title": "staff: existing purchase customer follows local Figma phone suggestion and selected states",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2598,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-drafts.spec.ts",
+      "line": 16,
+      "title": "T02 owner: real UI input, validation, pending request, reload, remove and cancel",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2782,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-drafts.spec.ts",
+      "line": 16,
+      "title": "T02 staff: real UI input, validation, pending request, reload, remove and cancel",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3896,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-drafts.spec.ts",
+      "line": 49,
+      "title": "T02 native IDB failure keeps the price form, rolls back and retries without duplicate request",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1810,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-drafts.spec.ts",
+      "line": 58,
+      "title": "T02 real customer creation and selection persist without creating an invoice or stock",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1604,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-drafts.spec.ts",
+      "line": 87,
+      "title": "T02 missing bracket is recoverable and ten real lines paginate without hidden rows",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5459,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-editor-figma.spec.ts",
+      "line": 15,
+      "title": "owner: empty purchase editor preserves the local Figma canvas layout",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1577,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-editor-figma.spec.ts",
+      "line": 15,
+      "title": "staff: empty purchase editor preserves the local Figma canvas layout",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1628,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-editor-figma.spec.ts",
+      "line": 46,
+      "title": "purchase editor keeps the shared shell and reference typography across desktop viewports",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2065,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization-storage.spec.ts",
+      "line": 6,
+      "title": "T05 native storage transaction rolls back, retries, reserves IDs and serializes connections",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 799,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization.spec.ts",
+      "line": 52,
+      "title": "T05 owner validates empty and missing customer, finalizes mixed prices and quantity once, then reloads safely",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2978,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization.spec.ts",
+      "line": 96,
+      "title": "T05 staff cannot finalize pending/rejected prices, then completes an approved mixed-price purchase",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4881,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization.spec.ts",
+      "line": 133,
+      "title": "T05 productCosts failure rolls back and keeps the editor for a single successful retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2309,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization.spec.ts",
+      "line": 133,
+      "title": "T05 auditEntries failure rolls back and keeps the editor for a single successful retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2367,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization.spec.ts",
+      "line": 155,
+      "title": "T05 two owner tabs finalize one draft once and the losing tab recovers to the list",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2869,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization.spec.ts",
+      "line": 171,
+      "title": "T05 reload immediately after native commit restores the completed draft without a second invoice",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2355,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-finalization.spec.ts",
+      "line": 194,
+      "title": "T05 cancel customer creation leaves no customer and concurrent phone creation stays unique",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2456,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-list.spec.ts",
+      "line": 4,
+      "title": "owner: Thu mua opens list, filters and pages real legacy data, then explicitly opens creation",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5403,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-list.spec.ts",
+      "line": 4,
+      "title": "staff: Thu mua opens list, filters and pages real legacy data, then explicitly opens creation",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5332,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-queries.spec.ts",
+      "line": 36,
+      "title": "T06 owner: real mixed-price purchase, combined search, reload, stable customer history and read-only views",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4518,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-queries.spec.ts",
+      "line": 36,
+      "title": "T06 staff: real mixed-price purchase, combined search, reload, stable customer history and read-only views",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5085,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-queries.spec.ts",
+      "line": 99,
+      "title": "T06 read error list: Figma notice closes without fabricated data or writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2659,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-queries.spec.ts",
+      "line": 99,
+      "title": "T06 read error detail: Figma notice closes without fabricated data or writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2639,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-queries.spec.ts",
+      "line": 99,
+      "title": "T06 read error history: Figma notice closes without fabricated data or writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2675,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-results.spec.ts",
+      "line": 16,
+      "title": "T04 approval reaches the creator live, is acknowledged once and survives replay/reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3570,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-results.spec.ts",
+      "line": 44,
+      "title": "T04 rejection reason and real price revision 80000, immutable history and new snapshot",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3643,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-results.spec.ts",
+      "line": 44,
+      "title": "T04 rejection reason and real price revision 130000, immutable history and new snapshot",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3985,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-results.spec.ts",
+      "line": 89,
+      "title": "T04 unread result recovers after signal failure and two creator tabs display it once",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3944,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "purchase-results.spec.ts",
+      "line": 119,
+      "title": "T04 acknowledgement and price write failures retain the dialog, rollback and retry once",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3514,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 15,
+      "title": "owner customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2902,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 15,
+      "title": "staff customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3026,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 73,
+      "title": "two tabs keep independent identities, live customer data without F5, and reject stale UI writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2439,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 98,
+      "title": "owner bracket UI uses fixed dropdown, validates, cancels, edits and blocks staff route",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2849,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 138,
+      "title": "customer UI reads existing purchase/sale history and snapshots, and refuses linked deletion",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1973,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 172,
+      "title": "customer UI handles a real IDB write failure without partial data and allows retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1413,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 194,
+      "title": "customer pagination changes real rows and search reset returns to the first page",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2869,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 1366x650 without browser zoom",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1487,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 1280x720 without browser zoom",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1492,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 1024x768 without browser zoom",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1572,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 768x1024 without browser zoom",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1615,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 390x844 without browser zoom",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1472,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 320x640 without browser zoom",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1447,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-purchase-cost.spec.ts",
+      "line": 6,
+      "title": "T03 actual purchase, four filters, read-only reload, source empty/error and three desktop viewports",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3596,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-purchase-cost.spec.ts",
+      "line": 61,
+      "title": "T03 staff direct route is denied with an independent owner tab",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2848,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-purchase-cost.spec.ts",
+      "line": 71,
+      "title": "T03 25 daily rows from real transactions paginate without changing period totals",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19472,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-reconciliation.spec.ts",
+      "line": 13,
+      "title": "G9-T06 approved purchase journey reconciles mixed-price stock, a real sale and both role dashboards",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4927,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-reconciliation.spec.ts",
+      "line": 83,
+      "title": "G9-T06 partial: independent staff sales update owner reports live and reconcile invoices, stock and costs",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5611,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-revenue.spec.ts",
+      "line": 18,
+      "title": "G9-T02 owner: real discounted revenue, four period filters, reload, read-only and empty/error recovery",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4404,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-revenue.spec.ts",
+      "line": 83,
+      "title": "G9-T02: 25 actual UI-completed invoices, daily pagination, stable totals and desktop screenshots",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 12450,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-revenue.spec.ts",
+      "line": 124,
+      "title": "G9-T02 staff: sidebar hidden and direct report route denied, owner session remains independent",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3385,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-revenue.spec.ts",
+      "line": 138,
+      "title": "G9-D01 native reload: missing payment time and legacy sale date never manufacture report revenue",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2840,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-t04.spec.ts",
+      "line": 13,
+      "title": "T04 profit: real paid totals, period filters, empty/error, reload and desktop geometry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4313,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-t04.spec.ts",
+      "line": 13,
+      "title": "T04 cash-flow: real paid totals, period filters, empty/error, reload and desktop geometry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4072,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-t04.spec.ts",
+      "line": 61,
+      "title": "T04 aged stock: exact threshold, filters, 25 real products, pagination, empty/error and readonly reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4788,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "reports-t04.spec.ts",
+      "line": 119,
+      "title": "T04 staff cannot access any new report while owner session remains independent",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2788,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 8,
+      "title": "G8-T03/T04 owner cash: real payment, immutable totals, exact points and close all dialogs",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3055,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 8,
+      "title": "G8-T03/T04 owner transfer: real payment, immutable totals, exact points and close all dialogs",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3702,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 8,
+      "title": "G8-T03/T04 staff cash: real payment, immutable totals, exact points and close all dialogs",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3996,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 8,
+      "title": "G8-T03/T04 staff transfer: real payment, immutable totals, exact points and close all dialogs",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4541,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 60,
+      "title": "G8-T04 native appMetadata failure rolls back and allows one retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2728,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 60,
+      "title": "G8-T04 native auditEntries failure rolls back and allows one retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3024,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 86,
+      "title": "G8-T04 two real tabs cannot sell the same product twice and stale QR remains recoverable",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3712,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sale-payment.spec.ts",
+      "line": 108,
+      "title": "G8-T04 point overflow leaves the real cart recoverable and cannot create a sale",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2728,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-draft.spec.ts",
+      "line": 29,
+      "title": "G8-T01 owner: mapped products remain draft-only",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3568,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-draft.spec.ts",
+      "line": 29,
+      "title": "G8-T01 staff: mapped products remain draft-only",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4543,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-draft.spec.ts",
+      "line": 149,
+      "title": "G8-T02 owner: explicit membership opt-in persists before payment",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3318,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-draft.spec.ts",
+      "line": 149,
+      "title": "G8-T02 staff: explicit membership opt-in persists before payment",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4532,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 16,
+      "title": "G8 sales list: real UI invoices, combined search/reset, pagination, immutable detail and both roles",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8378,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 101,
+      "title": "G8 sales list shows a native loading error and can retry without writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2385,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 124,
+      "title": "G8 inline entry: manual/wedge Enter, duplicates and invalid codes preserve the real cart",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2777,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 154,
+      "title": "G8 automatic discount updates live after another role earns points through a real sale",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3868,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t05-errors.spec.ts",
+      "line": 7,
+      "title": "T05 owner: invoice and customer purchase-history read errors use Figma notices and recover without writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3332,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t05-errors.spec.ts",
+      "line": 7,
+      "title": "T05 staff: invoice and customer purchase-history read errors use Figma notices and recover without writes",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4287,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t05-t06.spec.ts",
+      "line": 17,
+      "title": "T05 both roles: customer purchase history preserves paid snapshots after profile edits and prints read-only",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5428,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t05-t06.spec.ts",
+      "line": 63,
+      "title": "T06 two roles holding QR for different items cannot consume the same 50 points twice; stale tab recovers without reload",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4980,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t05-t06.spec.ts",
+      "line": 106,
+      "title": "T06 scheduler catch-up invalidates an open QR and retry uses the real new price",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3279,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t06-recovery.spec.ts",
+      "line": 25,
+      "title": "T06 owner: reload after native payment failure preserves cart and retries exactly once",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3775,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t06-recovery.spec.ts",
+      "line": 25,
+      "title": "T06 staff: reload after native payment failure preserves cart and retries exactly once",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4458,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "sales-t06-recovery.spec.ts",
+      "line": 72,
+      "title": "T06 owner and staff confirming the same product concurrently commit one invoice and one point update",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4595,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "shell.spec.ts",
+      "line": 4,
+      "title": "shell, fallback route, persisted metadata and local requests",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1133,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "shell.spec.ts",
+      "line": 45,
+      "title": "unavailable IndexedDB displays a recoverable startup error",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 227,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "shell.spec.ts",
+      "line": 54,
+      "title": "upgrades phase 1 browser data without deleting existing metadata or seeding accounts",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 350,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff-review.spec.ts",
+      "line": 76,
+      "title": "G5 source controls and successful states SC145/146/148/149/150/152-155/157-160/162 through real UI",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3988,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff-review.spec.ts",
+      "line": 131,
+      "title": "G5 failures SC147/151/156/161 preserve complete DB and recover through UI retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3119,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff-review.spec.ts",
+      "line": 157,
+      "title": "G5 create form and password control fit desktop and narrow viewports without console errors",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1795,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff.spec.ts",
+      "line": 16,
+      "title": "staff management UI validates all fields, cancels, creates, reads safe details and checks duplicates",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2417,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff.spec.ts",
+      "line": 48,
+      "title": "two real UI-created roles retain independent sessions; rename and delete revoke staff live",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3307,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff.spec.ts",
+      "line": 80,
+      "title": "two owner forms cannot overwrite a staff profile with a stale version",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2264,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff.spec.ts",
+      "line": 92,
+      "title": "account create storage failure keeps form, rolls back and allows UI retry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1576,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff.spec.ts",
+      "line": 102,
+      "title": "desktop details land on loaded content at 1366x650",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2047,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "staff.spec.ts",
+      "line": 102,
+      "title": "desktop details land on loaded content at 1280x720",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2180,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

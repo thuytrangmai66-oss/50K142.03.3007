@@ -1,0 +1,1020 @@
+{
+  "generatedAt": "2026-11-14T11:28:38.895Z",
+  "counts": {
+    "rules": 98,
+    "assertionReviews": 98,
+    "fullCertified": 0,
+    "notReviewed": 0,
+    "newAssertionReviewsThisContinuation": 75
+  },
+  "policy": "Assertion review across all98 rules does not certify full UC branch/control/visual coverage or replace earlier phase acceptance",
+  "rules": [
+    {
+      "id": "BR-UC0-01",
+      "useCases": [
+        "UC_0"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "AUTH_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC0-02",
+      "useCases": [
+        "UC_0"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "AUTH_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-01",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-02",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-03",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-04",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-05",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-06",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-07",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW",
+      "note": "Approved external staff quality precondition; no automatic quality controls"
+    },
+    {
+      "id": "BR-UC1-08",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-09",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-10",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-11",
+      "useCases": [
+        "UC_1.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-12",
+      "useCases": [
+        "UC_1.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-13",
+      "useCases": [
+        "UC_1.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-14",
+      "useCases": [
+        "UC_1.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-15",
+      "useCases": [
+        "UC_1.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-16",
+      "useCases": [
+        "UC_1.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "BLOCKED_UI_FIELDS",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC1-17",
+      "useCases": [
+        "UC_1.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-01",
+      "useCases": [
+        "UC_2.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-02",
+      "useCases": [
+        "UC_2.1",
+        "UC_2.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-03",
+      "useCases": [
+        "UC_2.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-04",
+      "useCases": [
+        "UC_2.1",
+        "UC_2.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-05",
+      "useCases": [
+        "UC_2.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-06",
+      "useCases": [
+        "UC_2.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-07",
+      "useCases": [
+        "UC_2.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-08",
+      "useCases": [
+        "UC_2.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC2-09",
+      "useCases": [
+        "UC_2.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "INVENTORY_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-01",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-02",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-03",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-04",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-05",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-06",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-07",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-08",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-09",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-10",
+      "useCases": [
+        "UC_3.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-11",
+      "useCases": [
+        "UC_3.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC3-12",
+      "useCases": [
+        "UC_3.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-01",
+      "useCases": [
+        "UC_4.1",
+        "UC_4.2",
+        "UC_4.4",
+        "UC_4.5",
+        "UC_4.6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-02",
+      "useCases": [
+        "UC_4.1",
+        "UC_4.2",
+        "UC_4.4",
+        "UC_4.5",
+        "UC_4.6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-03",
+      "useCases": [
+        "UC_4.2",
+        "UC_4.4"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-04",
+      "useCases": [
+        "UC_4.2",
+        "UC_4.4"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-05",
+      "useCases": [
+        "UC_4.2",
+        "UC_4.4"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-06",
+      "useCases": [
+        "UC_4.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-07",
+      "useCases": [
+        "UC_4.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-08",
+      "useCases": [
+        "UC_4.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-09",
+      "useCases": [
+        "UC_4.5"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-10",
+      "useCases": [
+        "UC_4.5"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-11",
+      "useCases": [
+        "UC_4.6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC4-12",
+      "useCases": [
+        "UC_4.6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "CUSTOMER_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-01",
+      "useCases": [
+        "UC_5.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-02",
+      "useCases": [
+        "UC_5.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-03",
+      "useCases": [
+        "UC_5.2",
+        "UC_5.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-04",
+      "useCases": [
+        "UC_5.2",
+        "UC_5.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-05",
+      "useCases": [
+        "UC_5.2",
+        "UC_5.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-06",
+      "useCases": [
+        "UC_5.2",
+        "UC_5.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-07",
+      "useCases": [
+        "UC_5.2",
+        "UC_5.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-08",
+      "useCases": [
+        "UC_5.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC5-09",
+      "useCases": [
+        "UC_5.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC6-01",
+      "useCases": [
+        "UC_6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC6-02",
+      "useCases": [
+        "UC_6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC6-03",
+      "useCases": [
+        "UC_6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC6-04",
+      "useCases": [
+        "UC_6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC6-05",
+      "useCases": [
+        "UC_6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC6-06",
+      "useCases": [
+        "UC_6"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-01",
+      "useCases": [
+        "UC_7.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-02",
+      "useCases": [
+        "UC_7.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-03",
+      "useCases": [
+        "UC_7.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-04",
+      "useCases": [
+        "UC_7.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-05",
+      "useCases": [
+        "UC_7.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-06",
+      "useCases": [
+        "UC_7.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-07",
+      "useCases": [
+        "UC_7.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-08",
+      "useCases": [
+        "UC_7.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-09",
+      "useCases": [
+        "UC_7.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-10",
+      "useCases": [
+        "UC_7.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-11",
+      "useCases": [
+        "UC_7.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-12",
+      "useCases": [
+        "UC_7.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-13",
+      "useCases": [
+        "UC_7.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-14",
+      "useCases": [
+        "UC_7.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-15",
+      "useCases": [
+        "UC_7.4"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-16",
+      "useCases": [
+        "UC_7.4"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-17",
+      "useCases": [
+        "UC_7.5"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-18",
+      "useCases": [
+        "UC_7.5"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-19",
+      "useCases": [
+        "UC_7.5"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-20",
+      "useCases": [
+        "UC_7.5"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC7-21",
+      "useCases": [
+        "UC_7.5"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "PURCHASE_SALES_REPORT_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-01",
+      "useCases": [
+        "UC_8.1",
+        "UC_8.2",
+        "UC_8.3",
+        "UC_8.4"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-02",
+      "useCases": [
+        "UC_8.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-03",
+      "useCases": [
+        "UC_8.1"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-04",
+      "useCases": [
+        "UC_8.1",
+        "UC_8.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-05",
+      "useCases": [
+        "UC_8.1",
+        "UC_8.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-06",
+      "useCases": [
+        "UC_8.1",
+        "UC_8.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-07",
+      "useCases": [
+        "UC_8.2"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-08",
+      "useCases": [
+        "UC_8.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-09",
+      "useCases": [
+        "UC_8.3"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    },
+    {
+      "id": "BR-UC8-10",
+      "useCases": [
+        "UC_8.4"
+      ],
+      "assertionReview": "REVIEWED_WITH_SCOPE_LIMITS",
+      "review": "APPROVAL_STAFF_BR_REVIEW.md",
+      "fullRequirementVerdict": "NOT_CERTIFIED",
+      "g10Acceptance": "PENDING_REVIEW"
+    }
+  ],
+  "scope": "G10 review only; prior phase acceptances remain unchanged",
+  "latestExecution": "../br-review/final/execution.json"
+}

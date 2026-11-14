@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:visual:local": "playwright test --config=playwright.visual.config.ts"
   },
   "dependencies": {
     "@fontsource/be-vietnam-pro": "^5.2.5",
@@ -23,9 +24,9 @@
     "qrcode": "^1.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.29.0",
+    "react-router-dom": "7.18.5",
     "tailwind-merge": "^3.0.2",
-    "zod": "^3.24.2",
+    "zod": "4.6.7",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
@@ -53,7 +54,7 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.72.1",
     "vite": "^6.1.1",
-    "vitest": "^3.0.6"
+    "vitest": "5.1.0"
   },
   "engines": {
     "node": ">=24 <25",

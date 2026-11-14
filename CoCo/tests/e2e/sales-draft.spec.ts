@@ -54,6 +54,8 @@ for (const role of ['owner', 'staff'] as const) test(`G8-T01 ${role}: mapped pro
 
   await openSalesFromSidebar(salesPage);
   await expect(salesPage.getByRole('heading', { name: 'Phiếu bán hàng', exact: true })).toBeVisible();
+  await salesPage.locator('.purchase-payment h2').click();
+  await salesPage.screenshot({ path: info.outputPath(`${role}-cart-empty-1440x900.png`) });
   await salesPage.getByRole('button', { name: 'Lưu', exact: true }).click();
   await closeNotice(salesPage, 'Hãy thêm ít nhất một sản phẩm');
 
@@ -66,7 +68,55 @@ for (const role of ['owner', 'staff'] as const) test(`G8-T01 ${role}: mapped pro
   await expect(salesPage.locator('.purchase-lines tbody tr')).toHaveCount(2);
   await expect(salesPage.locator('.purchase-payment .sales-grand-total')).toContainText('208.014');
   expect(await salesPage.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
+  await salesPage.locator('.purchase-payment h2').click();
   await salesPage.screenshot({ path: info.outputPath(`${role}-cart-1440x900.png`), fullPage: false });
+
+  for (const viewport of [{ width: 1452, height: 770 }, { width: 760, height: 700 }, { width: 390, height: 844 }]) {
+    await salesPage.setViewportSize(viewport);
+    const layout = await salesPage.evaluate(() => {
+      const card = document.querySelector<HTMLElement>('.purchase-payment')!.getBoundingClientRect();
+      const customer = document.querySelector<HTMLElement>('.purchase-customer')!.getBoundingClientRect();
+      const actions = document.querySelector<HTMLElement>('.purchase-payment .form-actions')!.getBoundingClientRect();
+      const methodButtons = Array.from(document.querySelectorAll<HTMLElement>('.sales-payment-method button')).map(button => button.getBoundingClientRect());
+      const headings = Array.from(document.querySelectorAll<HTMLElement>('.purchase-customer h2, .purchase-payment h2')).map(heading => {
+        const style = getComputedStyle(heading);
+        return [style.fontFamily, style.fontSize, style.fontWeight, style.lineHeight];
+      });
+      const amountEnds = Array.from(document.querySelectorAll<HTMLElement>('.purchase-payment .purchase-total > strong + strong'))
+        .map(amount => amount.getBoundingClientRect().right);
+      return {
+        card: { left: card.left, right: card.right, top: card.top, bottom: card.bottom },
+        customer: { left: customer.left, right: customer.right },
+        actions: { left: actions.left, right: actions.right, top: actions.top, bottom: actions.bottom },
+        methodButtons: methodButtons.map(button => ({ top: button.top, bottom: button.bottom })),
+        headings,
+        amountEnds,
+        mainOverflowY: getComputedStyle(document.querySelector<HTMLElement>('#main-content')!).overflowY,
+        documentWidth: document.documentElement.scrollWidth,
+        viewportWidth: document.documentElement.clientWidth,
+      };
+    });
+    expect(layout.documentWidth).toBeLessThanOrEqual(layout.viewportWidth);
+    expect(Math.abs(layout.customer.left - layout.card.left)).toBeLessThan(1);
+    expect(Math.abs(layout.customer.right - layout.card.right)).toBeLessThan(1);
+    expect(layout.actions.left).toBeGreaterThanOrEqual(layout.card.left);
+    expect(layout.actions.right).toBeLessThanOrEqual(layout.card.right);
+    expect(layout.actions.top).toBeGreaterThanOrEqual(layout.methodButtons[0].bottom);
+    expect(Math.abs(layout.methodButtons[0].top - layout.methodButtons[1].top)).toBeLessThan(1);
+    expect(Math.abs(layout.methodButtons[0].bottom - layout.methodButtons[1].bottom)).toBeLessThan(1);
+    expect(layout.headings[0]).toEqual(layout.headings[1]);
+    expect(Math.max(...layout.amountEnds) - Math.min(...layout.amountEnds)).toBeLessThan(1);
+    expect(layout.mainOverflowY).toBe('visible');
+    if (viewport.height === 770) {
+      await salesPage.screenshot({ path: info.outputPath(`${role}-cart-1452x770-full.png`), fullPage: true });
+    }
+    await salesPage.locator('.purchase-payment .button-secondary').scrollIntoViewIfNeeded();
+    await expect(salesPage.locator('.purchase-payment .button-secondary')).toBeInViewport({ ratio: 1 });
+    if (viewport.height === 770) {
+      await salesPage.screenshot({ path: info.outputPath(`${role}-cart-1452x770.png`) });
+    }
+  }
+  await salesPage.setViewportSize({ width: 1440, height: 900 });
 
   const draftId = salesPage.url().match(/sales\/(D[a-f0-9]+)/)?.[1];
   expect(draftId).toBeTruthy();

@@ -1,0 +1,39 @@
+{
+  "executedAt": "2026-11-14T10:40:25.854Z",
+  "baseCommit": "1fd4ad4a04e3b870a1c673fd7abd344af50dea69",
+  "workingTree": "Uncommitted G10; not a release SHA",
+  "unit": {
+    "passed": 514,
+    "failed": 0,
+    "pending": 0,
+    "todo": 0,
+    "success": true
+  },
+  "chromium": {
+    "startTime": "2026-11-14T10:29:51.747Z",
+    "duration": 564451.819,
+    "expected": 166,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "visual": {
+    "startTime": "2026-11-14T10:39:17.226Z",
+    "duration": 18776.487,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "sourceGuard": {
+    "checked": 191,
+    "changed": []
+  },
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "pipelineExitCode": 0
+  },
+  "phaseAcceptance": "IN_PROGRESS_NOT_ACCEPTED"
+}

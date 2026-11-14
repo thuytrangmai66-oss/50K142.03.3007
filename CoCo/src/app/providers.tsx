@@ -19,5 +19,7 @@ export function AppProviders({ children }: PropsWithChildren) {
     <p>Vui lòng cho phép lưu dữ liệu trên trình duyệt rồi thử lại.</p>
     <button onClick={() => window.location.reload()}>Thử lại</button>
   </main>;
-  return <HashRouter><AuthProvider>{children}</AuthProvider></HashRouter>;
+  // Preserve the synchronous navigation behavior used before Router 7. Leaving
+  // this undefined now transitions routes while the previous form stays live.
+  return <HashRouter useTransitions={false}><AuthProvider>{children}</AuthProvider></HashRouter>;
 }

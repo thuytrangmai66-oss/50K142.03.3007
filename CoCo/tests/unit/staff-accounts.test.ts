@@ -126,3 +126,34 @@ it.each(['create','rename','remove'] as const)('rolls back every row, aliases an
   await expect(call).rejects.toThrow('staff-audit-failure');db.auditEntries.hook('creating').unsubscribe(fail);
   expect(await snapshot()).toEqual(previous);expect(await auth.session(session.token)).not.toBeNull();
 });
+
+it.each([{name:''},{username:''},{phone:''},{phone:'090000002'},{phone:'０９０００００００２'}])('G10 invalid staff edit %# preserves all stores, credentials and live session',async patch=>{
+  const id=await service.create(input),profile=await service.detail(id),session=await auth.login(input.username,input.password);
+  const snapshot=()=>db.transaction('r',db.tables,()=>Promise.all(db.tables.map(table=>table.toArray())));
+  const before=await snapshot();
+  await expect(service.update(id,profile.revision,{...input,...patch})).rejects.toMatchObject({code:'VALIDATION'});
+  expect(await snapshot()).toEqual(before);
+  expect((await auth.session(session.token))?.employeeId).toBe(id);
+});
+
+it('G10 rejects a staff phone edit into another profile without revoking sessions or changing aliases',async()=>{
+  const id=await service.create(input);
+  await service.create({...input,name:'Nhân viên khác',username:'other',phone:'0900000003'});
+  const profile=await service.detail(id),session=await auth.login(input.username,input.password);
+  const snapshot=()=>db.transaction('r',db.tables,()=>Promise.all(db.tables.map(table=>table.toArray())));
+  const before=await snapshot();
+  await expect(service.update(id,profile.revision,{...input,phone:'0900000003'})).rejects.toMatchObject({code:'DUPLICATE',fields:{phone:expect.any(String)}});
+  expect(await snapshot()).toEqual(before);
+  expect((await auth.session(session.token))?.employeeId).toBe(id);
+});
+
+it('G10 staff list and detail are read-only for every store across reopen',async()=>{
+  const id=await service.create(input),expected=await service.detail(id);
+  const snapshot=()=>db.transaction('r',db.tables,()=>Promise.all(db.tables.map(table=>table.toArray())));
+  const before=await snapshot();
+  expect(await service.list()).toEqual([expected]);
+  expect(await service.detail(id)).toEqual(expected);
+  db.close();await db.open();
+  expect(await service.detail(id)).toEqual(expected);
+  expect(await snapshot()).toEqual(before);
+});
