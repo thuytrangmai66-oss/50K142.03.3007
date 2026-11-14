@@ -1,0 +1,63 @@
+{
+  "recordedAt": "2026-11-14T17:25:23.487Z",
+  "status": "LOCAL RELEASE GATES PASS; CI/deploy/smoke pending",
+  "baseSha": "e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+  "poDecision": "G11-B03 ACCEPTED FOR RELEASE / DEFERRED; unknown cause, not fixed",
+  "unchanged": [
+    "Source",
+    "Schema",
+    "Business rules",
+    "Dependencies",
+    "Workflow",
+    "Benchmark",
+    "Timeouts"
+  ],
+  "approvedChange": "Only .purchase-title-card > strong X tolerance 1 -> 2 CSS px under G10-D02 / B02",
+  "fullChromium": {
+    "startTime": "2026-11-14T17:14:02.144Z",
+    "duration": 627284.546,
+    "expected": 167,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0,
+    "scope": "Single normal-time rerun authorized by PO, no retries or skips"
+  },
+  "precheck": {
+    "checkedAt": "2026-11-14T17:13:56.579Z",
+    "vietnamTime": "15/11/2026, 00:13:56",
+    "base": "e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+    "protectedFiles": 187,
+    "candidateMatches": true,
+    "bundleUnchanged": true,
+    "scope": "One normal-time full Chromium rerun authorized by PO; no other test or source changes"
+  },
+  "reusedChecks": {
+    "lint": "PASS; B02 evidence unchanged",
+    "typecheck": "PASS; B02 evidence unchanged",
+    "build": "PASS; 22 bundle hashes unchanged",
+    "unitIntegration": {
+      "passed": 538,
+      "failed": 0,
+      "pending": 0,
+      "source": "b02/unit.json; protected source/test/dependency unchanged"
+    }
+  },
+  "codex": {
+    "files": 1162,
+    "bytes": 579440653,
+    "allHashesUnchanged": true,
+    "trackedPaths": 0
+  },
+  "previousRun": {
+    "passed": 166,
+    "failed": 1,
+    "status": "FAIL retained as historical evidence; B03 accepted, not repaired",
+    "reference": "b02-verification.json"
+  },
+  "commit": "PENDING after this preflight",
+  "ci": "NOT RUN for new B02 commit",
+  "deployment": "NOT RUN for new B02 commit",
+  "smoke": "NOT RUN; requires successful deploy",
+  "knownIssues": "G10-A01-A07 and G11-B03 ACCEPTED FOR RELEASE / DEFERRED, not fixed or PASS",
+  "handover": "G11-T04/T05 incomplete"
+}

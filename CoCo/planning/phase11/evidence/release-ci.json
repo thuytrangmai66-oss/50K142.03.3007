@@ -1,0 +1,134 @@
+{
+  "recordedAt": "2026-11-14T16:40:03.298Z",
+  "conclusion": "RELEASE BLOCKED",
+  "releaseSha": "e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+  "commitUrl": "https://github.com/thuytrangmai66-oss/50K142.03.3007/commit/e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+  "push": "SUCCESS; origin/main verified",
+  "ci": {
+    "runId": 43615453782,
+    "url": "https://github.com/thuytrangmai66-oss/50K142.03.3007/actions/runs/43615453782",
+    "headSha": "e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+    "conclusion": "failure",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/setup-node@v4",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm ci",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run lint",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run typecheck",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm test",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run node scripts/audit-phase1.mjs",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npx playwright install --with-deps chromium",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run test:e2e",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Run actions/upload-pages-artifact@v3",
+        "status": "completed",
+        "conclusion": "skipped"
+      },
+      {
+        "name": "Post Run actions/setup-node@v4",
+        "status": "completed",
+        "conclusion": "skipped"
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "chromium": {
+      "passed": 165,
+      "failed": 2,
+      "failedCases": [
+        "owner: empty purchase editor preserves the local Figma canvas layout",
+        "staff: empty purchase editor preserves the local Figma canvas layout"
+      ],
+      "file": "tests/e2e/purchase-editor-figma.spec.ts",
+      "line": 25,
+      "selector": ".purchase-title-card > strong",
+      "coordinate": "x",
+      "expectedMaximumDeltaCssPx": 1,
+      "observedDeltaCssPx": 1.3999999999999773,
+      "retries": "Both failed on initial attempt and both configured retries; no test/timeout/assertion changed"
+    }
+  },
+  "deployment": "SKIPPED because checks failed",
+  "smoke": "NOT RUN; no release deployment",
+  "pages": {
+    "url": "https://thuytrangmai66-oss.github.io/50K142.03.3007/",
+    "http": 200,
+    "assets": [
+      "/50K142.03.3007/assets/index-DPPpdAm4.js",
+      "/50K142.03.3007/assets/index-DJtNdkG8.css"
+    ],
+    "version": "Existing site; not deployed release SHA"
+  },
+  "remoteTreeGuard": {
+    "checkedAt": "2026-11-14T16:29:43.593Z",
+    "sha": "e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+    "remoteTreeSha": "e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+    "entries": 1843,
+    "codexPaths": 0,
+    "truncated": false
+  },
+  "codex": {
+    "files": 1162,
+    "bytes": 579440653,
+    "manifestSha256": "e81df9148d53e98425dc9270388a1d8c7cc92f6f7bd9baa1d19c28a0fe4d8696",
+    "allFileHashesUnchanged": true,
+    "checkedAt": "2026-11-14T15:48:20.605Z"
+  },
+  "b01": "Source fixed; targeted 33/33, local full 167/167; CI failed only the two unrelated layout cases",
+  "knownIssues": "A01-A07 ACCEPTED FOR RELEASE / DEFERRED; original incomplete status retained",
+  "followup": "PO decision required for the separate Linux layout assertions; do not bypass workflow or alter them under B01 scope"
+}

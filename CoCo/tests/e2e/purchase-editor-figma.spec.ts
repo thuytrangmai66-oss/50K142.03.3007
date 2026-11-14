@@ -22,7 +22,11 @@ for (const role of ['owner', 'staff'] as const) test(`${role}: empty purchase ed
   const measurements: Record<string, unknown> = {};
   for (const [selector, expected] of Object.entries(reference)) {
     const actual = await page.locator(selector).boundingBox(); expect(actual, selector).not.toBeNull();
-    for (const [index, key] of ['x', 'y', 'width', 'height'].entries()) expect(Math.abs(actual![key as keyof typeof actual] - expected[index]), `${selector} ${key}`).toBeLessThanOrEqual(1);
+    for (const [index, key] of ['x', 'y', 'width', 'height'].entries()) {
+      // G11-B02 / G10-D02: PO approved 2 CSS px only for this badge's X coordinate.
+      const tolerance = selector === '.purchase-title-card > strong' && key === 'x' ? 2 : 1;
+      expect(Math.abs(actual![key as keyof typeof actual] - expected[index]), `${selector} ${key}`).toBeLessThanOrEqual(tolerance);
+    }
     measurements[selector] = actual;
   }
   await expect(page.locator('.purchase-lines tbody tr')).toHaveCount(0);

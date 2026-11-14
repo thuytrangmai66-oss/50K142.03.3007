@@ -1,0 +1,153 @@
+{
+  "recordedAt": "2026-11-14T17:12:50.467Z",
+  "status": "RELEASE BLOCKED; B02 change implemented, full regression has an unrelated failure",
+  "baseSha": "e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd",
+  "approval": "PO explicitly approved only X coordinate of .purchase-title-card > strong from 1 to 2 CSS px under G10-D02",
+  "change": {
+    "file": "CoCo/tests/e2e/purchase-editor-figma.spec.ts",
+    "coordinate": "x",
+    "selector": ".purchase-title-card > strong",
+    "previousTolerance": 1,
+    "approvedTolerance": 2,
+    "otherAssertionsUnchanged": true,
+    "sourceCssSchemaDependenciesWorkflowUnchanged": true
+  },
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "unit": {
+      "passed": 538,
+      "failed": 0,
+      "pending": 0,
+      "success": true
+    },
+    "targeted": {
+      "startTime": "2026-11-14T16:55:45.297Z",
+      "duration": 22349.871,
+      "expected": 9,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "fullChromium": {
+      "startTime": "2026-11-14T16:56:48.948Z",
+      "duration": 673260.577,
+      "expected": 166,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "failedCaseRecheck": {
+      "startTime": "2026-11-14T17:09:25.763Z",
+      "duration": 81865.95,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "geometry": [
+    {
+      "case": "purchase-editor-figma-owne-f178f-e-local-Figma-canvas-layout-chromium",
+      "badge": {
+        "x": 905.4375,
+        "y": 155,
+        "width": 145,
+        "height": 39
+      },
+      "maximumDelta": 0.03750000000002274,
+      "exceedingTwo": []
+    },
+    {
+      "case": "purchase-editor-figma-owne-f178f-e-local-Figma-canvas-layout-chromium-repeat1",
+      "badge": {
+        "x": 905.4375,
+        "y": 155,
+        "width": 145,
+        "height": 39
+      },
+      "maximumDelta": 0.03750000000002274,
+      "exceedingTwo": []
+    },
+    {
+      "case": "purchase-editor-figma-owne-f178f-e-local-Figma-canvas-layout-chromium-repeat2",
+      "badge": {
+        "x": 905.4375,
+        "y": 155,
+        "width": 145,
+        "height": 39
+      },
+      "maximumDelta": 0.03750000000002274,
+      "exceedingTwo": []
+    },
+    {
+      "case": "purchase-editor-figma-staf-6bc20-e-local-Figma-canvas-layout-chromium",
+      "badge": {
+        "x": 905.4375,
+        "y": 155,
+        "width": 145,
+        "height": 39
+      },
+      "maximumDelta": 0.03750000000002274,
+      "exceedingTwo": []
+    },
+    {
+      "case": "purchase-editor-figma-staf-6bc20-e-local-Figma-canvas-layout-chromium-repeat1",
+      "badge": {
+        "x": 905.4375,
+        "y": 155,
+        "width": 145,
+        "height": 39
+      },
+      "maximumDelta": 0.03750000000002274,
+      "exceedingTwo": []
+    },
+    {
+      "case": "purchase-editor-figma-staf-6bc20-e-local-Figma-canvas-layout-chromium-repeat2",
+      "badge": {
+        "x": 905.4375,
+        "y": 155,
+        "width": 145,
+        "height": 39
+      },
+      "maximumDelta": 0.03750000000002274,
+      "exceedingTwo": []
+    }
+  ],
+  "guard": {
+    "checkedAt": "2026-11-14T16:58:20.821Z",
+    "codexFiles": 1162,
+    "codexUnchanged": true,
+    "bundleFiles": 22,
+    "bundleUnchanged": true,
+    "sourceChanges": "",
+    "testChanges": [
+      "CoCo/tests/e2e/purchase-editor-figma.spec.ts"
+    ]
+  },
+  "failures": [
+    {
+      "file": "phase10-finalize-benchmark.spec.ts",
+      "line": 17,
+      "title": "G10-T05 owner 1000: measure real purchase and cash-sale commits without an invented SLA",
+      "status": "failed",
+      "startTime": "2026-11-14T16:59:49.123Z",
+      "durationMs": 16252,
+      "error": "Error: expect(locator).toHaveValue(expected) failed\n\nLocator: getByRole('textbox', { name: 'Mã sản phẩm', exact: true })\nExpected: \"\"\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toHaveValue\" getByRole('textbox', { name: 'Mã sản phẩm', exact: true }) with timeout 5000ms\n  - waiting for getByRole('textbox', { name: 'Mã sản phẩm', exact: true })\n    3 × locator resolved to <input disabled autocomplete=\"off\" spellcheck=\"false\" value=\"SP0059085b\" aria-invalid=\"false\" aria-label=\"Mã sản phẩm\" placeholder=\"Quét mã vạch hoặc nhập mã sản phẩm\"/>\n      - unexpected value \"SP0059085b\"\n",
+      "errorContext": "D:\\50K142-NEW\\.git\\coco-release-recovery\\2026-11-14T15-30-53-634Z\\b02\\chromium\\phase10-finalize-benchmark-3def4-its-without-an-invented-SLA-chromium\\error-context.md"
+    }
+  ],
+  "diagnosis": {
+    "fact": "Failed test crossed Vietnam midnight: 2026-11-14T16:59:49.123Z through 2026-11-14T17:00:05.375Z; failure UI showed loading transaction",
+    "hypothesis": "Daily scheduler may affect draft loading during 1000-product processing; causality not established without a failing trace",
+    "recheck": "Same case passed three times afterward with trace; no source, timeout or assertion changes; full suite failure retained",
+    "next": "PO authorization for limited G11-B03 investigation requested; do not commit/push while gate failed"
+  },
+  "push": "NOT RUN for B02",
+  "ci": "NOT RUN for B02",
+  "deployment": "NOT RUN for B02",
+  "smoke": "NOT RUN; release deployment unavailable",
+  "pendingTasks": "G11-T04 and T05 remain incomplete",
+  "knownIssues": "G10-A01-A07 remain ACCEPTED FOR RELEASE / DEFERRED, not fixed or PASS"
+}

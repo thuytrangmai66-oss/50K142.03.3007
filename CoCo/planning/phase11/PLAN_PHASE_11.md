@@ -1,6 +1,6 @@
 # Kế hoạch Giai đoạn 11 Release, xác minh Pages và bàn giao
 
-> **14/11/2026: IN PROGRESS — G11-T02 RELEASE BLOCKED tại preflight Chromium (166 PASS / 1 FAIL).** PO đã phê duyệt release và chấp nhận tạm thời G10-A01–A07 theo G10-D08, giữ nguyên kết quả chưa hoàn thành/rủi ro; không coi G10 đã kiểm chứng đầy đủ. Chưa commit/push hoặc có CI/deploy/smoke mới. [Checkpoint và blocker G11-B01](RELEASE_EXECUTION.md). Không tự DONE G11-T02/T03/T04/T05 hoặc toàn G11.
+> **15/11/2026: G11-T02 LOCAL GATES PASS / CI PENDING.** PO duyệt B02 (chỉ X 1→2 px), targeted 9/9 PASS; 538 unit, lint/typecheck/build PASS. Full trước đó 166 PASS/1 FAIL giữ lịch sử; [B03 được PO ACCEPTED FOR RELEASE / DEFERRED](G11_B03_REVIEW.md), nguyên nhân chưa rõ/chưa sửa. Lượt full duy nhất theo PO đã **167/167 PASS**, không skip/retry; đủ điều kiện commit/push B02. Chỉ CI PASS mới deploy/smoke; chưa tự coi release thành công. G10-A01–A07 giữ ACCEPTED FOR RELEASE / DEFERRED. [Báo cáo release](RELEASE_EXECUTION.md). Không tự DONE T04/T05 hoặc toàn G11.
 
 Ngày lập 11/11/2026. Phạm vi/thứ tự task gốc dưới đây giữ nguyên. Quyền release cụ thể G10-D08 và quy tắc main trong AGENTS.md thay các chỉ dẫn nhánh/quyền cũ; ngoại lệ PO không cho phép bỏ check CI/CD hoặc tuyên bố tồn đọng đã sửa.
 

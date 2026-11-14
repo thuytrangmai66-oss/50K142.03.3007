@@ -1,65 +1,77 @@
 # G11-T02 — Release execution
 
-Ngày 14/11/2026. **PO APPROVED RELEASE / RELEASE BLOCKED — local Chromium preflight FAIL.** Không tạo release commit, push hoặc deploy. Quyền release và các ngoại lệ PO giữ nguyên; chúng không cho phép bỏ gate kiểm thử thất bại.
+Cập nhật 15/11/2026 (giờ Việt Nam). **PO APPROVED RELEASE / LOCAL GATES PASS, CI PENDING:** B03 được **ACCEPTED FOR RELEASE / DEFERRED**, chưa xác định nguyên nhân/chưa sửa. Lượt full Chromium duy nhất theo PO **167/167 PASS**, không skip/retry, đủ điều kiện commit/push B02. CI/deploy/smoke của commit mới còn chờ; CI FAIL trước trên `e0fd2a7` giữ làm lịch sử. Không báo hoàn tất G11-T02/T03 hoặc toàn G11.
 
-## Phạm vi và quyết định PO
+## Quyết định và phạm vi
 
-PO cho phép release phiên bản hiện tại, giữ nguyên code, nghiệp vụ, schema và test. Không phát triển thêm chức năng, sửa tồn đọng đã chấp nhận, nới assertion hoặc bỏ CI. G9 đã nghiệm thu; G10 chưa được chứng nhận đầy đủ. G11-T04 rollback/roll-forward và T05 nghiệm thu bàn giao chưa được coi hoàn thành từ lượt T02/T03.
+PO phê duyệt release với G10-A01–A07 **ACCEPTED FOR RELEASE / DEFERRED**, giữ tình trạng chưa hoàn thành và rủi ro; không tuyên bố đã sửa/PASS. Sau preflight lần đầu thất bại, PO cho phép xử lý giới hạn G11-B01. Chỉ sửa luồng đóng popup CONFLICT trong ApprovalsPage.tsx; không đổi test, assertion, timeout, schema, transaction, business rule hoặc workflow.
 
-| Known issue | Quyết định release | Rủi ro giữ nguyên |
-|---|---|---|
-| G10-A01 | ACCEPTED FOR RELEASE / DEFERRED | Mâu thuẫn SRS/Figma, thông tin Nhân viên/Trạng thái trên chi tiết còn thiếu; chưa sửa UI/SRS. |
-| G10-A02 | ACCEPTED FOR RELEASE / DEFERRED | Phím tắt/mức giá nhanh chưa chốt hoặc kiểm chứng đủ. |
-| G10-A03 | ACCEPTED FOR RELEASE / DEFERRED | Đã có số đo nhưng chưa có SLA được phê duyệt để kết luận NFR hiệu năng đạt. |
-| G10-A04 | ACCEPTED FOR RELEASE / DEFERRED | Visual/action coverage chưa hoàn chỉnh; SC105/8 modal PASS không chứng nhận 297 SC. |
-| G10-A05 | ACCEPTED FOR RELEASE / DEFERRED | Traceability mọi nhánh UC/control chưa khép; tổng test không thay chứng nhận coverage. |
-| G10-A06 | ACCEPTED FOR RELEASE / DEFERRED | 7 moderate dependency vulnerabilities trong nhóm công cụ lint còn tồn tại; không tuyên bố audit sạch. |
-| G10-A07 | ACCEPTED FOR RELEASE / DEFERRED | Chưa kiểm thử barcode/cảm ứng trên thiết bị vật lý; Chromium mô phỏng không thay hardware PASS. |
-
-## G11-T01 — Checkpoint Git và an toàn dữ liệu
-
-- Git root `D:\50K142-NEW`, app `CoCo/`, nhánh `main`, remote `https://github.com/thuytrangmai66-oss/50K142.03.3007.git`.
-- Khi bắt đầu T02, HEAD/origin/main cùng `1fd4ad4a04e3b870a1c673fd7abd344af50dea69`, 0 ahead/behind; 326 file đã stage, 0 unstaged/untracked không bị ignore. Reflog đã có thao tác đưa main về origin/main trước lượt này; không reset lại.
-- Commit cũ `035a16ba7be5cf7096641906e4259afe4f09c6e4` còn tồn tại local và chứa 1.162 file CODEX. Commit này không thuộc lịch sử main chuẩn bị push.
-- Đã tạo hai ref **chỉ local** `refs/coco-local-backup/2026-11-14T15-30-53-634Z/{original-035a16b,prepared-index}`; snapshot index tree `47e862d21191727fa6ec2096d2610d5655895498`. Không push các ref này.
-- Bản khôi phục tại `.git/coco-release-recovery/2026-11-14T15-30-53-634Z/`: index gốc, manifest SHA-256 working tree và toàn bộ CODEX cùng bản sao. **1.162 file / 579.440.653 byte**, đối chiếu bản sao theo SHA-256 giống hệt. Bảo toàn refactor pure-business-rules và tài liệu test-suite-audit trong candidate.
-- Root `.gitignore` đổi từ `CODEX/` sang đúng `/CODEX/`. CODEX không nằm trong index; kiểm tra lại toàn bộ lịch sử mới trước push, không chỉ dựa vào ignore.
-- Scan candidate ban đầu: không có CODEX, node_modules, dist, `.env`, DB/backup/archive riêng; không thấy mẫu private key/GitHub token/service-role. Ảnh nguồn riêng chỉ có baseline SC105 đã được PO duyệt; các ảnh runtime dùng profile/dataset kiểm thử. Workflow không thay đổi.
-
-## Preflight và xác minh release
-
-Kiểm tra trên worktree candidate sạch, nội dung Git tương đương source hiện tại tại `D:\50K142-NEW\.g11-release\CoCo`; snapshot local `2c8db14446dec5ab00db25b3a7c8c3c26304245f`. Không có CODEX trong candidate. Lượt `npm ci` đầu ở workspace chính bị EPERM do esbuild đang được sử dụng; đã cài sạch thành công trong candidate (17 giây) và khôi phục dependency workspace theo cùng lockfile, không dừng server hoặc đổi dependency. Checkout Windows chỉ khác CRLF/LF; 198 file source/test/config khớp nội dung Git, workspace gốc giữ nguyên byte. Build có 22 file artifact; không build lại trong khi Chromium sử dụng dist.
-
-| Bước | Kết quả hiện tại |
+| Known issue | Rủi ro được chấp nhận tạm thời |
 |---|---|
-| `npm ci` | PASS trên candidate sạch; còn 7 moderate đã được PO chấp nhận |
-| `npm run lint` | PASS, exit 0 |
-| `npm run typecheck` | PASS, exit 0 |
-| `npm test -- --maxWorkers=1` | 538 PASS / 0 FAIL / 0 SKIP, 29 file, 201,21 giây |
-| `npm run build` | PASS; giữ cảnh báo chunk >500 kB, không đổi cấu hình để che cảnh báo |
-| Chromium E2E `npm run test:e2e -- --workers=1` | **FAIL: 166 PASS / 1 FAIL / 0 SKIP / 0 FLAKY**, 618,05 giây; không rerun để che lỗi |
-| CODEX sau kiểm tra / trước push | 1.162 file / 579.440.653 byte giữ nguyên SHA-256; không có CODEX trong index hoặc candidate tree. Main = origin/main, không có commit mới để push; commit 035a16b chỉ giữ ở backup local |
-| Release commit SHA / danh sách file | **NOT CREATED** vì preflight FAIL; danh sách file chuẩn bị tại RELEASE_CANDIDATE_FILES.txt, không phải file đã commit |
-| Push `origin main` | **NOT RUN**, dừng trước commit/push |
-| CI run URL / SHA / kết quả | **NOT RUN cho candidate này**; workflow active nhưng chưa được kích hoạt bởi release |
-| Pages deploy / SHA | **NO NEW DEPLOYMENT**; website cũ HTTP 200 không phải bằng chứng deploy candidate |
-| Smoke website / routing / JS / IndexedDB / chức năng | **NOT RUN**, vì chưa có release deployment; không chạm dữ liệu trình duyệt thật |
+| A01 | Mâu thuẫn SRS/Figma; Nhân viên/Trạng thái trên chi tiết còn thiếu. |
+| A02 | Phím tắt/mức giá nhanh chưa chốt và kiểm chứng đủ. |
+| A03 | Chưa có SLA được duyệt; số đo không đồng nghĩa đạt SLA. |
+| A04 | Visual/action coverage chưa đầy đủ; SC105/8 modal không chứng nhận 297 SC. |
+| A05 | Traceability từng nhánh UC/control chưa khép. |
+| A06 | 7 moderate dependency vulnerabilities thuộc nhóm công cụ lint. |
+| A07 | Barcode/cảm ứng vật lý chưa kiểm thử trên thiết bị thật. |
+| G11-B03 | Chưa rõ nguyên nhân FAIL thêm sản phẩm bán hàng với 1.000 món khi qua 00:00 giờ VN; ba lượt recheck sau đó PASS chưa tái hiện điều kiện chuyển ngày. PO chấp nhận tạm thời, không sửa source/benchmark/assertion/timeout và không coi lỗi đã khắc phục. |
 
-## G11-B01 — Blocker preflight thực tế
+## Git, CODEX và checkpoint
 
-- Ca `tests/e2e/purchase-approvals.spec.ts:160`: **G10 opposing approve/reject UI decisions commit once and both owner tabs recover without reload**.
-- Assert thất bại tại `purchase-helpers.ts:10`, được gọi từ test dòng 190: sau đóng thông báo và thao tác Escape, một tab vẫn ở `#/approvals/Yc2f5a1ba` thay vì `#/approvals` trong 5 giây; error context còn dialog “Yêu cầu thu mua”. Không kết luận đây chỉ là sai lệch thẩm mỹ hoặc tự gán flaky.
-- Các assertion trước đó đã qua: chỉ một quyết định thắng, đúng trạng thái dòng sản phẩm, một notice/operation; không tạo hóa đơn hoặc sản phẩm. Lượt full vẫn **FAIL** do chưa về danh sách đúng yêu cầu.
-- Không sửa source, test, timeout, assertion hoặc workflow; không dùng 167 PASS lịch sử để thay kết quả 166/1 hiện tại. Cần PO quyết định phạm vi xử lý lỗi/test sau khi đối chiếu nguyên nhân, trước khi tiếp tục release; không tự bỏ test để vượt gate.
+- Bắt đầu: main và origin/main cùng 1fd4ad4a04e3b870a1c673fd7abd344af50dea69; 326 file staged, không có unstaged/untracked không bị ignore. Reflog đã có reset về origin/main trước lượt release; không reset lại.
+- Commit cũ 035a16ba7be5cf7096641906e4259afe4f09c6e4 chứa CODEX nhưng không thuộc lịch sử main mới. Đã bảo vệ bằng ref local, không push backup.
+- Recovery tại .git/coco-release-recovery/2026-11-14T15-30-53-634Z/: index gốc, snapshot, manifest và bản sao CODEX. Ref local dưới refs/coco-local-backup/2026-11-14T15-30-53-634Z/ giữ original-035a16b, prepared-index và release-candidate.
+- **1.162 file CODEX / 579.440.653 byte giữ nguyên SHA-256**, bản sao đã đối chiếu. Root .gitignore có /CODEX/; không có CODEX trong index, commit release hoặc bất kỳ commit mới nào push. API cây GitHub cũng xác nhận 0 đường dẫn CODEX.
+- Commit release: **e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd**, parent 1fd4ad4a04e3b870a1c673fd7abd344af50dea69.
+- Message: fix(coco): close conflicted approval flow and prepare G11 release.
+- Push thường origin main **SUCCESS**, remote SHA đã xác minh; đúng một commit mới, không force/push-all/backup. [Commit GitHub](https://github.com/thuytrangmai66-oss/50K142.03.3007/commit/e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd), [335 file đã commit](RELEASE_CANDIDATE_FILES.txt).
+- Refactor pure-business-rules và test-suite-audit được bảo toàn. Scan staging không thấy secret pattern, .env, database riêng, node_modules, dist hoặc tài liệu CODEX. Baseline SC105 là nguồn riêng duy nhất đã được PO duyệt version hóa; ảnh khác trong evidence là runtime với dữ liệu kiểm thử.
 
-Bằng chứng [release-preflight.json](evidence/release-preflight.json), [chi tiết FAIL](evidence/chromium-failure.json), [error context](evidence/approval-race-error-context.md). Log đầy đủ, JSON runner và bundle manifest ở thư mục khôi phục local nêu trên. Không chạy lại tám popup visual riêng hoặc sửa pixel theo thẩm mỹ.
+## Kiểm thử local và G11-B01
 
-## Git và bàn giao khi dừng
+npm ci đầu ở workspace bị EPERM do esbuild đang được dùng. Đã cài sạch candidate tại D:\50K142-NEW\.g11-release\CoCo và khôi phục dependency workspace theo cùng lockfile, không dừng server hoặc xóa dữ liệu. Không dùng lượt install lỗi làm PASS.
 
-Nhánh main/HEAD/upstream giữ tại `1fd4ad4a04e3b870a1c673fd7abd344af50dea69`; không tạo commit release hoặc push backup. Những file G10, refactor pure-business-rules, test-suite-audit và tài liệu release vẫn giữ trên máy/index để tiếp tục sau quyết định PO. Không xóa CODEX hoặc thay đổi source/nghiệp vụ/schema. Root ignore `/CODEX/` và bảo toàn dữ liệu được kiểm độc lập với kết quả test thất bại.
+| Kiểm tra sau sửa | Kết quả thực thi |
+|---|---|
+| npm ci | PASS trên candidate sạch, 17 giây; còn 7 moderate đã chấp nhận |
+| Lint / typecheck | PASS |
+| Production build | PASS; giữ cảnh báo chunk >500 kB |
+| Targeted approval E2E | **33 PASS / 0 FAIL / 0 SKIP**, 11 case lặp 3 lần |
+| Full unit/integration | **538 PASS / 0 FAIL / 0 SKIP**, 29 file, 191,53 giây |
+| Full Chromium | **167 PASS / 0 FAIL / 0 SKIP / 0 FLAKY**, 614,67 giây |
 
-Pages mục tiêu: https://thuytrangmai66-oss.github.io/50K142.03.3007/ . Chưa có release SHA/CI run/deployment mới hoặc smoke hợp lệ, nên **RELEASE BLOCKED**, không báo hoàn tất G11-T02/T03 hay toàn G11.
+Trước sửa: full 166 PASS/1 FAIL; đúng ca race lặp 3 lần đều FAIL có trace. Nhánh CONFLICT giữ popup lý do và chi tiết; một Escape chỉ đóng lớp lý do. Sửa closeFlow: conflict khiến đóng thông báo unmount cả luồng và về /approvals. Lỗi lưu thông thường vẫn giữ form/retry. Không sửa test hoặc transaction. [Root cause/fix](G11_B01_FIX.md), [execution sau sửa](evidence/b01-verification.json).
 
-## G11-B01 ?? s?a ? resume ???c PO ph? duy?t
+Guard: trong source/test/config chỉ ApprovalsPage.tsx đổi; service/repository/schema/test/workflow không đổi. Full Chromium dùng cùng bundle 22 file, không build giữa lượt. Giữ kết quả FAIL cũ ở [preflight cũ](evidence/release-preflight.json), [chi tiết FAIL cũ](evidence/chromium-failure.json), [error context](evidence/approval-race-error-context.md); không chuyển lịch sử FAIL thành PASS. Log/trace/JSON runner đầy đủ giữ local trong recovery.
 
-[Root cause v? minimal fix](G11_B01_FIX.md): l?i source ? nh?nh CONFLICT gi? lu?ng popup l?ng nhau. Ch? th?m closeFlow cho CONFLICT; X/Escape ??ng notice s? v? danh s?ch, kh?ng s?a test/timeout/assertion ho?c transaction. Tr??c s?a 3/3 FAIL c? trace; sau s?a 33/33 targeted (11 case ?3), 538/538 unit v? 167/167 Chromium PASS. [JSON execution](evidence/b01-verification.json). M?i k?t qu? FAIL c? ???c gi? nguy?n l?ch s?; kh?ng ??i th?nh PASS.
+## CI và blocker G11-B02
+
+[Workflow run 43615453782](https://github.com/thuytrangmai66-oss/50K142.03.3007/actions/runs/43615453782) kiểm đúng release SHA. [Bằng chứng CI/remote](evidence/release-ci.json).
+
+| Bước CI | Kết quả |
+|---|---|
+| Install / lint / typecheck / unit / static audit / build / install Chromium | SUCCESS; unit 538 PASS |
+| Chromium Linux | **165 PASS / 2 FAIL** |
+| Upload Pages artifact / deploy | SKIPPED do checks failure |
+
+Hai FAIL: tests/e2e/purchase-editor-figma.spec.ts:15, role Chủ và Nhân viên. Assertion dòng 25, .purchase-title-card > strong, tọa độ X: delta **1,4 CSS px**, vượt ngưỡng **1 px**; lần đầu và hai retry cùng lỗi. Không có G11-B01 trong danh sách FAIL. Chưa có bằng chứng lỗi nghiệp vụ từ hai phép đo layout này.
+
+**G11-B02 — quyết định mới của PO:** cho phép chỉ tọa độ X của `.purchase-title-card > strong` dùng 2 CSS px theo G10-D02; mọi giới hạn khác vẫn 1 px. Đã sửa đúng test, giữ CSS/reference/timeout/functional assertions. [Báo cáo B02](G11_B02_FIX.md).
+
+### Kiểm chứng B02 ngày 15/11/2026
+
+- Lint/typecheck/build PASS; unit/integration **538/538 PASS**; targeted layout **9/9 PASS** (3 case × 3 lượt), không có delta khác vượt 2 px. Source và bundle 22 file giữ nguyên.
+- Full Chromium **166 PASS / 1 FAIL** ở benchmark Chủ/1.000 sản phẩm, bước thêm sản phẩm bán hàng: input không về rỗng trong 5 giây; context hiển thị “Đang tải giao dịch…”. Case đi qua 00:00 giờ Việt Nam. Chưa xác nhận nguyên nhân bằng trace lần FAIL; không tự kết luận flaky.
+- Tái kiểm riêng đúng case, có trace, **3/3 PASS** sau nửa đêm; không thay kết quả full suite thành PASS. [B03 cần review](G11_B03_REVIEW.md), [evidence](evidence/b02-verification.json).
+- Tại checkpoint này đã dừng trước commit/push; HEAD và origin/main cùng `e0fd2a73b8c05b3e70cfb496a1d6ead4326967fd`. Sau đó PO quyết định B03 **ACCEPTED FOR RELEASE / DEFERRED**, cho chạy lại full Chromium một lần vào thời gian bình thường (bắt đầu 00:13:56 giờ VN). Chỉ đủ 167 PASS mới commit/push B02; CI còn FAIL phải dừng, chỉ deploy khi CI PASS. Kết quả lần FAIL vẫn giữ nguyên; không kết luận nguyên nhân hoặc sửa B03.
+- **Lượt full mới đã thực thi: 167 PASS / 0 FAIL / 0 SKIP / 0 FLAKY**, exit 0, không retry; [bằng chứng riêng](evidence/b03-release-verification.json). Các source/test/config được đối chiếu giữa main và candidate; chỉ test geometry B02 thay đổi so với SHA cũ. Unit 538/538 và lint/typecheck/build dùng evidence B02 còn hợp lệ; bundle 22 file giữ nguyên. Đủ gate local để commit/push, còn chờ CI đúng SHA mới, deployment và smoke.
+
+## Pages và bàn giao
+
+- [Pages mục tiêu](https://thuytrangmai66-oss.github.io/50K142.03.3007/) HTTP 200 hiện là site cũ, dùng index-DPPpdAm4.js và index-DJtNdkG8.css; không phải deployment release mới.
+- Deployment release **SKIPPED**; G11-T03 smoke **NOT RUN**. Không thao tác storage/profile trình duyệt thật. Script smoke profile riêng được chuẩn bị nhưng chưa chạy khi chưa có deployment.
+- G11-T04 rollback/roll-forward và T05 nghiệm thu bàn giao chưa thực thi/nghiệm thu; không tự DONE toàn G11.
+- Báo cáo sau CI cập nhật local, chưa commit/push thêm để tránh kích hoạt lại pipeline khi blocker chưa xử lý. Source release đã push đúng SHA; dữ liệu local/CODEX được bảo toàn.
+
+**Trạng thái hiện tại: LOCAL GATES PASS / CI PENDING.** Được phép commit/push B02 và tiếp tục kiểm đúng SHA trên CI/deploy/smoke. B03 được PO chấp nhận tạm thời, chưa rõ nguyên nhân/chưa khắc phục. Chưa có release mới deploy/smoke thành công.
