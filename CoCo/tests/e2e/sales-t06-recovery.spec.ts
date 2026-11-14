@@ -103,8 +103,8 @@ test('T06 owner and staff confirming the same product concurrently commit one in
   await expect(page.locator(':modal')).toHaveCount(0); await expect(staff.locator(':modal')).toHaveCount(0);
   expect(await inventoryData(staff)).toEqual(paid);
   await page.reload(); await staff.reload();
-  await expect(page.locator('.sidebar-footer p')).toHaveText('Chủ cửa hàng');
-  await expect(staff.locator('.sidebar-footer p')).toHaveText('Nhân viên');
+  await expect(page.locator('.account-name')).toHaveText('Chủ kiểm thử');
+  await expect(staff.locator('.account-name')).toHaveText('Nhân viên bán hàng');
   expect(await inventoryData(page)).toEqual(paid);
   expect(errors).toEqual([]);
 });

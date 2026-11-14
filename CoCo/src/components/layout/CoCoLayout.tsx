@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { House, LogOut, CircleUserRound, UsersRound, SlidersHorizontal, Settings, ShoppingBag, ShoppingCart, Package, ChartColumn, Check, ChevronDown } from 'lucide-react';
+import { CircleUserRound } from 'lucide-react';
+import { SidebarIcon } from './SidebarIcon';
 import { hasPermission } from '../../services/permissions';
 import { useAuth } from '../../features/auth/use-auth';
 import { Notice } from '../ui/Notice';
@@ -48,7 +49,7 @@ export function CoCoLayout() {
     try { await auth.logout(); } catch { setLogoutError('Không thể đăng xuất. Vui lòng thử lại.'); }
     finally { setBusy(false); }
   }
-  return <div className={`app-shell${purchaseEditor || salesEditor ? ' purchase-editor-shell' : ''}${location.pathname === '/sales' ? ' sales-list-shell' : ''}`}>
+  return <div className={`app-shell${location.pathname === '/' ? ' home-shell' : ''}${purchaseEditor || salesEditor ? ' purchase-editor-shell' : ''}${location.pathname === '/sales' ? ' sales-list-shell' : ''}`}>
     <a className="skip-link" href="#main-content" onClick={event => {
       event.preventDefault();
       document.getElementById('main-content')?.focus();
@@ -56,18 +57,18 @@ export function CoCoLayout() {
     <aside className="sidebar">
       <NavLink className="brand" to="/" aria-label="CoCo — Trang chủ"><img src={logo} alt="CoCo — Kho ký gửi" /></NavLink>
       <div className="sidebar-rule" />
-      <nav aria-label="Điều hướng chính"><NavLink to="/" end><House aria-hidden="true" />Trang chủ</NavLink>
-        <NavLink to="/purchases"><ShoppingBag aria-hidden="true" />Thu mua</NavLink>
-        {auth.user && hasPermission(auth.user.role, 'sales.create') && <NavLink className={`sales-navigation${location.pathname.startsWith('/sales') ? ' active' : ''}`} to="/sales"><ShoppingCart aria-hidden="true"/>Bán hàng</NavLink>}
-        <NavLink to="/inventory"><Package aria-hidden="true"/>Hàng hóa</NavLink>
-        {location.pathname.startsWith('/inventory') && <NavLink className="inventory-submenu" to="/inventory/discounts"><ChevronDown aria-hidden="true"/><span>Xử lý hàng tồn lâu</span></NavLink>}
-        <NavLink to="/customers"><UsersRound aria-hidden="true" />Khách hàng</NavLink>
-        {auth.user && hasPermission(auth.user.role, 'reports.read') && <NavLink to="/reports"><ChartColumn aria-hidden="true"/>Báo cáo</NavLink>}
-        {auth.user && hasPermission(auth.user.role, 'approvals.read') && <NavLink to="/approvals"><Check aria-hidden="true"/>Phê duyệt</NavLink>}
-        {auth.user && hasPermission(auth.user.role, 'staff.read') && <NavLink to="/staff"><Settings aria-hidden="true" />Nhân viên</NavLink>}
-        {auth.user && hasPermission(auth.user.role, 'price-brackets.read') && <NavLink to="/price-brackets"><SlidersHorizontal aria-hidden="true" />Khung giá thu mua</NavLink>}
+      <nav aria-label="Điều hướng chính"><NavLink to="/" end><SidebarIcon name="home"/><span>Trang chủ</span></NavLink>
+        <NavLink to="/purchases"><SidebarIcon name="purchase"/><span>Thu mua</span></NavLink>
+        {auth.user && hasPermission(auth.user.role, 'sales.create') && <NavLink className={`sales-navigation${location.pathname.startsWith('/sales') ? ' active' : ''}`} to="/sales"><SidebarIcon name="sales"/><span>Bán hàng</span></NavLink>}
+        <NavLink to="/inventory"><SidebarIcon name="inventory"/><span>Hàng hóa</span></NavLink>
+        {location.pathname.startsWith('/inventory') && <NavLink className="inventory-submenu" to="/inventory/discounts"><SidebarIcon name="chevron"/><span>Xử lý hàng tồn lâu</span></NavLink>}
+        <NavLink to="/customers"><SidebarIcon name="customers"/><span>Khách hàng</span></NavLink>
+        {auth.user && hasPermission(auth.user.role, 'reports.read') && <NavLink to="/reports"><SidebarIcon name="reports"/><span>Báo cáo</span></NavLink>}
+        {auth.user && hasPermission(auth.user.role, 'approvals.read') && <NavLink to="/approvals"><SidebarIcon name="approvals"/><span>Phê duyệt</span></NavLink>}
+        {auth.user && hasPermission(auth.user.role, 'staff.read') && <NavLink to="/staff"><SidebarIcon name="staff"/><span>Nhân viên</span></NavLink>}
+        {auth.user && hasPermission(auth.user.role, 'price-brackets.read') && <NavLink to="/price-brackets"><SidebarIcon name="priceBrackets"/><span>Khung giá thu mua</span></NavLink>}
       </nav>
-      <div className="sidebar-footer"><p>{auth.user?.role === 'owner' ? 'Chủ cửa hàng' : 'Nhân viên'}</p><div className="sidebar-rule" /><button type="button" onClick={logout} disabled={busy}><LogOut aria-hidden="true" />{busy ? 'Đang đăng xuất…' : 'Đăng xuất'}</button></div>
+      <div className="sidebar-footer"><div className="sidebar-rule" /><button type="button" onClick={logout} disabled={busy}><SidebarIcon name="logout"/>{busy ? 'Đang đăng xuất…' : 'Đăng xuất'}</button></div>
     </aside>
     <div className="workspace">
       <header className="page-header"><span>{location.pathname.startsWith('/reports') ? <>Báo cáo{location.pathname === '/reports/profit' && <span className="purchase-breadcrumb"> / Xem báo cáo lợi nhuận</span>}{location.pathname === '/reports/cash-flow' && <span className="purchase-breadcrumb"> / Xem báo cáo dòng tiền</span>}{location.pathname === '/reports/aged-stock' && <span className="purchase-breadcrumb"> / Xem báo cáo hàng tồn lâu</span>}{location.pathname === '/reports/purchase-cost' && <span className="purchase-breadcrumb"> / Xem báo cáo chi phí thu mua</span>}{location.pathname === '/reports/revenue' && <span className="purchase-breadcrumb"> / Xem báo cáo doanh thu bán hàng</span>}</> : purchaseEditor ? <>Thu mua<span className="purchase-breadcrumb"> / Tạo giao dịch</span></> : salesEditor ? <>Bán hàng<span className="purchase-breadcrumb"> / Tạo giao dịch</span></> : heading}</span><span className="account-name"><CircleUserRound aria-hidden="true" />{auth.user?.displayName}</span></header>

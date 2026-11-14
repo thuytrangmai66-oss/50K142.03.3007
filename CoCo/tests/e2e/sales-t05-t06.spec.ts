@@ -99,8 +99,8 @@ test('T06 two roles holding QR for different items cannot consume the same 50 po
   await expect(page.locator('.sales-list tbody tr')).toHaveCount(2);
   await expect(staff.locator('.sales-list tbody tr')).toHaveCount(2);
   expect(await inventoryData(page)).toEqual(paid);
-  await expect(page.locator('.sidebar-footer p')).toHaveText('Chủ cửa hàng');
-  await expect(staff.locator('.sidebar-footer p')).toHaveText('Nhân viên');
+  await expect(page.locator('.account-name')).toHaveText('Chủ kiểm thử');
+  await expect(staff.locator('.account-name')).toHaveText('Nhân viên bán hàng');
 });
 
 test('T06 scheduler catch-up invalidates an open QR and retry uses the real new price', async ({ page, context }, info) => {

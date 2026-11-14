@@ -47,7 +47,8 @@ for (const role of ['owner','staff'] as const) {
     await page.screenshot({ path: info.outputPath(`${screen(6)}-success.png`), fullPage: true });
     await page.getByRole('button', { name: 'Đóng thông báo', exact: true }).click();
     await expect(page.getByRole('heading', { name: 'Trang chủ', exact: true })).toBeVisible();
-    await expect(page.getByText(role === 'owner' ? 'Chủ cửa hàng' : 'Nhân viên', { exact: true })).toBeVisible();
+    await expect(page.locator('.account-name')).toHaveText(role === 'owner' ? OWNER.fullName : 'Nhân viên kiểm thử');
+    await expect(page.locator('.sidebar-footer p')).toHaveCount(0);
     const stored = await page.evaluate(() => ({ keys: Object.keys(sessionStorage), token: sessionStorage.getItem('coco:session') }));
     expect(stored.keys).toEqual(['coco:session']); expect(stored.token).toMatch(/^[a-f0-9]{64}$/);
     await page.reload();

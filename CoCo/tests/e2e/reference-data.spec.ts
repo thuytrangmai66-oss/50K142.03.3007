@@ -88,8 +88,8 @@ test('two tabs keep independent identities, live customer data without F5, and r
   await expect(staff.getByRole('alertdialog')).toContainText('Dữ liệu đã thay đổi ở tab khác');
   await page.getByRole('button', { name: 'Đóng thông báo', exact: true }).click();
   await expect(page.getByLabel('Họ tên', { exact: true })).toHaveValue('Tên thắng');
-  await expect(staff.getByText('Nhân viên', { exact: true })).toBeVisible();
-  await expect(page.getByText('Chủ cửa hàng', { exact: true })).toBeVisible();
+  await expect(staff.locator('.account-name')).toHaveText('Nhân viên kiểm thử');
+  await expect(page.locator('.account-name')).toHaveText('Chủ kiểm thử');
   expect(await page.evaluate(()=>sessionStorage.getItem('coco:session'))).toBe(originalToken);
   await page.screenshot({ path: info.outputPath('owner-live.png'), fullPage: true });
   await staff.screenshot({ path: info.outputPath('staff-conflict.png'), fullPage: true });

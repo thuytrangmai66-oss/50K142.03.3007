@@ -1,0 +1,465 @@
+{
+  "recordedAt": "2026-11-14T19:09:44.915Z",
+  "task": "Sidebar Figma UI-only",
+  "baseSha": "4f4b7ff4a191c3d675eada86ece54030a96f4796",
+  "figma": {
+    "fileKey": "YLODwa1EXmJimFXhwjXnj0",
+    "activeNode": "663:821",
+    "expandedMetadataNode": "663:889",
+    "session": "587dd660-eaa7-4b28-b7e2-b7bc5e2cd5af",
+    "contextRead": true,
+    "screenshotInspected": true,
+    "expandedContext": "Figma Starter quota reached; normal variant cross-checked against user image 2 and metadata",
+    "font": "Be Vietnam Pro",
+    "fontSize": 20,
+    "normalWeight": 400,
+    "activeWeight": 700,
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "activeColor": "#e8ddce",
+    "sidebar": {
+      "width": 397,
+      "height": 868
+    },
+    "iconSlot": 34,
+    "mainTextX": 134,
+    "submenuTextX": 132
+  },
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "unit": {
+      "passed": 22,
+      "failed": 0,
+      "pending": 0
+    },
+    "chromium": {
+      "startTime": "2026-11-14T19:06:00.998Z",
+      "duration": 114942.399,
+      "expected": 41,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "SC105": "PASS, unchanged baseline and approved thresholds",
+    "fullSuite": "NOT RUN; related regression selected",
+    "realDevice": "NOT RUN"
+  },
+  "browser": {
+    "deviceScaleFactor": 1,
+    "zoom": "100% default"
+  },
+  "guard": {
+    "routesPermissionsLogoutUnchanged": true,
+    "businessSchemaDependenciesWorkflowUnchanged": true,
+    "priorDashboardStyleBlockUnchanged": true
+  },
+  "assets": [
+    {
+      "file": "CoCo/src/assets/sidebar/approvals.svg",
+      "bytes": 334,
+      "sha256": "f8974527ccc9fb6946031188f9121cf307d87849898f6911a0c7bd3f6cc5c384",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/chevron.svg",
+      "bytes": 335,
+      "sha256": "d54b0c0e529672a67b30da6d1293980d5cbefdbde11b679bbb64fd273c065c3c",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/customers.svg",
+      "bytes": 2001,
+      "sha256": "14bee219038afaad80af2f8c6ce1034c32c68ec4fee9046041de1241e8772440",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/home.svg",
+      "bytes": 1145,
+      "sha256": "784b16ba2f644a60b2ee3a5ef7b7272105906a43ab55627a9374fe70128d74b0",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/inventory.svg",
+      "bytes": 1347,
+      "sha256": "64fe5b68cd1aa3e0445f40f5e4cc73223d01fbc7c8d6c3dcb8e012b83cd66806",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/logout.svg",
+      "bytes": 2348,
+      "sha256": "165c9c4a76cc813eed1ba1e39553f3175f28ea4535256eb3789b6c01ebdb50e0",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/price-brackets.svg",
+      "bytes": 2652,
+      "sha256": "9def4f0eecae2fe3df406e1aba22e6efe8e7753a5848b65116d0ab85731ef4a3",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"28.5\" height=\"25.5\" viewBox=\"0 0 28.5 25.5\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/purchase.svg",
+      "bytes": 1256,
+      "sha256": "de8b53c09e6d4c2fda3ee6f64495cee591ed38eadb808163697935544abb24b4",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"27.0252\" height=\"30.3333\" viewBox=\"0 0 27.0252 30.3333\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/reports.svg",
+      "bytes": 729,
+      "sha256": "aa93833cdf49226df374187d31cf7faf741529e3ff1b9a8bb7af5a2fda7ec22e",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/sales.svg",
+      "bytes": 1210,
+      "sha256": "772aee2434cf595e2dbe8e8b28cdf2f9430c3cd872e2095092c0ac9dc869667a",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"34\" height=\"34\" viewBox=\"0 0 34 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "CoCo/src/assets/sidebar/staff.svg",
+      "bytes": 4652,
+      "sha256": "adecab8b2e70166df551eb50600ec5fc279fa81549886641423e4dc968018bec",
+      "svgRoot": "<svg preserveAspectRatio=\"none\" overflow=\"visible\" style=\"display: block;\" width=\"33\" height=\"34\" viewBox=\"0 0 33 34\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">"
+    }
+  ],
+  "tests": [
+    {
+      "file": "auth.spec.ts",
+      "line": 6,
+      "title": "owner: login states, source geometry, real session, logout and Back protection",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 6,
+      "title": "staff: login states, source geometry, real session, logout and Back protection",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 66,
+      "title": "owner and staff share DB with separate sessions, staff route denied and revoked account loses access",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 95,
+      "title": "real browser v2 migration preserves existing owner credentials and customer data",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 153,
+      "title": "forged session data cannot select an owner identity",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 161,
+      "title": "failed browser session persistence rolls back the new login session and offers recovery",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "auth.spec.ts",
+      "line": 182,
+      "title": "bootstrap is race-safe across two browser tabs",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "home-layout.spec.ts",
+      "line": 5,
+      "title": "owner: dashboard fits desktop, keeps allowed navigation and reachable logout",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "home-layout.spec.ts",
+      "line": 5,
+      "title": "staff: dashboard fits desktop, keeps allowed navigation and reachable logout",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 11,
+      "title": "T05 approved M01-B: independent staff dashboard updates live on real profile create/delete and preserves legacy after reload",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 62,
+      "title": "T05 dashboard storage failure reports an error, offers retry and never displays a false zero",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 82,
+      "title": "T05 owner: real quick actions open lists without creating any business records",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 82,
+      "title": "T05 staff: real quick actions open lists without creating any business records",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "home-t05.spec.ts",
+      "line": 112,
+      "title": "T05 review-only: render proposed card wording outside runtime for approval",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 32,
+      "title": "G7 T01 owner: real inventory, combined filters, pagination, three desktop viewports, detail and read-only reload",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 32,
+      "title": "G7 T01 staff: real inventory, combined filters, pagination, three desktop viewports, detail and read-only reload",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 112,
+      "title": "G7 T01 empty inventory and native read failure use source error notices without writes",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "inventory.spec.ts",
+      "line": 135,
+      "title": "G7 T01 inventory list spacing and typography match Thu mua at 1440x900",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "phase10-visual.spec.ts",
+      "line": 9,
+      "title": "G10-T03 SC105 report picker: source geometry and pixel comparison, no runtime baseline update",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "purchase-editor-figma.spec.ts",
+      "line": 15,
+      "title": "owner: empty purchase editor preserves the local Figma canvas layout",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "purchase-editor-figma.spec.ts",
+      "line": 15,
+      "title": "staff: empty purchase editor preserves the local Figma canvas layout",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "purchase-editor-figma.spec.ts",
+      "line": 50,
+      "title": "purchase editor keeps the shared shell and reference typography across desktop viewports",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 15,
+      "title": "owner customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 15,
+      "title": "staff customer UI validates, cancels, creates, searches, edits, histories, deletes and persists",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 73,
+      "title": "two tabs keep independent identities, live customer data without F5, and reject stale UI writes",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 98,
+      "title": "owner bracket UI uses fixed dropdown, validates, cancels, edits and blocks staff route",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 138,
+      "title": "customer UI reads existing purchase/sale history and snapshots, and refuses linked deletion",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 172,
+      "title": "customer UI handles a real IDB write failure without partial data and allows retry",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 194,
+      "title": "customer pagination changes real rows and search reset returns to the first page",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 1366x650 without browser zoom",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 1280x720 without browser zoom",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 1024x768 without browser zoom",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 768x1024 without browser zoom",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 390x844 without browser zoom",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "reference-data.spec.ts",
+      "line": 216,
+      "title": "layout fits 320x640 without browser zoom",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 16,
+      "title": "G8 sales list: real UI invoices, combined search/reset, pagination, immutable detail and both roles",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 101,
+      "title": "G8 sales list shows a native loading error and can retry without writes",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 124,
+      "title": "G8 inline entry: manual/wedge Enter, duplicates and invalid codes preserve the real cart",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "sales-pages.spec.ts",
+      "line": 154,
+      "title": "G8 automatic discount updates live after another role earns points through a real sale",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "sidebar-figma.spec.ts",
+      "line": 5,
+      "title": "owner: Figma sidebar separates expanded and active submenu without changing navigation",
+      "status": [
+        "expected"
+      ]
+    },
+    {
+      "file": "sidebar-figma.spec.ts",
+      "line": 5,
+      "title": "staff: Figma sidebar separates expanded and active submenu without changing navigation",
+      "status": [
+        "expected"
+      ]
+    }
+  ],
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "deploy": "NOT RUN",
+  "notes": [
+    "Normal expanded submenu remains Regular; only active submenu is Bold/beige, per Figma active frame",
+    "Keep existing clean logo asset; do not replace with watermarked Figma source image",
+    "No new expand/collapse interaction; preserve route-driven visibility",
+    "Existing uncommitted dashboard/release changes preserved"
+  ]
+}
