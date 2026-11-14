@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
 import { CircleAlert } from 'lucide-react';
 
-interface DataTableProps { headers: string[]; children?: ReactNode; empty?: string; columnWidths?: string[]; rowDividers?: boolean }
+interface DataTableProps { headers: string[]; children?: ReactNode; footer?: ReactNode; empty?: string; columnWidths?: string[]; rowDividers?: boolean }
 
-export function DataTable({ headers, children, empty, columnWidths, rowDividers = true }: DataTableProps) {
+export function DataTable({ headers, children, footer, empty, columnWidths, rowDividers = true }: DataTableProps) {
   return <div className="data-table-scroll"><table className={`data-table${rowDividers ? '' : ' data-table-borderless'}`}>{columnWidths && <colgroup>{columnWidths.map((width,index)=><col key={headers[index]} style={{width}} />)}</colgroup>}<thead><tr>{headers.map(header => <th key={header} scope="col">{header}</th>)}</tr></thead>
-    <tbody>{empty ? <tr className="data-table-empty"><td colSpan={headers.length}><p className="empty-state"><CircleAlert aria-hidden="true" />{empty}</p></td></tr> : children}</tbody></table></div>;
+    <tbody>{empty ? <tr className="data-table-empty"><td colSpan={headers.length}><p className="empty-state"><CircleAlert aria-hidden="true" />{empty}</p></td></tr> : children}</tbody>{footer && <tfoot>{footer}</tfoot>}</table></div>;
 }
 export function PaginatedTable({ pagination, ...table }: DataTableProps & { pagination: ReactNode }) {
   return <div className="paginated-table"><DataTable {...table} />{pagination}</div>;

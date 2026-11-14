@@ -12,6 +12,8 @@ type ChangeFor<N extends RecordName> =
   | { table: N; kind: 'delete'; key: RecordKey<N>; expectedVersion: number };
 export type Change = { [N in RecordName]: ChangeFor<N> }[RecordName];
 export interface Command { id: string; actor?: string; changes: Change[] }
+/** DB-only side effects share the command transaction and run only once. */
+export type CommitEffect = (context: { id: string; actor?: string; executedAt: string }) => Promise<void>;
 export interface Versioned<N extends RecordName> { record: RecordMap[N]; version: number }
 interface PreparedChange {
   table: RecordName;
@@ -90,7 +92,7 @@ export class CoCoRepository {
     });
   }
 
-  async commit(command: Command, authorize?: () => Promise<{ username: string }>): Promise<{ duplicate: boolean; executedAt: string }> {
+  async commit(command: Command, authorize?: () => Promise<{ username: string }>, effect?: CommitEffect): Promise<{ duplicate: boolean; executedAt: string }> {
     if (!command || typeof command.id !== 'string' || !command.id.trim() || command.id.length > 200 ||
       !Array.isArray(command.changes) || command.changes.length === 0) {
       throw new RepositoryError('VALIDATION', 'Command id and nonempty changes are required');
@@ -152,6 +154,7 @@ export class CoCoRepository {
       if (effectiveActor && !await this.db.taiKhoan.get(effectiveActor)) throw new RepositoryError('REFERENCE', 'Audit actor does not exist');
       await this.db.operations.add({ id, fingerprint, executedAt });
       await this.db.auditEntries.add({ id, actor: effectiveActor, executedAt, changed: refs });
+      await effect?.({ id, actor: effectiveActor, executedAt });
       return { duplicate: false, executedAt };
     });
   }

@@ -132,7 +132,7 @@ export class AuthService {
     return () => this.requireSession(hash, permission);
   }
 
-  async commitAuthorized(token: string, permission: Permission, command: Omit<Command, 'actor'>, validate?: (user: AuthUser) => Promise<void>) {
+  async commitAuthorized(token: string, permission: Permission, command: Omit<Command, 'actor'>, validate?: (user: AuthUser) => Promise<void>, effect?: import('../../repositories').CommitEffect) {
     const snapshot = structuredClone(command);
     const hash = await this.digestToken(token);
     return this.repository.commit({ ...snapshot, actor: undefined }, async () => {
@@ -150,7 +150,7 @@ export class AuthService {
       }
       await validate?.(user);
       return user;
-    });
+    }, effect);
   }
 
   async logout(token: string): Promise<void> {

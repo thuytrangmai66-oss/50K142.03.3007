@@ -28,7 +28,13 @@ export function CoCoLayout() {
       const card = main?.querySelector<HTMLElement>('.record-card, .history-card, [role="alert"]');
       if (!card) return;
       observer.disconnect();
-      card.scrollIntoView({ block: 'start', behavior: 'instant' });
+      // Reveal inside the workspace only. scrollIntoView also scrolls outer
+      // ancestors when the sidebar is taller than a short desktop viewport,
+      // which can move the fixed workspace header completely off screen.
+      const offset = card.getBoundingClientRect().top - main!.getBoundingClientRect().top + main!.scrollTop;
+      const margin = parseFloat(getComputedStyle(card).scrollMarginTop) || 0;
+      main!.scrollTo({ top: Math.max(0, offset - margin), behavior: 'instant' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
       const title = card.querySelector<HTMLElement>('h1') ?? card;
       title.tabIndex = -1; title.focus({ preventScroll: true });
     }
@@ -56,7 +62,7 @@ export function CoCoLayout() {
         <NavLink to="/inventory"><Package aria-hidden="true"/>Hàng hóa</NavLink>
         {location.pathname.startsWith('/inventory') && <NavLink className="inventory-submenu" to="/inventory/discounts"><ChevronDown aria-hidden="true"/><span>Xử lý hàng tồn lâu</span></NavLink>}
         <NavLink to="/customers"><UsersRound aria-hidden="true" />Khách hàng</NavLink>
-        {purchaseEditor && auth.user?.role === 'owner' && <span className="nav-unavailable" aria-disabled="true" title="Chưa khả dụng"><ChartColumn aria-hidden="true"/>Báo cáo</span>}
+        {auth.user && hasPermission(auth.user.role, 'reports.read') && <NavLink to="/reports"><ChartColumn aria-hidden="true"/>Báo cáo</NavLink>}
         {auth.user && hasPermission(auth.user.role, 'approvals.read') && <NavLink to="/approvals"><Check aria-hidden="true"/>Phê duyệt</NavLink>}
         {auth.user && hasPermission(auth.user.role, 'staff.read') && <NavLink to="/staff"><Settings aria-hidden="true" />Nhân viên</NavLink>}
         {auth.user && hasPermission(auth.user.role, 'price-brackets.read') && <NavLink to="/price-brackets"><SlidersHorizontal aria-hidden="true" />Khung giá thu mua</NavLink>}
@@ -64,7 +70,7 @@ export function CoCoLayout() {
       <div className="sidebar-footer"><p>{auth.user?.role === 'owner' ? 'Chủ cửa hàng' : 'Nhân viên'}</p><div className="sidebar-rule" /><button type="button" onClick={logout} disabled={busy}><LogOut aria-hidden="true" />{busy ? 'Đang đăng xuất…' : 'Đăng xuất'}</button></div>
     </aside>
     <div className="workspace">
-      <header className="page-header"><span>{purchaseEditor ? <>Thu mua<span className="purchase-breadcrumb"> / Tạo giao dịch</span></> : salesEditor ? <>Bán hàng<span className="purchase-breadcrumb"> / Tạo giao dịch</span></> : heading}</span><span className="account-name"><CircleUserRound aria-hidden="true" />{auth.user?.displayName}</span></header>
+      <header className="page-header"><span>{location.pathname.startsWith('/reports') ? <>Báo cáo{location.pathname === '/reports/profit' && <span className="purchase-breadcrumb"> / Xem báo cáo lợi nhuận</span>}{location.pathname === '/reports/cash-flow' && <span className="purchase-breadcrumb"> / Xem báo cáo dòng tiền</span>}{location.pathname === '/reports/aged-stock' && <span className="purchase-breadcrumb"> / Xem báo cáo hàng tồn lâu</span>}{location.pathname === '/reports/purchase-cost' && <span className="purchase-breadcrumb"> / Xem báo cáo chi phí thu mua</span>}{location.pathname === '/reports/revenue' && <span className="purchase-breadcrumb"> / Xem báo cáo doanh thu bán hàng</span>}</> : purchaseEditor ? <>Thu mua<span className="purchase-breadcrumb"> / Tạo giao dịch</span></> : salesEditor ? <>Bán hàng<span className="purchase-breadcrumb"> / Tạo giao dịch</span></> : heading}</span><span className="account-name"><CircleUserRound aria-hidden="true" />{auth.user?.displayName}</span></header>
       <main id="main-content" data-detail={isDetail} tabIndex={-1}>
         {auth.notice && <Notice onClose={auth.clearNotice}>{auth.notice}</Notice>}
         {logoutError && <Notice error onClose={() => setLogoutError('')}>{logoutError}</Notice>}

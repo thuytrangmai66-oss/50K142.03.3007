@@ -211,7 +211,8 @@ test('T03 real requests paginate and list read error recovers through navigation
   await page.evaluate(() => {
     const original = IDBObjectStore.prototype.getAll;
     IDBObjectStore.prototype.getAll = function (...args) {
-      if (this.name === 'purchaseApprovals') throw new DOMException('T03 list failure', 'UnknownError');
+      // Scope this fault to the list under test; Home also reads pending approvals.
+      if (this.name === 'purchaseApprovals' && location.hash.startsWith('#/approvals')) throw new DOMException('T03 list failure', 'UnknownError');
       return original.apply(this, args);
     };
     window.addEventListener('t03:restore-read', () => { IDBObjectStore.prototype.getAll = original; }, { once: true });

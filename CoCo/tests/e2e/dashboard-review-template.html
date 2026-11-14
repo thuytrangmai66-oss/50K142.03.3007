@@ -1,0 +1,20 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>T05 — Đề xuất, chưa kích hoạt</title>
+<style>
+@font-face{font-family:BeVietnam;src:url(data:font/woff2;base64,__FONT_400__);font-weight:400}
+@font-face{font-family:BeVietnam;src:url(data:font/woff2;base64,__FONT_700__);font-weight:700}
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#f4f0e8;color:#000;font-family:BeVietnam,Arial,sans-serif}h1{font-size:20px;margin:0 0 12px}.note{font-size:13px;margin:0 0 20px;color:#555}.frame{max-width:1000px;margin:0 auto 32px;padding:24px;background:#f4f0e8}.header{background:#fff;padding:16px 24px;border-radius:10px;font-weight:700;margin-bottom:24px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}.card{display:flex;align-items:center;gap:24px;background:#fff;padding:28px 24px;min-height:158px}.icon{background:#e8dece;min-width:58px;height:58px;display:grid;place-items:center;border-radius:50%}.icon svg{width:30px;height:30px;stroke-width:1.5}.copy{flex:1;text-align:center}.label{font-size:17px;margin:0 0 10px}.value{font-size:24px;font-weight:700;margin:0}.comparison{font-size:12px;color:#666;margin:12px 0 0;min-height:18px}.positive{color:#52b86b}.actions{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:24px;background:#fff;border-radius:10px;margin-top:24px}.action{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:122px;border-radius:8px;font-weight:700;font-size:15px}.action svg{width:28px;height:28px;stroke-width:1.5}.purchase{color:#fff;background:#000}.sale{background:#e8dece}
+</style>
+<h1>T05 — Bản đề xuất để review, chưa kích hoạt trên CoCo</h1><p class="note">Số liệu bên dưới chỉ minh họa các trạng thái cần duyệt. Không phải KPI thật và không có truy vấn/ghi dữ liệu. Bố cục theo SC007/SC198; các dòng giải thích trong thẻ là phần đề xuất.</p>
+<section class="frame" id="owner" aria-label="Đề xuất Chủ cửa hàng"><div class="header">Trang Chủ · Chủ cửa hàng — trạng thái chưa có cơ sở so sánh</div><div class="cards">
+<article class="card"><div class="icon">{{dollar}}</div><div class="copy"><p class="label">Doanh thu hôm nay</p><p class="value">104.007đ</p><p class="comparison">Chưa có cơ sở so với hôm qua</p></div></article>
+<article class="card"><div class="icon">{{cart}}</div><div class="copy"><p class="label">Đơn hàng hôm nay</p><p class="value">1 đơn</p><p class="comparison positive">+1 đơn so với hôm qua</p></div></article>
+<article class="card"><div class="icon">{{clock}}</div><div class="copy"><p class="label">Yêu cầu chờ phê duyệt</p><p class="value">2 phiếu</p></div></article>
+<article class="card"><div class="icon">{{package}}</div><div class="copy"><p class="label">Sản phẩm tồn kho</p><p class="value">25 sản phẩm</p><p class="comparison">Chưa đủ cơ sở so với tháng trước</p></div></article>
+</div><div class="actions"><div class="action purchase">{{bag}}Thu mua</div><div class="action sale">{{cart}}Bán hàng</div></div></section>
+<section class="frame" id="staff" aria-label="Đề xuất Nhân viên"><div class="header">Trang Chủ · Nhân viên — dữ liệu đã xác minh và chưa xác minh</div><div class="cards">
+<article class="card"><div class="icon">{{bag}}</div><div class="copy"><p class="label">Đơn thu mua hôm nay</p><p class="value">2 đơn</p></div></article>
+<article class="card"><div class="icon">{{cart}}</div><div class="copy"><p class="label">Đơn hàng hôm nay</p><p class="value">1 đơn</p></div></article>
+<article class="card"><div class="icon">{{package}}</div><div class="copy"><p class="label">Sản phẩm mới nhập</p><p class="value">25 sản phẩm</p></div></article>
+<article class="card"><div class="icon">{{users}}</div><div class="copy"><p class="label">Khách hàng mới</p><p class="value">0 người đã xác minh</p><p class="comparison">3 hồ sơ chưa có ngày tạo tin cậy</p></div></article>
+</div><div class="actions"><div class="action purchase">{{bag}}Thu mua</div><div class="action sale">{{cart}}Bán hàng</div></div></section>
+</html>

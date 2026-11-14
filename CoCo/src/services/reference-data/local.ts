@@ -10,6 +10,7 @@ import type { Permission } from '../permissions';
 import { DataServiceError, type ReferenceDataGateway, type CustomerInput, type BracketInput, type HistoryKind, type Bracket } from './contracts';
 import { purchaseHeader, purchaseInvoice } from '../purchase-queries';
 import { readSaleInvoice } from '../sales-queries';
+import { customerCreationEffect, customerCreationKey } from '../customer-creation';
 
 // No invented TINYINT-to-business-label mapping. Inject only a confirmed catalog.
 export type ConditionCatalog = Readonly<Record<number, string>>;
@@ -68,8 +69,8 @@ export class LocalReferenceData implements ReferenceDataGateway {
     if (!result) throw new DataServiceError('NOT_FOUND', 'Thông tin không còn tồn tại. Vui lòng tải lại.');
     return result;
   }
-  private async write(permission: Permission, changes: Change[], validate?: () => Promise<void>) {
-    try { await this.auth.commitAuthorized(this.token(), permission, { id: `reference:${crypto.randomUUID()}`, changes }, validate); }
+  private async write(permission: Permission, changes: Change[], validate?: () => Promise<void>, effect?: import('../../repositories').CommitEffect) {
+    try { await this.auth.commitAuthorized(this.token(), permission, { id: `reference:${crypto.randomUUID()}`, changes }, validate, effect); }
     catch (error) {
       if (error instanceof RepositoryError && error.code === 'CONFLICT') throw new DataServiceError('CONFLICT', 'Dữ liệu đã thay đổi ở tab khác. Vui lòng tải lại trước khi lưu.');
       throw error;
@@ -90,7 +91,7 @@ export class LocalReferenceData implements ReferenceDataGateway {
   }
   async createCustomer(input: CustomerInput) {
     const data = validateCustomer(input), id = `KH${randomHex(4)}`;
-    await this.write('customers.create', [{ table: 'khachHang', kind: 'create', value: { MaKH: id, TenKH: data.name, SoDienThoaiKH: data.phone, DiemTichLuy: 0 } }], () => this.uniquePhone(data.phone));
+    await this.write('customers.create', [{ table: 'khachHang', kind: 'create', value: { MaKH: id, TenKH: data.name, SoDienThoaiKH: data.phone, DiemTichLuy: 0 } }], () => this.uniquePhone(data.phone), customerCreationEffect(this.db, id));
     return id;
   }
   async updateCustomer(id: string, version: number, input: CustomerInput) {
@@ -107,7 +108,7 @@ export class LocalReferenceData implements ReferenceDataGateway {
       if (await this.db.hoaDonThuMua.where('MaKH').equals(id).count() || await this.db.hoaDonBanHang.where('MaKH').equals(id).count()) {
         throw new DataServiceError('HAS_HISTORY', 'Không thể xóa khách hàng đã phát sinh giao dịch thu mua hoặc bán hàng');
       }
-    });
+    }, async () => { await this.db.appMetadata.delete(customerCreationKey(id)); });
   }
   history(id: string, kind: HistoryKind) {
     return this.read('customers.read', async () => {

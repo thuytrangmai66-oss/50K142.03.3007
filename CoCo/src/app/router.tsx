@@ -17,6 +17,10 @@ import { InventoryPage, InventoryDetail } from '../features/inventory/InventoryP
 import { DiscountMonitor } from '../features/inventory/DiscountMonitor';
 import { SalesEditor } from '../features/sales/SalesEditor';
 import { SalesPage, SaleInvoicePage } from '../features/sales/SalesPages';
+import { ReportsPage, RevenueReportPage } from '../features/reports/RevenueReportPage';
+import { PurchaseCostReportPage } from '../features/reports/PurchaseCostReportPage';
+import { FinancialReportPage } from '../features/reports/FinancialReportPage';
+import { AgedStockReportPage } from '../features/reports/AgedStockReportPage';
 
 function RequireSession() {
   const { user } = useAuth();
@@ -53,6 +57,12 @@ export function AppRouter() {
     <Route path="price-brackets/:bracketId" element={<PriceBracketDetailPage />} />
     <Route path="staff" element={<StaffPage />} />
     <Route path="staff/:employeeId" element={<StaffDetailPage />} />
+    <Route path="reports" element={<ReportsPage />} />
+    <Route path="reports/revenue" element={<RevenueReportPage />} />
+    <Route path="reports/purchase-cost" element={<PurchaseCostReportPage />} />
+    <Route path="reports/profit" element={<FinancialReportPage key="profit" kind="profit" />} />
+    <Route path="reports/cash-flow" element={<FinancialReportPage key="cash-flow" kind="cash-flow" />} />
+    <Route path="reports/aged-stock" element={<AgedStockReportPage />} />
     <Route path="*" element={<section className="panel"><h1>Không tìm thấy trang</h1><Link to="/">Về trang chủ</Link></section>} />
   </Route></Route></Routes>;
 }

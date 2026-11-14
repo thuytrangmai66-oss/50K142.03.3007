@@ -116,7 +116,8 @@ test('G7 T01 empty inventory and native read failure use source error notices wi
   const before = await stored(page);
   await page.evaluate(() => {
     const getAll = IDBObjectStore.prototype.getAll;
-    IDBObjectStore.prototype.getAll = function (...args) { if (this.name === 'sanPham') throw new DOMException('G7 read failure', 'UnknownError'); return getAll.apply(this, args); };
+    // Target the inventory screen; Home now legitimately reads the same store.
+    IDBObjectStore.prototype.getAll = function (...args) { if (this.name === 'sanPham' && location.hash.startsWith('#/inventory')) throw new DOMException('G7 read failure', 'UnknownError'); return getAll.apply(this, args); };
   });
   await page.getByRole('link', { name: 'Trang chủ', exact: true }).click();
   await page.getByRole('link', { name: 'Hàng hóa', exact: true }).click();

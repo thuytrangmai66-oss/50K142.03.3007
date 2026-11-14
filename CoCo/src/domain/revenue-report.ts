@@ -16,6 +16,23 @@ export interface RevenueSummary {
   invoiceIds: string[];
 }
 
+/** Daily ledger rows for the selected period, ordered by Vietnam calendar day.
+ * No empty dates or sample Figma amounts are manufactured. */
+export function revenueRowsFromVerifiedSales(period: ReportPeriod, sales: readonly VerifiedRevenueSale[]) {
+  // Validate the whole source once, including duplicates outside this period.
+  revenueFromVerifiedSales(period, sales);
+  const groups = new Map<string, VerifiedRevenueSale[]>();
+  for (const sale of sales) {
+    if (!inReportPeriod(period, sale.paidAt)) continue;
+    const date = new Date(Date.parse(sale.paidAt) + 7 * 3_600_000).toISOString().slice(0, 10);
+    const group = groups.get(date) ?? [];
+    group.push(sale); groups.set(date, group);
+  }
+  return [...groups].sort(([a], [b]) => a.localeCompare(b)).map(([date, group]) => ({
+    date, ...revenueFromVerifiedSales(period, group),
+  }));
+}
+
 /** BR-UC7-01..03. No legacy classification, writes, or invented rounding policy. */
 export function revenueFromVerifiedSales(period: ReportPeriod, sales: readonly VerifiedRevenueSale[]): RevenueSummary {
   const seen = new Set<string>(), invoiceIds: string[] = [];

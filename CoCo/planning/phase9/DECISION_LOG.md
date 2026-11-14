@@ -1,5 +1,23 @@
 # G9 — Decision Log
 
+## G9-D05 — So sánh tồn kho lịch sử, APPROVED_USER 14/11/2026
+
+Người dùng xác nhận: **“Duyệt phương án A: mốc cuối tháng trước và phạm vi dữ liệu đã xác minh”** tại [HISTORICAL_STOCK_REVIEW.md](HISTORICAL_STOCK_REVIEW.md).
+
+Mốc là cận loại trừ 00:00 ngày đầu tháng hiện tại theo giờ VN. Chỉ dùng chuỗi nhập/bán đã xác minh, cùng phạm vi cho số hiện tại và số trước; không suy thời điểm bán từ trạng thái hiện tại/NgayBan, không backfill legacy. Phần trăm `(hiện tại − trước)/trước ×100`, hiển thị tối đa một chữ số thập phân trong ô hiện có. Thiếu bằng chứng hoặc mẫu số 0 giữ “Chưa đủ cơ sở so với tháng trước”. Không thêm schema/snapshot/UI, không tự nghiệm thu G9. G9-D05 mở gate nguồn/thuật toán lịch sử mà G9-D04 trước đó giữ BLOCKED; các mô tả BLOCKED trong nhật ký cũ thuộc thời điểm trước xác nhận này.
+
+## Quyết định bổ sung 14/11/2026 — G9-D04 APPROVED_USER
+
+Người dùng xác nhận: **“Duyệt: KPI toàn cửa hàng theo ngày VN + M01-B (xóa marker cùng hồ sơ) + wording đề xuất”** cho [T05_REVIEW_GATE.md](T05_REVIEW_GATE.md).
+
+- Dashboard Nhân viên: cả bốn KPI toàn cửa hàng theo ngày hiện tại Việt Nam; chỉ tính nguồn đủ điều kiện đã xác minh.
+- G9-M01-B: kích hoạt `customer-creation:<MaKH>` / `customer-creation-v1` cho hồ sơ mới từ thời điểm triển khai; cùng transaction hồ sơ/receipt/audit. Xóa marker cùng transaction xóa hồ sơ hợp lệ; KPI đếm hồ sơ hiện còn. Sửa hồ sơ không đổi ngày tạo. Không thêm bảng/cột/version DB, không backfill legacy.
+- G9-U01: dùng hai dòng “N người đã xác minh” và “N hồ sơ chưa có ngày tạo tin cậy” trong thẻ Khách hàng mới. Dòng thứ hai là tập nguồn chưa đủ căn cứ, không gán vào ngày báo cáo.
+- Duyệt wording so sánh doanh thu “Chưa có cơ sở so với hôm qua”; tồn kho “Chưa đủ cơ sở so với tháng trước”; trạng thái tồn chưa đủ căn cứ “Chưa xác minh” và số sản phẩm chưa đối chiếu trạng thái. Phần trăm có cơ sở hiển thị tối đa một chữ số thập phân, không đổi số tiền lưu.
+- **So sánh tồn kho tháng trước vẫn BLOCKED**: duyệt placeholder không phê duyệt nguồn lịch sử hoặc miễn trừ tiêu chí nghiệm thu. Không tự DONE G9.
+
+Các đoạn “chưa có nguồn được phê duyệt/chưa nối UI” bên dưới là lịch sử trước G9-D04; đọc cùng execution hiện hành. Quy trình Git hiện hành theo AGENTS.md thay chỉ dẫn Git cũ trong G9-D03.
+
 Ngày 13/11/2026. Nguồn phê duyệt: chỉ đạo trực tiếp “COCO – QUYẾT ĐỊNH XỬ LÝ DỮ LIỆU LEGACY VÀ KPI KHÁCH HÀNG MỚI”. Thay thế trạng thái chờ quyết định nghiệp vụ R01/R02; không nghiệm thu phase và không cho phép thay schema/UI.
 
 | ID | Quyết định | Trạng thái |

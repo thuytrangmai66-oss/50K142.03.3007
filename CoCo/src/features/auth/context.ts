@@ -11,6 +11,8 @@ import type { DiscountScheduler } from '../../services/discount-scheduler';
 import type { SalesDraftService } from '../../services/sales';
 import type { SalesPaymentService } from '../../services/sales-payment';
 import type { SalesQueriesService } from '../../services/sales-queries';
+import type { ReportQueriesService } from '../../services/report-queries';
+import type { DashboardService } from '../../services/dashboard';
 
 export interface AuthContextValue extends AuthState {
   referenceData: ReferenceDataGateway;
@@ -21,6 +23,8 @@ export interface AuthContextValue extends AuthState {
   salesDrafts: SalesDraftService;
   salesPayments: SalesPaymentService;
   salesQueries: SalesQueriesService;
+  reports: ReportQueriesService;
+  dashboard: DashboardService;
   inventory: InventoryService;
   discounts: { read(): ReturnType<DiscountScheduler['read']> };
   login(username: string, password: string): Promise<void>;

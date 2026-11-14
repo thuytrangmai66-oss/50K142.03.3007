@@ -1,5 +1,7 @@
 # G9-T01 — Nền kỳ báo cáo và component dùng chung
 
+> Cập nhật 14/11/2026: T01 đã nối route/sidebar/picker/bộ lọc cho báo cáo doanh thu T02; xem [T02_UI_EXECUTION.md](T02_UI_EXECUTION.md). Bốn báo cáo còn lại chưa kích hoạt. Nội dung bên dưới là mốc triển khai nền 13/11, không thay thế tiến độ mới hoặc chính sách Git main ở root AGENTS.md.
+
 Ngày 13/11/2026. **PARTIAL / PENDING REVIEW**. Phần tính kỳ và component đã triển khai; route/sidebar, truy vấn báo cáo và kiểm chứng Chromium chưa tích hợp. Không nghiệm thu G9.
 
 ## Nguồn và baseline

@@ -7,6 +7,8 @@ import { PurchaseFinalizationService } from '../../services/purchase-finalizatio
 import { SalesDraftService } from '../../services/sales';
 import { SalesPaymentService } from '../../services/sales-payment';
 import { SalesQueriesService } from '../../services/sales-queries';
+import { ReportQueriesService } from '../../services/report-queries';
+import { DashboardService } from '../../services/dashboard';
 import { PURCHASE_STATUS_MAPPING } from '../../domain/purchase-status';
 import { InventoryService } from '../../services/inventory';
 import { DiscountScheduler, startDiscountScheduler } from '../../services/discount-scheduler';
@@ -39,6 +41,8 @@ export function AuthProvider({ children }: PropsWithChildren) {
   const salesDrafts = useMemo(() => new SalesDraftService(db, () => token), [token]);
   const salesPayments = useMemo(() => new SalesPaymentService(db, () => token), [token]);
   const salesQueries = useMemo(() => new SalesQueriesService(db, () => token), [token]);
+  const reports = useMemo(() => new ReportQueriesService(db, () => token), [token]);
+  const dashboard = useMemo(() => new DashboardService(db, () => token), [token]);
   useEffect(() => {
     try { setToken(sessionStorageToken.read()); setInitialized(true); }
     catch { setError(true); }
@@ -84,7 +88,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
     <p>Vui lòng cho phép lưu dữ liệu trên trình duyệt rồi thử lại.</p>
     <Button onClick={() => window.location.reload()}>Thử lại</Button></main>;
   if (!state) return <main className="startup" role="status">Đang mở CoCo…</main>;
-  return <AuthContext.Provider value={{ ...state, referenceData, inventory, discounts, staffAccounts, purchaseDrafts, approvals, purchaseFinalizer, salesDrafts, salesPayments, salesQueries, notice, clearNotice: () => setNotice(''),
+  return <AuthContext.Provider value={{ ...state, referenceData, inventory, discounts, staffAccounts, purchaseDrafts, approvals, purchaseFinalizer, salesDrafts, salesPayments, salesQueries, reports, dashboard, notice, clearNotice: () => setNotice(''),
     login: async (username, password) => {
       const result = await service.login(username, password);
       try { sessionStorageToken.write(result.token); }

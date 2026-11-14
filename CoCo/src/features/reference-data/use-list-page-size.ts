@@ -32,7 +32,7 @@ export function useListPageSize(page: number, setPage: Dispatch<SetStateAction<n
       const nav = section.querySelector<HTMLElement>('.pagination');
       if (!table || !nav || table.querySelector('.empty-state')) return;
       const available = budget - (table.getBoundingClientRect().top - sr.top) - nav.getBoundingClientRect().height - parseFloat(getComputedStyle(nav).marginTop);
-      const header = table.tHead?.getBoundingClientRect().height ?? 0;
+      const header = (table.tHead?.getBoundingClientRect().height ?? 0) + (table.tFoot?.getBoundingClientRect().height ?? 0);
       const heights = Array.from(table.tBodies[0].rows, row => row.getBoundingClientRect().height);
       if (header + heights.reduce((sum, height) => sum + height, 0) <= available + 1) return;
       // Account for a wrapped label anywhere in the sampled first page rather

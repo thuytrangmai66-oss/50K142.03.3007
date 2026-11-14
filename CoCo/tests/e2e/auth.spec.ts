@@ -71,8 +71,9 @@ test('owner and staff share DB with separate sessions, staff route denied and re
   await staff.goto('http://127.0.0.1:4173/50K142.03.3007/#/reports');
   await expect(staff.getByRole('heading', { name: 'Không có quyền truy cập', exact: true })).toBeVisible();
   await page.goto('http://127.0.0.1:4173/50K142.03.3007/#/reports');
-  await expect(page.getByRole('heading', { name: 'Không tìm thấy trang', exact: true })).toBeVisible();
-  await page.getByRole('link', { name: 'Về trang chủ' }).click();
+  // G9 replaces the former owner-only placeholder with the actual report picker.
+  await expect(page.getByRole('button', { name: 'Xem báo cáo doanh thu bán hàng', exact: true })).toBeEnabled();
+  await page.getByRole('link', { name: 'Trang chủ', exact: true }).click();
   await page.evaluate(() => new Promise<void>((resolve, reject) => {
     const req = indexedDB.open('CoCoDB'); req.onerror = () => reject(req.error);
     req.onsuccess = () => {

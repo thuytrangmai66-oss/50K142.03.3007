@@ -1,6 +1,6 @@
 # Kế hoạch Giai đoạn 10 Tích hợp, hồi quy, NFR và đối chiếu giao diện
 
-Ngày 11/11/2026. **NOT STARTED**. Roadmap đã được cho phép qua chỉ đạo tiếp tục P02; phase này chưa triển khai. Giữ dependency, review phase trước và quyết định chặn module. Không commit/push/deploy khi chưa được cho phép.
+Ngày lập 11/11/2026; rà trạng thái 14/11/2026. **NOT STARTED**. G9 đã triển khai dashboard/báo cáo và so sánh tồn theo phương án A được duyệt tại G9-D05; full unit mới 491/491 PASS, full Chromium **151/151 PASS**, 0 FAIL/0 SKIP (8,2 phút). Gate quyết định nguồn tồn kho đã mở, G9 vẫn PENDING REVIEW; không tự nghiệm thu hoặc tính đối soát G9-T06 là G10-T01 DONE. Xem [tiến độ G9](../phase9/REPORT_PHASE_9.md), [execution nguồn lịch sử](../phase9/STOCK_COMPARISON_EXECUTION.md). Giữ roadmap/dependency và các gate NFR/visual của G10; không tự đổi Q21/P11.
 
 ## 1 Mục tiêu
 
@@ -75,4 +75,4 @@ Vào: plan và các quyết định chặn task đã được duyệt, baseline 
 
 ## 16 Git, CI và regression
 
-Tạo nhánh làm việc riêng sau khi được phép code (ví dụ coco/phase-10); ghi commit theo task sau test; không force/reset/ghi đè thay đổi khác. Chỉ push/merge/deploy khi có cho phép. Workflow main hiện có vẫn install/lint/typecheck/unit/audit/build/Chromium trước deploy. Regression tối thiểu nền G2 và các phase trước, thêm full suite khi thay contract/schema/quyền. Rollback schema phải thử trên bản sao; ưu tiên roll-forward nếu build cũ không đọc schema mới.
+Theo chỉ đạo Git hiện hành tại [AGENTS.md](../../../AGENTS.md): code trực tiếp `main`, đồng bộ fast-forward khi an toàn và bảo toàn working tree; commit/push `origin/main` theo phase khi đủ gate/test, không hỏi lại quyền đã cấp. Không tạo feature branch/PR mặc định, không reset/rebase/stash/force push hoặc ghi đè dữ liệu. Blocker/test FAIL thì dừng trước commit/push; push không phải nghiệm thu. Không đổi workflow/quyền Pages hoặc deploy thủ công ngoài phạm vi. Workflow hiện có vẫn thực hiện các checks trước deploy tự động khi push main. Regression nền G2/các phase trước và full suite khi đổi contract/schema/quyền; rollback schema chỉ thử trên bản sao.
