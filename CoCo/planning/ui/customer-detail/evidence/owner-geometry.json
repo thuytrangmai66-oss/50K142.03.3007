@@ -1,0 +1,286 @@
+[
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "bottom": 80
+    },
+    "back": {
+      "x": 292,
+      "y": 96,
+      "width": 96,
+      "height": 24,
+      "bottom": 120
+    },
+    "card": {
+      "x": 292,
+      "y": 136,
+      "width": 1058,
+      "height": 406,
+      "bottom": 542
+    },
+    "title": {
+      "x": 292,
+      "y": 136,
+      "width": 1058,
+      "height": 54,
+      "bottom": 190
+    },
+    "input": {
+      "x": 621.25,
+      "y": 210,
+      "width": 639.25,
+      "height": 48,
+      "bottom": 258
+    },
+    "histories": [
+      {
+        "x": 417,
+        "y": 350,
+        "width": 394,
+        "height": 112
+      },
+      {
+        "x": 831,
+        "y": 350,
+        "width": 394,
+        "height": 112
+      }
+    ],
+    "actions": {
+      "x": 312,
+      "y": 482,
+      "width": 1018,
+      "height": 40,
+      "bottom": 522
+    },
+    "a": 16,
+    "b": 16,
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "iconWidth": 24,
+    "iconHeight": 24,
+    "iconTextGap": "8px",
+    "scrollTop": 0,
+    "scrollY": 0,
+    "pageX": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "bottom": 106
+    },
+    "back": {
+      "x": 461,
+      "y": 130,
+      "width": 96,
+      "height": 24,
+      "bottom": 154
+    },
+    "card": {
+      "x": 461,
+      "y": 178,
+      "width": 943,
+      "height": 645,
+      "bottom": 823
+    },
+    "title": {
+      "x": 461,
+      "y": 178,
+      "width": 943,
+      "height": 75,
+      "bottom": 253
+    },
+    "input": {
+      "x": 752,
+      "y": 276,
+      "width": 620,
+      "height": 70,
+      "bottom": 346
+    },
+    "histories": [
+      {
+        "x": 526,
+        "y": 510,
+        "width": 375,
+        "height": 165
+      },
+      {
+        "x": 959,
+        "y": 510,
+        "width": 375,
+        "height": 165
+      }
+    ],
+    "actions": {
+      "x": 493,
+      "y": 715,
+      "width": 879,
+      "height": 49,
+      "bottom": 764
+    },
+    "a": 24,
+    "b": 24,
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "iconWidth": 24,
+    "iconHeight": 24,
+    "iconTextGap": "8px",
+    "scrollTop": 0,
+    "scrollY": 0,
+    "pageX": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "bottom": 106
+    },
+    "back": {
+      "x": 461,
+      "y": 130,
+      "width": 96,
+      "height": 24,
+      "bottom": 154
+    },
+    "card": {
+      "x": 461,
+      "y": 178,
+      "width": 1423,
+      "height": 645,
+      "bottom": 823
+    },
+    "title": {
+      "x": 461,
+      "y": 178,
+      "width": 1423,
+      "height": 75,
+      "bottom": 253
+    },
+    "input": {
+      "x": 992,
+      "y": 276,
+      "width": 620,
+      "height": 70,
+      "bottom": 346
+    },
+    "histories": [
+      {
+        "x": 766,
+        "y": 510,
+        "width": 375,
+        "height": 165
+      },
+      {
+        "x": 1199,
+        "y": 510,
+        "width": 375,
+        "height": 165
+      }
+    ],
+    "actions": {
+      "x": 493,
+      "y": 715,
+      "width": 1359,
+      "height": 49,
+      "bottom": 764
+    },
+    "a": 24,
+    "b": 24,
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "iconWidth": 24,
+    "iconHeight": 24,
+    "iconTextGap": "8px",
+    "scrollTop": 0,
+    "scrollY": 0,
+    "pageX": 0
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 972,
+      "height": 64,
+      "bottom": 80
+    },
+    "back": {
+      "x": 292,
+      "y": 96,
+      "width": 96,
+      "height": 24,
+      "bottom": 120
+    },
+    "card": {
+      "x": 292,
+      "y": 136,
+      "width": 972,
+      "height": 398,
+      "bottom": 534
+    },
+    "title": {
+      "x": 292,
+      "y": 136,
+      "width": 972,
+      "height": 54,
+      "bottom": 190
+    },
+    "input": {
+      "x": 578.25,
+      "y": 206,
+      "width": 639.25,
+      "height": 48,
+      "bottom": 254
+    },
+    "histories": [
+      {
+        "x": 374,
+        "y": 346,
+        "width": 394,
+        "height": 112
+      },
+      {
+        "x": 788,
+        "y": 346,
+        "width": 394,
+        "height": 112
+      }
+    ],
+    "actions": {
+      "x": 312,
+      "y": 478,
+      "width": 932,
+      "height": 40,
+      "bottom": 518
+    },
+    "a": 16,
+    "b": 16,
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "iconWidth": 24,
+    "iconHeight": 24,
+    "iconTextGap": "8px",
+    "scrollTop": 0,
+    "scrollY": 0,
+    "pageX": 0
+  }
+]

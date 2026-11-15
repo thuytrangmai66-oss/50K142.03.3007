@@ -1,0 +1,26 @@
+﻿[
+    {
+        "path":  "CoCo/src/index.css",
+        "sha256":  "1b605136b591c69d8751e781ed6913ac55902bb09c6cb6d2c68001894198c770"
+    },
+    {
+        "path":  "CoCo/src/components/layout/CoCoLayout.tsx",
+        "sha256":  "9638fe895a56e35cca4cde429d67443e28ef1d35fc5a69467336af477cae1ac0"
+    },
+    {
+        "path":  "CoCo/tests/e2e/list-frame-alignment.spec.ts",
+        "sha256":  "84799f7d1fb99ea501a54e124bd01bbb15f44353c3e806c2919b0e2de1d50a41"
+    },
+    {
+        "path":  "CoCo/tests/e2e/purchase-editor-figma.spec.ts",
+        "sha256":  "8391d38af989ae3fa741f7059ccd846c13ae206484afe90884d087666fadc4f3"
+    },
+    {
+        "path":  "CoCo/package-lock.json",
+        "sha256":  "0466a148e350cdc3d7fdc6bfdbaa8780c2ec98c2413bf3cd36a29320e51f2ca3"
+    },
+    {
+        "path":  "CoCo/playwright.config.ts",
+        "sha256":  "560fd564faf64f2769bd35cbde1757cd1119b2be5c0ca156a76998b40bc9dac1"
+    }
+]

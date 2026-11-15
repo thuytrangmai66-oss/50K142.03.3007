@@ -8,7 +8,6 @@ import type { HistoryKind } from '../../services/reference-data/contracts';
 import { formatCalendarDate, formatDate } from '../../domain/formatters';
 import { ResultDialog } from '../../components/ui/ResultDialog';
 import { PurchaseInvoicePage } from '../purchases/PurchaseInvoicePage';
-import { CustomerToolbar } from './CustomerToolbar';
 import { SaleInvoiceCard } from '../sales/SaleInvoiceCard';
 
 export function CustomerHistoryPage({ kind }: { kind: HistoryKind }) {
@@ -19,7 +18,7 @@ export function CustomerHistoryPage({ kind }: { kind: HistoryKind }) {
   const { data: profile } = useResource(loadCustomer);
   const customer = data?.customer ?? profile?.record;
   const [dismissedError, setDismissedError] = useState<unknown>();
-  return <section className={`reference-page${kind === 'purchases' ? ' customer-purchase-history' : ''}`}><CustomerToolbar /><Link className="back-link" to={`/customers/${customerId}`}><ArrowLeft aria-hidden="true" />Quay lại</Link>
+  return <section className="reference-page customer-history"><Link className="back-link" to={`/customers/${customerId}`}><ArrowLeft aria-hidden="true" />Quay lại</Link>
     {loading ? <p role="status">Đang tải lịch sử…</p> : Boolean(data || error) && <div className="history-card">
       {customer && <div className="customer-summary"><p><strong>Họ tên: </strong>{customer.TenKH}</p><p><strong>SĐT: </strong>{customer.SoDienThoaiKH}</p></div>}
       <DataTable headers={['Mã giao dịch','Thời gian','Trạng thái']} empty={!error && !data?.rows.length ? kind === 'purchases' ? 'Không tìm thấy lịch sử mua' : 'Không tìm thấy lịch sử bán' : undefined}>
@@ -40,7 +39,7 @@ function CustomerPurchaseInvoicePage({ kind }: { kind: HistoryKind }) {
     id: data.id, date: data.date, subtotal: data.subtotal, discount: data.discount, total: data.total, paymentLabel: data.paymentLabel,
     customer: { name: data.customer.TenKH, phone: data.customer.SoDienThoaiKH, points: data.customerPoints }, lines: data.lines,
   } : undefined;
-  return <section className="reference-page"><CustomerToolbar /><Link className="back-link" to={`/customers/${customerId}/${kind}`}><ArrowLeft aria-hidden="true" />Quay lại</Link>
+  return <section className="reference-page customer-history-invoice"><Link className="back-link" to={`/customers/${customerId}/${kind}`}><ArrowLeft aria-hidden="true" />Quay lại</Link>
     {loading ? <p role="status">Đang tải hóa đơn…</p> : presentation && <SaleInvoiceCard data={presentation}/>}
     {(Boolean(error) || (!loading && !presentation)) && <ResultDialog error message="Không thể tải thông tin giao dịch. Vui lòng thử lại" onClose={() => navigate(`/customers/${customerId}/${kind}`, { replace: true })}/>}
   </section>;

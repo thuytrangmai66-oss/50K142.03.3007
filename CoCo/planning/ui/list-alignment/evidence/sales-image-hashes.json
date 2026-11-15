@@ -1,0 +1,20 @@
+﻿[
+    {
+        "viewportWidth":  1366,
+        "beforeSha256":  "d4f76736a4289784b0d493b24ed4b0847aadadd49b5d8f7fcd052cb2c605e897",
+        "afterSha256":  "d4f76736a4289784b0d493b24ed4b0847aadadd49b5d8f7fcd052cb2c605e897",
+        "identical":  true
+    },
+    {
+        "viewportWidth":  1440,
+        "beforeSha256":  "6b5b24aeb3c9b82915ca6bfc49ebacae4add8c9574e2211879b950953a00847a",
+        "afterSha256":  "6b5b24aeb3c9b82915ca6bfc49ebacae4add8c9574e2211879b950953a00847a",
+        "identical":  true
+    },
+    {
+        "viewportWidth":  1920,
+        "beforeSha256":  "9c667f9e9fe730ab3e622bb24965b6dead6d3f7eabbbcd9f751591c5e154a88d",
+        "afterSha256":  "9c667f9e9fe730ab3e622bb24965b6dead6d3f7eabbbcd9f751591c5e154a88d",
+        "identical":  true
+    }
+]

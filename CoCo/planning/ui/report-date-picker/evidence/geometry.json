@@ -1,0 +1,194 @@
+{
+  "reference": {
+    "height": 45,
+    "border": "1px solid rgb(174, 174, 178)",
+    "radius": "8px",
+    "fontSize": "14px"
+  },
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "fields": [
+        {
+          "x": 1026,
+          "y": 197,
+          "width": 144,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 218.890625
+        },
+        {
+          "x": 1182,
+          "y": 197,
+          "width": 144,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 218.890625
+        }
+      ],
+      "indicators": [
+        {
+          "width": 20,
+          "height": 20,
+          "center": 218.890625
+        },
+        {
+          "width": 20,
+          "height": 20,
+          "center": 218.890625
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fields": [
+        {
+          "x": 1080,
+          "y": 231,
+          "width": 144,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 252.890625
+        },
+        {
+          "x": 1236,
+          "y": 231,
+          "width": 144,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 252.890625
+        }
+      ],
+      "indicators": [
+        {
+          "width": 20,
+          "height": 20,
+          "center": 252.890625
+        },
+        {
+          "width": 20,
+          "height": 20,
+          "center": 252.890625
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fields": [
+        {
+          "x": 1560,
+          "y": 231,
+          "width": 144,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 252.890625
+        },
+        {
+          "x": 1716,
+          "y": 231,
+          "width": 144,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 252.890625
+        }
+      ],
+      "indicators": [
+        {
+          "width": 20,
+          "height": 20,
+          "center": 252.890625
+        },
+        {
+          "width": 20,
+          "height": 20,
+          "center": 252.890625
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "fields": [
+        {
+          "x": 316,
+          "y": 326.5625,
+          "width": 200,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 348.453125
+        },
+        {
+          "x": 528,
+          "y": 326.5625,
+          "width": 200,
+          "height": 43.78125,
+          "border": "1px solid rgb(174, 174, 178)",
+          "radius": "8px",
+          "fontSize": "14px",
+          "textFits": true,
+          "iconWidth": 36,
+          "iconHeight": 43.78125,
+          "iconCenter": 348.453125
+        }
+      ],
+      "indicators": [
+        {
+          "width": 20,
+          "height": 20,
+          "center": 348.453125
+        },
+        {
+          "width": 20,
+          "height": 20,
+          "center": 348.453125
+        }
+      ]
+    }
+  ]
+}

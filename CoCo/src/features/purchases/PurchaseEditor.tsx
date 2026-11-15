@@ -19,6 +19,7 @@ import type { Customer } from '../../services/reference-data/contracts';
 import type { PurchaseLine } from '../../domain/purchases';
 import { PurchaseResults } from './PurchaseResults';
 import type { FinalizePurchaseCommand } from '../../services/purchase-finalization';
+import { useCloudOnline } from '../../cloud/connectivity';
 const tableMoney = (value: number) => new Intl.NumberFormat('vi-VN').format(value);
 
 function ItemDialog({ bundle, line, onClose, onSaved }: { bundle: DraftBundle; line?: PurchaseLine; onClose(): void; onSaved(id: string, pending: boolean, revision: number): void }) {
@@ -66,6 +67,7 @@ function ItemDialog({ bundle, line, onClose, onSaved }: { bundle: DraftBundle; l
 }
 
 export function PurchaseEditor() {
+  const online = useCloudOnline();
   const { draftId } = useParams(), navigate = useNavigate(); const { purchaseDrafts, referenceData, purchaseFinalizer } = useAuth();
   const fresh = useRef<DraftBundle>();
   const load = useCallback(async () => draftId ? purchaseDrafts.load(draftId) : fresh.current ?? (fresh.current = await purchaseDrafts.prepareDraft()), [draftId, purchaseDrafts]);
@@ -124,7 +126,7 @@ export function PurchaseEditor() {
     <div className="purchase-heading"><Button className="button-beige" onClick={() => setAdding(true)} disabled={interactionBlocked}>Thêm</Button><div className="purchase-title-card"><h1>Thông tin giao dịch</h1><strong>{data.draft.id}</strong></div></div>
     <div className="purchase-board"><section ref={ref} data-page-size={pageSize} data-pagination={visible.pages > 1 ? 'paged' : 'single'} className="reference-list purchase-lines">
       {!active.length && <p className="sr-only" role="status">Chưa có sản phẩm</p>}
-      <PaginatedTable headers={['Sản phẩm', 'Số lượng', 'Đơn giá', 'Thành tiền']} empty={saveAttempted && !active.length ? 'Hãy thêm ít nhất một sản phẩm' : undefined} columnWidths={['26.333%', '22.294%', '21.971%', '29.402%']} rowDividers={false} pagination={<Pagination page={visible.page} pages={visible.pages} onChange={setPage}/>}>
+      <PaginatedTable headers={['Sản phẩm', 'Số lượng', 'Đơn giá', 'Thành tiền']} empty={saveAttempted && !active.length ? 'Hãy thêm ít nhất một sản phẩm' : undefined} emptyTone="validation" columnWidths={['26.333%', '22.294%', '21.971%', '29.402%']} rowDividers={false} pagination={<Pagination page={visible.page} pages={visible.pages} onChange={setPage}/>}>
         {visible.rows.map(line => <tr key={line.id}><td>{line.status === 'rejected' ? <button className="purchase-rejected-product" aria-label={`Nhập lại giá ${line.bracket.type} ${line.bracket.brand}`} disabled={interactionBlocked} onClick={() => setEditingLineId(line.id)}><strong>{line.bracket.type} {line.bracket.brand}</strong></button> : <strong>{line.bracket.type} {line.bracket.brand}</strong>}<small>{conditionLabel(line.bracket.condition)}{line.status === 'pending' && <span className="purchase-pending">Chờ phê duyệt giá</span>}{line.status === 'approved' && <span>Đã phê duyệt</span>}{line.status === 'rejected' && <span>Đã từ chối</span>}{saveAttempted && !['priced', 'approved'].includes(line.status) && <span className="field-error"><CircleAlert aria-hidden="true" className="field-error-icon"/>Sản phẩm chưa được duyệt giá</span>}</small></td><td>{line.quantity}</td><td>{tableMoney(line.unitCost)}</td><td><div className="purchase-line-amount"><strong>{tableMoney(line.quantity * line.unitCost)}</strong><button className="purchase-remove" aria-label={`Xóa ${line.bracket.type} ${line.bracket.brand}`} disabled={interactionBlocked} onClick={() => void remove(line.id)}><Trash2 aria-hidden="true"/></button></div></td></tr>)}
       </PaginatedTable>
     </section><aside className="purchase-summary"><section className="purchase-customer"><div className="purchase-customer-heading"><h2>Khách hàng</h2>{customerMissing && <Button disabled={interactionBlocked} onClick={() => setCreating(true)}>+ Thêm khách hàng</Button>}</div>
@@ -132,7 +134,7 @@ export function PurchaseEditor() {
         {suggestions.length > 0 && <div className="customer-suggestions" role="group" aria-label="Khách hàng tìm thấy">{suggestions.map(customer => <button className="customer-suggestion" type="button" key={customer.record.MaKH} onClick={() => void selectCustomer(customer)} disabled={interactionBlocked}>{customer.record.TenKH}</button>)}</div>}
         {customerMissing && <p className="customer-not-found">Khách hàng không tồn tại</p>}{customerError && <p role="alert">{customerError}</p>}
       </div><Field label="Họ tên" placeholder="Nhập họ và tên" value={name} error={saveAttempted && !name ? 'Hãy nhập đầy đủ thông tin' : undefined} errorIcon={<CircleAlert aria-hidden="true" className="field-error-icon"/>} readOnly/>
-    </section><section className="purchase-payment"><h2>Thanh toán</h2><div className="purchase-total"><strong>Tổng tiền</strong>{active.length > 0 && <strong>{formatMoney(total)}</strong>}</div><div className="form-actions"><Button className="button-beige" disabled={interactionBlocked} onClick={() => void save()}>Lưu</Button><Button className="button-secondary" disabled={interactionBlocked} onClick={() => void remove()}>Hủy</Button></div></section></aside></div>
+    </section><section className="purchase-payment"><h2>Thanh toán</h2><div className="purchase-total"><strong>Tổng tiền</strong>{active.length > 0 && <strong>{formatMoney(total)}</strong>}</div><div className="form-actions"><Button className="button-beige" disabled={interactionBlocked || !online} onClick={() => void save()}>Lưu</Button><Button className="button-secondary" disabled={interactionBlocked} onClick={() => void remove()}>Hủy</Button></div></section></aside></div>
     {adding && <ItemDialog bundle={data} onClose={() => setAdding(false)} onSaved={(id, pending, revision) => { setMinimumRevision(revision); setAdding(false); navigate(`/purchases/${id}`, { replace: true }); if (pending) { setNoticeError(false); setNotice('Giá thu mua vượt mức, cần được phê duyệt'); } reload(); }}/ >}
     {notice && <ResultDialog error={noticeError} message={notice} onClose={() => { setNotice(''); if (completedInvoiceId) navigate('/purchases', { replace: true }); }}/ >}
     {editingLineId && <ItemDialog bundle={data} line={data.lines.find(line => line.id === editingLineId)} onClose={() => setEditingLineId(undefined)} onSaved={(_, pending, revision) => { setMinimumRevision(revision); setEditingLineId(undefined); if (pending) { setNoticeError(false); setNotice('Giá thu mua vượt mức, cần được phê duyệt'); } reload(); }} />}

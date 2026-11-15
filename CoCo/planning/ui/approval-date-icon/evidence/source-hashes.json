@@ -1,0 +1,18 @@
+﻿[
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\features\\approvals\\ApprovalsPage.tsx",
+        "Hash":  "5F07088F335E7AC95FD092A76A0ED34FC7CB2867D192970704B5D9D94A7B3A90"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\index.css",
+        "Hash":  "C9251C23DF1322946D9D547E5EA05687EE6F16417C80579DA4A0F6B6E0BC701E"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\tests\\e2e\\list-search-layout.spec.ts",
+        "Hash":  "5835D832BA952F247BB49A97725CE6561EFADB527359832A1F1E93FF17B988AF"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\tests\\e2e\\purchase-approvals.spec.ts",
+        "Hash":  "50972286F9F5FEA120926E0C3E376EB3A277104243E0F5A61CF91251A2806F1B"
+    }
+]

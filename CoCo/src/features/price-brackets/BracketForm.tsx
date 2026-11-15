@@ -24,7 +24,7 @@ export function BracketForm({ bracket, onClose, onSaved }: { bracket?: Bracket; 
       else setError(cause instanceof DataServiceError ? cause.message : bracket ? 'Cập nhật không thành công' : 'Tạo khung giá không thành công');
     } finally { setBusy(false); }
   }
-  return <><FormDialog title={bracket ? 'Sửa khung giá thu mua' : 'Tạo khung giá thu mua'} onClose={onClose} busy={busy}><form className="record-form" noValidate onSubmit={submit} aria-busy={busy}>
+  return <><FormDialog title={bracket ? 'Sửa khung giá thu mua' : 'Tạo khung giá thu mua'} onClose={onClose} busy={busy} compact={!bracket}><form className="record-form" noValidate onSubmit={submit} aria-busy={busy}>
     <Field label="Loại hàng" maxLength={50} value={input.productType} error={fields.productType} onChange={e => change('productType',e.target.value)} />
     <Field label="Thương hiệu" maxLength={50} value={input.brand} error={fields.brand} onChange={e => change('brand',e.target.value)} />
     <div className="coco-field"><label htmlFor={conditionId}>Độ mới</label><div><select id={conditionId} value={input.condition} aria-invalid={Boolean(fields.condition)} aria-describedby={fields.condition ? `${conditionId}-error` : undefined} onChange={e => change('condition',e.target.value)}>

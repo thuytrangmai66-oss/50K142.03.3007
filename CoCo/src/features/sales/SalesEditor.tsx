@@ -16,6 +16,7 @@ import type { Customer } from '../../services/reference-data/contracts';
 import { CustomerForm } from '../customers/CustomerForm';
 import type { CheckoutInput, SaleQuote } from '../../domain/sale-payment';
 import { TransferQrDialog } from './TransferQrDialog';
+import { useCloudOnline } from '../../cloud/connectivity';
 
 function ProductEntry({ bundle, disabled, onBusyChange, onSaved }: { bundle: SalesDraftBundle; disabled: boolean; onBusyChange(busy: boolean): void; onSaved(bundle: SalesDraftBundle): void }) {
   const { salesDrafts } = useAuth();
@@ -67,6 +68,7 @@ function ProductEntry({ bundle, disabled, onBusyChange, onSaved }: { bundle: Sal
 }
 
 export function SalesEditor() {
+  const online = useCloudOnline();
   const { draftId } = useParams();
   const navigate = useNavigate();
   const { salesDrafts, salesPayments, referenceData } = useAuth();
@@ -308,6 +310,7 @@ export function SalesEditor() {
         {!data.lines.length && <p className="sr-only" role="status">Chưa có sản phẩm</p>}
         <PaginatedTable headers={['Sản phẩm', 'SL', 'Đơn giá', 'Thành tiền']}
           empty={saveAttempted && !data.lines.length ? 'Hãy thêm ít nhất một sản phẩm' : undefined}
+          emptyTone="validation"
           columnWidths={['40%', '10%', '24%', '26%']}
           pagination={<Pagination page={visible.page} pages={visible.pages} onChange={setPage}/>}>
           {visible.rows.map(line => <tr key={line.productId}>
@@ -374,7 +377,7 @@ export function SalesEditor() {
               disabled={interactionBlocked} onClick={() => setMethod(value)}>{value === 'cash' ? 'Tiền mặt' : 'Chuyển khoản'}</button>)}
           </div>
           <div className="form-actions">
-            <Button className="button-beige" disabled={interactionBlocked || registeringMembership || membershipLoading || Boolean(promotionError)} onClick={() => void pay()}>Lưu</Button>
+            <Button className="button-beige" disabled={interactionBlocked || !online || registeringMembership || membershipLoading || Boolean(promotionError)} onClick={() => void pay()}>Lưu</Button>
             <Button className="button-secondary" disabled={interactionBlocked} onClick={() => void cancel()}>Hủy</Button>
           </div>
         </section>

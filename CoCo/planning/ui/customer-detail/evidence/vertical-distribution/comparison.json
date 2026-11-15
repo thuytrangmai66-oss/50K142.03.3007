@@ -1,0 +1,178 @@
+﻿[
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1366,
+                         "height":  768
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  210,
+        "input1TopAfter":  225,
+        "input2TopBefore":  278,
+        "input2TopAfter":  343.015625,
+        "historyTopBefore":  350,
+        "historyTopAfter":  468.375,
+        "actionsTopBefore":  482,
+        "actionsTopAfter":  667.359375
+    },
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1440,
+                         "height":  900
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  276,
+        "input1TopAfter":  284.25,
+        "input2TopBefore":  395,
+        "input2TopAfter":  416.75,
+        "historyTopBefore":  510,
+        "historyTopAfter":  545.9375,
+        "actionsTopBefore":  715,
+        "actionsTopAfter":  786.921875
+    },
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1920,
+                         "height":  1080
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  276,
+        "input1TopAfter":  303.140625,
+        "input2TopBefore":  395,
+        "input2TopAfter":  473.453125,
+        "historyTopBefore":  510,
+        "historyTopAfter":  653.03125,
+        "actionsTopBefore":  715,
+        "actionsTopAfter":  946.21875
+    },
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1280,
+                         "height":  650
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  206,
+        "input1TopAfter":  212.609375,
+        "input2TopBefore":  274,
+        "input2TopAfter":  305.84375,
+        "historyTopBefore":  346,
+        "historyTopAfter":  398.171875,
+        "actionsTopBefore":  478,
+        "actionsTopAfter":  562.9375
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1366,
+                         "height":  768
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  210,
+        "input1TopAfter":  225,
+        "input2TopBefore":  278,
+        "input2TopAfter":  343.015625,
+        "historyTopBefore":  350,
+        "historyTopAfter":  468.375,
+        "actionsTopBefore":  482,
+        "actionsTopAfter":  667.359375
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1440,
+                         "height":  900
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  276,
+        "input1TopAfter":  284.25,
+        "input2TopBefore":  395,
+        "input2TopAfter":  416.75,
+        "historyTopBefore":  510,
+        "historyTopAfter":  545.9375,
+        "actionsTopBefore":  715,
+        "actionsTopAfter":  786.921875
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1920,
+                         "height":  1080
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  276,
+        "input1TopAfter":  303.140625,
+        "input2TopBefore":  395,
+        "input2TopAfter":  473.453125,
+        "historyTopBefore":  510,
+        "historyTopAfter":  653.03125,
+        "actionsTopBefore":  715,
+        "actionsTopAfter":  946.21875
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1280,
+                         "height":  650
+                     },
+        "cardUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputSizesAndXUnchanged":  true,
+        "historySizesAndXUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "input1TopBefore":  206,
+        "input1TopAfter":  212.609375,
+        "input2TopBefore":  274,
+        "input2TopAfter":  305.84375,
+        "historyTopBefore":  346,
+        "historyTopAfter":  398.171875,
+        "actionsTopBefore":  478,
+        "actionsTopAfter":  562.9375
+    }
+]

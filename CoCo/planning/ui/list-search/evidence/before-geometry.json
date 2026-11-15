@@ -1,0 +1,278 @@
+[
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "route": "approvals",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "bottom": 80
+    },
+    "toolbar": {
+      "x": 292,
+      "y": 124,
+      "width": 1058,
+      "height": 70,
+      "bottom": 194
+    },
+    "search": {
+      "x": 292,
+      "y": 124,
+      "width": 822,
+      "height": 70,
+      "bottom": 194
+    },
+    "date": {
+      "x": 1130,
+      "y": 127,
+      "width": 220,
+      "height": 64,
+      "bottom": 191
+    },
+    "table": {
+      "x": 292,
+      "y": 226,
+      "width": 1058,
+      "height": 474,
+      "bottom": 700
+    },
+    "pagination": {
+      "x": 292,
+      "y": 720,
+      "width": 1058,
+      "height": 32,
+      "bottom": 752
+    }
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "route": "customers",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "bottom": 80
+    },
+    "toolbar": {
+      "x": 292,
+      "y": 124,
+      "width": 1058,
+      "height": 70,
+      "bottom": 194
+    },
+    "search": {
+      "x": 292,
+      "y": 124,
+      "width": 842.328125,
+      "height": 70,
+      "bottom": 194
+    },
+    "date": null,
+    "table": {
+      "x": 292,
+      "y": 226,
+      "width": 1058,
+      "height": 474,
+      "bottom": 700
+    },
+    "pagination": {
+      "x": 292,
+      "y": 720,
+      "width": 1058,
+      "height": 32,
+      "bottom": 752
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "approvals",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "bottom": 106
+    },
+    "toolbar": {
+      "x": 461,
+      "y": 158,
+      "width": 943,
+      "height": 70,
+      "bottom": 228
+    },
+    "search": {
+      "x": 461,
+      "y": 158,
+      "width": 707,
+      "height": 70,
+      "bottom": 228
+    },
+    "date": {
+      "x": 1184,
+      "y": 161,
+      "width": 220,
+      "height": 64,
+      "bottom": 225
+    },
+    "table": {
+      "x": 461,
+      "y": 260,
+      "width": 943,
+      "height": 572,
+      "bottom": 832
+    },
+    "pagination": {
+      "x": 461,
+      "y": 852,
+      "width": 943,
+      "height": 32,
+      "bottom": 884
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "customers",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "bottom": 106
+    },
+    "toolbar": {
+      "x": 461,
+      "y": 158,
+      "width": 943,
+      "height": 70,
+      "bottom": 228
+    },
+    "search": {
+      "x": 461,
+      "y": 158,
+      "width": 727.328125,
+      "height": 70,
+      "bottom": 228
+    },
+    "date": null,
+    "table": {
+      "x": 461,
+      "y": 260,
+      "width": 943,
+      "height": 572,
+      "bottom": 832
+    },
+    "pagination": {
+      "x": 461,
+      "y": 852,
+      "width": 943,
+      "height": 32,
+      "bottom": 884
+    }
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "route": "approvals",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "bottom": 106
+    },
+    "toolbar": {
+      "x": 461,
+      "y": 158,
+      "width": 1423,
+      "height": 70,
+      "bottom": 228
+    },
+    "search": {
+      "x": 461,
+      "y": 158,
+      "width": 1187,
+      "height": 70,
+      "bottom": 228
+    },
+    "date": {
+      "x": 1664,
+      "y": 161,
+      "width": 220,
+      "height": 64,
+      "bottom": 225
+    },
+    "table": {
+      "x": 461,
+      "y": 260,
+      "width": 1423,
+      "height": 752,
+      "bottom": 1012
+    },
+    "pagination": {
+      "x": 461,
+      "y": 1032,
+      "width": 1423,
+      "height": 32,
+      "bottom": 1064
+    }
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "route": "customers",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "bottom": 106
+    },
+    "toolbar": {
+      "x": 461,
+      "y": 158,
+      "width": 1423,
+      "height": 70,
+      "bottom": 228
+    },
+    "search": {
+      "x": 461,
+      "y": 158,
+      "width": 1207.328125,
+      "height": 70,
+      "bottom": 228
+    },
+    "date": null,
+    "table": {
+      "x": 461,
+      "y": 260,
+      "width": 1423,
+      "height": 752,
+      "bottom": 1012
+    },
+    "pagination": {
+      "x": 461,
+      "y": 1032,
+      "width": 1423,
+      "height": 32,
+      "bottom": 1064
+    }
+  }
+]

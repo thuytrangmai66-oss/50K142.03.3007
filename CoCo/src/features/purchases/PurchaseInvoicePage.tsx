@@ -5,7 +5,6 @@ import { useAuth } from '../auth/use-auth';
 import { useResource } from '../reference-data/use-resource';
 import { DataTable } from '../../components/ui/DataTable';
 import { ResultDialog } from '../../components/ui/ResultDialog';
-import { CustomerToolbar } from '../customers/CustomerToolbar';
 import { formatMoney, formatTransactionDateTime } from '../../domain/formatters';
 
 /** Both entry points share the Figma invoice card. Employee/status remain in
@@ -18,8 +17,7 @@ export function PurchaseInvoicePage({ fromHistory = false }: { fromHistory?: boo
   const load = useCallback(() => fromHistory ? referenceData.invoice(customerId, 'sales', invoiceId)
     : purchaseDrafts.transaction(invoiceId), [fromHistory, referenceData, customerId, invoiceId, purchaseDrafts]);
   const { data, loading, error } = useResource(load);
-  return <section className="reference-page purchase-invoice-page">
-    {fromHistory && <CustomerToolbar />}
+  return <section className={`reference-page purchase-invoice-page${fromHistory ? ' customer-history-invoice' : ''}`}>
     <Link className="back-link" to={backTo}><ArrowLeft aria-hidden="true"/>Quay lại</Link>
     {loading ? <p role="status">Đang tải giao dịch…</p> : data && <article className="record-card purchase-invoice">
       <h1>Chi tiết giao dịch {data.id}</h1>

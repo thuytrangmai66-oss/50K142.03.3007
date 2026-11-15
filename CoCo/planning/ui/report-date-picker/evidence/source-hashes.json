@@ -1,0 +1,26 @@
+﻿[
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\features\\reports\\ReportPeriodForm.tsx",
+        "Hash":  "114E1CA6E01164A6FDEE988C081868D0F06D3C42AFC815F54F3BFC675B13A35B"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\index.css",
+        "Hash":  "8AE5BE8D2E2E721C11DDA0E090B4FD55486B3DEA83E0DAD4B094156F3D113A3C"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\tests\\e2e\\report-date-picker.spec.ts",
+        "Hash":  "6D8BBAEFD1FBF1FF354737009E9B933CF0C03C8A91E31F69F0C0E8B613AE2E8F"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\tests\\unit\\report-components.test.tsx",
+        "Hash":  "63C856ADF5DEC6EEE70A0000AFEF3B109BA7D49F777C895A6AEFEC93D92C8192"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\package-lock.json",
+        "Hash":  "0466A148E350CDC3D7FDC6BFDBAA8780C2EC98C2413BF3CD36A29320E51F2CA3"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\lib\\vietnam-time.ts",
+        "Hash":  "326CE9F78FFC0F75DB8D46FF9222868BC82D87954F28B1BCD672D50A99CC5AC4"
+    }
+]

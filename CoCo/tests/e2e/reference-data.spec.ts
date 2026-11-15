@@ -39,6 +39,10 @@ for (const role of ['owner','staff'] as const) test(`${role} customer UI validat
   await page.getByRole('button', { name: 'Xóa tìm kiếm' }).click();
   await page.getByRole('link', { name: 'Khách có dấu', exact: true }).click();
   await expect(page.getByLabel('Số điện thoại', { exact: true })).toHaveValue('0123456789');
+  await expect(page.getByRole('textbox', { name: 'Tìm khách hàng theo số điện thoại' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Tạo tài khoản', exact: true })).toHaveCount(0);
+  // Search/create belong to the list; return there before the existing search.
+  await page.getByRole('link', { name: 'Quay lại', exact: true }).click();
   await page.getByRole('textbox', { name: 'Tìm khách hàng theo số điện thoại' }).fill('0123456789');
   await page.getByRole('button', { name: 'Tìm khách hàng', exact: true }).click();
   await expect(page.getByRole('link', { name: 'Khách có dấu', exact: true })).toBeVisible();
@@ -157,11 +161,15 @@ test('customer UI reads existing purchase/sale history and snapshots, and refuse
   }),id);
   await page.getByRole('link', { name: 'Lịch sử mua', exact: true }).click(); await page.getByRole('link', { name: 'BH01', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Chi tiết hóa đơn BH01', exact: true })).toBeVisible();
+  await expect(page.getByRole('search')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Tạo tài khoản', exact: true })).toHaveCount(0);
   await expect(page.getByRole('cell', { name: 'Áo lịch sử', exact: true })).toBeVisible();
   await page.screenshot({ path: info.outputPath('sale-history-viewer.png'), fullPage: true });
   await page.getByRole('link', { name: 'Quay lại', exact: true }).click(); await page.getByRole('link', { name: 'Quay lại', exact: true }).click();
   await page.getByRole('link', { name: 'Lịch sử bán', exact: true }).click(); await page.getByRole('link', { name: 'TM01', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Chi tiết giao dịch TM01', exact: true })).toBeVisible();
+  await expect(page.getByRole('search')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Tạo tài khoản', exact: true })).toHaveCount(0);
   await expect(page.locator('.invoice-total')).toContainText('100.000');
   await page.getByRole('link', { name: 'Quay lại', exact: true }).click(); await page.getByRole('link', { name: 'Quay lại', exact: true }).click();
   await page.getByRole('button', { name: 'Xóa tài khoản', exact: true }).click();

@@ -53,9 +53,12 @@ for (const role of ['owner', 'staff'] as const) {
     await expect(target.locator('.history-card')).toContainText('Khách G7');
     await expect(target.locator('.history-card')).not.toContainText('Không tìm thấy lịch sử mua');
     await expect(target.locator('.history-card tbody tr')).toHaveCount(0);
-    const toolbar = (await target.locator('.reference-toolbar').boundingBox())!;
+    await expect(target.locator('.reference-toolbar')).toHaveCount(0);
+    await expect(target.getByRole('search')).toHaveCount(0);
+    await expect(target.getByRole('button', { name: 'Tạo tài khoản', exact: true })).toHaveCount(0);
+    const back = (await target.getByRole('link', { name: 'Quay lại', exact: true }).boundingBox())!;
     const header = (await target.locator('.page-header').boundingBox())!;
-    expect(toolbar.y).toBeGreaterThanOrEqual(header.y + header.height);
+    expect(back.y).toBeGreaterThanOrEqual(header.y + header.height);
     const card = (await target.locator('.history-card').boundingBox())!;
     expect(card.y + card.height).toBeGreaterThan(target.viewportSize()!.height * .85);
     await target.screenshot({ path: info.outputPath(`${role}-history-read-error.png`) });

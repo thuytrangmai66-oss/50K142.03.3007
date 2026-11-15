@@ -1,0 +1,66 @@
+[
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "inputBefore": 639.25,
+    "inputAfter": 591.3125,
+    "inputPercent": 67.27104664391354,
+    "historyBefore": 394,
+    "historyAfter": 375,
+    "historyGapBefore": 20,
+    "historyGapAfter": 36,
+    "actionsWidthBefore": 1018,
+    "actionsWidthAfter": 879,
+    "outerMaxDelta": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "inputBefore": 620,
+    "inputAfter": 619,
+    "inputPercent": 70.42093287827076,
+    "historyBefore": 375,
+    "historyAfter": 375,
+    "historyGapBefore": 58,
+    "historyGapAfter": 58,
+    "actionsWidthBefore": 879,
+    "actionsWidthAfter": 879,
+    "outerMaxDelta": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "inputBefore": 620,
+    "inputAfter": 619,
+    "inputPercent": 70.42093287827076,
+    "historyBefore": 375,
+    "historyAfter": 375,
+    "historyGapBefore": 58,
+    "historyGapAfter": 58,
+    "actionsWidthBefore": 1359,
+    "actionsWidthAfter": 879,
+    "outerMaxDelta": 0
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "inputBefore": 639.25,
+    "inputAfter": 591.3125,
+    "inputPercent": 67.27104664391354,
+    "historyBefore": 394,
+    "historyAfter": 375,
+    "historyGapBefore": 20,
+    "historyGapAfter": 36,
+    "actionsWidthBefore": 932,
+    "actionsWidthAfter": 879,
+    "outerMaxDelta": 0
+  }
+]

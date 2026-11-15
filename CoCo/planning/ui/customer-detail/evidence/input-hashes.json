@@ -1,0 +1,26 @@
+﻿[
+    {
+        "path":  "CoCo/src/features/customers/CustomerDetailPage.tsx",
+        "sha256":  "2d5ba8b16c28070a40ea4c4bd8e8ddbc0f02673ce99f1b554dbcc0351c262c26"
+    },
+    {
+        "path":  "CoCo/src/features/customers/CustomerToolbar.tsx",
+        "sha256":  "c08a40549de92f8998e42bf3e2db6c0dc3a3574259065f7c51b65fa7606eeafc"
+    },
+    {
+        "path":  "CoCo/src/features/customers/CustomersPage.tsx",
+        "sha256":  "bb53569351b8802f730c043afd49f81ef9685029b1f66f3d7d21d7f0bd565c27"
+    },
+    {
+        "path":  "CoCo/src/index.css",
+        "sha256":  "801db2082bcb6116ffb55923711d5d1f60ebb103c7180ec890b6644c99ad2a31"
+    },
+    {
+        "path":  "CoCo/tests/e2e/customer-detail-layout.spec.ts",
+        "sha256":  "775c5dda45a8a1f8d3a75d1b7fc965d28ace312f6d5b2251af2c634cbd56b37b"
+    },
+    {
+        "path":  "CoCo/tests/e2e/reference-data.spec.ts",
+        "sha256":  "a10d2a4d4b15fc0151cba60f7c5308b2da2dd1958256efda41b64ad51de6051f"
+    }
+]

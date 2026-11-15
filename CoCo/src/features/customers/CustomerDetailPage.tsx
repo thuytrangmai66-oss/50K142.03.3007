@@ -9,7 +9,6 @@ import { ConfirmDialog } from '../../components/ui/ConfirmDialog';
 import { ResultDialog } from '../../components/ui/ResultDialog';
 import { CustomerForm } from './CustomerForm';
 import { DataServiceError, type Customer } from '../../services/reference-data/contracts';
-import { CustomerToolbar } from './CustomerToolbar';
 
 export function CustomerDetailPage() {
   const { customerId = '' } = useParams(), navigate = useNavigate();
@@ -26,10 +25,9 @@ export function CustomerDetailPage() {
       deletion: true, linked: cause instanceof DataServiceError && cause.code === 'HAS_HISTORY' }); }
     finally { setBusy(false); }
   }
-  return <section className="reference-page">
-    <CustomerToolbar />
+  return <section className="reference-page customer-detail">
     <Link className="back-link" to="/customers"><ArrowLeft aria-hidden="true" />Quay lại</Link>
-    {loading ? <p role="status">Đang tải thông tin khách hàng…</p> : error || !data ? <div className="panel" role="alert"><p>Lỗi truy xuất dữ liệu khách hàng</p><Button onClick={reload}>Thử lại</Button></div> : <article className="record-card">
+    {loading ? <p role="status">Đang tải thông tin khách hàng…</p> : error || !data ? <div className="panel" role="alert"><p>Lỗi truy xuất dữ liệu khách hàng</p><Button onClick={reload}>Thử lại</Button></div> : <article className="record-card customer-detail-card">
       <h1>Thông tin khách hàng</h1><div className="record-body">
         <div className="record-form"><Field label="Họ tên" readOnly value={data.record.TenKH} /><Field label="Số điện thoại" readOnly value={data.record.SoDienThoaiKH} /></div>
         <div className="history-links"><Link to="purchases"><ShoppingBag aria-hidden="true" />Lịch sử mua</Link><Link to="sales"><ShoppingCart aria-hidden="true" />Lịch sử bán</Link></div>

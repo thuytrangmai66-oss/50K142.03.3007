@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { CalendarDays, Search } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { useAuth } from '../auth/use-auth';
 import { useResource } from '../reference-data/use-resource';
 import { useListPageSize } from '../reference-data/use-list-page-size';
@@ -127,9 +127,14 @@ export function ApprovalsPage() {
   return <section ref={ref} data-page-size={pageSize} className="reference-page reference-list approval-list">
     <div className="reference-toolbar approval-toolbar">
       <label className="search-field"><Search aria-hidden="true"/><input aria-label="Tìm theo tên nhân viên" placeholder="Tìm theo tên nhân viên" value={employeeName} onChange={event => { setEmployeeName(event.target.value); setPage(1); setDismissed(false); }} /></label>
-      <label className="approval-date-field"><CalendarDays aria-hidden="true" />
+      <label className="approval-date-field">
         <input className="approval-date" type="date" aria-label="Ngày gửi" data-empty={!sentOn} value={sentOn}
-          onClick={event => event.currentTarget.showPicker()} onChange={event => { setSentOn(event.target.value); setPage(1); setDismissed(false); }} />
+          onClick={event => {
+            const input = event.currentTarget;
+            if (typeof input.showPicker === 'function') {
+              try { input.showPicker(); event.preventDefault(); } catch { /* Keep the native indicator usable when showPicker is unavailable. */ }
+            }
+          }} onChange={event => { setSentOn(event.target.value); setPage(1); setDismissed(false); }} />
         {!sentOn && <span>Ngày gửi</span>}
       </label>
     </div>

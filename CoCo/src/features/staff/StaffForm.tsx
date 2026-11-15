@@ -31,7 +31,7 @@ export function StaffForm({ account, onClose, onSaved }: { account?: StaffAccoun
       else setError(cause instanceof StaffServiceError ? cause.message : account ? 'Cập nhật thông tin thất bại' : 'Lỗi trong quá trình lưu. Vui lòng thử lại');
     } finally {setBusy(false);}
   }
-  return <><FormDialog title={account ? 'Sửa tài khoản nhân viên' : 'Tạo tài khoản nhân viên'} onClose={onClose} busy={locked}>
+  return <><FormDialog title={account ? 'Sửa tài khoản nhân viên' : 'Tạo tài khoản nhân viên'} onClose={onClose} busy={locked} compact={!account}>
     <form className="record-form staff-form" noValidate onSubmit={submit} aria-busy={busy}>
       <StaffField label="Họ tên" icon={!account && <UserRound aria-hidden="true" />} autoComplete="name" maxLength={50} placeholder="Nhập họ tên nhân viên" value={input.name} error={fields.name} onChange={e=>change('name',e.target.value)} />
       <StaffField label="Số điện thoại" icon={!account && <Phone aria-hidden="true" />} autoComplete="tel" inputMode="tel" type="tel" placeholder="Nhập số điện thoại nhân viên" value={input.phone} error={fields.phone} onChange={e=>change('phone',e.target.value)} />

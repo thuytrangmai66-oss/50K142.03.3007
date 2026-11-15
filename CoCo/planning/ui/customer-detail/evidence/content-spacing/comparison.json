@@ -1,0 +1,178 @@
+﻿[
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1366,
+                         "height":  768
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  230,
+        "gapHistoryActionsAfter":  20,
+        "actionsMovedUp":  210,
+        "cardHeight":  616,
+        "cardBottom":  752,
+        "sidebarBottom":  752,
+        "pageX":  0,
+        "mainScrollY":  0
+    },
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1440,
+                         "height":  900
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  136,
+        "gapHistoryActionsAfter":  40,
+        "actionsMovedUp":  96,
+        "cardHeight":  706,
+        "cardBottom":  884,
+        "sidebarBottom":  884,
+        "pageX":  0,
+        "mainScrollY":  0
+    },
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1920,
+                         "height":  1080
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  316,
+        "gapHistoryActionsAfter":  40,
+        "actionsMovedUp":  276,
+        "cardHeight":  886,
+        "cardBottom":  1064,
+        "sidebarBottom":  1064,
+        "pageX":  0,
+        "mainScrollY":  0
+    },
+    {
+        "role":  "owner",
+        "viewport":  {
+                         "width":  1280,
+                         "height":  650
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  116,
+        "gapHistoryActionsAfter":  20,
+        "actionsMovedUp":  96,
+        "cardHeight":  498,
+        "cardBottom":  634,
+        "sidebarBottom":  634,
+        "pageX":  0,
+        "mainScrollY":  0
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1366,
+                         "height":  768
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  230,
+        "gapHistoryActionsAfter":  20,
+        "actionsMovedUp":  210,
+        "cardHeight":  616,
+        "cardBottom":  752,
+        "sidebarBottom":  752,
+        "pageX":  0,
+        "mainScrollY":  0
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1440,
+                         "height":  900
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  136,
+        "gapHistoryActionsAfter":  40,
+        "actionsMovedUp":  96,
+        "cardHeight":  706,
+        "cardBottom":  884,
+        "sidebarBottom":  884,
+        "pageX":  0,
+        "mainScrollY":  0
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1920,
+                         "height":  1080
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  316,
+        "gapHistoryActionsAfter":  40,
+        "actionsMovedUp":  276,
+        "cardHeight":  886,
+        "cardBottom":  1064,
+        "sidebarBottom":  1064,
+        "pageX":  0,
+        "mainScrollY":  0
+    },
+    {
+        "role":  "staff",
+        "viewport":  {
+                         "width":  1280,
+                         "height":  650
+                     },
+        "outerFrameUnchanged":  true,
+        "sidebarUnchanged":  true,
+        "headerUnchanged":  true,
+        "backUnchanged":  true,
+        "inputsUnchanged":  true,
+        "historiesUnchanged":  true,
+        "buttonSizesAndXUnchanged":  true,
+        "gapHistoryActionsBefore":  116,
+        "gapHistoryActionsAfter":  20,
+        "actionsMovedUp":  96,
+        "cardHeight":  498,
+        "cardBottom":  634,
+        "sidebarBottom":  634,
+        "pageX":  0,
+        "mainScrollY":  0
+    }
+]

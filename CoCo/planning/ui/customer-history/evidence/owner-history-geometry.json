@@ -1,0 +1,472 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "kind": "purchases",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "bottom": 106
+    },
+    "back": {
+      "x": 461,
+      "y": 130,
+      "width": 96,
+      "height": 24,
+      "bottom": 154
+    },
+    "card": {
+      "x": 461,
+      "y": 178,
+      "width": 943,
+      "height": 706,
+      "bottom": 884
+    },
+    "summary": {
+      "x": 461,
+      "y": 178,
+      "width": 943,
+      "height": 121.59375,
+      "bottom": 299.59375
+    },
+    "table": {
+      "x": 461,
+      "y": 299.59375,
+      "width": 943,
+      "height": 584.40625,
+      "bottom": 884
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "kind": "sales",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "bottom": 106
+    },
+    "back": {
+      "x": 461,
+      "y": 130,
+      "width": 96,
+      "height": 24,
+      "bottom": 154
+    },
+    "card": {
+      "x": 461,
+      "y": 178,
+      "width": 943,
+      "height": 706,
+      "bottom": 884
+    },
+    "summary": {
+      "x": 461,
+      "y": 178,
+      "width": 943,
+      "height": 121.59375,
+      "bottom": 299.59375
+    },
+    "table": {
+      "x": 461,
+      "y": 299.59375,
+      "width": 943,
+      "height": 584.40625,
+      "bottom": 884
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "kind": "purchases",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "bottom": 80
+    },
+    "back": {
+      "x": 292,
+      "y": 96,
+      "width": 96,
+      "height": 24,
+      "bottom": 120
+    },
+    "card": {
+      "x": 292,
+      "y": 136,
+      "width": 1058,
+      "height": 616,
+      "bottom": 752
+    },
+    "summary": {
+      "x": 292,
+      "y": 136,
+      "width": 1058,
+      "height": 121.59375,
+      "bottom": 257.59375
+    },
+    "table": {
+      "x": 292,
+      "y": 257.59375,
+      "width": 1058,
+      "height": 494.40625,
+      "bottom": 752
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "kind": "sales",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "bottom": 80
+    },
+    "back": {
+      "x": 292,
+      "y": 96,
+      "width": 96,
+      "height": 24,
+      "bottom": 120
+    },
+    "card": {
+      "x": 292,
+      "y": 136,
+      "width": 1058,
+      "height": 616,
+      "bottom": 752
+    },
+    "summary": {
+      "x": 292,
+      "y": 136,
+      "width": 1058,
+      "height": 121.59375,
+      "bottom": 257.59375
+    },
+    "table": {
+      "x": 292,
+      "y": 257.59375,
+      "width": 1058,
+      "height": 494.40625,
+      "bottom": 752
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "kind": "purchases",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "bottom": 106
+    },
+    "back": {
+      "x": 461,
+      "y": 130,
+      "width": 96,
+      "height": 24,
+      "bottom": 154
+    },
+    "card": {
+      "x": 461,
+      "y": 178,
+      "width": 1423,
+      "height": 886,
+      "bottom": 1064
+    },
+    "summary": {
+      "x": 461,
+      "y": 178,
+      "width": 1423,
+      "height": 121.59375,
+      "bottom": 299.59375
+    },
+    "table": {
+      "x": 461,
+      "y": 299.59375,
+      "width": 1423,
+      "height": 764.40625,
+      "bottom": 1064
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "kind": "sales",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "bottom": 106
+    },
+    "back": {
+      "x": 461,
+      "y": 130,
+      "width": 96,
+      "height": 24,
+      "bottom": 154
+    },
+    "card": {
+      "x": 461,
+      "y": 178,
+      "width": 1423,
+      "height": 886,
+      "bottom": 1064
+    },
+    "summary": {
+      "x": 461,
+      "y": 178,
+      "width": 1423,
+      "height": 121.59375,
+      "bottom": 299.59375
+    },
+    "table": {
+      "x": 461,
+      "y": 299.59375,
+      "width": 1423,
+      "height": 764.40625,
+      "bottom": 1064
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "kind": "purchases",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 460,
+      "height": 64,
+      "bottom": 80
+    },
+    "back": {
+      "x": 292,
+      "y": 96,
+      "width": 96,
+      "height": 24,
+      "bottom": 120
+    },
+    "card": {
+      "x": 292,
+      "y": 136,
+      "width": 460,
+      "height": 872,
+      "bottom": 1008
+    },
+    "summary": {
+      "x": 292,
+      "y": 136,
+      "width": 460,
+      "height": 121.59375,
+      "bottom": 257.59375
+    },
+    "table": {
+      "x": 292,
+      "y": 257.59375,
+      "width": 460,
+      "height": 750.40625,
+      "bottom": 1008
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "kind": "sales",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 460,
+      "height": 64,
+      "bottom": 80
+    },
+    "back": {
+      "x": 292,
+      "y": 96,
+      "width": 96,
+      "height": 24,
+      "bottom": 120
+    },
+    "card": {
+      "x": 292,
+      "y": 136,
+      "width": 460,
+      "height": 872,
+      "bottom": 1008
+    },
+    "summary": {
+      "x": 292,
+      "y": 136,
+      "width": 460,
+      "height": 121.59375,
+      "bottom": 257.59375
+    },
+    "table": {
+      "x": 292,
+      "y": 257.59375,
+      "width": 460,
+      "height": 750.40625,
+      "bottom": 1008
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "kind": "purchases",
+    "header": {
+      "x": 12,
+      "y": 434,
+      "width": 366,
+      "height": 64,
+      "bottom": 498
+    },
+    "back": {
+      "x": 12,
+      "y": 514,
+      "width": 96,
+      "height": 24,
+      "bottom": 538
+    },
+    "card": {
+      "x": 12,
+      "y": 554,
+      "width": 366,
+      "height": 437.09375,
+      "bottom": 991.09375
+    },
+    "summary": {
+      "x": 12,
+      "y": 554,
+      "width": 366,
+      "height": 121.59375,
+      "bottom": 675.59375
+    },
+    "table": {
+      "x": 12,
+      "y": 675.59375,
+      "width": 366,
+      "height": 315.5,
+      "bottom": 991.09375
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "kind": "sales",
+    "header": {
+      "x": 12,
+      "y": 434,
+      "width": 366,
+      "height": 64,
+      "bottom": 498
+    },
+    "back": {
+      "x": 12,
+      "y": 514,
+      "width": 96,
+      "height": 24,
+      "bottom": 538
+    },
+    "card": {
+      "x": 12,
+      "y": 554,
+      "width": 366,
+      "height": 437.09375,
+      "bottom": 991.09375
+    },
+    "summary": {
+      "x": 12,
+      "y": 554,
+      "width": 366,
+      "height": 121.59375,
+      "bottom": 675.59375
+    },
+    "table": {
+      "x": 12,
+      "y": 675.59375,
+      "width": 366,
+      "height": 315.5,
+      "bottom": 991.09375
+    },
+    "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+    "gap": "8px",
+    "icon": 24,
+    "pageX": 0,
+    "scrollTop": 0
+  }
+]

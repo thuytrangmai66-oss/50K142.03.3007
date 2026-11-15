@@ -1,0 +1,278 @@
+[
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "bottom": 80
+    },
+    "toolbar": {
+      "x": 292,
+      "y": 124,
+      "width": 1058,
+      "height": 70,
+      "bottom": 194
+    },
+    "back": {
+      "x": 292,
+      "y": 226,
+      "width": 96,
+      "height": 24,
+      "bottom": 250
+    },
+    "card": {
+      "x": 292,
+      "y": 270,
+      "width": 1058,
+      "height": 449.5,
+      "bottom": 719.5
+    },
+    "title": {
+      "x": 292,
+      "y": 270,
+      "width": 1058,
+      "height": 81.5,
+      "bottom": 351.5
+    },
+    "input": {
+      "x": 586.5,
+      "y": 371.5,
+      "width": 743.5,
+      "height": 56,
+      "bottom": 427.5
+    },
+    "history": {
+      "x": 312,
+      "y": 523.5,
+      "width": 1018,
+      "height": 112,
+      "bottom": 635.5
+    },
+    "historyButton": {
+      "x": 312,
+      "y": 523.5,
+      "width": 499,
+      "height": 112,
+      "bottom": 635.5
+    },
+    "actions": {
+      "x": 312,
+      "y": 655.5,
+      "width": 1018,
+      "height": 44,
+      "bottom": 699.5
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "bottom": 106
+    },
+    "toolbar": {
+      "x": 461,
+      "y": 158,
+      "width": 943,
+      "height": 70,
+      "bottom": 228
+    },
+    "back": {
+      "x": 461,
+      "y": 260,
+      "width": 96,
+      "height": 24,
+      "bottom": 284
+    },
+    "card": {
+      "x": 461,
+      "y": 304,
+      "width": 943,
+      "height": 541.5,
+      "bottom": 845.5
+    },
+    "title": {
+      "x": 461,
+      "y": 304,
+      "width": 943,
+      "height": 81.5,
+      "bottom": 385.5
+    },
+    "input": {
+      "x": 730.75,
+      "y": 413.5,
+      "width": 645.25,
+      "height": 56,
+      "bottom": 469.5
+    },
+    "history": {
+      "x": 489,
+      "y": 581.5,
+      "width": 887,
+      "height": 160,
+      "bottom": 741.5
+    },
+    "historyButton": {
+      "x": 489,
+      "y": 581.5,
+      "width": 427.5,
+      "height": 160,
+      "bottom": 741.5
+    },
+    "actions": {
+      "x": 489,
+      "y": 769.5,
+      "width": 887,
+      "height": 48,
+      "bottom": 817.5
+    }
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "bottom": 106
+    },
+    "toolbar": {
+      "x": 461,
+      "y": 158,
+      "width": 1423,
+      "height": 70,
+      "bottom": 228
+    },
+    "back": {
+      "x": 461,
+      "y": 260,
+      "width": 96,
+      "height": 24,
+      "bottom": 284
+    },
+    "card": {
+      "x": 461,
+      "y": 304,
+      "width": 1423,
+      "height": 541.5,
+      "bottom": 845.5
+    },
+    "title": {
+      "x": 461,
+      "y": 304,
+      "width": 1423,
+      "height": 81.5,
+      "bottom": 385.5
+    },
+    "input": {
+      "x": 850.75,
+      "y": 413.5,
+      "width": 1005.25,
+      "height": 56,
+      "bottom": 469.5
+    },
+    "history": {
+      "x": 489,
+      "y": 581.5,
+      "width": 1367,
+      "height": 160,
+      "bottom": 741.5
+    },
+    "historyButton": {
+      "x": 489,
+      "y": 581.5,
+      "width": 667.5,
+      "height": 160,
+      "bottom": 741.5
+    },
+    "actions": {
+      "x": 489,
+      "y": 769.5,
+      "width": 1367,
+      "height": 48,
+      "bottom": 817.5
+    }
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 972,
+      "height": 64,
+      "bottom": 80
+    },
+    "toolbar": {
+      "x": 292,
+      "y": 124,
+      "width": 972,
+      "height": 70,
+      "bottom": 194
+    },
+    "back": {
+      "x": 292,
+      "y": 226,
+      "width": 96,
+      "height": 24,
+      "bottom": 250
+    },
+    "card": {
+      "x": 292,
+      "y": 270,
+      "width": 972,
+      "height": 449.5,
+      "bottom": 719.5
+    },
+    "title": {
+      "x": 292,
+      "y": 270,
+      "width": 972,
+      "height": 81.5,
+      "bottom": 351.5
+    },
+    "input": {
+      "x": 565,
+      "y": 371.5,
+      "width": 679,
+      "height": 56,
+      "bottom": 427.5
+    },
+    "history": {
+      "x": 312,
+      "y": 523.5,
+      "width": 932,
+      "height": 112,
+      "bottom": 635.5
+    },
+    "historyButton": {
+      "x": 312,
+      "y": 523.5,
+      "width": 456,
+      "height": 112,
+      "bottom": 635.5
+    },
+    "actions": {
+      "x": 312,
+      "y": 655.5,
+      "width": 932,
+      "height": 44,
+      "bottom": 699.5
+    }
+  }
+]

@@ -1,0 +1,578 @@
+{
+  "sanPham": [
+    {
+      "MaSP": "SP47b03748",
+      "TenSP": "Áo",
+      "MaHDTM": "TMebd5dfd4",
+      "TrangThai": 2,
+      "MaKhungGia": "KGeb4adfba",
+      "NgayNhapKho": "2026-11-15",
+      "GiaBanHienHanh": 104000,
+      "GiaGocChuKyGiam": 104000,
+      "NgayBatDauChuKyGiam": "2026-11-15"
+    },
+    {
+      "MaSP": "SP9acaf81b",
+      "TenSP": "Áo",
+      "MaHDTM": "TMebd5dfd4",
+      "TrangThai": 1,
+      "MaKhungGia": "KGeb4adfba",
+      "NgayNhapKho": "2026-11-15",
+      "GiaBanHienHanh": 20000,
+      "GiaGocChuKyGiam": 104000,
+      "NgayBatDauChuKyGiam": "2026-10-01"
+    }
+  ],
+  "nhanVien": [
+    {
+      "MaNV": "NV00000001",
+      "HoTen": "Owner",
+      "SoDienThoai": "0900000001"
+    }
+  ],
+  "taiKhoan": [
+    {
+      "MaNV": "NV00000001",
+      "TenDangNhap": "owner"
+    }
+  ],
+  "khachHang": [
+    {
+      "MaKH": "KH598b6e60",
+      "TenKH": "Customer",
+      "DiemTichLuy": 0,
+      "SoDienThoaiKH": "0900000002"
+    },
+    {
+      "MaKH": "KHLEGACY01",
+      "TenKH": "Legacy",
+      "DiemTichLuy": 0,
+      "SoDienThoaiKH": "0900000004"
+    }
+  ],
+  "operations": [
+    {
+      "id": "discounts:f28aebb8-c85b-459a-a5c0-94f3ab71e693",
+      "executedAt": "2026-11-15T13:53:45.099Z",
+      "fingerprint": "b13fd00926f6313a66054f7a9e81832da0c71cb848481796abefe2a0daca6072"
+    },
+    {
+      "id": "discounts:f858031d-7266-4463-b2ba-f7b85a41fa8a",
+      "executedAt": "2026-11-15T13:53:45.109Z",
+      "fingerprint": "b13fd00926f6313a66054f7a9e81832da0c71cb848481796abefe2a0daca6072"
+    },
+    {
+      "id": "g6-approval:approve-key",
+      "executedAt": "2026-11-15T13:53:45.082Z",
+      "fingerprint": "723cf9e62951ffc2fb3d05b197c11bf475d3ab0e3ef9cad6c121d306472f394e"
+    },
+    {
+      "id": "purchase-finalize:purchase-key",
+      "executedAt": "2026-11-15T13:53:45.021Z",
+      "fingerprint": "03a2a5f995d4305df9eb5f7679f5d4ab410616edcc0a908fb907ebef41340a34"
+    },
+    {
+      "id": "purchaseDrafts:approval-draft",
+      "executedAt": "2026-11-15T13:53:45.077Z",
+      "fingerprint": "f8f22545cd2d42cf1ce96915c07c650fa4d1e9447fc0e67a6cf11d5a7a5d35e9"
+    },
+    {
+      "id": "purchaseDrafts:draft-key",
+      "executedAt": "2026-11-15T13:53:45.013Z",
+      "fingerprint": "3dd4e4015c11b98270b2bcb4fbbfdc12650b7d28f4b52a80b7dcc4621b3348f0"
+    },
+    {
+      "id": "reference:customer-one",
+      "executedAt": "2026-11-15T13:53:44.988Z",
+      "fingerprint": "6665aab255446911e1b5184749bf064a73aefe63d878be47dda2b53174d25a0f"
+    },
+    {
+      "id": "reference:dbb46489-353b-451a-9924-2eff310622bb",
+      "executedAt": "2026-11-15T13:53:45.001Z",
+      "fingerprint": "dab17da23ddf298b6d96d160ce89c44d0c569fa8511cc6a7bdcd401da3aef41b"
+    },
+    {
+      "id": "sale-finalize:sale-key",
+      "executedAt": "2026-11-15T13:53:45.056Z",
+      "fingerprint": "72b5ab99449d17389893c7134f0fd8f07045a5a0eccc91f97f9c900bebfff2ec"
+    },
+    {
+      "id": "salesDrafts:cart-key",
+      "executedAt": "2026-11-15T13:53:45.047Z",
+      "fingerprint": "68c5002ee4332bef152c041b200ff17f40f3b2c20857980740deaee81f453e40"
+    }
+  ],
+  "appMetadata": [
+    {
+      "key": "condition-catalog:KGeb4adfba",
+      "value": "coco:conditions:2026-11-11"
+    },
+    {
+      "key": "customer-creation:KH598b6e60",
+      "value": "{\"createdAt\":\"2026-11-15T13:53:44.988Z\",\"createdBy\":\"owner\",\"customerId\":\"KH598b6e60\",\"format\":\"customer-creation-v1\",\"operationId\":\"reference:customer-one\",\"source\":\"customer-create\"}"
+    },
+    {
+      "key": "discount-day:2026-11-15",
+      "value": "426619dd-7e04-42f9-b107-8585aa5a752a"
+    },
+    {
+      "key": "discount-run:426619dd-7e04-42f9-b107-8585aa5a752a",
+      "value": "{\"errors\":0,\"executedAt\":\"2026-11-15T13:53:45.099Z\",\"finishedAt\":\"2026-11-15T13:53:45.103Z\",\"id\":\"426619dd-7e04-42f9-b107-8585aa5a752a\",\"kept\":1,\"notes\":[],\"scanned\":2,\"scheduledFor\":\"2026-11-15T00:00:00+07:00\",\"sequence\":1,\"status\":\"success\",\"updated\":1}"
+    },
+    {
+      "key": "discount-sequence",
+      "value": "1"
+    },
+    {
+      "key": "purchase-status-mapping:TMebd5dfd4",
+      "value": "{\"invoiceCompleted\":1,\"productAvailable\":1,\"productSold\":2}"
+    },
+    {
+      "key": "sales-draft:D00000002",
+      "value": "{\"createdAt\":\"2026-11-15T13:53:45.047Z\",\"createdBy\":\"owner\",\"employeeId\":\"NV00000001\",\"format\":\"sales-cart-v1\",\"id\":\"D00000002\",\"invoiceId\":\"BH00000001\",\"lines\":[{\"lineTotal\":104000,\"name\":\"Áo\",\"productId\":\"SP47b03748\",\"productVersion\":1,\"quantity\":1,\"selectedAt\":\"2026-11-15T13:53:45.047Z\",\"sourcePurchaseId\":\"TMebd5dfd4\",\"unitPrice\":104000}],\"revision\":2,\"status\":\"finalized\",\"updatedAt\":\"2026-11-15T13:53:45.056Z\"}"
+    },
+    {
+      "key": "sales-invoice:BH00000001",
+      "value": "{\"operationId\":\"sale-key\",\"paidAt\":\"2026-11-15T13:53:45.056Z\",\"snapshot\":{\"customer\":{\"id\":\"KH598b6e60\",\"isMember\":false,\"name\":\"Customer\",\"phone\":\"0900000002\",\"pointsAfter\":0,\"pointsBefore\":0,\"pointsEarned\":0,\"pointsUsed\":0,\"registeredAt\":null,\"version\":1},\"discount\":0,\"draftId\":\"D00000002\",\"employee\":{\"id\":\"NV00000001\",\"name\":\"Owner\",\"username\":\"owner\"},\"format\":\"sales-invoice-v1\",\"invoiceId\":\"BH00000001\",\"lines\":[{\"lineTotal\":104000,\"name\":\"Áo\",\"productId\":\"SP47b03748\",\"productVersion\":1,\"quantity\":1,\"selectedAt\":\"2026-11-15T13:53:45.047Z\",\"sourcePurchaseId\":\"TMebd5dfd4\",\"unitPrice\":104000}],\"mapping\":{\"cash\":1,\"completed\":1,\"transfer\":2},\"method\":\"cash\",\"revision\":1,\"subtotal\":104000,\"total\":104000}}"
+    }
+  ],
+  "memberships": [],
+  "auditEntries": [
+    {
+      "id": "discounts:f28aebb8-c85b-459a-a5c0-94f3ab71e693",
+      "actor": "owner",
+      "changed": [],
+      "executedAt": "2026-11-15T13:53:45.099Z"
+    },
+    {
+      "id": "discounts:f858031d-7266-4463-b2ba-f7b85a41fa8a",
+      "actor": "owner",
+      "changed": [],
+      "executedAt": "2026-11-15T13:53:45.109Z"
+    },
+    {
+      "id": "g6-approval:approve-key",
+      "actor": "owner",
+      "changed": [],
+      "executedAt": "2026-11-15T13:53:45.082Z"
+    },
+    {
+      "id": "purchase-finalize:purchase-key",
+      "actor": "owner",
+      "changed": [
+        "purchaseFinalizations:TMebd5dfd4",
+        "purchaseDrafts:D00000001",
+        "hoaDonThuMua:TMebd5dfd4"
+      ],
+      "executedAt": "2026-11-15T13:53:45.021Z"
+    },
+    {
+      "id": "purchaseDrafts:approval-draft",
+      "actor": "owner",
+      "changed": [],
+      "executedAt": "2026-11-15T13:53:45.077Z"
+    },
+    {
+      "id": "purchaseDrafts:draft-key",
+      "actor": "owner",
+      "changed": [],
+      "executedAt": "2026-11-15T13:53:45.013Z"
+    },
+    {
+      "id": "reference:customer-one",
+      "actor": "owner",
+      "changed": [
+        "[\"khachHang\",\"KH598b6e60\"]"
+      ],
+      "executedAt": "2026-11-15T13:53:44.988Z"
+    },
+    {
+      "id": "reference:dbb46489-353b-451a-9924-2eff310622bb",
+      "actor": "owner",
+      "changed": [],
+      "executedAt": "2026-11-15T13:53:45.001Z"
+    },
+    {
+      "id": "sale-finalize:sale-key",
+      "actor": "owner",
+      "changed": [
+        "sales-invoice:BH00000001"
+      ],
+      "executedAt": "2026-11-15T13:53:45.056Z"
+    },
+    {
+      "id": "salesDrafts:cart-key",
+      "actor": "owner",
+      "changed": [],
+      "executedAt": "2026-11-15T13:53:45.047Z"
+    }
+  ],
+  "authSessions": [],
+  "hoaDonThuMua": [
+    {
+      "MaKH": "KH598b6e60",
+      "MaNV": "NV00000001",
+      "MaHDTM": "TMebd5dfd4",
+      "TrangThai": 1,
+      "NgayThuMua": "2026-11-15T13:53:45.021Z",
+      "TongTienTM": 160000
+    }
+  ],
+  "productCosts": [
+    {
+      "MaSP": "SP47b03748",
+      "MaHDTM": "TMebd5dfd4",
+      "unitCost": 80000,
+      "MaKhungGia": "KGeb4adfba",
+      "recordedAt": "2026-11-15T13:53:45.021Z"
+    },
+    {
+      "MaSP": "SP9acaf81b",
+      "MaHDTM": "TMebd5dfd4",
+      "unitCost": 80000,
+      "MaKhungGia": "KGeb4adfba",
+      "recordedAt": "2026-11-15T13:53:45.021Z"
+    }
+  ],
+  "hoaDonBanHang": [
+    {
+      "MaKH": "KH598b6e60",
+      "MaNV": "NV00000001",
+      "PTTT": 1,
+      "MaHDBH": "BH00000001",
+      "NgayBan": "2026-11-15T13:53:45.056Z",
+      "TichDiem": 0,
+      "TongTien": 104000,
+      "TrangThai": 1,
+      "TienKhuyenMai": 0
+    }
+  ],
+  "notifications": [],
+  "purchaseLines": [
+    {
+      "id": "line-approval",
+      "status": "approved",
+      "bracket": {
+        "id": "KGeb4adfba",
+        "max": 100000,
+        "min": 50000,
+        "type": "Áo",
+        "brand": "CoCo",
+        "revision": 1,
+        "condition": 2
+      },
+      "draftId": "D00000004",
+      "position": 1,
+      "quantity": 1,
+      "revision": 1,
+      "unitCost": 120000,
+      "approvalId": "Y00000001"
+    },
+    {
+      "id": "line-one",
+      "status": "priced",
+      "bracket": {
+        "id": "KGeb4adfba",
+        "max": 100000,
+        "min": 50000,
+        "type": "Áo",
+        "brand": "CoCo",
+        "revision": 1,
+        "condition": 2
+      },
+      "draftId": "D00000001",
+      "position": 1,
+      "quantity": 2,
+      "revision": 1,
+      "unitCost": 80000
+    }
+  ],
+  "khungGiaThuMua": [
+    {
+      "MaNV": "NV00000001",
+      "GiaMax": 100000,
+      "GiaMin": 50000,
+      "TinhTrang": 2,
+      "MaKhungGia": "KGeb4adfba",
+      "ThuongHieu": "CoCo",
+      "LoaiSanPham": "Áo"
+    }
+  ],
+  "purchaseDrafts": [
+    {
+      "id": "D00000001",
+      "format": "purchase-lines-v1",
+      "status": "finalized",
+      "revision": 2,
+      "createdAt": "2026-11-15T13:53:45.011Z",
+      "createdBy": "owner",
+      "invoiceId": "TMebd5dfd4",
+      "updatedAt": "2026-11-15T13:53:45.021Z",
+      "customerId": "KH598b6e60",
+      "employeeId": "NV00000001"
+    },
+    {
+      "id": "D00000004",
+      "format": "purchase-lines-v1",
+      "status": "editing",
+      "revision": 1,
+      "createdAt": "2026-11-15T13:53:45.011Z",
+      "createdBy": "owner",
+      "updatedAt": "2026-11-15T13:53:45.011Z",
+      "customerId": "KH598b6e60",
+      "employeeId": "NV00000001"
+    }
+  ],
+  "recordVersions": [
+    {
+      "key": "[\"chiTietHoaDonBH\",[\"BH00000001\",\"SP47b03748\"]]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.062Z"
+    },
+    {
+      "key": "[\"discountApplications\",[\"SP9acaf81b\",\"2026-10-01\",45]]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.102Z"
+    },
+    {
+      "key": "[\"hoaDonBanHang\",\"BH00000001\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.060Z"
+    },
+    {
+      "key": "[\"hoaDonThuMua\",\"TMebd5dfd4\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.023Z"
+    },
+    {
+      "key": "[\"khachHang\",\"KH598b6e60\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:44.991Z"
+    },
+    {
+      "key": "[\"khungGiaThuMua\",\"KGeb4adfba\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.004Z"
+    },
+    {
+      "key": "[\"nhanVien\",\"NV00000001\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:44.968Z"
+    },
+    {
+      "key": "[\"productCosts\",\"SP47b03748\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.028Z"
+    },
+    {
+      "key": "[\"productCosts\",\"SP9acaf81b\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.031Z"
+    },
+    {
+      "key": "[\"purchaseApprovals\",\"Y00000001\"]",
+      "version": 2,
+      "updatedAt": "2026-11-15T13:53:45.084Z"
+    },
+    {
+      "key": "[\"purchaseDrafts\",\"D00000001\"]",
+      "version": 2,
+      "updatedAt": "2026-11-15T13:53:45.033Z"
+    },
+    {
+      "key": "[\"purchaseDrafts\",\"D00000004\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.078Z"
+    },
+    {
+      "key": "[\"purchaseFinalizations\",\"TMebd5dfd4\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.024Z"
+    },
+    {
+      "key": "[\"purchaseLines\",\"line-approval\"]",
+      "version": 2,
+      "updatedAt": "2026-11-15T13:53:45.084Z"
+    },
+    {
+      "key": "[\"purchaseLines\",\"line-one\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.019Z"
+    },
+    {
+      "key": "[\"purchaseNotices\",\"N18a8155fb51e49aeb80c758aa0713566\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.085Z"
+    },
+    {
+      "key": "[\"purchaseProvenance\",\"SP47b03748\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.029Z"
+    },
+    {
+      "key": "[\"purchaseProvenance\",\"SP9acaf81b\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:45.032Z"
+    },
+    {
+      "key": "[\"sanPham\",\"SP47b03748\"]",
+      "version": 2,
+      "updatedAt": "2026-11-15T13:53:45.062Z"
+    },
+    {
+      "key": "[\"sanPham\",\"SP9acaf81b\"]",
+      "version": 2,
+      "updatedAt": "2026-11-15T13:53:45.103Z"
+    },
+    {
+      "key": "[\"taiKhoan\",\"owner\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:44.973Z"
+    },
+    {
+      "key": "[\"accountSecurity\",\"owner\"]",
+      "version": 1,
+      "updatedAt": "2026-11-15T13:53:44.957Z"
+    }
+  ],
+  "accountSecurity": [
+    {
+      "role": "owner",
+      "active": true,
+      "TenDangNhap": "owner"
+    }
+  ],
+  "chiTietHoaDonBH": [
+    {
+      "MaSP": "SP47b03748",
+      "DonGia": 104000,
+      "MaHDBH": "BH00000001",
+      "SoLuong": 1,
+      "ThanhTien": 104000
+    }
+  ],
+  "chiTietHoaDonTM": [],
+  "purchaseNotices": [
+    {
+      "id": "N18a8155fb51e49aeb80c758aa0713566",
+      "delivery": "pending",
+      "createdAt": "2026-11-15T13:53:45.082Z",
+      "recipient": "owner",
+      "approvalId": "Y00000001"
+    }
+  ],
+  "issuedIdentifiers": [
+    {
+      "key": "[\"hoaDonBanHang\",\"BH00000001\"]",
+      "issuedAt": "2026-11-15T13:53:45.056Z"
+    },
+    {
+      "key": "[\"hoaDonThuMua\",\"TMebd5dfd4\"]",
+      "issuedAt": "2026-11-15T13:53:45.023Z"
+    },
+    {
+      "key": "[\"khachHang\",\"KH598b6e60\"]",
+      "issuedAt": "2026-11-15T13:53:44.990Z"
+    },
+    {
+      "key": "[\"khungGiaThuMua\",\"KGeb4adfba\"]",
+      "issuedAt": "2026-11-15T13:53:45.003Z"
+    },
+    {
+      "key": "[\"sanPham\",\"SP47b03748\"]",
+      "issuedAt": "2026-11-15T13:53:45.026Z"
+    },
+    {
+      "key": "[\"sanPham\",\"SP9acaf81b\"]",
+      "issuedAt": "2026-11-15T13:53:45.030Z"
+    }
+  ],
+  "purchaseApprovals": [
+    {
+      "id": "Y00000001",
+      "lineId": "line-approval",
+      "bracket": {
+        "id": "KGeb4adfba",
+        "max": 100000,
+        "min": 50000,
+        "type": "Áo",
+        "brand": "CoCo",
+        "revision": 1,
+        "condition": 2
+      },
+      "draftId": "D00000004",
+      "decision": {
+        "actor": "owner",
+        "status": "approved",
+        "decidedAt": "2026-11-15T13:53:45.082Z"
+      },
+      "quantity": 1,
+      "revision": 2,
+      "unitCost": 120000,
+      "requestedAt": "2026-11-15T13:53:45.011Z",
+      "requestedBy": "owner",
+      "lineRevision": 1
+    }
+  ],
+  "yeuCauPheDuyetGia": [],
+  "purchaseProvenance": [
+    {
+      "format": "purchase-lines-v1",
+      "lineId": "line-one",
+      "unitCost": 80000,
+      "invoiceId": "TMebd5dfd4",
+      "productId": "SP47b03748",
+      "recordedAt": "2026-11-15T13:53:45.021Z"
+    },
+    {
+      "format": "purchase-lines-v1",
+      "lineId": "line-one",
+      "unitCost": 80000,
+      "invoiceId": "TMebd5dfd4",
+      "productId": "SP9acaf81b",
+      "recordedAt": "2026-11-15T13:53:45.021Z"
+    }
+  ],
+  "discountApplications": [
+    {
+      "MaSP": "SP9acaf81b",
+      "milestone": 45,
+      "executedAt": "2026-11-15T13:53:45.099Z",
+      "priceAfter": 20000,
+      "priceBefore": 10000,
+      "scheduledFor": "2026-11-15",
+      "cycleStartedOn": "2026-10-01"
+    }
+  ],
+  "purchaseFinalizations": [
+    {
+      "lines": [
+        {
+          "id": "line-one",
+          "status": "priced",
+          "bracket": {
+            "id": "KGeb4adfba",
+            "max": 100000,
+            "min": 50000,
+            "type": "Áo",
+            "brand": "CoCo",
+            "revision": 1,
+            "condition": 2
+          },
+          "draftId": "D00000001",
+          "position": 1,
+          "quantity": 2,
+          "revision": 1,
+          "unitCost": 80000
+        }
+      ],
+      "format": "purchase-lines-v1",
+      "paidAt": "2026-11-15T13:53:45.021Z",
+      "draftId": "D00000001",
+      "subtotal": 160000,
+      "invoiceId": "TMebd5dfd4",
+      "paidTotal": 160000,
+      "finalizedAt": "2026-11-15T13:53:45.021Z"
+    }
+  ]
+}

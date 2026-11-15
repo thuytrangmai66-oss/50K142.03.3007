@@ -23,7 +23,7 @@ export function CustomerForm({ customer, onClose, onSaved }: { customer?: Custom
       else setError(cause instanceof DataServiceError ? cause.message : customer ? 'Cập nhật thông tin khách hàng không thành công' : 'Không thể tạo thông tin khách hàng');
     } finally { setBusy(false); }
   }
-  return <><FormDialog title={customer ? 'Sửa thông tin khách hàng' : 'Tạo thông tin khách hàng'} busy={busy} onClose={onClose}>
+  return <><FormDialog title={customer ? 'Sửa thông tin khách hàng' : 'Tạo thông tin khách hàng'} busy={busy} onClose={onClose} compact={!customer}>
     <form className="record-form" noValidate onSubmit={submit} aria-busy={busy}>
       <Field label="Họ tên" autoComplete="name" maxLength={50} value={name} error={fields.name} onChange={e => setName(e.target.value)} />
       <Field label="Số điện thoại" type="tel" inputMode="numeric" autoComplete="tel" value={phone} error={fields.phone} onChange={e => setPhone(e.target.value)} />

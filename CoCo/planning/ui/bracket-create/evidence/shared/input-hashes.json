@@ -1,0 +1,18 @@
+﻿[
+    {
+        "path":  "CoCo/src/features/customers/CustomerForm.tsx",
+        "sha256":  "619f90569f8491e6911a0b6cf48d8454ed1b9fdd843e5a690bc62a93d4132f86"
+    },
+    {
+        "path":  "CoCo/src/features/staff/StaffForm.tsx",
+        "sha256":  "932cecad55cd5964227d899733fd552efd3ad1caef9a7b8b63adff39fff01c04"
+    },
+    {
+        "path":  "CoCo/src/components/ui/FormDialog.tsx",
+        "sha256":  "d1ca85d6d66d9190432e9a548e04676dd69358dc054bb7a4742219c1ba950091"
+    },
+    {
+        "path":  "CoCo/src/index.css",
+        "sha256":  "90b8c5363b5dbec5d5fa68935b563404be8e3ddf517e30ab13d2ce6f87e24adb"
+    }
+]

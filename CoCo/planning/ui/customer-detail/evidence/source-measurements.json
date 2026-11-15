@@ -1,0 +1,50 @@
+﻿{
+    "source":  "CODEX/Figma.Chủ/Xem thông tin Khách hàng.pdf",
+    "sha256":  "a296b14b1f3624eef8b4bc217498a945bced111e861e4126b61b232c14d3f5f6",
+    "viewport":  [
+                     1440,
+                     900
+                 ],
+    "card":  {
+                 "y":  178,
+                 "width":  943,
+                 "height":  645,
+                 "x":  461
+             },
+    "cardHeader":  {
+                       "height":  75,
+                       "width":  943
+                   },
+    "inputFill":  {
+                      "height":  70,
+                      "width":  619
+                  },
+    "historyCards":  [
+                         {
+                             "y":  510,
+                             "width":  375,
+                             "height":  165,
+                             "x":  526
+                         },
+                         {
+                             "y":  510,
+                             "width":  375,
+                             "height":  165,
+                             "x":  959
+                         }
+                     ],
+    "editButton":  {
+                       "height":  49,
+                       "width":  255
+                   },
+    "deleteButton":  {
+                         "height":  48,
+                         "width":  255
+                     },
+    "fontSizes":  {
+                      "field":  25,
+                      "title":  25,
+                      "actions":  25,
+                      "history":  20
+                  }
+}

@@ -2,12 +2,13 @@ import { useEffect, useState, type PropsWithChildren } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { initializeDatabase } from '../db';
 import { AuthProvider } from '../features/auth/AuthProvider';
+import { cloudEnabled } from '../cloud/client';
 
 export function AppProviders({ children }: PropsWithChildren) {
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   useEffect(() => {
     let active = true;
-    initializeDatabase().then(
+    (cloudEnabled ? Promise.resolve() : initializeDatabase()).then(
       () => { if (active) setStatus('ready'); },
       () => { if (active) setStatus('error'); },
     );

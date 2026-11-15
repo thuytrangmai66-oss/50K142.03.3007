@@ -5,6 +5,7 @@ import { CoCoRepository, recordVersionKey, type Command } from '../../repositori
 import { hasPermission, type Permission } from '../permissions';
 import { derivePassword, equalHash, PASSWORD_ITERATIONS, randomHex, sha256 } from './crypto';
 import { AuthError } from './errors';
+import { CLOUD_READ_AUTHORIZER, type CloudReadPort } from '../../cloud/contracts';
 
 export interface BootstrapInput { fullName: string; phone: string; username: string; password: string }
 const BOOTSTRAP_KEY = 'auth:bootstrap-completed';
@@ -120,6 +121,10 @@ export class AuthService {
 
   /** Business services pass a fixed permission and DB-only query, not UI role claims. */
   async readAuthorized<T>(token: string, permission: Permission, query: (user: AuthUser) => Promise<T>): Promise<T> {
+    // Cloud read projections use immutable, server-filtered snapshots, not local
+    // credentials. This capability is never consulted by sessions or mutations.
+    const projection = (this.db as CoCoDatabase & Partial<CloudReadPort>)[CLOUD_READ_AUTHORIZER];
+    if (projection) return projection(permission, query);
     const hash = await this.digestToken(token);
     return this.db.transaction('r', this.db.tables, async () => query(await this.requireSession(hash, permission)));
   }

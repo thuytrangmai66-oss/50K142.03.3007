@@ -49,6 +49,7 @@ Desktop.ini
 *.db
 *.sqlite
 *.sqlite3
+CoCo-private-backup-*.json
 *.docx
 CODEX/
 

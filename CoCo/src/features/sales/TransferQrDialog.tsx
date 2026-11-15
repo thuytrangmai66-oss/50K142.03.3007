@@ -5,10 +5,12 @@ import { Button } from '../../components/ui/Button';
 import { formatMoney } from '../../domain/formatters';
 import type { SaleQuote } from '../../domain/sale-payment';
 import { COCO_BANK } from '../../lib/payment/vietqr';
+import { useCloudOnline } from '../../cloud/connectivity';
 
 export function TransferQrDialog({ quote, busy, onClose, onConfirm }: {
   quote: SaleQuote; busy: boolean; onClose(): void; onConfirm(): void;
 }) {
+  const online = useCloudOnline();
   const [image, setImage] = useState(''), [error, setError] = useState('');
   useEffect(() => {
     let active = true;
@@ -23,7 +25,7 @@ export function TransferQrDialog({ quote, busy, onClose, onConfirm }: {
       <strong className="transfer-amount">{formatMoney(quote.snapshot.total)}</strong>
       {error ? <p role="alert">{error}</p> : image ? <img src={image} alt={`QR ${COCO_BANK.name}, ${COCO_BANK.account}, ${COCO_BANK.holder}, ${quote.snapshot.total} đồng`}/> : <p role="status">Đang tạo mã QR…</p>}
       <div className="form-actions">
-        <Button className="button-beige" disabled={busy || !image || Boolean(error)} onClick={onConfirm}>{busy ? 'Đang xử lý…' : 'Đã nhận'}</Button>
+        <Button className="button-beige" disabled={busy || !online || !image || Boolean(error)} onClick={onConfirm}>{busy ? 'Đang xử lý…' : 'Đã nhận'}</Button>
         <Button className="button-secondary" disabled={busy} onClick={onClose}>Quay lại</Button>
       </div>
     </div>

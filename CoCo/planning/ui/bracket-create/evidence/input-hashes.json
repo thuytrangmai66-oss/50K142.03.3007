@@ -1,0 +1,18 @@
+﻿[
+    {
+        "path":  "CoCo/src/components/ui/FormDialog.tsx",
+        "sha256":  "d1ca85d6d66d9190432e9a548e04676dd69358dc054bb7a4742219c1ba950091"
+    },
+    {
+        "path":  "CoCo/src/features/price-brackets/BracketForm.tsx",
+        "sha256":  "886216f8eb690ad8a972504f93d38aea84276d7275651be8202a9cf5d33f838b"
+    },
+    {
+        "path":  "CoCo/src/index.css",
+        "sha256":  "90b8c5363b5dbec5d5fa68935b563404be8e3ddf517e30ab13d2ce6f87e24adb"
+    },
+    {
+        "path":  "CoCo/tests/e2e/bracket-create-dialog.spec.ts",
+        "sha256":  "ae4a0db14c9a5c135e7574f2b0af46b44eb6c1c337612b8a2033f7ab6562794d"
+    }
+]

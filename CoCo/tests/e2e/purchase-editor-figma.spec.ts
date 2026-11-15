@@ -107,7 +107,17 @@ test('purchase editor keeps the shared shell and reference typography across des
       };
     });
     expect(editor.shell).toEqual(list.shell);
-    expect(editor.layout).toEqual(list.layout);
+    // Lists now use Sales' approved 12px header gap. The editor keeps its
+    // existing 24px/32px gap and Figma canvas; all other shell coordinates,
+    // including the bottom edge of main, must remain identical.
+    const editorGap = viewport.width <= 1400 ? 24 : 32;
+    const listMain = list.layout[list.layout.length - 1];
+    const listHeader = list.layout[3];
+    expect(listMain[1] - listHeader[1] - listHeader[3]).toBe(12);
+    const expectedEditorLayout = list.layout.map((box, index) => index === list.layout.length - 1
+      ? [box[0], box[1] + editorGap - 12, box[2], box[3] - editorGap + 12]
+      : box);
+    expect(editor.layout).toEqual(expectedEditorLayout);
     expect(editor.title).toEqual(list.title);
     expect(editor.account).toEqual(list.account);
     expect(editor.menu).toEqual(list.menu);

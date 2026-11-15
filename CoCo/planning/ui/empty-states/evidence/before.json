@@ -1,0 +1,1010 @@
+[
+  {
+    "route": "staff",
+    "message": "Chưa có tài khoản nhân viên",
+    "table": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 534.375
+    },
+    "container": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 594,
+      "bottom": 832
+    },
+    "header": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 42,
+      "bottom": 280
+    },
+    "body": {
+      "x": 461,
+      "y": 280,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 534.375
+    },
+    "empty": {
+      "x": 485,
+      "y": 287.1875,
+      "width": 895,
+      "height": 240,
+      "bottom": 527.1875
+    },
+    "icon": {
+      "x": 908.5,
+      "y": 362.78125,
+      "width": 48,
+      "height": 48,
+      "bottom": 410.78125
+    },
+    "text": {
+      "x": 822.6875,
+      "y": 426.78125,
+      "width": 219.625,
+      "height": 20,
+      "bottom": 446.78125
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(174, 174, 178)",
+      "direction": "column",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(174, 174, 178)",
+      "stroke": "rgb(174, 174, 178)",
+      "strokeWidth": "1.5px",
+      "iconWidth": "48px",
+      "iconHeight": "48px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "sales",
+    "message": "Chưa có giao dịch bán hàng",
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 592.375
+    },
+    "container": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "bottom": 832
+    },
+    "header": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 42,
+      "bottom": 338
+    },
+    "body": {
+      "x": 461,
+      "y": 338,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 592.375
+    },
+    "empty": {
+      "x": 485,
+      "y": 345.1875,
+      "width": 895,
+      "height": 240,
+      "bottom": 585.1875
+    },
+    "icon": {
+      "x": 805.4375,
+      "y": 453.1875,
+      "width": 24,
+      "height": 24,
+      "bottom": 477.1875
+    },
+    "text": {
+      "x": 841.4375,
+      "y": 454.78125,
+      "width": 218.109375,
+      "height": 20,
+      "bottom": 474.78125
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "direction": "row",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(0, 0, 0)",
+      "stroke": "rgb(0, 0, 0)",
+      "strokeWidth": "2px",
+      "iconWidth": "24px",
+      "iconHeight": "24px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "purchases",
+    "message": "Chưa có giao dịch thu mua",
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 592.375
+    },
+    "container": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "bottom": 832
+    },
+    "header": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 42,
+      "bottom": 338
+    },
+    "body": {
+      "x": 461,
+      "y": 338,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 592.375
+    },
+    "empty": {
+      "x": 485,
+      "y": 345.1875,
+      "width": 895,
+      "height": 240,
+      "bottom": 585.1875
+    },
+    "icon": {
+      "x": 810.625,
+      "y": 453.1875,
+      "width": 24,
+      "height": 24,
+      "bottom": 477.1875
+    },
+    "text": {
+      "x": 846.625,
+      "y": 454.78125,
+      "width": 207.75,
+      "height": 20,
+      "bottom": 474.78125
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "direction": "row",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(0, 0, 0)",
+      "stroke": "rgb(0, 0, 0)",
+      "strokeWidth": "2px",
+      "iconWidth": "24px",
+      "iconHeight": "24px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "inventory",
+    "message": "Không tìm thấy sản phẩm",
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 592.375
+    },
+    "container": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "bottom": 832
+    },
+    "header": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 42,
+      "bottom": 338
+    },
+    "body": {
+      "x": 461,
+      "y": 338,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 592.375
+    },
+    "empty": {
+      "x": 473,
+      "y": 345.1875,
+      "width": 919,
+      "height": 240,
+      "bottom": 585.1875
+    },
+    "icon": {
+      "x": 815.21875,
+      "y": 453.1875,
+      "width": 24,
+      "height": 24,
+      "bottom": 477.1875
+    },
+    "text": {
+      "x": 851.21875,
+      "y": 454.78125,
+      "width": 198.546875,
+      "height": 20,
+      "bottom": 474.78125
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "direction": "row",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(0, 0, 0)",
+      "stroke": "rgb(0, 0, 0)",
+      "strokeWidth": "2px",
+      "iconWidth": "24px",
+      "iconHeight": "24px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "customers",
+    "message": "Chưa có thông tin khách hàng",
+    "table": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 534.375
+    },
+    "container": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 594,
+      "bottom": 832
+    },
+    "header": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 42,
+      "bottom": 280
+    },
+    "body": {
+      "x": 461,
+      "y": 280,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 534.375
+    },
+    "empty": {
+      "x": 485,
+      "y": 287.1875,
+      "width": 895,
+      "height": 240,
+      "bottom": 527.1875
+    },
+    "icon": {
+      "x": 797.90625,
+      "y": 395.1875,
+      "width": 24,
+      "height": 24,
+      "bottom": 419.1875
+    },
+    "text": {
+      "x": 833.90625,
+      "y": 396.78125,
+      "width": 233.1875,
+      "height": 20,
+      "bottom": 416.78125
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "direction": "row",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(0, 0, 0)",
+      "stroke": "rgb(0, 0, 0)",
+      "strokeWidth": "2px",
+      "iconWidth": "24px",
+      "iconHeight": "24px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "approvals",
+    "message": "Không có yêu cầu cần phê duyệt",
+    "table": {
+      "x": 461,
+      "y": 217,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 513.375
+    },
+    "container": {
+      "x": 461,
+      "y": 217,
+      "width": 943,
+      "height": 615,
+      "bottom": 832
+    },
+    "header": {
+      "x": 461,
+      "y": 217,
+      "width": 943,
+      "height": 42,
+      "bottom": 259
+    },
+    "body": {
+      "x": 461,
+      "y": 259,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 513.375
+    },
+    "empty": {
+      "x": 485,
+      "y": 266.1875,
+      "width": 895,
+      "height": 240,
+      "bottom": 506.1875
+    },
+    "icon": {
+      "x": 904.5,
+      "y": 337.78125,
+      "width": 56,
+      "height": 56,
+      "bottom": 393.78125
+    },
+    "text": {
+      "x": 805.6875,
+      "y": 409.78125,
+      "width": 253.625,
+      "height": 20,
+      "bottom": 429.78125
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(174, 174, 178)",
+      "direction": "column",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(174, 174, 178)",
+      "stroke": "rgb(174, 174, 178)",
+      "strokeWidth": "2px",
+      "iconWidth": "56px",
+      "iconHeight": "56px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "price-brackets",
+    "message": "Chưa có khung giá thu mua",
+    "table": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 534.375
+    },
+    "container": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 594,
+      "bottom": 832
+    },
+    "header": {
+      "x": 461,
+      "y": 238,
+      "width": 943,
+      "height": 42,
+      "bottom": 280
+    },
+    "body": {
+      "x": 461,
+      "y": 280,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 534.375
+    },
+    "empty": {
+      "x": 485,
+      "y": 287.1875,
+      "width": 895,
+      "height": 240,
+      "bottom": 527.1875
+    },
+    "icon": {
+      "x": 809.296875,
+      "y": 395.1875,
+      "width": 24,
+      "height": 24,
+      "bottom": 419.1875
+    },
+    "text": {
+      "x": 845.296875,
+      "y": 396.78125,
+      "width": 210.390625,
+      "height": 20,
+      "bottom": 416.78125
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "direction": "row",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(0, 0, 0)",
+      "stroke": "rgb(0, 0, 0)",
+      "strokeWidth": "2px",
+      "iconWidth": "24px",
+      "iconHeight": "24px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "reports/revenue",
+    "message": "Không có dữ liệu doanh thu trong khoảng thời gian này",
+    "table": {
+      "x": 461,
+      "y": 504.375,
+      "width": 943,
+      "height": 320.375,
+      "bottom": 824.75
+    },
+    "container": {
+      "x": 461,
+      "y": 504.375,
+      "width": 943,
+      "height": 379.625,
+      "bottom": 884
+    },
+    "header": {
+      "x": 461,
+      "y": 504.375,
+      "width": 943,
+      "height": 66,
+      "bottom": 570.375
+    },
+    "body": {
+      "x": 461,
+      "y": 570.375,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 824.75
+    },
+    "empty": {
+      "x": 485,
+      "y": 577.5625,
+      "width": 895,
+      "height": 240,
+      "bottom": 817.5625
+    },
+    "icon": {
+      "x": 908.5,
+      "y": 653.15625,
+      "width": 48,
+      "height": 48,
+      "bottom": 701.15625
+    },
+    "text": {
+      "x": 721.078125,
+      "y": 717.15625,
+      "width": 422.828125,
+      "height": 20,
+      "bottom": 737.15625
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(174, 176, 180)",
+      "direction": "column",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(174, 176, 180)",
+      "stroke": "rgb(174, 176, 180)",
+      "strokeWidth": "2px",
+      "iconWidth": "48px",
+      "iconHeight": "48px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "reports/purchase-cost",
+    "message": "Không có dữ liệu chi phí thu mua trong khoảng thời gian này",
+    "table": {
+      "x": 461,
+      "y": 504.375,
+      "width": 943,
+      "height": 320.375,
+      "bottom": 824.75
+    },
+    "container": {
+      "x": 461,
+      "y": 504.375,
+      "width": 943,
+      "height": 379.625,
+      "bottom": 884
+    },
+    "header": {
+      "x": 461,
+      "y": 504.375,
+      "width": 943,
+      "height": 66,
+      "bottom": 570.375
+    },
+    "body": {
+      "x": 461,
+      "y": 570.375,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 824.75
+    },
+    "empty": {
+      "x": 485,
+      "y": 577.5625,
+      "width": 895,
+      "height": 240,
+      "bottom": 817.5625
+    },
+    "icon": {
+      "x": 908.5,
+      "y": 653.15625,
+      "width": 48,
+      "height": 48,
+      "bottom": 701.15625
+    },
+    "text": {
+      "x": 701.53125,
+      "y": 717.15625,
+      "width": 461.9375,
+      "height": 20,
+      "bottom": 737.15625
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(174, 176, 180)",
+      "direction": "column",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(174, 176, 180)",
+      "stroke": "rgb(174, 176, 180)",
+      "strokeWidth": "2px",
+      "iconWidth": "48px",
+      "iconHeight": "48px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "reports/profit",
+    "message": "Không có dữ liệu bán hàng để tính lợi nhuận trong thời gian đã chọn",
+    "table": {
+      "x": 461,
+      "y": 483.578125,
+      "width": 943,
+      "height": 320.375,
+      "bottom": 803.953125
+    },
+    "container": {
+      "x": 461,
+      "y": 483.578125,
+      "width": 943,
+      "height": 400.421875,
+      "bottom": 884
+    },
+    "header": {
+      "x": 461,
+      "y": 483.578125,
+      "width": 943,
+      "height": 66,
+      "bottom": 549.578125
+    },
+    "body": {
+      "x": 461,
+      "y": 549.578125,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 803.953125
+    },
+    "empty": {
+      "x": 485,
+      "y": 556.765625,
+      "width": 895,
+      "height": 240,
+      "bottom": 796.765625
+    },
+    "icon": {
+      "x": 908.5,
+      "y": 632.359375,
+      "width": 48,
+      "height": 48,
+      "bottom": 680.359375
+    },
+    "text": {
+      "x": 672.09375,
+      "y": 696.359375,
+      "width": 520.8125,
+      "height": 20,
+      "bottom": 716.359375
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(174, 176, 180)",
+      "direction": "column",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(174, 176, 180)",
+      "stroke": "rgb(174, 176, 180)",
+      "strokeWidth": "2px",
+      "iconWidth": "48px",
+      "iconHeight": "48px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "reports/cash-flow",
+    "message": "Không có dữ liệu dòng tiền trong khoảng thời gian này",
+    "table": {
+      "x": 461,
+      "y": 483.578125,
+      "width": 943,
+      "height": 296.375,
+      "bottom": 779.953125
+    },
+    "container": {
+      "x": 461,
+      "y": 483.578125,
+      "width": 943,
+      "height": 400.421875,
+      "bottom": 884
+    },
+    "header": {
+      "x": 461,
+      "y": 483.578125,
+      "width": 943,
+      "height": 42,
+      "bottom": 525.578125
+    },
+    "body": {
+      "x": 461,
+      "y": 525.578125,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 779.953125
+    },
+    "empty": {
+      "x": 485,
+      "y": 532.765625,
+      "width": 895,
+      "height": 240,
+      "bottom": 772.765625
+    },
+    "icon": {
+      "x": 908.5,
+      "y": 608.359375,
+      "width": 48,
+      "height": 48,
+      "bottom": 656.359375
+    },
+    "text": {
+      "x": 723.25,
+      "y": 672.359375,
+      "width": 418.5,
+      "height": 20,
+      "bottom": 692.359375
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(174, 176, 180)",
+      "direction": "column",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(174, 176, 180)",
+      "stroke": "rgb(174, 176, 180)",
+      "strokeWidth": "2px",
+      "iconWidth": "48px",
+      "iconHeight": "48px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "reports/aged-stock",
+    "message": "Không có sản phẩm tồn kho phù hợp với điều kiện đã chọn",
+    "table": {
+      "x": 461,
+      "y": 417.578125,
+      "width": 943,
+      "height": 291.875,
+      "bottom": 709.453125
+    },
+    "container": {
+      "x": 461,
+      "y": 417.578125,
+      "width": 943,
+      "height": 466.421875,
+      "bottom": 884
+    },
+    "header": {
+      "x": 461,
+      "y": 417.578125,
+      "width": 943,
+      "height": 37.5,
+      "bottom": 455.078125
+    },
+    "body": {
+      "x": 461,
+      "y": 455.078125,
+      "width": 943,
+      "height": 254.375,
+      "bottom": 709.453125
+    },
+    "empty": {
+      "x": 467,
+      "y": 462.265625,
+      "width": 931,
+      "height": 240,
+      "bottom": 702.265625
+    },
+    "icon": {
+      "x": 908.5,
+      "y": 540.5625,
+      "width": 48,
+      "height": 48,
+      "bottom": 588.5625
+    },
+    "text": {
+      "x": 749.546875,
+      "y": 603.5625,
+      "width": 365.90625,
+      "height": 16,
+      "bottom": 619.5625
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "23.4px",
+      "letterSpacing": "normal",
+      "color": "rgb(174, 176, 180)",
+      "direction": "column",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(174, 176, 180)",
+      "stroke": "rgb(174, 176, 180)",
+      "strokeWidth": "2px",
+      "iconWidth": "48px",
+      "iconHeight": "48px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "history/purchases",
+    "message": "Không tìm thấy lịch sử mua",
+    "table": {
+      "x": 461,
+      "y": 425.59375,
+      "width": 943,
+      "height": 344,
+      "bottom": 769.59375
+    },
+    "container": {
+      "x": 461,
+      "y": 425.59375,
+      "width": 943,
+      "height": 426.40625,
+      "bottom": 852
+    },
+    "header": {
+      "x": 461,
+      "y": 425.59375,
+      "width": 943,
+      "height": 68,
+      "bottom": 493.59375
+    },
+    "body": {
+      "x": 461,
+      "y": 493.59375,
+      "width": 943,
+      "height": 276,
+      "bottom": 769.59375
+    },
+    "empty": {
+      "x": 485,
+      "y": 511.59375,
+      "width": 895,
+      "height": 240,
+      "bottom": 751.59375
+    },
+    "icon": {
+      "x": 810.078125,
+      "y": 619.59375,
+      "width": 24,
+      "height": 24,
+      "bottom": 643.59375
+    },
+    "text": {
+      "x": 846.078125,
+      "y": 621.1875,
+      "width": 208.828125,
+      "height": 20,
+      "bottom": 641.1875
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "direction": "row",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(0, 0, 0)",
+      "stroke": "rgb(0, 0, 0)",
+      "strokeWidth": "2px",
+      "iconWidth": "24px",
+      "iconHeight": "24px"
+    },
+    "pageX": 0
+  },
+  {
+    "route": "history/sales",
+    "message": "Không tìm thấy lịch sử bán",
+    "table": {
+      "x": 461,
+      "y": 425.59375,
+      "width": 943,
+      "height": 344,
+      "bottom": 769.59375
+    },
+    "container": {
+      "x": 461,
+      "y": 425.59375,
+      "width": 943,
+      "height": 344,
+      "bottom": 769.59375
+    },
+    "header": {
+      "x": 461,
+      "y": 425.59375,
+      "width": 943,
+      "height": 68,
+      "bottom": 493.59375
+    },
+    "body": {
+      "x": 461,
+      "y": 493.59375,
+      "width": 943,
+      "height": 276,
+      "bottom": 769.59375
+    },
+    "empty": {
+      "x": 485,
+      "y": 511.59375,
+      "width": 895,
+      "height": 240,
+      "bottom": 751.59375
+    },
+    "icon": {
+      "x": 811.90625,
+      "y": 619.59375,
+      "width": 24,
+      "height": 24,
+      "bottom": 643.59375
+    },
+    "text": {
+      "x": 847.90625,
+      "y": 621.1875,
+      "width": 205.171875,
+      "height": 20,
+      "bottom": 641.1875
+    },
+    "style": {
+      "fontFamily": "\"Be Vietnam Pro\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "28.8px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "direction": "row",
+      "gap": "12px",
+      "textAlign": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "iconColor": "rgb(0, 0, 0)",
+      "stroke": "rgb(0, 0, 0)",
+      "strokeWidth": "2px",
+      "iconWidth": "24px",
+      "iconHeight": "24px"
+    },
+    "pageX": 0
+  }
+]

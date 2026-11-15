@@ -1,0 +1,8 @@
+# Login is deliberately public; credentials are verified by Supabase Auth.
+# Staff administration still requires a valid JWT at the gateway and checks an
+# active owner again inside the function before using server Auth admin.
+[functions.auth-login]
+verify_jwt = false
+
+[functions.staff-admin]
+verify_jwt = true

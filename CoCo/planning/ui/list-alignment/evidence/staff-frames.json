@@ -1,0 +1,2042 @@
+[
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "route": "sales",
+    "state": "empty",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "right": 1350,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 1058,
+      "height": 166,
+      "right": 1350,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 1058,
+      "height": 430,
+      "right": 1350,
+      "bottom": 700
+    },
+    "pagination": {
+      "x": 292,
+      "y": 720,
+      "width": 1058,
+      "height": 32,
+      "right": 1350,
+      "bottom": 752
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 805,
+      "y": 720,
+      "width": 32,
+      "height": 32,
+      "right": 837,
+      "bottom": 752
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 821,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "route": "inventory",
+    "state": "empty",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "right": 1350,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 1058,
+      "height": 166,
+      "right": 1350,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 1058,
+      "height": 430,
+      "right": 1350,
+      "bottom": 700
+    },
+    "pagination": {
+      "x": 292,
+      "y": 720,
+      "width": 1058,
+      "height": 32,
+      "right": 1350,
+      "bottom": 752
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 805,
+      "y": 720,
+      "width": 32,
+      "height": 32,
+      "right": 837,
+      "bottom": 752
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 821,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "route": "inventory",
+    "state": "populated",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "right": 1350,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 1058,
+      "height": 166,
+      "right": 1350,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 1058,
+      "height": 430,
+      "right": 1350,
+      "bottom": 700
+    },
+    "pagination": {
+      "x": 292,
+      "y": 720,
+      "width": 1058,
+      "height": 32,
+      "right": 1350,
+      "bottom": 752
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 785,
+      "y": 720,
+      "width": 32,
+      "height": 32,
+      "right": 817,
+      "bottom": 752
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 821,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "route": "purchases",
+    "state": "empty",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "right": 1350,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 1058,
+      "height": 166,
+      "right": 1350,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 1058,
+      "height": 430,
+      "right": 1350,
+      "bottom": 700
+    },
+    "pagination": {
+      "x": 292,
+      "y": 720,
+      "width": 1058,
+      "height": 32,
+      "right": 1350,
+      "bottom": 752
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 805,
+      "y": 720,
+      "width": 32,
+      "height": 32,
+      "right": 837,
+      "bottom": 752
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 821,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "route": "purchases",
+    "state": "populated",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 1058,
+      "height": 64,
+      "right": 1350,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 1058,
+      "height": 166,
+      "right": 1350,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 1058,
+      "height": 430,
+      "right": 1350,
+      "bottom": 700
+    },
+    "pagination": {
+      "x": 292,
+      "y": 720,
+      "width": 1058,
+      "height": 32,
+      "right": 1350,
+      "bottom": 752
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 805,
+      "y": 720,
+      "width": 32,
+      "height": 32,
+      "right": 837,
+      "bottom": 752
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 821,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "sales",
+    "state": "empty",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "right": 1404,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 943,
+      "height": 166,
+      "right": 1404,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "right": 1404,
+      "bottom": 832
+    },
+    "pagination": {
+      "x": 461,
+      "y": 852,
+      "width": 943,
+      "height": 32,
+      "right": 1404,
+      "bottom": 884
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 916.5,
+      "y": 852,
+      "width": 32,
+      "height": 32,
+      "right": 948.5,
+      "bottom": 884
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 932.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "inventory",
+    "state": "empty",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "right": 1404,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 943,
+      "height": 166,
+      "right": 1404,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "right": 1404,
+      "bottom": 832
+    },
+    "pagination": {
+      "x": 461,
+      "y": 852,
+      "width": 943,
+      "height": 32,
+      "right": 1404,
+      "bottom": 884
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 916.5,
+      "y": 852,
+      "width": 32,
+      "height": 32,
+      "right": 948.5,
+      "bottom": 884
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 932.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "inventory",
+    "state": "populated",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "right": 1404,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 943,
+      "height": 166,
+      "right": 1404,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "right": 1404,
+      "bottom": 832
+    },
+    "pagination": {
+      "x": 461,
+      "y": 852,
+      "width": 943,
+      "height": 32,
+      "right": 1404,
+      "bottom": 884
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 896.5,
+      "y": 852,
+      "width": 32,
+      "height": 32,
+      "right": 928.5,
+      "bottom": 884
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 932.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "purchases",
+    "state": "empty",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "right": 1404,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 943,
+      "height": 166,
+      "right": 1404,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "right": 1404,
+      "bottom": 832
+    },
+    "pagination": {
+      "x": 461,
+      "y": 852,
+      "width": 943,
+      "height": 32,
+      "right": 1404,
+      "bottom": 884
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 916.5,
+      "y": 852,
+      "width": 32,
+      "height": 32,
+      "right": 948.5,
+      "bottom": 884
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 932.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "purchases",
+    "state": "populated",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 943,
+      "height": 75,
+      "right": 1404,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 943,
+      "height": 166,
+      "right": 1404,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 943,
+      "height": 536,
+      "right": 1404,
+      "bottom": 832
+    },
+    "pagination": {
+      "x": 461,
+      "y": 852,
+      "width": 943,
+      "height": 32,
+      "right": 1404,
+      "bottom": 884
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 916.5,
+      "y": 852,
+      "width": 32,
+      "height": 32,
+      "right": 948.5,
+      "bottom": 884
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 932.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "route": "sales",
+    "state": "empty",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "right": 1884,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 1423,
+      "height": 166,
+      "right": 1884,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 1423,
+      "height": 716,
+      "right": 1884,
+      "bottom": 1012
+    },
+    "pagination": {
+      "x": 461,
+      "y": 1032,
+      "width": 1423,
+      "height": 32,
+      "right": 1884,
+      "bottom": 1064
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 1156.5,
+      "y": 1032,
+      "width": 32,
+      "height": 32,
+      "right": 1188.5,
+      "bottom": 1064
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 1172.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "route": "inventory",
+    "state": "empty",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "right": 1884,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 1423,
+      "height": 166,
+      "right": 1884,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 1423,
+      "height": 716,
+      "right": 1884,
+      "bottom": 1012
+    },
+    "pagination": {
+      "x": 461,
+      "y": 1032,
+      "width": 1423,
+      "height": 32,
+      "right": 1884,
+      "bottom": 1064
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 1156.5,
+      "y": 1032,
+      "width": 32,
+      "height": 32,
+      "right": 1188.5,
+      "bottom": 1064
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 1172.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "route": "inventory",
+    "state": "populated",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "right": 1884,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 1423,
+      "height": 166,
+      "right": 1884,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 1423,
+      "height": 716,
+      "right": 1884,
+      "bottom": 1012
+    },
+    "pagination": {
+      "x": 461,
+      "y": 1032,
+      "width": 1423,
+      "height": 32,
+      "right": 1884,
+      "bottom": 1064
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 1136.5,
+      "y": 1032,
+      "width": 32,
+      "height": 32,
+      "right": 1168.5,
+      "bottom": 1064
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 1172.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "route": "purchases",
+    "state": "empty",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "right": 1884,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 1423,
+      "height": 166,
+      "right": 1884,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 1423,
+      "height": 716,
+      "right": 1884,
+      "bottom": 1012
+    },
+    "pagination": {
+      "x": 461,
+      "y": 1032,
+      "width": 1423,
+      "height": 32,
+      "right": 1884,
+      "bottom": 1064
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 1156.5,
+      "y": 1032,
+      "width": 32,
+      "height": 32,
+      "right": 1188.5,
+      "bottom": 1064
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 1172.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "route": "purchases",
+    "state": "populated",
+    "header": {
+      "x": 461,
+      "y": 31,
+      "width": 1423,
+      "height": 75,
+      "right": 1884,
+      "bottom": 106
+    },
+    "filter": {
+      "x": 461,
+      "y": 118,
+      "width": 1423,
+      "height": 166,
+      "right": 1884,
+      "bottom": 284
+    },
+    "table": {
+      "x": 461,
+      "y": 296,
+      "width": 1423,
+      "height": 716,
+      "right": 1884,
+      "bottom": 1012
+    },
+    "pagination": {
+      "x": 461,
+      "y": 1032,
+      "width": 1423,
+      "height": 32,
+      "right": 1884,
+      "bottom": 1064
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 477,
+      "y": 219,
+      "width": 160.375,
+      "height": 48,
+      "right": 637.375,
+      "bottom": 267
+    },
+    "reset": {
+      "x": 649.375,
+      "y": 218,
+      "width": 136.421875,
+      "height": 50,
+      "right": 785.796875,
+      "bottom": 268
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 1156.5,
+      "y": 1032,
+      "width": 32,
+      "height": 32,
+      "right": 1188.5,
+      "bottom": 1064
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 1172.5,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "route": "sales",
+    "state": "empty",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 972,
+      "height": 64,
+      "right": 1264,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 972,
+      "height": 166,
+      "right": 1264,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 972,
+      "height": 312,
+      "right": 1264,
+      "bottom": 582
+    },
+    "pagination": {
+      "x": 292,
+      "y": 602,
+      "width": 972,
+      "height": 32,
+      "right": 1264,
+      "bottom": 634
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 762,
+      "y": 602,
+      "width": 32,
+      "height": 32,
+      "right": 794,
+      "bottom": 634
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 778,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "route": "inventory",
+    "state": "empty",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 972,
+      "height": 64,
+      "right": 1264,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 972,
+      "height": 166,
+      "right": 1264,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 972,
+      "height": 312,
+      "right": 1264,
+      "bottom": 582
+    },
+    "pagination": {
+      "x": 292,
+      "y": 602,
+      "width": 972,
+      "height": 32,
+      "right": 1264,
+      "bottom": 634
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 762,
+      "y": 602,
+      "width": 32,
+      "height": 32,
+      "right": 794,
+      "bottom": 634
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 778,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "route": "inventory",
+    "state": "populated",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 972,
+      "height": 64,
+      "right": 1264,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 972,
+      "height": 166,
+      "right": 1264,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 972,
+      "height": 312,
+      "right": 1264,
+      "bottom": 582
+    },
+    "pagination": {
+      "x": 292,
+      "y": 602,
+      "width": 972,
+      "height": 32,
+      "right": 1264,
+      "bottom": 634
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 722,
+      "y": 602,
+      "width": 32,
+      "height": 32,
+      "right": 754,
+      "bottom": 634
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 778,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "route": "purchases",
+    "state": "empty",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 972,
+      "height": 64,
+      "right": 1264,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 972,
+      "height": 166,
+      "right": 1264,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 972,
+      "height": 312,
+      "right": 1264,
+      "bottom": 582
+    },
+    "pagination": {
+      "x": 292,
+      "y": 602,
+      "width": 972,
+      "height": 32,
+      "right": 1264,
+      "bottom": 634
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 762,
+      "y": 602,
+      "width": 32,
+      "height": 32,
+      "right": 794,
+      "bottom": 634
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 778,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 650
+    },
+    "route": "purchases",
+    "state": "populated",
+    "header": {
+      "x": 292,
+      "y": 16,
+      "width": 972,
+      "height": 64,
+      "right": 1264,
+      "bottom": 80
+    },
+    "filter": {
+      "x": 292,
+      "y": 92,
+      "width": 972,
+      "height": 166,
+      "right": 1264,
+      "bottom": 258
+    },
+    "table": {
+      "x": 292,
+      "y": 270,
+      "width": 972,
+      "height": 312,
+      "right": 1264,
+      "bottom": 582
+    },
+    "pagination": {
+      "x": 292,
+      "y": 602,
+      "width": 972,
+      "height": 32,
+      "right": 1264,
+      "bottom": 634
+    },
+    "filterStyle": {
+      "padding": "16px",
+      "radius": "12px",
+      "font": "16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)"
+    },
+    "search": {
+      "x": 308,
+      "y": 193,
+      "width": 160.375,
+      "height": 48,
+      "right": 468.375,
+      "bottom": 241
+    },
+    "reset": {
+      "x": 480.375,
+      "y": 192,
+      "width": 136.421875,
+      "height": 50,
+      "right": 616.796875,
+      "bottom": 242
+    },
+    "searchStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(232, 221, 206)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)"
+    },
+    "resetStyle": {
+      "padding": "12px 24px",
+      "radius": "8px",
+      "font": "700 16px / 24px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 0)",
+      "border": "1px solid rgb(174, 174, 178)"
+    },
+    "pageButton": {
+      "x": 762,
+      "y": 602,
+      "width": 32,
+      "height": 32,
+      "right": 794,
+      "bottom": 634
+    },
+    "pageButtonStyle": {
+      "padding": "0px",
+      "radius": "8px",
+      "font": "14px / 21px \"Be Vietnam Pro\", sans-serif",
+      "background": "rgb(39, 39, 39)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)"
+    },
+    "headerGap": 12,
+    "tableGap": 12,
+    "paginationGap": 20,
+    "contentCenter": 778,
+    "tableScrollY": 0,
+    "pageScrollX": 0
+  }
+]
