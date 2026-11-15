@@ -86,7 +86,7 @@ function ApprovalDetail({ approvalId }: { approvalId: string }) {
     } finally { lock.current = false; setBusy(false); }
   }
   return <>
-    <FormDialog title="Yêu cầu thu mua" onClose={() => navigate('/approvals')} busy={busy} showClose={false}>
+    <FormDialog title="Yêu cầu thu mua" onClose={() => navigate('/approvals')} busy={busy} closeLabel="Đóng yêu cầu thu mua">
       {loading ? <p role="status">Đang tải yêu cầu…</p> : error || !data ? <p role="alert">Lỗi! Không thể truy cập</p> :
         <div className="approval-request">
           <h2>Thông tin sản phẩm</h2>

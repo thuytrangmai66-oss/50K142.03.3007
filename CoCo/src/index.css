@@ -353,6 +353,9 @@ p { line-height: 1.8; }
 .approval-id-link { background: transparent; border: 0; padding: 4px 0; font: inherit; color: inherit; text-align: left; }
 .approval-id-link:hover { text-decoration: underline; }
 .form-dialog:has(.approval-request) { width: 1011px; }
+.form-dialog:has(.approval-request) > header { padding-inline: 56px; }
+.form-dialog:has(.approval-request) .dialog-close { top: 0; right: 16px; bottom: 0; width: 40px; height: 40px; margin-block: auto; padding: 0; display: grid; place-items: center; color: #000; }
+.form-dialog:has(.approval-request) .dialog-close svg { width: 24px; height: 24px; }
 .form-dialog:has(.approval-request) .form-dialog-body { margin: 30px; padding: 12px 60px 18px; }
 .form-dialog .approval-request h2 { text-align: center; font-size: 20px; font-weight: 700; margin: 0 0 6px; }
 .approval-request .data-table-scroll + h2 { margin-top: 26px; }
