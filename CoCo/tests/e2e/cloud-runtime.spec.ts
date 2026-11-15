@@ -18,7 +18,7 @@ function authUser(role: Role) {
 }
 function authSession(role: Role) {
   const now = Math.floor(Date.now() / 1000), user = authUser(role);
-  return { access_token: `${encode({ alg: 'HS256', typ: 'JWT' })}.${encode({ sub: user.id, aud: 'authenticated', role: 'authenticated', email: user.email, iat: now, exp: now + 3600 })}.fixture-signature`,
+  return { access_token: `${encode({ alg: 'HS256', typ: 'JWT' })}.${encode({ sub: user.id, aud: 'authenticated', role: 'authenticated', email: user.email, iat: now, exp: now + 3600 })}.ZmFrZQ`,
     token_type: 'bearer', expires_in: 3600, expires_at: now + 3600, refresh_token: `fixture-refresh-${role}`, user };
 }
 function bearerRole(header: string | null): Role | undefined {

@@ -29,9 +29,37 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: node scripts/audit-phase1.mjs
-      - run: npm run build
       - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e
+      - name: Build local E2E bundle
+        run: npm run build
+        env:
+          VITE_SUPABASE_URL: ' '
+          VITE_SUPABASE_ANON_KEY: ' '
+      - name: Run local E2E suite
+        run: npm run test:e2e -- --workers=1 --grep-invert 'cloud schema missing|healthy cloud presents the existing login UI|mocked cloud Auth|cloud offline warning'
+      - name: Build cloud E2E bundle
+        run: npm run build
+        env:
+          VITE_SUPABASE_URL: https://cloud-test.supabase.co
+          VITE_SUPABASE_ANON_KEY: sb_publishable_test
+      - name: Run cloud E2E suite
+        run: npm run test:e2e -- --workers=1 --grep 'cloud schema missing|healthy cloud presents the existing login UI|mocked cloud Auth|cloud offline warning'
+      - name: Require Supabase Pages variables
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          if [ -z "$VITE_SUPABASE_URL" ] || [ -z "$VITE_SUPABASE_ANON_KEY" ]; then
+            echo "::error::Set repository Actions variables VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY."
+            exit 1
+          fi
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+      - name: Build Pages bundle
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
