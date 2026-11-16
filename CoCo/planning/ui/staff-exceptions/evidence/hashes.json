@@ -1,0 +1,22 @@
+﻿[
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\domain\\staff-validation.ts",
+        "Hash":  "AC495A557193168FA5C37DA2A261402E76A338B500AC544E91B46067606C0032"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\features\\staff\\StaffForm.tsx",
+        "Hash":  "2A6BC37FB539CAC0EFD63DE2A7331DCECEDCBBD1F1540725322571F8DD69B076"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\services\\staff-accounts.ts",
+        "Hash":  "30126121653562A7B4E55E1E6CBB3402454FAC016215C381727C7920DD4E16C0"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\cloud\\services.ts",
+        "Hash":  "508B30EC96EB8BE0780327AADD8F740A4CBF5D79452B14FD201005A2BB0106BE"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\supabase\\functions\\staff-admin\\index.ts",
+        "Hash":  "FD48A9044A8304A58CC271DF8036BD23173F78B0AAE2D40F225BA50ED70F0A16"
+    }
+]

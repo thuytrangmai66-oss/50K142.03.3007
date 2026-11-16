@@ -179,6 +179,79 @@ function bracketTransport() {
   return { rows, install, failNext: (failure: NonNullable<typeof error>) => { error = failure; } };
 }
 
+test('mocked cloud Auth: staff complete create preflight and backend exceptions remain field-specific', async ({ page,context },info) => {
+  await mockCloud(context); let requests=0;
+  let failure: {code:string;message:string}|undefined = {code:'weak_password',message:'Password should be at least 8 characters.'};
+  await context.route('**/functions/v1/staff-admin',route=> {
+    if(route.request().method()!=='POST')return route.fallback(); requests++;
+    return route.fulfill({ status:failure ? 400:200,headers:{'access-control-allow-origin':'*'},json:failure ?? 'NVSTAFF' });
+  });
+  await page.goto('./'); await login(page,'owner',password); await page.goto('./#/staff');
+  await page.getByRole('button',{name:'Tạo tài khoản',exact:true}).click();
+  const form=page.getByRole('dialog',{name:'Tạo tài khoản nhân viên',exact:true}), save=form.getByRole('button',{name:'Lưu',exact:true});
+  await save.click(); await expect(form.locator('.field-error')).toHaveCount(4); expect(requests).toBe(0);
+  await form.getByLabel('Họ tên',{exact:true}).fill('Nhân viên'); await expect(form.locator('.field-error')).toHaveCount(3);
+  await page.screenshot({path:info.outputPath('staff-required-inline.png')});
+  await page.setViewportSize({width:768,height:500}); await save.scrollIntoViewIfNeeded(); await expect(save).toBeInViewport();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBe(0);
+  await page.screenshot({path:info.outputPath('staff-required-small.png')}); await page.setViewportSize({width:1440,height:900});
+  const valid=[['Họ tên','Nhân viên'],['Số điện thoại','0900000002'],['Tên đăng nhập','staff02'],['Mật khẩu','x']];
+  let validationSample = 0;
+  for(const [label,value,message] of [['Họ tên','   ','Họ tên không được để trống'],['Số điện thoại','','Số điện thoại không được để trống'],['Số điện thoại','123456789','Số điện thoại không hợp lệ'],['Số điện thoại','12345678901','Số điện thoại không hợp lệ'],['Số điện thoại','123456789a','Số điện thoại không hợp lệ'],['Tên đăng nhập','   ','Tên đăng nhập không được để trống'],['Mật khẩu','   ','Mật khẩu không được để trống']]) {
+    for(const [key,val]of valid)await form.getByLabel(key,{exact:true}).fill(val);
+    await form.getByLabel(label,{exact:true}).fill(value); await save.click();
+    await expect(form.locator('.field-error')).toHaveText(message); await expect(page.getByRole('alertdialog')).toHaveCount(0); expect(requests).toBe(0);
+    await expect(form.getByLabel(label,{exact:true})).toHaveAttribute('aria-invalid','true');
+    await page.screenshot({path:info.outputPath(`staff-input-${++validationSample}.png`)});
+  }
+  for(const [key,val]of valid)await form.getByLabel(key,{exact:true}).fill(val);
+  await save.click(); await expect(form.locator('.field-error')).toHaveText('Mật khẩu phải có ít nhất 8 ký tự');
+  await expect(form.getByLabel('Mật khẩu',{exact:true})).toHaveValue('x'); await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await page.screenshot({path:info.outputPath('staff-auth-password-inline.png')});
+  await form.getByLabel('Mật khẩu',{exact:true}).fill('backend-accepted!');
+  for(const error of [{code:'42501',message:'permission denied'}, {code:'XX000',message:'SQL internal failure'}, {code:'P0001',message:'VALIDATION: Nội dung bắt buộc hoặc quá dài'}]) {
+    failure=error; await save.click(); await expect(page.getByRole('alertdialog')).toBeVisible();
+    await expect(page.getByRole('alertdialog')).not.toContainText(/VALIDATION:|SQL internal|permission denied/);
+    await page.getByRole('button',{name:'Đóng thông báo',exact:true}).click(); await expect(form).toBeVisible();
+    await expect(form.getByLabel('Mật khẩu',{exact:true})).toHaveValue('backend-accepted!');
+  }
+  await context.setOffline(true); await save.click(); await expect(page.getByRole('alertdialog')).toContainText('Mất kết nối mạng');
+  await page.getByRole('button',{name:'Đóng thông báo',exact:true}).click(); await context.setOffline(false);
+  failure=undefined; const before=requests;
+  await form.locator('form').evaluate(element=>{const f=element as HTMLFormElement;f.requestSubmit();f.requestSubmit();});
+  await expect(page.getByRole('alertdialog')).toContainText('Tạo tài khoản mới thành công'); expect(requests-before).toBe(1);
+});
+
+test('mocked cloud Auth: staff edit retains identity, excludes password and supports failure correction', async ({page,context},info)=>{
+  const mock=await mockCloud(context);
+  mock.stores.nhanVien.push({MaNV:'NVSTAFF',HoTen:'Nhân viên',SoDienThoai:'0900000002'});
+  mock.stores.taiKhoan.push({TenDangNhap:'staff02',MaNV:'NVSTAFF'});
+  mock.stores.accountSecurity.push({TenDangNhap:'staff02',role:'staff',active:true});
+  let failure: {code:string;message:string}|undefined;
+  await context.route('**/functions/v1/staff-admin',route=>{
+    if(route.request().method()!=='POST')return route.fallback();
+    const body=route.request().postDataJSON(); expect(body.method).toBe('update'); expect(body.args[0]).toBe('NVSTAFF');
+    expect(body.args[2]).not.toHaveProperty('role');
+    return route.fulfill({status:failure?400:200,headers:{'access-control-allow-origin':'*'},json:failure ?? null});
+  });
+  await page.goto('./');await login(page,'owner',password);await page.goto('./#/staff/NVSTAFF');
+  await page.getByRole('button',{name:'Sửa thông tin',exact:true}).click();
+  const form=page.getByRole('dialog',{name:'Sửa tài khoản nhân viên',exact:true});
+  await expect(form.getByLabel('Mật khẩu',{exact:true})).toHaveCount(0);
+  await form.getByLabel('Họ tên',{exact:true}).fill('   ');await form.getByRole('button',{name:'Lưu',exact:true}).click();
+  await expect(form.locator('.field-error')).toHaveText('Họ tên không được để trống'); await form.getByLabel('Họ tên',{exact:true}).fill('Nhân viên');
+  for(const [constraint,message]of [['coco_employee_phone','Số điện thoại đã tồn tại'],['coco_profiles_username_key','Tên đăng nhập đã tồn tại']]){
+    failure={code:'23505',message:`duplicate key value violates unique constraint "${constraint}"`};
+    await form.getByRole('button',{name:'Lưu',exact:true}).click();await expect(form.locator('.field-error')).toHaveText(message);await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  }
+  await page.screenshot({path:info.outputPath('staff-edit-inline.png')});
+  failure={code:'P0001',message:'CONFLICT: Dữ liệu đã thay đổi ở tab khác. Vui lòng tải lại trước khi lưu.'};
+  await form.getByRole('button',{name:'Lưu',exact:true}).click();await expect(page.getByRole('alertdialog')).toContainText('Dữ liệu đã thay đổi');
+  await page.getByRole('button',{name:'Đóng thông báo',exact:true}).click();
+  failure=undefined; await form.getByRole('button',{name:'Lưu',exact:true}).click();await expect(page.getByRole('alertdialog')).toContainText('Cập nhật thông tin thành công');
+  expect(mock.stores.accountSecurity[0]).toMatchObject({role:'staff',active:true});
+});
+
 for (const edit of [false, true]) test(`mocked cloud Auth: customer ${edit ? 'update' : 'create'} duplicate phone uses Figma inline error and retains the form`, async ({ page, context }, info) => {
   const mock = await mockCloud(context);
   mock.stores.khachHang.push({ MaKH: 'KH00000001', TenKH: 'Khách kiểm thử', SoDienThoaiKH: '0900000001', DiemTichLuy: 0 });

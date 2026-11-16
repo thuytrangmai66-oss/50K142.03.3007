@@ -1,4 +1,4 @@
-import { useState, type FormEvent, type ComponentProps } from 'react';
+import { useRef, useState, type FormEvent, type ComponentProps } from 'react';
 import { UserRound, Phone, LockKeyhole, Eye, EyeOff, CircleAlert } from 'lucide-react';
 import { FormDialog } from '../../components/ui/FormDialog';
 import { ResultDialog } from '../../components/ui/ResultDialog';
@@ -6,6 +6,9 @@ import { Field } from '../../components/ui/Field';
 import { Button } from '../../components/ui/Button';
 import { StaffServiceError, type StaffAccount, type StaffCreateInput } from '../../services/staff-accounts';
 import { useAuth } from '../auth/use-auth';
+import { validateStaffInput } from '../../domain/staff-validation';
+import { AuthError } from '../../services/auth/errors';
+import { CloudOfflineError } from '../../cloud/services';
 
 function StaffField(props: ComponentProps<typeof Field>) {
   return <Field {...props} errorIcon={<CircleAlert className="field-error-icon" aria-hidden="true"/>}/>;
@@ -18,9 +21,16 @@ export function StaffForm({ account, onClose, onSaved }: { account?: StaffAccoun
   const [showPassword,setShowPassword] = useState(false);
   const [saved,setSaved] = useState<{employeeId:string;message:string}>();
   const locked=busy || Boolean(saved);
-  const change = (key:keyof StaffCreateInput,value:string) => setInput(previous=>({ ...previous,[key]:value }));
+  const submitLock = useRef(false);
+  const change = (key:keyof StaffCreateInput,value:string) => {
+    setInput(previous=>({ ...previous,[key]:value }));
+    setFields(previous=> { const next = { ...previous }; delete next[key]; return next; });
+  };
   async function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault(); if(locked)return; setBusy(true);setFields({});
+    event.preventDefault(); if(locked || submitLock.current)return;
+    const checked = validateStaffInput(input, !account);
+    setFields(checked.fields); if (Object.keys(checked.fields).length) return;
+    submitLock.current = true; setBusy(true);setError('');
     try {
       const id = account ? account.employeeId : await staffAccounts.create(input);
       if(account) await staffAccounts.update(account.employeeId,account.revision,input);
@@ -28,8 +38,8 @@ export function StaffForm({ account, onClose, onSaved }: { account?: StaffAccoun
       setSaved({employeeId:id,message:account ? 'Cập nhật thông tin thành công' : 'Tạo tài khoản mới thành công'});
     } catch(cause) {
       if(cause instanceof StaffServiceError && Object.keys(cause.fields).length) setFields(cause.fields);
-      else setError(cause instanceof StaffServiceError ? cause.message : account ? 'Cập nhật thông tin thất bại' : 'Lỗi trong quá trình lưu. Vui lòng thử lại');
-    } finally {setBusy(false);}
+      else setError(cause instanceof StaffServiceError || cause instanceof AuthError || cause instanceof CloudOfflineError ? cause.message : account ? 'Cập nhật thông tin thất bại' : 'Lỗi trong quá trình lưu. Vui lòng thử lại');
+    } finally {submitLock.current = false;setBusy(false);}
   }
   return <><FormDialog title={account ? 'Sửa tài khoản nhân viên' : 'Tạo tài khoản nhân viên'} onClose={onClose} busy={locked} compact={!account}>
     <form className="record-form staff-form" noValidate onSubmit={submit} aria-busy={busy}>

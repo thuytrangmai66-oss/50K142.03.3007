@@ -1,9 +1,9 @@
 import type { CoCoDatabase } from '../db/schema';
-import { identifier } from '../domain/records';
 import { CoCoRepository, RepositoryError, type Change } from '../repositories';
 import { AuthService } from './auth/service';
 import { AuthError } from './auth/errors';
 import { derivePassword, PASSWORD_ITERATIONS, randomHex } from './auth/crypto';
+import { validateStaffInput } from '../domain/staff-validation';
 
 export interface StaffProfile { name: string; phone: string; username: string }
 export interface StaffCreateInput extends StaffProfile { password: string }
@@ -21,17 +21,8 @@ export class StaffServiceError extends Error {
     public readonly fields: Partial<Record<keyof StaffCreateInput,string>> = {}) { super(message); this.name = 'StaffServiceError'; }
 }
 export const accountIdentityKey = (username: string) => `account-identity:${username}`;
-const text = (value: unknown) => typeof value === 'string' ? value.trim() : '';
 function validate(input: StaffProfile) {
-  const name = text(input.name), phone = text(input.phone), username = text(input.username);
-  const fields: Partial<Record<keyof StaffCreateInput,string>> = {};
-  if (!name) fields.name = 'Họ tên không được để trống';
-  else if (name.length > 50) fields.name = 'Họ tên không được vượt quá 50 ký tự';
-  if (!phone) fields.phone = 'Số điện thoại không được để trống';
-  else if (!/^\d{10}$/.test(phone)) fields.phone = 'Số điện thoại không hợp lệ';
-  if (!username) fields.username = 'Tên đăng nhập không được để trống';
-  else if (!identifier.safeParse(username).success) fields.username = 'Tên đăng nhập tối đa 10 ký tự và không chứa khoảng trắng';
-  return { name, phone, username, fields };
+  return validateStaffInput(input);
 }
 
 export class StaffAccountsService implements StaffAccountsGateway {

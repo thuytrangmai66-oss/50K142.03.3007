@@ -1,5 +1,6 @@
 // Runs only in Supabase Edge Functions. The service key never enters Vite.
 import { createClient, type User } from 'npm:@supabase/supabase-js@2.119.0';
+import { validateStaffInput, staffPasswordMessage } from '../../../src/domain/staff-validation.ts';
 
 declare const Deno: { env: { get(name: string): string | undefined }; serve(handler: (request: Request) => Promise<Response>): void };
 const cors = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type', 'Access-Control-Allow-Methods': 'POST, OPTIONS' };
@@ -35,8 +36,16 @@ Deno.serve(async request => {
     const body = object(await request.json()), method = body.method, args = body.args, key = body.idempotency_key;
     if (!['create', 'update', 'remove'].includes(String(method)) || !Array.isArray(args) || typeof key !== 'string' || !key.trim() || key.length > 200)
       throw new StaffError('VALIDATION', 'VALIDATION: Invalid staff command');
+    if (method === 'create' || method === 'update') {
+      const checked = validateStaffInput(object(args[method === 'create' ? 0 : 2]), method === 'create');
+      if (Object.keys(checked.fields).length) throw new StaffError('VALIDATION', 'Hãy kiểm tra thông tin tài khoản', 400, checked.fields);
+    }
     const hash = await fingerprint([identity.user.id, method, args]);
     const safeArgs = structuredClone(args);
+    if (method === 'create' || method === 'update') {
+      const position = method === 'create' ? 0 : 2, input = object(safeArgs[position]), checked = validateStaffInput(input);
+      safeArgs[position] = { ...input, name: checked.name, phone: checked.phone, username: checked.username };
+    }
     if (method === 'create') { const input = object(safeArgs[0]); delete input.password; safeArgs[0] = input; }
     const rpc = async (action: string, authUserId: string | null = null) => caller.rpc('coco_staff_admin', {
       p_method: action, p_args: action === 'lookup' ? [] : safeArgs, p_auth_user_id: authUserId, p_idempotency_key: key, p_fingerprint: hash,
@@ -48,13 +57,12 @@ Deno.serve(async request => {
     let provisioned: User | undefined;
     if (method === 'create') {
       const input = object(args[0]), username = typeof input.username === 'string' ? input.username.trim() : '';
-      if (!/^\S{1,10}$/.test(username) || typeof input.password !== 'string' || !input.password.trim())
-        throw new StaffError('VALIDATION', 'VALIDATION: Kiểm tra tên đăng nhập và mật khẩu', 400, { password: 'Mật khẩu không được để trống' });
+      const password = typeof input.password === 'string' ? input.password : '';
       // Opaque deterministic address supports case-sensitive/Unicode usernames
       // without assuming they are valid email local-parts. Login resolves the
       // authoritative username -> Auth user email on the server.
       const email = `coco-${(await fingerprint(username)).slice(0, 40)}@coco.invalid`;
-      const created = await admin.auth.admin.createUser({ email, password: input.password, email_confirm: true,
+      const created = await admin.auth.admin.createUser({ email, password, email_confirm: true,
         app_metadata: { coco_provisioning_key: key, coco_payload_hash: hash } });
       if (created.error) {
         // Retry an uncertain prior attempt only when trusted app_metadata binds
@@ -74,8 +82,10 @@ Deno.serve(async request => {
         if (!provisioned) {
           const replay = await rpc('lookup'); if (!replay.error && replay.data?.found) return json(replay.data.result);
           const duplicate = ['email_exists', 'user_already_exists'].includes(created.error.code ?? '');
-          throw new StaffError(duplicate ? 'DUPLICATE' : 'VALIDATION', duplicate ? 'DUPLICATE: Tên đăng nhập đã tồn tại' : `VALIDATION: ${created.error.message}`, 400,
-            duplicate ? { username: 'Tên đăng nhập đã tồn tại' } : { password: created.error.message });
+          const passwordError = staffPasswordMessage(created.error);
+          if (passwordError) throw new StaffError('VALIDATION', passwordError, 400, { password: passwordError });
+          if (duplicate) throw new StaffError('DUPLICATE', 'Tên đăng nhập đã tồn tại', 400, { username: 'Tên đăng nhập đã tồn tại' });
+          throw new StaffError('SYSTEM', 'Lỗi trong quá trình lưu. Vui lòng thử lại', 503);
         }
       } else provisioned = created.data.user;
       if (!provisioned) throw new StaffError('SYSTEM', 'Không thể tạo tài khoản Auth', 503);

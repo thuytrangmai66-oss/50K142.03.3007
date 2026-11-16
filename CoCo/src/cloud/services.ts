@@ -17,6 +17,7 @@ import { RepositoryError } from '../repositories/errors';
 import type { CoCoDatabase } from '../db/schema';
 import type { CloudServiceOptions, CloudSnapshot } from './contracts';
 import { createSnapshotDatabase } from './repository';
+import { validateStaffInput, staffPasswordMessage } from '../domain/staff-validation';
 
 type Public<T> = Pick<T, keyof T>;
 export interface CloudServices {
@@ -59,6 +60,8 @@ export function cloudServiceError(service: string, error: RemoteError, method?: 
     return new DataServiceError('DUPLICATE', message, { phone: message });
   }
   if (staffWrite) {
+    const passwordError = staffPasswordMessage(error);
+    if (passwordError) return new StaffServiceError('VALIDATION', passwordError, { password: passwordError });
     const text = error.message?.replace(/^DUPLICATE:\s*/, '');
     const phone = error.code === '23505' && constraint === 'coco_employee_phone';
     const username = error.code === '23505' && ['taiKhoan_pkey', 'coco_profiles_username_key'].includes(constraint ?? '') || ['DUPLICATE', 'P0001'].includes(error.code ?? '') && text === 'Tên đăng nhập đã tồn tại';
@@ -77,6 +80,7 @@ export function cloudServiceError(service: string, error: RemoteError, method?: 
     return staffWrite ? new StaffServiceError('DUPLICATE', message) : new DataServiceError('DUPLICATE', message);
   }
   if (bracketWrite && !error.code && /failed to fetch|fetch failed|networkerror|network request failed|load failed/i.test(error.message ?? '')) return new CloudOfflineError();
+  if (staffWrite && !error.code && /failed to fetch|fetch failed|networkerror|network request failed|load failed/i.test(error.message ?? '')) return new CloudOfflineError();
   const message = error.message ?? 'Không thể truy cập dữ liệu tập trung. Vui lòng thử lại.';
   const code = details.code ?? (message.match(/^([A-Z_]+)(?::|\s)/)?.[1]) ??
     ({ '42501': 'FORBIDDEN', '28000': 'AUTH_REQUIRED', '23505': 'DUPLICATE', '23503': 'REFERENCE', '40001': 'CONFLICT' } as Record<string, string>)[error.code ?? ''] ?? error.code;
@@ -85,7 +89,7 @@ export function cloudServiceError(service: string, error: RemoteError, method?: 
   if (service === 'referenceData' && ['VALIDATION', 'DUPLICATE', 'CONFLICT', 'NOT_FOUND', 'HAS_HISTORY', 'CONFIRMATION', 'CONDITION_MAPPING'].includes(code ?? ''))
     return new DataServiceError(code as DataServiceError['code'], bracketWrite ? message.replace(/^[A-Z_]+:\s*/, '') : message, fields);
   if (service === 'staffAccounts' && ['VALIDATION', 'DUPLICATE', 'NOT_FOUND', 'CONFLICT', 'CONFIRMATION'].includes(code ?? ''))
-    return new StaffServiceError(code as StaffServiceError['code'], message, fields);
+    return new StaffServiceError(code as StaffServiceError['code'], /duplicate key|constraint|^VALIDATION: Nội dung bắt buộc hoặc quá dài/.test(message) ? 'Không thể lưu thông tin tài khoản. Vui lòng kiểm tra lại hoặc thử lại.' : message.replace(/^[A-Z_]+:\s*/, ''), fields);
   if (['VALIDATION', 'DUPLICATE', 'NOT_FOUND', 'CONFLICT', 'REFERENCE', 'IMMUTABLE', 'OPERATION_REUSED'].includes(code ?? '')) {
     if (code === 'VALIDATION') {
       if (service === 'purchaseDrafts') return new PurchaseInputError(message, fields);
@@ -134,6 +138,13 @@ export function createCloudServices(client: SupabaseClient, options: CloudServic
   async function write(service: string, method: string, args: unknown[]): Promise<unknown> {
     requireCloudOnline();
     const user = options.currentUser(); if (!user) throw new AuthError('AUTH_REQUIRED');
+    if (service === 'staffAccounts' && ['create','update'].includes(method)) {
+      const input = (method === 'create' ? args[0] : args[2]) as Parameters<typeof validateStaffInput>[0];
+      const checked = validateStaffInput(input, method === 'create');
+      if (Object.keys(checked.fields).length) throw new StaffServiceError('VALIDATION', 'Hãy kiểm tra thông tin tài khoản', checked.fields);
+      const position = method === 'create' ? 0 : 2;
+      args = args.map((value,index) => index === position ? { ...input, name:checked.name, phone:checked.phone, username:checked.username } : value);
+    }
     const first = args[0] && typeof args[0] === 'object' ? args[0] as Record<string, unknown> : undefined;
     const operationId = typeof first?.operationId === 'string' ? first.operationId :
       service === 'purchaseDrafts' && method === 'reviseRejected' && typeof args[3] === 'string' ? args[3] :
@@ -162,6 +173,7 @@ export function createCloudServices(client: SupabaseClient, options: CloudServic
       }
       retryKeys.delete(fingerprint); invalidate(); return data;
     } catch (error) {
+      if (service === 'staffAccounts' && error instanceof Error && (error.name === 'FunctionsFetchError' || /failed to fetch|fetch failed|networkerror|network request failed/i.test(error.message))) throw new CloudOfflineError();
       // Keep the same idempotency key after a lost response / network failure.
       if (retryKeys.size > 1000) retryKeys.delete(retryKeys.keys().next().value!);
       throw error;
