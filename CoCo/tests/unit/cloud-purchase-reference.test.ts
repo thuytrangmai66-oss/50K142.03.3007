@@ -1,0 +1,41 @@
+import { expect, it, vi } from 'vitest';
+import type { SupabaseClient } from '@supabase/supabase-js';
+import { createCloudServices } from '../../src/cloud/services';
+import { CLOUD_STORE_KEYS } from '../../src/cloud/repository';
+import { approvalMatchesLine } from '../../src/domain/purchases';
+import { CONDITION_CATALOG_VERSION, conditionMetadataKey } from '../../src/domain/conditions';
+import { recordVersionKey } from '../../src/repositories';
+import type { CloudSnapshot } from '../../src/cloud/contracts';
+import type { CandidateDraftCommand } from '../../src/services/purchase-candidate';
+
+it('cloud preparation sends every pending request with exact line/revision/price/snapshot in one RPC, preserving retry identity', async () => {
+  const data: CloudSnapshot = Object.fromEntries(Object.keys(CLOUD_STORE_KEYS).map(name=>[name,[]]));
+  data.khungGiaThuMua=[{MaKhungGia:'KGTEST',LoaiSanPham:'Áo',ThuongHieu:'CoCo',TinhTrang:2,GiaMin:50000,GiaMax:100000,MaNV:'NVOWNER'}];
+  data.appMetadata=[{key:conditionMetadataKey('KGTEST'),value:CONDITION_CATALOG_VERSION}];
+  data.recordVersions=[{key:recordVersionKey('khungGiaThuMua','KGTEST'),version:1,updatedAt:new Date().toISOString()}];
+  let fail = false;
+  const rpc=vi.fn(async (name:string, payload?:Record<string,unknown>)=>{
+    if(name==='coco_snapshot')return {data,error:null};
+    const c=(payload!.p_payload as {args:[CandidateDraftCommand]}).args[0];
+    if(fail)return {data:null,error:{code:'P0001',message:'REFERENCE: Thiếu yêu cầu phê duyệt'}};
+    data.purchaseDrafts=[c.draft];data.purchaseLines=c.lines;data.purchaseApprovals=c.approvals;
+    return {data:{duplicate:false},error:null};
+  });
+  const services=createCloudServices({rpc} as unknown as SupabaseClient,{currentUser:()=>({username:'staff',employeeId:'NVSTAFF',displayName:'Nhân viên',role:'staff'}),invalidate:()=>undefined,subscribe:()=>()=>undefined});
+  const draft=await services.purchaseDrafts.prepareDraft(), bracket=(await services.purchaseDrafts.catalog())[0];
+  const first=await services.purchaseDrafts.prepareAdd(draft,bracket,1,'120000');
+  expect(first.approvals).toHaveLength(1);expect(approvalMatchesLine(first.approvals[0],first.lines[0])).toBe(true);
+  await services.purchaseDrafts.commit(first);
+  const loaded=await services.purchaseDrafts.load(draft.draft.id);
+  const second=await services.purchaseDrafts.prepareAdd(loaded,bracket,1,'150000');
+  expect(second.approvals).toHaveLength(2);
+  for(const line of second.lines)expect(approvalMatchesLine(second.approvals.find(a=>a.id===line.approvalId)!,line)).toBe(true);
+  expect(second.approvals[0]).toEqual(first.approvals[0]);
+  fail=true;await expect(services.purchaseDrafts.commit(second)).rejects.toMatchObject({code:'REFERENCE'});
+  fail=false;await services.purchaseDrafts.commit(second);
+  const writes=rpc.mock.calls.filter(([name])=>name==='coco_service');
+  expect(writes).toHaveLength(3);
+  expect(writes[1][1]).toEqual(writes[2][1]);
+  expect(writes[2][1]).toMatchObject({p_service:'purchaseDrafts',p_method:'commit',p_idempotency_key:second.operationId,p_payload:{args:[second]}});
+  expect(data.purchaseApprovals).toHaveLength(2);expect(data.hoaDonThuMua).toHaveLength(0);expect(data.sanPham).toHaveLength(0);
+});

@@ -1,0 +1,77 @@
+{
+  "engine": "PGlite PostgreSQL; Auth/roles shims",
+  "results": [
+    {
+      "name": "patch applies twice without altering tables, constraints, RLS or function ACL/security/search_path",
+      "status": "PASS"
+    },
+    {
+      "name": "patch stops on an unexpected installed function and leaves it unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "at Max: no request or invoice is fabricated",
+      "status": "PASS"
+    },
+    {
+      "name": "one above-Max line: exact request snapshot saved atomically",
+      "status": "PASS"
+    },
+    {
+      "name": "same command replay creates no duplicate request or audit",
+      "status": "PASS"
+    },
+    {
+      "name": "absent request: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong line link: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong proposed price: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "stale line revision: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong bracket snapshot: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "staff cannot approve its own request",
+      "status": "PASS"
+    },
+    {
+      "name": "pending request cannot finalize",
+      "status": "PASS"
+    },
+    {
+      "name": "second pending line preserves first request and creates the second request",
+      "status": "PASS"
+    },
+    {
+      "name": "owner approves exact request; opposing stale decision cannot overwrite it",
+      "status": "PASS"
+    },
+    {
+      "name": "owner rejects second request with a reason; it is never treated as approved",
+      "status": "PASS"
+    },
+    {
+      "name": "adding to a draft with approved/rejected history preserves every historical snapshot",
+      "status": "PASS"
+    },
+    {
+      "name": "two pending lines in a new draft work in either approval array order",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "Not the deployed Supabase database",
+    "Independent multi-connection race NOT RUN"
+  ]
+}

@@ -1,5 +1,19 @@
 # Kiểm chứng PostgreSQL cục bộ
 
+## Bản vá reference Thu mua — 16/11/2026
+
+`node supabase/tests/purchase-reference.mjs` chạy migration gốc rồi bản vá
+`supabase/patches/20261116_purchase_reference.sql` trong DB riêng, kiểm snapshot,
+rollback, replay, nhiều dòng pending, quyền và bảo toàn schema/RLS/ACL/dữ liệu.
+`--baseline` chỉ chạy SQL gốc để tái hiện lỗi: dự kiến **11 PASS / 1 FAIL** ở ca
+thêm dòng pending thứ hai. Không coi kết quả baseline là nghiệm thu PASS.
+
+Bản vá riêng đã được PO cho phép chuẩn bị/kiểm thử local; **chưa áp dụng cloud**.
+Không thay `migration_all.sql`. Sau khi được cho phép áp dụng, cả database mới
+chạy migration gốc cũng cần chạy thêm bản vá này. Bản vá tự dừng nếu hàm đang
+cài khác câu lệnh đã review; không tự chạy lại migration tổng hoặc sửa dữ liệu.
+Xem `planning/ui/purchase-reference/REVIEW.md`.
+
 Chạy từ `CoCo/`:
 
 ```powershell

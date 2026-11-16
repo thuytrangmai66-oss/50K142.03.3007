@@ -81,6 +81,54 @@ async function sessionSubject(page: Page) {
   });
 }
 
+test('mocked cloud Auth: purchase reference failure preserves the price, retries one command and never stacks dialogs', async ({page,context},info)=>{
+  const mock=await mockCloud(context);
+  mock.stores.khungGiaThuMua.push({MaKhungGia:'KGTEST',LoaiSanPham:'Áo',ThuongHieu:'CoCo',TinhTrang:2,GiaMin:50000,GiaMax:100000,MaNV:'NVOWNER'});
+  mock.stores.appMetadata.push({key:'condition-catalog:KGTEST',value:'coco:conditions:2026-11-11'});
+  mock.stores.recordVersions.push({key:JSON.stringify(['khungGiaThuMua','KGTEST']),version:1,updatedAt:new Date().toISOString()});
+  const requests:Record<string,unknown>[]=[], errors:string[]=[];
+  page.on('pageerror',error=>errors.push(error.message));
+  let failure=true;
+  await context.route('**/rest/v1/rpc/coco_service',async route=>{
+    const body=route.request().postDataJSON();
+    if(body.p_service!=='purchaseDrafts')return route.fallback();
+    requests.push(body);
+    if(failure)return route.fulfill({status:400,json:{code:'P0001',message:'REFERENCE: Thiếu yêu cầu phê duyệt'}});
+    const c=body.p_payload.args[0];
+    mock.stores.purchaseDrafts=[c.draft];mock.stores.purchaseLines=c.lines;mock.stores.purchaseApprovals=c.approvals;
+    return route.fulfill({json:{duplicate:false}});
+  });
+  await page.goto('./');await login(page,'staff',password);await page.goto('./#/purchases/new');
+  await page.getByRole('button',{name:'Thêm',exact:true}).click();
+  const input=page.getByRole('dialog',{name:'Tạo giao dịch',exact:true});
+  await input.getByLabel('Loại sản phẩm',{exact:true}).fill('Áo');await input.getByLabel('Thương hiệu',{exact:true}).fill('CoCo');
+  await input.getByLabel('Chất lượng',{exact:true}).selectOption('2');await input.getByLabel('Số lượng',{exact:true}).fill('1');
+  await input.getByRole('button',{name:'Xác nhận',exact:true}).click();
+  const form=page.getByRole('dialog',{name:'Thông tin sản phẩm',exact:true});
+  await form.getByLabel('Giá thu mua đề xuất',{exact:true}).fill('120000');
+  await form.locator('form').evaluate(element=>{const f=element as HTMLFormElement;f.requestSubmit();f.requestSubmit();});
+  await expect(page.getByRole('alertdialog')).toContainText('Không thể lưu thông tin sản phẩm');
+  await expect(page.getByRole('alertdialog')).not.toContainText(/REFERENCE|Supabase|PostgreSQL/);
+  await expect(page.locator('dialog[open]')).toHaveCount(1);expect(requests).toHaveLength(1);
+  await page.screenshot({path:info.outputPath('purchase-reference-error.png')});
+  await page.getByRole('button',{name:'Đóng thông báo',exact:true}).click();
+  await expect(form.getByLabel('Giá thu mua đề xuất',{exact:true})).toHaveValue('120000');
+  await expect(page.locator('dialog[open]')).toHaveCount(1);
+  await page.screenshot({path:info.outputPath('purchase-reference-form-retained.png')});
+  await context.setOffline(true);await form.getByRole('button',{name:'Xác nhận',exact:true}).click();
+  await expect(page.getByRole('alertdialog')).toContainText('Mất kết nối mạng');expect(requests).toHaveLength(1);
+  await page.getByRole('button',{name:'Đóng thông báo',exact:true}).click();await context.setOffline(false);
+  failure=false;await form.getByRole('button',{name:'Xác nhận',exact:true}).click();
+  await expect(page.getByRole('alertdialog')).toContainText('Giá thu mua vượt mức, cần được phê duyệt');
+  expect(requests).toHaveLength(2);expect(requests[1]).toEqual(requests[0]);
+  await page.getByRole('button',{name:'Đóng thông báo',exact:true}).click();
+  await expect(page.locator('dialog[open]')).toHaveCount(0);
+  await expect(page.locator('.purchase-lines')).toContainText('Chờ phê duyệt giá');
+  await page.reload();await expect(page.locator('.purchase-lines')).toContainText('Chờ phê duyệt giá');
+  expect(mock.stores.purchaseApprovals).toHaveLength(1);expect(mock.stores.hoaDonThuMua).toHaveLength(0);expect(mock.stores.sanPham).toHaveLength(0);
+  expect(errors).toEqual([]);
+});
+
 test('cloud schema missing fails truthfully before login and does not create IndexedDB or bootstrap an owner', async ({ page, context }, info) => {
   const mock = await mockCloud(context, false); await page.goto('./');
   await expect(page.getByRole('heading', { name: 'Chưa thể mở CoCo cloud', exact: true })).toBeVisible();

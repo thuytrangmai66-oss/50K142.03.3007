@@ -1,0 +1,59 @@
+{
+  "engine": "PGlite PostgreSQL; Auth/roles shims",
+  "results": [
+    {
+      "name": "at Max: no request or invoice is fabricated",
+      "status": "PASS"
+    },
+    {
+      "name": "one above-Max line: exact request snapshot saved atomically",
+      "status": "PASS"
+    },
+    {
+      "name": "same command replay creates no duplicate request or audit",
+      "status": "PASS"
+    },
+    {
+      "name": "absent request: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong line link: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong proposed price: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "stale line revision: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong bracket snapshot: rejected with complete transaction rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "staff cannot approve its own request",
+      "status": "PASS"
+    },
+    {
+      "name": "pending request cannot finalize",
+      "status": "PASS"
+    },
+    {
+      "name": "second pending line preserves first request and creates the second request",
+      "status": "FAIL",
+      "code": "P0001",
+      "message": "REFERENCE: Thiếu yêu cầu phê duyệt"
+    },
+    {
+      "name": "owner approves exact request; opposing stale decision cannot overwrite it",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "Not the deployed Supabase database",
+    "Independent multi-connection race NOT RUN"
+  ]
+}

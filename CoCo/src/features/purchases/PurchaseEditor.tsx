@@ -20,6 +20,8 @@ import type { PurchaseLine } from '../../domain/purchases';
 import { PurchaseResults } from './PurchaseResults';
 import type { FinalizePurchaseCommand } from '../../services/purchase-finalization';
 import { useCloudOnline } from '../../cloud/connectivity';
+import { CloudOfflineError } from '../../cloud/services';
+import { AuthError } from '../../services/auth/errors';
 const tableMoney = (value: number) => new Intl.NumberFormat('vi-VN').format(value);
 
 function ItemDialog({ bundle, line, onClose, onSaved }: { bundle: DraftBundle; line?: PurchaseLine; onClose(): void; onSaved(id: string, pending: boolean, revision: number): void }) {
@@ -44,10 +46,16 @@ function ItemDialog({ bundle, line, onClose, onSaved }: { bundle: DraftBundle; l
         }
         onSaved(bundle.draft.id, Number(price) > match.bracket.max, bundle.draft.revision + 1);
       }
-    } catch (cause) { if (cause instanceof PurchaseInputError && Object.keys(cause.fields).length) setFields(cause.fields); else setError(cause instanceof Error ? cause.message : 'Không thể lưu thông tin sản phẩm'); }
+    } catch (cause) {
+      if (cause instanceof PurchaseInputError && Object.keys(cause.fields).length) setFields(cause.fields);
+      else setError(cause instanceof AuthError || cause instanceof CloudOfflineError || cause instanceof PurchaseInputError && !/^[A-Z_]+:/.test(cause.message) ? cause.message : 'Không thể lưu thông tin sản phẩm');
+    }
     finally { lock.current = false; setBusy(false); }
   }
-  return <><FormDialog title={match ? 'Thông tin sản phẩm' : 'Tạo giao dịch'} busy={busy} onClose={onClose}>
+  // Keep entered values/command in this component while showing one modal at a
+  // time. Closing the error restores the same form, without a stacked overlay.
+  if (error) return <ResultDialog error message={error} onClose={() => setError('')}/>;
+  return <FormDialog title={match ? 'Thông tin sản phẩm' : 'Tạo giao dịch'} busy={busy} onClose={onClose}>
     <form className="record-form purchase-item-form" noValidate onSubmit={submit}>
       {!match ? <>
         <Field label="Loại sản phẩm" list="purchase-types" placeholder="Nhập loại sản phẩm" value={input.type} error={fields.type} onChange={e => setInput({ ...input, type: e.target.value })}/>
@@ -63,7 +71,7 @@ function ItemDialog({ bundle, line, onClose, onSaved }: { bundle: DraftBundle; l
       </>}
       <div className="form-actions"><Button className="button-secondary" type="button" disabled={busy} onClick={onClose}>Hủy</Button><Button className="button-beige" type="submit" disabled={busy}>{busy ? 'Đang lưu…' : 'Xác nhận'}</Button></div>
     </form>
-  </FormDialog>{error && <ResultDialog error message={error} onClose={() => setError('')}/>}</>;
+  </FormDialog>;
 }
 
 export function PurchaseEditor() {

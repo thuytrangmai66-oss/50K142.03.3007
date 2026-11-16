@@ -1,0 +1,26 @@
+﻿[
+    {
+        "path":  "src/features/purchases/PurchaseEditor.tsx",
+        "sha256":  "B3B87B0749AD38453E66E8D4F197DD57BDC7263A871D2C38638BEF6FDC65B1E4"
+    },
+    {
+        "path":  "supabase/patches/20261116_purchase_reference.sql",
+        "sha256":  "0D036B45A00D13E5CA60C377A1EEB8DC10FC61D0D6D23AEBA33433C8DC2CF266"
+    },
+    {
+        "path":  "supabase/tests/purchase-reference.mjs",
+        "sha256":  "7580A25CB593EB402505FE3A255EB3EF75FC2CCDB7CC53F379D9D6F5B911F2B1"
+    },
+    {
+        "path":  "tests/unit/cloud-purchase-reference.test.ts",
+        "sha256":  "0B224795264DE940BF451336304E9617AB32D3662122EED125290D723B112B2C"
+    },
+    {
+        "path":  "tests/e2e/cloud-runtime.spec.ts",
+        "sha256":  "BABE78BEF4BFD4717321D62A4927A1E5623E3E57453F7C4ED84FBE7414560E03"
+    },
+    {
+        "path":  "supabase/migration_all.sql",
+        "sha256":  "620757196052D12E4741CCB7053F0224FF3E7F0037018D1C42BF3CE895450BA8"
+    }
+]
