@@ -49,6 +49,12 @@ async function mockCloud(context: BrowserContext, schemaAvailable = true) {
     }
     if (url.pathname === '/auth/v1/user') return role ? reply(authUser(role)) : reply({ message: 'No test session' }, 401);
     if (url.pathname === '/auth/v1/logout') return route.fulfill({ status: 204, headers });
+    if (url.pathname === '/rest/v1/nhanVien' && request.method() === 'GET') {
+      calls.push({rpc:'staff-phone-preflight',role});
+      if(role!=='owner')return reply({code:'42501',message:'FORBIDDEN: fixture owner required'},403);
+      const phone=url.searchParams.get('data->>SoDienThoai')?.replace(/^eq\./,'');
+      return reply(empty.nhanVien.filter(row=>row.SoDienThoai===phone).slice(0,1).map(row=>({id:row.MaNV})));
+    }
     if (url.pathname.startsWith('/rest/v1/rpc/')) {
       const rpc = url.pathname.split('/').at(-1)!; calls.push({ rpc, role, service: body?.p_service as string, method: body?.p_method as string });
       if (rpc === 'coco_schema_version') return schemaAvailable ? reply(1) : reply({ code: 'PGRST202', message: 'Function not found in fixture schema' }, 404);
@@ -169,7 +175,9 @@ test('mocked cloud Auth keeps owner/staff sessions independent through reload an
   expect(await sessionSubject(page)).toBe(identities.owner.id); expect(await sessionSubject(staff)).toBe(identities.staff.id);
   await page.screenshot({ path: info.outputPath('cloud-owner-after-reload.png') });
   await staff.screenshot({ path: info.outputPath('cloud-staff-after-reload.png') });
-  await staff.goto('./#/approvals'); await expect(staff.getByRole('heading', { name: 'Không có quyền truy cập', exact: true })).toBeVisible();
+  for (const route of ['approvals','staff','staff/NVSTAFF']) {
+    await staff.goto(`./#/${route}`); await expect(staff.getByRole('heading', { name: 'Không có quyền truy cập', exact: true })).toBeVisible();
+  }
   await page.getByRole('button', { name: 'Đăng xuất', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Đăng nhập', exact: true })).toBeVisible();
   expect(await sessionSubject(page)).toBeNull(); expect(await sessionSubject(staff)).toBe(identities.staff.id);
@@ -227,6 +235,37 @@ function bracketTransport() {
   return { rows, install, failNext: (failure: NonNullable<typeof error>) => { error = failure; } };
 }
 
+test('mocked cloud Auth: staff known phone duplicate is inline even with a legacy generic-error Edge',async({page,context},info)=>{
+  const mock=await mockCloud(context);
+  // An inactive employee is omitted from the staff list but its unique phone
+  // still exists. The check must query nhanVien, not just visible list rows.
+  mock.stores.nhanVien.push({MaNV:'NVINACTIVE',HoTen:'Hồ sơ cũ kiểm thử',SoDienThoai:'0900000002'});
+  mock.stores.taiKhoan.push({TenDangNhap:'oldstaff',MaNV:'NVINACTIVE'});
+  mock.stores.accountSecurity.push({TenDangNhap:'oldstaff',role:'staff',active:false});
+  let writes=0,legacyFailure=true;
+  await context.route('**/functions/v1/staff-admin',async route=>{
+    if(route.request().method()!=='POST')return route.fallback();writes++;
+    if(legacyFailure)return route.fulfill({status:500,json:{code:'SYSTEM',message:'Lỗi trong quá trình lưu. Vui lòng thử lại'}});
+    const body=route.request().postDataJSON(),input=body.args[0];
+    mock.stores.nhanVien.push({MaNV:'NVNEW',HoTen:input.name,SoDienThoai:input.phone});mock.stores.taiKhoan.push({TenDangNhap:input.username,MaNV:'NVNEW'});mock.stores.accountSecurity.push({TenDangNhap:input.username,role:'staff',active:true});
+    return route.fulfill({json:'NVNEW'});
+  });
+  await page.goto('./');await login(page,'owner',password);await page.goto('./#/staff');
+  await page.getByRole('button',{name:'Tạo tài khoản',exact:true}).click();
+  const form=page.getByRole('dialog',{name:'Tạo tài khoản nhân viên',exact:true});
+  for(const [label,value]of [['Họ tên','Nhân viên mới kiểm thử'],['Số điện thoại','0900000002'],['Tên đăng nhập','newstaff'],['Mật khẩu','test-password!']])await form.getByLabel(label,{exact:true}).fill(value);
+  await form.getByRole('button',{name:'Lưu',exact:true}).click();
+  await expect(form.locator('.field-error')).toHaveText('Số điện thoại đã tồn tại');await expect(form.getByLabel('Số điện thoại',{exact:true})).toHaveAttribute('aria-invalid','true');
+  await expect(form.locator('.field-error-icon')).toBeVisible();await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await expect(form.getByLabel('Họ tên',{exact:true})).toHaveValue('Nhân viên mới kiểm thử');await expect(form.getByLabel('Tên đăng nhập',{exact:true})).toHaveValue('newstaff');await expect(form.getByLabel('Mật khẩu',{exact:true})).toHaveValue('test-password!');
+  expect(writes).toBe(0);expect(mock.stores.nhanVien).toHaveLength(1);
+  await page.screenshot({path:info.outputPath('staff-phone-duplicate-preflight.png')});
+  legacyFailure=false;await form.getByLabel('Số điện thoại',{exact:true}).fill('0900000003');
+  await form.getByRole('button',{name:'Lưu',exact:true}).click();await expect(page.getByRole('alertdialog')).toContainText('Tạo tài khoản mới thành công');
+  expect(writes).toBe(1);await page.getByRole('button',{name:'Đóng thông báo',exact:true}).click();
+  await expect(page.getByRole('link',{name:'Nhân viên mới kiểm thử',exact:true})).toBeVisible();
+});
+
 test('mocked cloud Auth: staff complete create preflight and backend exceptions remain field-specific', async ({ page,context },info) => {
   await mockCloud(context); let requests=0;
   let failure: {code:string;message:string}|undefined = {code:'weak_password',message:'Password should be at least 8 characters.'};
@@ -243,7 +282,7 @@ test('mocked cloud Auth: staff complete create preflight and backend exceptions 
   await page.setViewportSize({width:768,height:500}); await save.scrollIntoViewIfNeeded(); await expect(save).toBeInViewport();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBe(0);
   await page.screenshot({path:info.outputPath('staff-required-small.png')}); await page.setViewportSize({width:1440,height:900});
-  const valid=[['Họ tên','Nhân viên'],['Số điện thoại','0900000002'],['Tên đăng nhập','staff02'],['Mật khẩu','x']];
+  const valid=[['Họ tên','Nhân viên'],['Số điện thoại','0900000002'],['Tên đăng nhập','staff02'],['Mật khẩu','secret']];
   let validationSample = 0;
   for(const [label,value,message] of [['Họ tên','   ','Họ tên không được để trống'],['Số điện thoại','','Số điện thoại không được để trống'],['Số điện thoại','123456789','Số điện thoại không hợp lệ'],['Số điện thoại','12345678901','Số điện thoại không hợp lệ'],['Số điện thoại','123456789a','Số điện thoại không hợp lệ'],['Tên đăng nhập','   ','Tên đăng nhập không được để trống'],['Mật khẩu','   ','Mật khẩu không được để trống']]) {
     for(const [key,val]of valid)await form.getByLabel(key,{exact:true}).fill(val);
@@ -253,8 +292,13 @@ test('mocked cloud Auth: staff complete create preflight and backend exceptions 
     await page.screenshot({path:info.outputPath(`staff-input-${++validationSample}.png`)});
   }
   for(const [key,val]of valid)await form.getByLabel(key,{exact:true}).fill(val);
+  await form.getByLabel('Mật khẩu',{exact:true}).fill('12345');await save.click();
+  await expect(form.locator('.field-error')).toHaveText('Mật khẩu phải có ít nhất 6 ký tự');expect(requests).toBe(0);
+  await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await page.screenshot({path:info.outputPath('staff-short-password-inline.png')});
+  await form.getByLabel('Mật khẩu',{exact:true}).fill('secret');
   await save.click(); await expect(form.locator('.field-error')).toHaveText('Mật khẩu phải có ít nhất 8 ký tự');
-  await expect(form.getByLabel('Mật khẩu',{exact:true})).toHaveValue('x'); await expect(page.getByRole('alertdialog')).toHaveCount(0);
+  await expect(form.getByLabel('Mật khẩu',{exact:true})).toHaveValue('secret'); await expect(page.getByRole('alertdialog')).toHaveCount(0);
   await page.screenshot({path:info.outputPath('staff-auth-password-inline.png')});
   await form.getByLabel('Mật khẩu',{exact:true}).fill('backend-accepted!');
   for(const error of [{code:'42501',message:'permission denied'}, {code:'XX000',message:'SQL internal failure'}, {code:'P0001',message:'VALIDATION: Nội dung bắt buộc hoặc quá dài'}]) {

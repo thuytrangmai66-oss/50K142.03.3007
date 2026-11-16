@@ -1,0 +1,64 @@
+{
+  "engine": "PGlite PostgreSQL, Auth/roles fixtures",
+  "results": [
+    {
+      "name": "valid create always assigns staff even when caller injects owner role",
+      "status": "PASS"
+    },
+    {
+      "name": "same-key create replay adds no employee, profile or audit",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate phone is exact PostgreSQL 23505 and rolls back all business rows",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate username is rejected without creating a second employee",
+      "status": "PASS"
+    },
+    {
+      "name": "edit unchanged fields does not falsely report duplicate or alter role/active state",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate phone and username edits leave all data unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "rename preserves employee identity and historical draft actor through alias",
+      "status": "PASS"
+    },
+    {
+      "name": "stale revision from a second client cannot overwrite the rename",
+      "status": "PASS"
+    },
+    {
+      "name": "audit write failure rolls back the employee/profile/receipt transaction",
+      "status": "PASS"
+    },
+    {
+      "name": "staff cannot manage accounts, directly write profiles, or read owner security profile",
+      "status": "PASS"
+    },
+    {
+      "name": "RLS operational employee documents are visible to staff, including other employee phone",
+      "status": "OPEN",
+      "rows": 2,
+      "requiresReview": "UC8 management is owner-only; changes to shared snapshot/RLS require approval and compatibility review"
+    },
+    {
+      "name": "cancel removal leaves data unchanged; confirmed removal disables Auth profile and preserves history",
+      "status": "PASS"
+    },
+    {
+      "name": "a disabled account cannot obtain identity, snapshot or business writes despite existing Auth user",
+      "status": "PASS"
+    }
+  ],
+  "notRun": [
+    "Real Auth password validation",
+    "Independent two-connection race",
+    "Production project"
+  ]
+}

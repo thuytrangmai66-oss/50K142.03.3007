@@ -1,0 +1,46 @@
+﻿[
+    {
+        "path":  "src/domain/staff-validation.ts",
+        "sha256":  "C11DB88CA04B61B83E2098B253A5BC4D4E81EB7E70ED1E44DC7B05A4E89B4685"
+    },
+    {
+        "path":  "src/features/staff/StaffForm.tsx",
+        "sha256":  "658C84FBDA0A9F028423CA04A56EE0FE50A297B8C120164F7B4B7DE21489EF2B"
+    },
+    {
+        "path":  "src/cloud/services.ts",
+        "sha256":  "89BD713645498027F3C6C11F85DE6DA5944B2FC8A68B006477D0B92CE084A6E8"
+    },
+    {
+        "path":  "supabase/functions/staff-admin/index.ts",
+        "sha256":  "97D32D207606222360C90A19957D5FDB50B73FBA4456EE6F57038752FD4C7CEE"
+    },
+    {
+        "path":  "supabase/functions/auth-login/index.ts",
+        "sha256":  "6967FE616D00E9A30A32EBDC30690EE19BFA7D5B1F3EB7B85FF578CD87ABD120"
+    },
+    {
+        "path":  "supabase/migration_all.sql",
+        "sha256":  "620757196052D12E4741CCB7053F0224FF3E7F0037018D1C42BF3CE895450BA8"
+    },
+    {
+        "path":  "supabase/tests/staff-accounts.mjs",
+        "sha256":  "4C56CA8825C5E6083AEBB5DF9BF5D411DCF602CD025E5036EBEE9DB766CE2CE3"
+    },
+    {
+        "path":  "tests/unit/staff-validation.test.ts",
+        "sha256":  "4A703E81E88B00050E49FE3351669E5DBD8026BBC839A359730EFD9B31090055"
+    },
+    {
+        "path":  "tests/unit/staff-admin-edge.test.ts",
+        "sha256":  "60E4A8400DE40EE5CA2D13AF837CB1D649C8589315FD7882E453CB1671CF7AD3"
+    },
+    {
+        "path":  "tests/unit/staff-login-edge.test.ts",
+        "sha256":  "41BEAB89F0EC4F05DE0AF4E67A07B8D4E2C466D86ECA7D4508E3DDC6FC91DAA9"
+    },
+    {
+        "path":  "tests/e2e/cloud-runtime.spec.ts",
+        "sha256":  "FA7DADD101814EE6B044370D19883B0EAFD9BE9E028A793E77248B12AEE25663"
+    }
+]

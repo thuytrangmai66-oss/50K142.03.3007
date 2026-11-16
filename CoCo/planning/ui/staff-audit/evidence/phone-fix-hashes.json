@@ -1,0 +1,22 @@
+﻿[
+    {
+        "path":  "src/cloud/services.ts",
+        "sha256":  "7E70E62865FC96304B55220C2B50D675DBE6738CDBE5D192AF3B8933F48CAC94"
+    },
+    {
+        "path":  "supabase/functions/staff-admin/index.ts",
+        "sha256":  "EE3CE8D820AC7C748E5EDA913E66F5B5CB97481E9702303C759CD490123CD68B"
+    },
+    {
+        "path":  "tests/unit/staff-phone-preflight.test.ts",
+        "sha256":  "ECC74A0F24A175BED48724E2FFAAA635471076C38E26F34DEC6EF3AF3646EB62"
+    },
+    {
+        "path":  "tests/unit/staff-admin-edge.test.ts",
+        "sha256":  "C18CF7A55D9A6C66DD136AD92575EEB77AA3042FAD8C8752477F9FF7F3A40F6D"
+    },
+    {
+        "path":  "tests/e2e/cloud-runtime.spec.ts",
+        "sha256":  "9A190DD27D36240A9DA454DEECBAD6BA1EF15A392410CB901756147AAD3F8375"
+    }
+]

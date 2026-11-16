@@ -1,0 +1,12 @@
+﻿[
+    {
+        "name":  "checks",
+        "conclusion":  "success",
+        "html_url":  "https://github.com/thuytrangmai66-oss/50K142.03.3007/actions/runs/43814113609/job/133122119712"
+    },
+    {
+        "name":  "deploy",
+        "conclusion":  "success",
+        "html_url":  "https://github.com/thuytrangmai66-oss/50K142.03.3007/actions/runs/43814113609/job/133126734114"
+    }
+]

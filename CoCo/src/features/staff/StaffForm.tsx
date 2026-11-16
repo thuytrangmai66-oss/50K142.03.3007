@@ -6,7 +6,8 @@ import { Field } from '../../components/ui/Field';
 import { Button } from '../../components/ui/Button';
 import { StaffServiceError, type StaffAccount, type StaffCreateInput } from '../../services/staff-accounts';
 import { useAuth } from '../auth/use-auth';
-import { validateStaffInput } from '../../domain/staff-validation';
+import { validateStaffInput, SUPABASE_PASSWORD_FLOOR } from '../../domain/staff-validation';
+import { cloudEnabled } from '../../cloud/client';
 import { AuthError } from '../../services/auth/errors';
 import { CloudOfflineError } from '../../cloud/services';
 
@@ -28,7 +29,7 @@ export function StaffForm({ account, onClose, onSaved }: { account?: StaffAccoun
   };
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); if(locked || submitLock.current)return;
-    const checked = validateStaffInput(input, !account);
+    const checked = validateStaffInput(input, !account, cloudEnabled ? SUPABASE_PASSWORD_FLOOR : 0);
     setFields(checked.fields); if (Object.keys(checked.fields).length) return;
     submitLock.current = true; setBusy(true);setError('');
     try {

@@ -17,7 +17,7 @@ import { RepositoryError } from '../repositories/errors';
 import type { CoCoDatabase } from '../db/schema';
 import type { CloudServiceOptions, CloudSnapshot } from './contracts';
 import { createSnapshotDatabase } from './repository';
-import { validateStaffInput, staffPasswordMessage } from '../domain/staff-validation';
+import { validateStaffInput, staffPasswordMessage, SUPABASE_PASSWORD_FLOOR } from '../domain/staff-validation';
 
 type Public<T> = Pick<T, keyof T>;
 export interface CloudServices {
@@ -138,12 +138,15 @@ export function createCloudServices(client: SupabaseClient, options: CloudServic
   async function write(service: string, method: string, args: unknown[]): Promise<unknown> {
     requireCloudOnline();
     const user = options.currentUser(); if (!user) throw new AuthError('AUTH_REQUIRED');
+    let staffPhone: string | undefined;
     if (service === 'staffAccounts' && ['create','update'].includes(method)) {
+      if (user.role !== 'owner') throw new AuthError('FORBIDDEN');
       const input = (method === 'create' ? args[0] : args[2]) as Parameters<typeof validateStaffInput>[0];
-      const checked = validateStaffInput(input, method === 'create');
+      const checked = validateStaffInput(input, method === 'create', SUPABASE_PASSWORD_FLOOR);
       if (Object.keys(checked.fields).length) throw new StaffServiceError('VALIDATION', 'Hãy kiểm tra thông tin tài khoản', checked.fields);
       const position = method === 'create' ? 0 : 2;
       args = args.map((value,index) => index === position ? { ...input, name:checked.name, phone:checked.phone, username:checked.username } : value);
+      staffPhone = checked.phone;
     }
     const first = args[0] && typeof args[0] === 'object' ? args[0] as Record<string, unknown> : undefined;
     const operationId = typeof first?.operationId === 'string' ? first.operationId :
@@ -151,8 +154,18 @@ export function createCloudServices(client: SupabaseClient, options: CloudServic
       service === 'purchaseDrafts' && method === 'removeOrCancel' && typeof args[1] === 'string' ? args[1] : undefined;
     const fingerprint = canonical([user.username, service, method, args]);
     const key = operationId ?? retryKeys.get(fingerprint) ?? crypto.randomUUID();
-    retryKeys.set(fingerprint, key);
     try {
+      // Query the database freshly, including inactive employee records. A list
+      // cache may be stale or omit them. The UNIQUE index still arbitrates races.
+      // Skip preflight on an uncertain retry: a prior successful commit may now
+      // own the phone, so the same Edge receipt/key must resolve that outcome.
+      if (staffPhone && !retryKeys.has(fingerprint)) {
+        const checked = await client.from('nhanVien').select('id').eq('data->>SoDienThoai', staffPhone).limit(1);
+        if (checked.error) throw cloudServiceError(service, checked.error, method);
+        const ownId = method === 'update' ? args[0] : undefined;
+        if (checked.data?.some(row => row.id !== ownId)) throw new StaffServiceError('DUPLICATE', 'Số điện thoại đã tồn tại', { phone: 'Số điện thoại đã tồn tại' });
+      }
+      retryKeys.set(fingerprint, key);
       let data: unknown;
       if (service === 'staffAccounts') {
         const result = await client.functions.invoke('staff-admin', { body: { method, args, idempotency_key: key } });

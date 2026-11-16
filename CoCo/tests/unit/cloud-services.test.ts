@@ -25,7 +25,8 @@ function setup(user: AuthUser = owner) {
   const data = snapshot(), rpc = vi.fn(async (name: string) => ({ data: name === 'coco_snapshot' ? data : { duplicate: false }, error: null }));
   const invoke = vi.fn(async () => ({ data: 'NV000002', error: null }));
   const listeners = new Set<() => void>(), invalidate = vi.fn();
-  const services = createCloudServices({ rpc, functions: { invoke } } as unknown as SupabaseClient, {
+  const from=vi.fn(()=>({select:()=>({eq:()=>({limit:async()=>({data:[],error:null})})})}));
+  const services = createCloudServices({ rpc, from, functions: { invoke } } as unknown as SupabaseClient, {
     currentUser: () => user,
     subscribe: callback => { listeners.add(callback); return () => { listeners.delete(callback); }; }, invalidate,
   });

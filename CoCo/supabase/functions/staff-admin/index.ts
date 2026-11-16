@@ -1,6 +1,6 @@
 // Runs only in Supabase Edge Functions. The service key never enters Vite.
 import { createClient, type User } from 'npm:@supabase/supabase-js@2.119.0';
-import { validateStaffInput, staffPasswordMessage } from '../../../src/domain/staff-validation.ts';
+import { validateStaffInput, staffPasswordMessage, SUPABASE_PASSWORD_FLOOR } from '../../../src/domain/staff-validation.ts';
 
 declare const Deno: { env: { get(name: string): string | undefined }; serve(handler: (request: Request) => Promise<Response>): void };
 const cors = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type', 'Access-Control-Allow-Methods': 'POST, OPTIONS' };
@@ -37,7 +37,7 @@ Deno.serve(async request => {
     if (!['create', 'update', 'remove'].includes(String(method)) || !Array.isArray(args) || typeof key !== 'string' || !key.trim() || key.length > 200)
       throw new StaffError('VALIDATION', 'VALIDATION: Invalid staff command');
     if (method === 'create' || method === 'update') {
-      const checked = validateStaffInput(object(args[method === 'create' ? 0 : 2]), method === 'create');
+      const checked = validateStaffInput(object(args[method === 'create' ? 0 : 2]), method === 'create', SUPABASE_PASSWORD_FLOOR);
       if (Object.keys(checked.fields).length) throw new StaffError('VALIDATION', 'Hãy kiểm tra thông tin tài khoản', 400, checked.fields);
     }
     const hash = await fingerprint([identity.user.id, method, args]);
@@ -53,6 +53,17 @@ Deno.serve(async request => {
     const prior = await rpc('lookup');
     if (prior.error) throw new StaffError(prior.error.message.match(/^([A-Z_]+):/)?.[1] ?? 'SYSTEM', prior.error.message);
     if (prior.data?.found) return json(prior.data.result);
+
+    // Avoid provisioning an Auth user for an already-known phone conflict.
+    // Receipts are checked first so an uncertain successful create is replayed,
+    // not mistaken for a duplicate. SQL UNIQUE remains the final race guard.
+    if (method === 'create' || method === 'update') {
+      const input = object(safeArgs[method === 'create' ? 0 : 2]);
+      const phones = await admin.from('nhanVien').select('id').eq('data->>SoDienThoai', input.phone).limit(1);
+      if (phones.error) throw new StaffError('SYSTEM', 'Lỗi trong quá trình lưu. Vui lòng thử lại', 503);
+      const ownId = method === 'update' ? safeArgs[0] : undefined;
+      if (phones.data?.some(row => row.id !== ownId)) throw new StaffError('DUPLICATE', 'Số điện thoại đã tồn tại', 400, { phone: 'Số điện thoại đã tồn tại' });
+    }
 
     let provisioned: User | undefined;
     if (method === 'create') {

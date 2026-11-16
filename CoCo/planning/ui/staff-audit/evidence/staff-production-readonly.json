@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-16T07:52:00.525Z",
+  "url": "https://thuytrangmai66-oss.github.io/50K142.03.3007/#/login",
+  "loginVisible": true,
+  "pageErrors": [],
+  "asset": "/50K142.03.3007/assets/index-CbE6EUVx.js",
+  "assetSha256": "81fbfcd331d57d17f1163f52372139666f4b33b04cead026ed94e5dc8a5011ad",
+  "frontend": {
+    "hasExactPhoneConstraint": true,
+    "hasVietnamesePhoneError": true
+  },
+  "serviceWorkers": 0,
+  "authSettingsStatus": 200,
+  "publicPasswordSettings": {},
+  "staffAdminAnonymousStatus": 405,
+  "authenticatedStaffFlows": "NOT RUN: no dedicated test owner session; no account creation or mutation attempted"
+}

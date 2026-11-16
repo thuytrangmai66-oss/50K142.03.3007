@@ -1,6 +1,6 @@
 import { expect, it, vi } from 'vitest';
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { validateStaffInput, staffPasswordMessage } from '../../src/domain/staff-validation';
+import { validateStaffInput, staffPasswordMessage, SUPABASE_PASSWORD_FLOOR } from '../../src/domain/staff-validation';
 import { createCloudServices, cloudServiceError } from '../../src/cloud/services';
 const valid = { name: 'Nhân viên', phone: '0900000001', username: 'staff', password: 'x' };
 it.each([
@@ -21,9 +21,22 @@ it('does not invent a password complexity/minimum rule and never requires one on
 });
 it('normalizes profile whitespace exactly as the existing local service without trimming passwords', async () => {
   const invoke = vi.fn(async()=>({data:'NVSTAFF',error:null}));
-  const services = createCloudServices({functions:{invoke}} as unknown as SupabaseClient, {currentUser:()=>({username:'owner',employeeId:'NVOWNER',displayName:'Owner',role:'owner'}),subscribe:()=>()=>{},invalidate:vi.fn()});
-  await services.staffAccounts.create({name:' Nhân viên ',phone:' 0900000001 ',username:' staff ',password:' x '});
-  expect(invoke).toHaveBeenCalledWith('staff-admin',expect.objectContaining({body:expect.objectContaining({args:[{name:'Nhân viên',phone:'0900000001',username:'staff',password:' x '}]})}));
+  const from=vi.fn(()=>({select:()=>({eq:()=>({limit:async()=>({data:[],error:null})})})}));
+  const services = createCloudServices({functions:{invoke},from} as unknown as SupabaseClient, {currentUser:()=>({username:'owner',employeeId:'NVOWNER',displayName:'Owner',role:'owner'}),subscribe:()=>()=>{},invalidate:vi.fn()});
+  await services.staffAccounts.create({name:' Nhân viên ',phone:' 0900000001 ',username:' staff ',password:' secret '});
+  expect(invoke).toHaveBeenCalledWith('staff-admin',expect.objectContaining({body:expect.objectContaining({args:[{name:'Nhân viên',phone:'0900000001',username:'staff',password:' secret '}]})}));
+});
+it.each(['x','12345','😀😀😀'])('cloud provider floor blocks short password %s before Edge',async password=>{
+  const invoke=vi.fn(); const services=createCloudServices({functions:{invoke}} as unknown as SupabaseClient,{currentUser:()=>({username:'owner',employeeId:'NVOWNER',displayName:'Owner',role:'owner'}),subscribe:()=>()=>{},invalidate:()=>{}});
+  await expect(services.staffAccounts.create({...valid,password})).rejects.toMatchObject({fields:{password:'Mật khẩu phải có ít nhất 6 ký tự'}});
+  expect(invoke).not.toHaveBeenCalled();
+});
+it('provider preflight counts Unicode code points, preserves whitespace and does not affect edits/local mode',()=>{
+  expect(validateStaffInput({...valid,password:'😀'.repeat(6)},true,SUPABASE_PASSWORD_FLOOR).fields).toEqual({});
+  expect(validateStaffInput({...valid,password:' 1234 '},true,SUPABASE_PASSWORD_FLOOR).fields).toEqual({});
+  expect(validateStaffInput({...valid,password:''},false,SUPABASE_PASSWORD_FLOOR).fields).toEqual({});
+  expect(validateStaffInput(valid,true).fields).toEqual({});
+  expect(staffPasswordMessage({code:'validation_failed',message:'Password cannot be longer than 72 characters'})).toBe('Mật khẩu vượt quá độ dài cho phép của hệ thống');
 });
 it.each([6,8,12])('translates Auth minimum %s from the actual response, not a fixed frontend limit', min => {
   const error = { code: 'weak_password', message: `Password should be at least ${min} characters.` };
