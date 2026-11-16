@@ -1,0 +1,14 @@
+﻿[
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\supabase\\migration_all.sql",
+        "Hash":  "620757196052D12E4741CCB7053F0224FF3E7F0037018D1C42BF3CE895450BA8"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\cloud\\services.ts",
+        "Hash":  "FAA05A874F12E25FB39D878F921C61DFE2E19DFAA51A6AF8C2185AF7D1144EF2"
+    },
+    {
+        "Path":  "D:\\50K142-NEW\\CoCo\\src\\features\\price-brackets\\BracketForm.tsx",
+        "Hash":  "0E4441FAB9E15E9F4AF3DE7ADD0873719B1688734D2873215CCCE557D23EC61E"
+    }
+]

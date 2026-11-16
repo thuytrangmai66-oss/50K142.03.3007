@@ -45,18 +45,45 @@ function canonical(value: unknown): string {
   if (value && typeof value === 'object') return `{${Object.entries(value).filter(([, item]) => item !== undefined).sort(([a], [b]) => a.localeCompare(b)).map(([key, item]) => `${JSON.stringify(key)}:${canonical(item)}`).join(',')}}`;
   return JSON.stringify(value) ?? 'null';
 }
-type RemoteError = { message?: string; code?: string; details?: string; fields?: Record<string, string> };
+type RemoteError = { message?: string; code?: string; details?: string; constraint?: string; fields?: Record<string, string> };
 /** Preserve the error classes the existing UI uses for validation and stale writes. */
-export function cloudServiceError(service: string, error: RemoteError): Error {
+export function cloudServiceError(service: string, error: RemoteError, method?: string): Error {
   let details: RemoteError = {};
   try { details = error.details ? JSON.parse(error.details) as RemoteError : {}; } catch { /* Postgres details may be plain text. */ }
+  const bracketWrite = service === 'referenceData' && (method === 'createBracket' || method === 'updateBracket');
+  const customerWrite = service === 'referenceData' && (method === 'createCustomer' || method === 'updateCustomer');
+  const staffWrite = service === 'staffAccounts' && (method === 'create' || method === 'update');
+  const constraint = error.constraint ?? details.constraint ?? error.message?.match(/unique constraint "([^"]+)"/)?.[1];
+  if (customerWrite && error.code === '23505' && constraint === 'coco_customer_phone') {
+    const message = 'Số điện thoại bị trùng với khách hàng khác';
+    return new DataServiceError('DUPLICATE', message, { phone: message });
+  }
+  if (staffWrite) {
+    const text = error.message?.replace(/^DUPLICATE:\s*/, '');
+    const phone = error.code === '23505' && constraint === 'coco_employee_phone';
+    const username = error.code === '23505' && ['taiKhoan_pkey', 'coco_profiles_username_key'].includes(constraint ?? '') || ['DUPLICATE', 'P0001'].includes(error.code ?? '') && text === 'Tên đăng nhập đã tồn tại';
+    if (phone || username) {
+      const message = phone ? 'Số điện thoại đã tồn tại' : 'Tên đăng nhập đã tồn tại';
+      return new StaffServiceError('DUPLICATE', message, { [phone ? 'phone' : 'username']: message });
+    }
+  }
+  if (bracketWrite && error.code === '23505') {
+    return new DataServiceError('DUPLICATE', constraint === 'coco_bracket_identity'
+      ? 'Khung giá đã tồn tại'
+      : 'Không thể lưu khung giá vì mã dữ liệu đã tồn tại. Vui lòng thử lại.');
+  }
+  if ((customerWrite || staffWrite) && error.code === '23505') {
+    const message = 'Không thể lưu do mã dữ liệu đã tồn tại. Vui lòng kiểm tra lại.';
+    return staffWrite ? new StaffServiceError('DUPLICATE', message) : new DataServiceError('DUPLICATE', message);
+  }
+  if (bracketWrite && !error.code && /failed to fetch|fetch failed|networkerror|network request failed|load failed/i.test(error.message ?? '')) return new CloudOfflineError();
   const message = error.message ?? 'Không thể truy cập dữ liệu tập trung. Vui lòng thử lại.';
   const code = details.code ?? (message.match(/^([A-Z_]+)(?::|\s)/)?.[1]) ??
     ({ '42501': 'FORBIDDEN', '28000': 'AUTH_REQUIRED', '23505': 'DUPLICATE', '23503': 'REFERENCE', '40001': 'CONFLICT' } as Record<string, string>)[error.code ?? ''] ?? error.code;
   const fields = details.fields ?? error.fields ?? {};
   if (code === 'FORBIDDEN' || code === 'AUTH_REQUIRED') return new AuthError(code);
   if (service === 'referenceData' && ['VALIDATION', 'DUPLICATE', 'CONFLICT', 'NOT_FOUND', 'HAS_HISTORY', 'CONFIRMATION', 'CONDITION_MAPPING'].includes(code ?? ''))
-    return new DataServiceError(code as DataServiceError['code'], message, fields);
+    return new DataServiceError(code as DataServiceError['code'], bracketWrite ? message.replace(/^[A-Z_]+:\s*/, '') : message, fields);
   if (service === 'staffAccounts' && ['VALIDATION', 'DUPLICATE', 'NOT_FOUND', 'CONFLICT', 'CONFIRMATION'].includes(code ?? ''))
     return new StaffServiceError(code as StaffServiceError['code'], message, fields);
   if (['VALIDATION', 'DUPLICATE', 'NOT_FOUND', 'CONFLICT', 'REFERENCE', 'IMMUTABLE', 'OPERATION_REUSED'].includes(code ?? '')) {
@@ -123,14 +150,14 @@ export function createCloudServices(client: SupabaseClient, options: CloudServic
           if (response instanceof Response) {
             let body: RemoteError | undefined;
             try { body = await response.json() as RemoteError; } catch { /* Retain safe transport error. */ }
-            if (body) throw cloudServiceError(service, body);
+            if (body) throw cloudServiceError(service, body, method);
           }
           throw result.error;
         }
         data = result.data;
       } else {
         const result = await client.rpc('coco_service', { p_service: service, p_method: method, p_payload: { args: JSON.parse(JSON.stringify(args)) }, p_idempotency_key: key });
-        if (result.error) throw cloudServiceError(service, result.error);
+        if (result.error) throw cloudServiceError(service, result.error, method);
         data = result.data;
       }
       retryKeys.delete(fingerprint); invalidate(); return data;

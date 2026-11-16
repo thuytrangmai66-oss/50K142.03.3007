@@ -90,7 +90,9 @@ Deno.serve(async request => {
         // has no active profile and cannot read/write CoCo through RLS.
         if (!linked.error && !linked.data && saved.error.code) await admin.auth.admin.deleteUser(provisioned.id);
       }
-      throw new StaffError(saved.error.message.match(/^([A-Z_]+):/)?.[1] ?? 'SYSTEM', saved.error.message);
+      // Preserve constraint identity for the client mapper; never collapse every
+      // PostgreSQL error into SYSTEM or lose the field-specific duplicate case.
+      return json({ code: saved.error.code, message: saved.error.message, details: saved.error.details }, 400);
     }
     // Removal deactivates the profile atomically in SQL. This is authoritative
     // even if the Auth access token has not expired; no remote Auth delete needed.

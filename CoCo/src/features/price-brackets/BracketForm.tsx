@@ -6,6 +6,8 @@ import { ResultDialog } from '../../components/ui/ResultDialog';
 import { CONDITIONS } from '../../domain/conditions';
 import { DataServiceError, type Bracket, type BracketInput } from '../../services/reference-data/contracts';
 import { useAuth } from '../auth/use-auth';
+import { AuthError } from '../../services/auth/errors';
+import { CloudOfflineError } from '../../cloud/services';
 
 export function BracketForm({ bracket, onClose, onSaved }: { bracket?: Bracket; onClose(): void; onSaved(message: string): void }) {
   const { referenceData } = useAuth(), conditionId = useId();
@@ -21,7 +23,7 @@ export function BracketForm({ bracket, onClose, onSaved }: { bracket?: Bracket; 
       onSaved(bracket ? 'Cập nhật khung giá thu mua thành công' : 'Tạo khung giá thu mua thành công');
     } catch (cause) {
       if (cause instanceof DataServiceError && Object.keys(cause.fields).length) setFields(cause.fields);
-      else setError(cause instanceof DataServiceError ? cause.message : bracket ? 'Cập nhật không thành công' : 'Tạo khung giá không thành công');
+      else setError(cause instanceof DataServiceError || cause instanceof AuthError || cause instanceof CloudOfflineError ? cause.message : bracket ? 'Cập nhật không thành công' : 'Tạo khung giá không thành công');
     } finally { setBusy(false); }
   }
   return <><FormDialog title={bracket ? 'Sửa khung giá thu mua' : 'Tạo khung giá thu mua'} onClose={onClose} busy={busy} compact={!bracket}><form className="record-form" noValidate onSubmit={submit} aria-busy={busy}>

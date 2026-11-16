@@ -5,6 +5,7 @@ import { FormDialog } from '../../components/ui/FormDialog';
 import { ResultDialog } from '../../components/ui/ResultDialog';
 import { DataServiceError, type Customer, type CustomerInput } from '../../services/reference-data/contracts';
 import { useAuth } from '../auth/use-auth';
+import { CircleAlert } from 'lucide-react';
 
 export function CustomerForm({ customer, onClose, onSaved }: { customer?: Customer; onClose(): void; onSaved(message: string): void }) {
   const { referenceData } = useAuth();
@@ -26,7 +27,7 @@ export function CustomerForm({ customer, onClose, onSaved }: { customer?: Custom
   return <><FormDialog title={customer ? 'Sửa thông tin khách hàng' : 'Tạo thông tin khách hàng'} busy={busy} onClose={onClose} compact={!customer}>
     <form className="record-form" noValidate onSubmit={submit} aria-busy={busy}>
       <Field label="Họ tên" autoComplete="name" maxLength={50} value={name} error={fields.name} onChange={e => setName(e.target.value)} />
-      <Field label="Số điện thoại" type="tel" inputMode="numeric" autoComplete="tel" value={phone} error={fields.phone} onChange={e => setPhone(e.target.value)} />
+      <Field label="Số điện thoại" type="tel" inputMode="numeric" autoComplete="tel" value={phone} error={fields.phone} errorIcon={<CircleAlert className="field-error-icon" aria-hidden="true"/>} onChange={e => setPhone(e.target.value)} />
       <div className="form-actions"><Button className="button-secondary" type="button" disabled={busy} onClick={onClose}>Hủy</Button><Button className="button-beige" disabled={busy} type="submit">{busy ? 'Đang lưu…' : 'Lưu'}</Button></div>
     </form></FormDialog>{error && <ResultDialog error message={error} onClose={() => setError('')} />}</>;
 }
